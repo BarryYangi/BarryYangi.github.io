@@ -1,19 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.smitten.today/</id>
-    <title>Gridea</title>
-    <updated>2020-11-16T15:17:17.345Z</updated>
+    <title>Barry&apos;s Blog</title>
+    <updated>2020-11-17T04:08:18.140Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.smitten.today/"/>
     <link rel="self" href="https://www.smitten.today/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>仅对偏爱心动</subtitle>
     <logo>https://www.smitten.today/images/avatar.png</logo>
     <icon>https://www.smitten.today/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, Barry&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Markdown语法学习]]></title>
+        <id>https://www.smitten.today/markdown-yu-fa-xue-xi/</id>
+        <link href="https://www.smitten.today/markdown-yu-fa-xue-xi/">
+        </link>
+        <updated>2020-11-17T03:51:40.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>你的名字</strong></p>
+<p><em>你的名字</em></p>
+<p><code>if</code></p>
+<p><s>这就是删除</s></p>
+<ul class="contains-task-list">
+<li>List</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1190120"><label class="task-list-item-label" for="task-item-1190120">  Todu</label></li>
+</ul>
+<ol>
+<li>wad</li>
+<li>sda</li>
+</ol>
+<ul>
+<li>sad</li>
+</ul>
+<blockquote>
+<p>这是注释</p>
+</blockquote>
+<hr>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[精选短句]]></title>
+        <id>https://www.smitten.today/jing-xuan-duan-ju/</id>
+        <link href="https://www.smitten.today/jing-xuan-duan-ju/">
+        </link>
+        <updated>2020-11-17T03:26:46.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li>
+<p>枕边书，怀中猫，意中人。</p>
+</li>
+<li>
+<p>在等雪花、圣诞树、新年烟火、和更好的你。</p>
+</li>
+<li>
+<p>喜欢是别的也行 爱是死磕。</p>
+</li>
+<li>
+<p>可以回头看 但不要回头走 因为 逆行是全责。</p>
+</li>
+<li>
+<p>解不开心结就把它变成蝴蝶结。</p>
+</li>
+<li>
+<p>我想做一个能在你的葬礼上描述你一声的人.</p>
+</li>
+<li>
+<p>真爱出现的第一征兆，在男孩身上就是胆怯。</p>
+</li>
+<li>
+<p>九万七，世间欢喜十万，你独占九万七，剩余弱水三千，我皆不动心。</p>
+</li>
+<li>
+<p>所以万家灯火，有没有灯为你而开？</p>
+</li>
+<li>
+<p>红尘万物，你即是救赎。</p>
+</li>
+<li>
+<p>我好喜欢那句“秀外慧中 好是喜欢”</p>
+</li>
+<li>
+<p>多年以前，我的矫情浪费了我的天时地利，直到今天已经统统过期。</p>
+</li>
+<li>
+<p>在爱情上，我只愿你永远不会有失去第一次爱过的人的那种感觉。</p>
+</li>
+<li>
+<p>浅尝辄止,过犹不及。</p>
+</li>
+<li>
+<p>理智的状态是有节制的热爱。</p>
+</li>
+<li>
+<p>我很擅长约会，但不擅长维持一段长久的关系。</p>
+</li>
+<li>
+<p>世间万物皆苦，你明目张胆的偏爱就是救赎。</p>
+</li>
+<li>
+<p>白天有很多好东西，但是那里没有你。</p>
+</li>
+<li>
+<p>世界灿烂盛大，欢迎回家。</p>
+</li>
+<li>
+<p>暴躁且甜，温柔且善。</p>
+</li>
+<li>
+<p>岁岁常欢愉,万事皆胜意。</p>
+</li>
+<li>
+<p>如果夜里不能吃东西，那冰箱为什么会有灯呢？</p>
+</li>
+<li>
+<p>“一块玻璃准备跳楼你猜他会说什么”</p>
+<p>“什么呢”</p>
+<p>“晚安 ，我碎咯”</p>
+</li>
+<li>
+<p>我往宇宙撒了把盐，</p>
+<p>如果三点前还睡不着</p>
+<p>今晚就吃盐焗小星球～～</p>
+</li>
+<li>
+<p>月亮今晚不营业，所以我来说晚安</p>
+</li>
+<li>
+<p>你知道为什么月亮两头尖尖中间弯嘛？</p>
+<p>因为锋芒对外 温柔对你。</p>
+</li>
+<li>
+<p>我能抵抗一切，除了诱惑。 王尔德</p>
+</li>
+<li>
+<p>你当温柔，却又力量。</p>
+</li>
+<li>
+<p>想念，像十除以三。</p>
+</li>
+<li>
+<p>从来如此，便对么？ ------------鲁迅狂人日记</p>
+</li>
+<li>
+<p>撒娇是察觉到了被偏爱的可能。</p>
+</li>
+<li>
+<p>请保持网络畅通 及时接受我的想念</p>
+</li>
+<li>
+<p>温柔仅供参考，一切以生气时间为准。</p>
+</li>
+<li>
+<p>对你收起所有的怦然心动，然后保持距离。</p>
+</li>
+<li>
+<p>只可私藏，不准共享。</p>
+</li>
+<li>
+<p>世界欠你的温柔，我给。</p>
+</li>
+<li>
+<p>不辜负自己，不将就生活。你的存在，配的上世间所有的最好。</p>
+</li>
+<li>
+<p>在我面前你可以不勇敢。</p>
+</li>
+<li>
+<p>如果我写不出温柔漂亮的句子，你能不能直接看一下我温柔的心。</p>
+</li>
+<li>
+<p>遇见了温柔的人，所以想温柔待人。</p>
+</li>
+<li>
+<p>原来躲起来的星星也在努力发光啊。</p>
+</li>
+<li>
+<p>你是我明目张胆的偏袒众所周知的私心。</p>
+</li>
+<li>
+<p>我一扑向你，就感到无限温柔啊。</p>
+</li>
+<li>
+<p>未曾谋面的也终将会相遇。</p>
+</li>
+<li>
+<p>温柔的绕道</p>
+</li>
+<li>
+<p>小姐是我漫漫余生里义无反顾的梦想。</p>
+</li>
+<li>
+<p>你是我无限努力的理由</p>
+</li>
+<li>
+<p>贩卖日落</p>
+</li>
+<li>
+<p>陪伴本身就是这个世界上最了不起的安慰方式。</p>
+</li>
+<li>
+<p>我会在每个有意义的时刻，远隔山海与你共存。</p>
+</li>
+<li>
+<p>No one and you.（无人及你）</p>
+</li>
+<li>
+<p>我是此间少年郎，你是天上明月光。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[所有过往，皆为序章]]></title>
+        <id>https://www.smitten.today/suo-you-guo-wang-jie-wei-xu-zhang/</id>
+        <link href="https://www.smitten.today/suo-you-guo-wang-jie-wei-xu-zhang/">
+        </link>
+        <updated>2020-03-09T19:03:10.000Z</updated>
+        <content type="html"><![CDATA[<p>当韶华散去，便不问一切是否可以重来。</p>
+<p>/</p>
+<p>还想听你的故事</p>
+<p>谢春花 王碧浪</p>
+<p>这是我单曲循环了许久的一首歌。</p>
+<p>第一次是在日推里发现它的，初次听到这首歌的旋律时，</p>
+<p>一瞬间它就直击我内心，</p>
+<p>当听到:</p>
+<p>我们只是共享了几个故事</p>
+<p>对你来说也许是平凡小事</p>
+<p>说出的字一秒就成了历史</p>
+<p>我只想紧抓着不让它流逝</p>
+<p>我们其实才是最适合彼此</p>
+<p>多想让你知道我此刻心事</p>
+<p>今天的誓明天是否还坚持</p>
+<p>你是否还有勇气再说开始</p>
+<p>我心中瞬间五味杂粮</p>
+<p>/</p>
+<p>瓦解</p>
+<p>沉沦</p>
+<p>/</p>
+<p>“或许太重感情的人，日子终究不会好过，信任、依赖、念旧，分分钟把你虐的万劫不复。”</p>
+<p>听过无数话都看似很有道理，但我只信两句话，</p>
+<p>一个物以类聚，</p>
+<p>一个因果报应。</p>
+<p>最大的幸福莫过于固执和深情得到回应<br>
+这是这首歌的一个热评，固然每个人对这句话的解读都能有所不同，但不可否认的是这确实能引发大多数人的共鸣，</p>
+<p>无论是从数据上，</p>
+<p>还是内容上。</p>
+<p>于此<br>
+我是反过来解读这句话的：</p>
+<p>“一个了解你的人，最起码不会让你一直难过，如果明知道这样做你不好</p>
+<p>受却还是做了，单是这样的恶意和愚蠢就不该被原谅。”</p>
+<pre><code>                                                念
+</code></pre>
+<p>我们其实才是最适合彼此</p>
+<p>多想让你知道我此刻心事</p>
+<p>今天的誓明天是否还坚持</p>
+<p>你是否还有勇气再说开始</p>
+<p>句句都是那么让人感到措手不及，</p>
+<p>正如人间失格里面有一句话：胆小鬼连幸福都害怕，碰到棉花都会受伤，我想我是骨子里透着卑微的胆小鬼。<br>
+有些风景，一旦入眼入心，即便刹那，也是永恒。<br>
+/</p>
+<p>/</p>
+<p>那些花了好久才想明白的事，总是会被偶尔的情绪失控全部推翻。</p>
+<p>/</p>
+<p>只有继续从容向前，才不会辜负那些在漫漫长夜中依旧熠熠生辉的旧时光。人这一辈子，无非就是一路的失去，天长地久这种东西，正因为难得，才被歌颂。</p>
+<p>/</p>
+<p>曾经<br>
+未来遥远的没有形状</p>
+<p>我们单纯得没有烦恼</p>
+<p>后来<br>
+孤街没了浪人，深巷没了老猫</p>
+<p>梦想缩了水，欲望也瘪的不像话</p>
+<p>竟到了贩卖温柔的地步</p>
+<p>风尘仆仆的只想找一个家</p>
+<p>/</p>
+<p>很喜欢宫崎骏先生说过的两句话，</p>
+<p>一句是：</p>
+<p>“你简单世界就是童话，你复杂世界就是迷宫。”</p>
+<p>生而为人，肯定要与事故有所碰撞，只愿你一如既往简单看待这个世界，在躺过世俗浑水后，仍能不沾染那一身的事故。</p>
+<p>另一句是：</p>
+<p>“一举一动，都是承诺，会被另一个人看在眼里，记在心上的。”</p>
+<p>正如老话言‘行胜于言’，有时候不去打扰，只是觉得自己多余，愿你被阅读，不被辜负。</p>
+<p>/</p>
+<p>创作翻唱杨某的小吧</p>
+<p>by 小杨呐i</p>
+<p>/</p>
+<p>我建这个电台的目的可能就是因为我喜欢恋旧，</p>
+<p>我渴望将我曾经的那些美好给记录下来。</p>
+<p>`</p>
+<p>因为，</p>
+<p>我怕有一天，</p>
+<p>所有人都杳无音信</p>
+<p>从我的世界蒸发。</p>
+<p>我也渴望被人收藏好，妥善保管，细心保存，免我惊，免我苦，免我四下流离，免我无枝可依，那人，我知，是你，也不是你。<br>
+也渴望找一个温暖如太阳的人，晒掉所有不值一提的悲伤。<br>
+/</p>
+<p>/</p>
+<p>我们生来孤独，又何苦闯进人群自取其辱，终归还不是都要沦为尘埃。</p>
+<p>真正治愈自己的，只有自己</p>
+<p>不去抱怨，尽量担待</p>
+<p>不怕孤单，努力沉淀</p>
+<p>随着日子不断往前走。</p>
+<p>/</p>
+<p>/</p>
+<p>/</p>
+<p>不奢望自己变得多romantic</p>
+<p>但渴望生活中多一些serendipity</p>
+<p>少一些smitten</p>
+<p>更期望flipped.</p>
+<pre><code>                                                        落日归山海，山海藏深意.
+
+                                                                   2020/3/10     yct</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://www.smitten.today/post/hello-gridea/</id>
-        <link href="https://www.smitten.today/post/hello-gridea/">
+        <id>https://www.smitten.today/hello-gridea/</id>
+        <link href="https://www.smitten.today/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
