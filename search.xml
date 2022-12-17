@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>关于itsNeko开源博客食用方法</title>
+      <link href="/posts/itsneko-opensource-blog.html"/>
+      <url>/posts/itsneko-opensource-blog.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">前言：本文是关于itsNeko开源博客食用方法详解，感谢使用本开源博客。时间过的好快，还好我都记录下来了。</div><h3 id="itsNeko开源介绍"><a href="#itsNeko开源介绍" class="headerlink" title="itsNeko开源介绍"></a>itsNeko开源介绍</h3><ul><li>基于<br>itsNeko开源博客是基于Hexo博客Matery主题魔改，感谢各位对本博客的喜爱与支持。</li><li>作者<br>Hello，itsNeko，我是本博客的作者，itsNeko博主博客: <a href="https://dyfa.top/" target="_blank">itsNeko博客~</a></li><li>赞赏<br>如果你觉得本开源博客还可以，欢迎大家的赞赏，赞赏二维码见页面：<a href="https://dyfa.top/donate/" target="_blank">赞赏itsNeko开源博主~</a></li><li>提示<br>本博客为纯静态，无数据库，文章使用markdown格式，图片存在json里面，整体打包上传至服务器即可。</li><li>建议<br>最好懂一点编程知识，建议使用VsCode，善于使用<code>“ ctrl+F ”</code>快捷键定位然后修改自定义内容。</li></ul><h3 id="源码下载及命令"><a href="#源码下载及命令" class="headerlink" title="源码下载及命令"></a>源码下载及命令</h3><ul><li>本开源博客源码已公开在在博主的GitHub仓库，国内也可使用Gitee，希望得到各位的<code>小星星，Star</code>。</li><li>GitHub仓库：<a href="https://github.com/nekodeng/hexo-theme-itsneko.git" target="_blank">itsNeko开源博客源码GitHub地址</a></li><li><p>Gitee仓库：<a href="https://gitee.com/nekodeng/hexo-theme-itsneko.git" target="_blank">itsNeko开源博客源码Gitee地址</a></p></li><li><p>首先，新建一个文件夹名为“ <code>nekoblog</code> ”，在该文件夹下打开git bash，执行命令行</p></li></ul><pre><code>git clone https://github.com/nekodeng/hexo-theme-itsneko.git或者使用国内的giteegit clone https://gitee.com/nekodeng/hexo-theme-itsneko.git</code></pre><ul><li>将下载的整个文件夹在VsCode中打开，在终端中依次执行以下命令行</li></ul><pre><code>npm installhexo cleanhexo ghexo s</code></pre><ul><li>然后在浏览器中，打开“ <a href="http://localhost:4000/">http://localhost:4000/</a> ”，即可实时预览网站，再依次修改网站内容。</li></ul><p>注意：依次执行完上述4条命令后，若遇到报错极大概率是npm install的问题，也可能是网络问题，建议删除整个“ node_modules ”文件夹，然后重新执行上述命令行。</p><h3 id="各页面配置详解"><a href="#各页面配置详解" class="headerlink" title="各页面配置详解"></a>各页面配置详解</h3><h4 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h4><h5 id="1、网站标题描述等"><a href="#1、网站标题描述等" class="headerlink" title="1、网站标题描述等"></a>1、网站标题描述等</h5><p>在<code>/nekoblog/_config.yml</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ Site ”</code>，然后自行修改内容。</p><h5 id="2、logo图片与logo字体"><a href="#2、logo图片与logo字体" class="headerlink" title="2、logo图片与logo字体"></a>2、logo图片与logo字体</h5><ul><li>logo图片:<br>在<code>/themes/_config.yml</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ 配置网站favicon和网站LOGO ”</code>，然后自行修改图片并注意图片格式（此处建议图片大小为180*116最佳）。</li><li>logo字体:<br>在<code>/themes/layout/_partial/header.ejs</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ itsNeko-openSource-Blog ”</code>，然后自行修改大屏幕和小屏幕下logo字体（此处建议小屏下字体数目不宜过多）。 </li></ul><h5 id="3、banner图上打字效果字体"><a href="#3、banner图上打字效果字体" class="headerlink" title="3、banner图上打字效果字体"></a>3、banner图上打字效果字体</h5><p>在<code>/themes/_config.yml</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ sub1 ”</code>，然后自行修改。</p><h5 id="4、《质数的孤独》内容部分"><a href="#4、《质数的孤独》内容部分" class="headerlink" title="4、《质数的孤独》内容部分"></a>4、《质数的孤独》内容部分</h5><p>在<code>/themes/layout/_widget/dream.ejs</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ 《质数的孤独》 ”</code>，然后自行修改标题和内容。</p><h5 id="5、公告栏作者等内容部分"><a href="#5、公告栏作者等内容部分" class="headerlink" title="5、公告栏作者等内容部分"></a>5、公告栏作者等内容部分</h5><p>在<code>/themes/layout/index.ejs</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ 公告文字栏开始 ”</code>，然后自行修改内容。</p><h5 id="6、footer内容部分"><a href="#6、footer内容部分" class="headerlink" title="6、footer内容部分"></a>6、footer内容部分</h5><p>在<code>/themes/layout/_partial/footer.ejs</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ 版权信息 ”</code>，然后自行修改各类内容；此处还要在<code>/themes/_config.yml</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ socialLink ”</code>，然后自行修改。</p><h4 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h4><h5 id="1、配置个人信息"><a href="#1、配置个人信息" class="headerlink" title="1、配置个人信息"></a>1、配置个人信息</h5><p>在<code>/themes/_config.yml</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ profile ”</code>，然后自行修改头像、职业和个人介绍。</p><h5 id="2、个人介绍内容"><a href="#2、个人介绍内容" class="headerlink" title="2、个人介绍内容"></a>2、个人介绍内容</h5><p>在<code>/themes/layout/about.ejs</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ 关于我哦 ”</code>，然后自行个人介绍介绍。</p><h4 id="相册"><a href="#相册" class="headerlink" title="相册"></a>相册</h4><h5 id="1、页面介绍"><a href="#1、页面介绍" class="headerlink" title="1、页面介绍"></a>1、页面介绍</h5><p>在<code>/themes/layout/galley.ejs</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ itsNeko开源博客相册 ”</code>，然后自行修改此内容。</p><h5 id="2、相册数据"><a href="#2、相册数据" class="headerlink" title="2、相册数据"></a>2、相册数据</h5><p>相册是存在json里面的，在<code>/nekoblog/source/_data/galley.json</code>文件中。一个相册就是在一个{}对象内的json数据。</p><h5 id="3、新建一个相册流程"><a href="#3、新建一个相册流程" class="headerlink" title="3、新建一个相册流程"></a>3、新建一个相册流程</h5><ul><li>首先，找到<code>/nekoblog/source/galley</code>文件夹。</li><li>复制已存在的“ itsNeko博主的绘画作品 ”文件夹，并取名。</li><li>打开新取名文件夹下的index.md文件，然后修改title字段必须与新取名文件夹名称相同，否则运行报错。</li><li>然后，在<code>/nekoblog/source/_data/galley.json</code>文件中，复制已存在的{}对象内的json数据，与第一段并以逗号区隔，然后修改新相册的各类内容。并注意：<code>name，url_name，album内的title这三个字段内容必须与新取名文件夹名称相同，否则运行报错。</code></li></ul><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><h5 id="增加友情链接"><a href="#增加友情链接" class="headerlink" title="增加友情链接"></a>增加友情链接</h5><ul><li>友链信息是存储在<code>/nekoblog/source/_data/friends.json</code>文件中，一个友链就是在一个{}对象内的json数据，自行增添。</li></ul><h5 id="增加网址收藏"><a href="#增加网址收藏" class="headerlink" title="增加网址收藏"></a>增加网址收藏</h5><ul><li>网址收藏信息是存储在<code>/nekoblog/source/_data/collection.json</code>文件中，一个网址信息就是在一个{}对象内的json数据，自行增添。</li></ul><h4 id="其余"><a href="#其余" class="headerlink" title="其余"></a>其余</h4><p>其余页面自定义修改的内容不多，或者没必要修改，这里给出其余页面的对应文件，可自行根据需要定位到对应页面文件中进行修改。</p><ul><li><code>书单 -&gt; /themes/layout/books.ejs</code></li><li><code>留言板 -&gt; /themes/layout/contact.ejs</code></li><li><code>实战项目 -&gt; /themes/layout/project.ejs</code></li><li><code>博客打赏记录 -&gt; /themes/layout/donate.ejs</code></li><li><code>ticktack -&gt; /themes/layout/ticktack.ejs</code></li><li><code>实战项目 -&gt; /themes/layout/project.ejs</code></li><li><code>vlog -&gt; /themes/layout/videos.ejs</code><br>使用“ ctrl+F ”快捷键定位到<code>“ src=”//player.bilibili ”</code>，然后自行修改两个视频的src，建议使用B站的外链。</li><li><code>music -&gt; /themes/layout/musics.ejs</code><br>使用“ ctrl+F ”快捷键定位到<code>“ id=” ”</code>，然后自行修改两个歌单的id，建议使用网易云和QQ音乐的外链。</li><li><code>urls.txt -&gt; /nekoblog/urls.txt</code>将内容替换成自己网站的url地址即可。</li><li><code>网站2个_config.yml文件 -&gt; 主要是网站的总体配置，自行打开两个文件然后只修改里面的包含个人信息的部分，其余不动。</code></li></ul><h3 id="撰写第一篇文章"><a href="#撰写第一篇文章" class="headerlink" title="撰写第一篇文章"></a>撰写第一篇文章</h3><ul><li>修改完个人信息后，你便可以撰写属于你的第一篇文章啦。</li><li>文章采用markdown语法，所有文章存储在<code>/nekoblog/source/_posts</code>文件夹中。</li><li>这里我已给出常用的两类文章模板，可直接复制粘贴然后（修改文章名，链接后缀建议用英文，标签建议只用一个，分类，时间，以及文章banner图片）形成新的文章。</li></ul><h3 id="怎样开通评论"><a href="#怎样开通评论" class="headerlink" title="怎样开通评论"></a>怎样开通评论</h3><ul><li>本开源博客使用valine评论，环境以及搭好，只需填写valine配置数据即可。</li><li>自行根据网上教程得到配置数据，关键词 “ Hexo 博客添加 Valine 评论系统 ”，教程之一：<a href="https://www.zhyong.cn/posts/95cb/" target="_blank">Hexo 博客添加 Valine 评论系统</a></li><li>注意：本开源博客中已经搭好了环境，<code>比如valine.min.js，valine.ejs等文件已经存在，不用再根据教程添加这些文件</code>，只需根据教程步骤配置其余，然后获取到 APP ID 和 APP KEY。</li><li>然后，将获取到的 APP ID 和 APP KEY，在<code>/themes/_config.yml</code>文件中，使用“ ctrl+F ”快捷键定位到<code>“ valine ”</code>，然后自行修改appId，appKey值即可。</li><li>多说一句，若最后评论功能总是报错，不知道怎么弄，那么建议一切根据外链教程（这个不行，换个完整版教程）操作，可替换本博客已经存在的环境文件，<code>学会自己独立使用浏览器解决问题</code>。</li></ul><h3 id="网站怎样上线"><a href="#网站怎样上线" class="headerlink" title="网站怎样上线"></a>网站怎样上线</h3><ul><li><p><code>免费版 使用gitee免费托管</code><br>关键词，“ Hexo部署到Gitee ”，随机教程：<a href="https://blog.csdn.net/qq_38157825/article/details/112783631" target="_blank">Hexo 部署到 Gitee</a></p></li><li><p><code>收费版 自行购买域名服务器</code><br>关键词，“ Hexo部署到自己服务器 ”</p></li></ul><h3 id="七零八碎补充"><a href="#七零八碎补充" class="headerlink" title="七零八碎补充"></a>七零八碎补充</h3><p>可自行根据需要定位到对应文件中进行修改。</p><ul><li><p><code>赞赏二维码图片 -&gt; /themes/source/medias/reward</code></p></li><li><p><code>鼠标左键点击文字 -&gt; /themes/source/js/click_show_text.js</code></p></li><li><p><code>网站标题栏和footer栏背景颜色 -&gt; /themes/source/css/matery.css</code><br>在该文件中使用“ ctrl+F ”快捷键定位到<code>“ 网站标题栏和footer栏背景颜色 ”</code>，然后自行修改颜色。</p></li><li><p><code>各大页面banner图 -&gt; 若你不想使用默认图片，将以下代码复制到对应页面ejs文件中并修改图片链接即可。</code></p></li></ul><pre><code>    &lt;style&gt;      /* banner背景图 */      .bg-cover &amp;#123;          background-image: url(&quot;图片链接地址&quot;)!important;      &amp;#125;    &lt;/style&gt;</code></pre><h3 id="怎样联系itsNeko"><a href="#怎样联系itsNeko" class="headerlink" title="怎样联系itsNeko"></a>怎样联系itsNeko</h3><ul><li>留言：itsNeko博客地址:<a href="https://dyfa.top/" target="_blank">itsNeko博客~</a></li><li>邮箱：nekodeng@qq.com</li><li>QQ: 2018854221</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> itsNeko博客食用方法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 关于itsNeko开源博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>这是技术文章模板</title>
+      <link href="/posts/articletemplate.html"/>
+      <url>/posts/articletemplate.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。</div><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><ul><li>项目1</li><li>项目2</li><li>项目3</li></ul><p>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p><p><img src="/posts/articletemplate.htm/图片url" alt="图片介绍"></p><p><code>正文一些需要高亮色的文字</code></p><p><a href="链接地址" class="LinkCard" target="_blank">引入链接</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>这是随笔文章模板</title>
+      <link href="/posts/essay-demo.html"/>
+      <url>/posts/essay-demo.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="这是博主的随笔板块，后续会更新文章，目前弄好了模板格式"><a href="#这是博主的随笔板块，后续会更新文章，目前弄好了模板格式" class="headerlink" title="这是博主的随笔板块，后续会更新文章，目前弄好了模板格式~"></a>这是博主的随笔板块，后续会更新文章，目前弄好了模板格式~</h4><div class="ipage">    <div class="ititle">节选自《你若安好便是晴天》- 前言</div>  <div class="izhengwen">  <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。这个季节，许多人都在打听关于莲荷的消息，以及茉莉在黄昏浮动的神秘幽香。不知多少人会记得有个女子，曾经走过人间四月天，又与莲开的夏季有过相濡以沫的约定。</p>  <p>一个人，一本书，一杯茶，一帘梦。有时候，寂寞是这样叫人心动，也只有此刻，世事才会如此波澜不惊。凉风吹起书页，这烟雨让尘封在书卷里的词章和故事弥漫着潮湿的气息。独倚幽窗，看转角处的青石小巷，一柄久违的油纸伞，遮住了低过屋檐的光阴。</p>  <p>时光微凉，那一场远去的往事被春水浸泡，秋风吹拂，早已洗去铅华，清绝明净。以为历经人生匆匆聚散，尝过尘世种种烟火，应该承担岁月带给我们的沧桑。可流年分明安然无恙，而山石草木是这样毫发无伤。只是曾经许过地老天荒的城，在细雨中越发地清瘦单薄。</p>  <p>青梅煎好的茶水，还是当年的味道；而我们等候的人，不会再来。后来才知道，那一袭素色白衣的女子已化身为燕，去寻觅水乡旧巢。她走过的地方，有一树一树的花开，她呢喃的梁间，还留着余温犹存的梦。有人说，她是个冰洁的女子，所以无论人世如何变迁，她都有着美丽的容颜。有人说，她是个理智的女子，不管面临怎样的诱惑，最后都可以全身而退。</p>  <p>她叫林徽因，出生于杭州，是许多人梦中期待的白莲。她在雨雾之都伦敦，发生过一场空前绝后的康桥之恋。她爱过三个男子，爱得清醒，也爱得平静。徐志摩为她徜徉在康桥，深情地等待一场旧梦可以归来。梁思成与她携手走过千山万水，为完成使命而相约白头。金岳霖为她终身不娶，痴心不改地守候一世。可她懂得人生飘忽不定，要学会随遇而安。</p>  </div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
