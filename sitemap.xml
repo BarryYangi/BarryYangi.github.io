@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/about/index.html</loc>
+    <loc>https://www.baidu.com/books/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -44,14 +44,14 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/collection/index.html</loc>
+    <loc>https://www.baidu.com/about/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/books/index.html</loc>
+    <loc>https://www.baidu.com/collection/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/essay/index.html</loc>
+    <loc>https://www.baidu.com/donate/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/donate/index.html</loc>
+    <loc>https://www.baidu.com/essay/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -100,14 +100,14 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/musics/index.html</loc>
+    <loc>https://www.baidu.com/lab/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/lab/index.html</loc>
+    <loc>https://www.baidu.com/musics/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -142,13 +142,6 @@
   </url>
   
   <url>
-    <loc>https://www.baidu.com/videos/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.baidu.com/ticktack/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
@@ -157,6 +150,13 @@
   
   <url>
     <loc>https://www.baidu.com/vote/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.baidu.com/videos/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
