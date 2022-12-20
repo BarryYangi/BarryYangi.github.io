@@ -3,11 +3,11 @@
   <title>Barryの个人博客</title>
   
   
-  <link href="https://www.baidu.com/atom.xml" rel="self"/>
+  <link href="https://www.smitten.top/atom.xml" rel="self"/>
   
-  <link href="https://www.baidu.com/"/>
-  <updated>2022-11-03T06:22:48.000Z</updated>
-  <id>https://www.baidu.com/</id>
+  <link href="https://www.smitten.top/"/>
+  <updated>2022-12-20T17:45:40.096Z</updated>
+  <id>https://www.smitten.top/</id>
   
   <author>
     <name>itsBarry</name>
@@ -17,9 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>步入Linux的现代方法</title>
+    <link href="https://www.smitten.top/posts/linux.html"/>
+    <id>https://www.smitten.top/posts/linux.html</id>
+    <published>2022-12-20T16:34:14.000Z</published>
+    <updated>2022-12-20T17:45:40.096Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://www.smitten.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://www.smitten.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于itsNeko开源博客食用方法</title>
-    <link href="https://www.baidu.com/posts/itsneko-opensource-blog.html"/>
-    <id>https://www.baidu.com/posts/itsneko-opensource-blog.html</id>
+    <link href="https://www.smitten.top/posts/itsneko-opensource-blog.html"/>
+    <id>https://www.smitten.top/posts/itsneko-opensource-blog.html</id>
     <published>2021-12-15T16:34:14.000Z</published>
     <updated>2022-11-03T06:22:48.000Z</updated>
     
@@ -34,19 +59,19 @@
     
     
     
-    <category term="itsNeko博客食用方法" scheme="https://www.baidu.com/categories/itsNeko%E5%8D%9A%E5%AE%A2%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <category term="itsNeko博客食用方法" scheme="https://www.smitten.top/categories/itsNeko%E5%8D%9A%E5%AE%A2%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     
     
-    <category term="关于itsNeko开源博客" scheme="https://www.baidu.com/tags/%E5%85%B3%E4%BA%8EitsNeko%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2/"/>
+    <category term="关于itsNeko开源博客" scheme="https://www.smitten.top/tags/%E5%85%B3%E4%BA%8EitsNeko%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
-    <title>这是技术文章模板</title>
-    <link href="https://www.baidu.com/posts/articletemplate.html"/>
-    <id>https://www.baidu.com/posts/articletemplate.html</id>
-    <published>2021-12-13T16:34:14.000Z</published>
-    <updated>2022-11-03T06:22:48.000Z</updated>
+    <title>宝藏句子收藏区</title>
+    <link href="https://www.smitten.top/posts/gift.html"/>
+    <id>https://www.smitten.top/posts/gift.html</id>
+    <published>2020-03-09T16:34:14.000Z</published>
+    <updated>2022-12-20T16:48:52.334Z</updated>
     
     
       
@@ -59,19 +84,19 @@
     
     
     
-    <category term="技术" scheme="https://www.baidu.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="收藏" scheme="https://www.smitten.top/categories/%E6%94%B6%E8%97%8F/"/>
     
     
-    <category term="技术" scheme="https://www.baidu.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="宝藏句子" scheme="https://www.smitten.top/tags/%E5%AE%9D%E8%97%8F%E5%8F%A5%E5%AD%90/"/>
     
   </entry>
   
   <entry>
-    <title>这是随笔文章模板</title>
-    <link href="https://www.baidu.com/posts/essay-demo.html"/>
-    <id>https://www.baidu.com/posts/essay-demo.html</id>
-    <published>2020-01-03T16:34:14.000Z</published>
-    <updated>2022-11-03T06:22:48.000Z</updated>
+    <title>所有过往，皆为序章</title>
+    <link href="https://www.smitten.top/posts/essay.html"/>
+    <id>https://www.smitten.top/posts/essay.html</id>
+    <published>2020-03-09T16:34:14.000Z</published>
+    <updated>2022-12-20T16:29:07.511Z</updated>
     
     
       
@@ -84,10 +109,10 @@
     
     
     
-    <category term="随笔" scheme="https://www.baidu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://www.smitten.top/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="随笔" scheme="https://www.baidu.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://www.smitten.top/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

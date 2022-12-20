@@ -2,168 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.baidu.com/posts/itsneko-opensource-blog.html</loc>
+    <loc>https://www.smitten.top/posts/linux.html</loc>
+    
+    <lastmod>2022-12-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/posts/gift.html</loc>
+    
+    <lastmod>2022-12-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/posts/essay.html</loc>
+    
+    <lastmod>2022-12-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/gallery/itsBarry%E5%8E%9F%E7%A5%9E%E6%91%84%E5%BD%B1%E4%BD%9C%E5%93%81/index.html</loc>
+    
+    <lastmod>2022-12-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/vote/index.html</loc>
+    
+    <lastmod>2022-12-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/posts/itsneko-opensource-blog.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/posts/articletemplate.html</loc>
+    <loc>https://www.smitten.top/404.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/posts/essay-demo.html</loc>
+    <loc>https://www.smitten.top/about/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/404.html</loc>
+    <loc>https://www.smitten.top/books/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/books/index.html</loc>
+    <loc>https://www.smitten.top/categories/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/categories/index.html</loc>
+    <loc>https://www.smitten.top/contact/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/about/index.html</loc>
+    <loc>https://www.smitten.top/donate/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/collection/index.html</loc>
+    <loc>https://www.smitten.top/collection/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/contact/index.html</loc>
+    <loc>https://www.smitten.top/essay/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/count/index.html</loc>
+    <loc>https://www.smitten.top/friends/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/donate/index.html</loc>
+    <loc>https://www.smitten.top/count/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/essay/index.html</loc>
+    <loc>https://www.smitten.top/gallery/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/friends/index.html</loc>
+    <loc>https://www.smitten.top/musics/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/gallery/index.html</loc>
+    <loc>https://www.smitten.top/lab/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/lab/index.html</loc>
+    <loc>https://www.smitten.top/project/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/musics/index.html</loc>
+    <loc>https://www.smitten.top/qingdan/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/qingdan/index.html</loc>
+    <loc>https://www.smitten.top/tags/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/project/index.html</loc>
+    <loc>https://www.smitten.top/record/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/record/index.html</loc>
+    <loc>https://www.smitten.top/ticktack/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/tags/index.html</loc>
+    <loc>https://www.smitten.top/videos/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.baidu.com/ticktack/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.baidu.com/vote/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.baidu.com/videos/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.baidu.com/gallery/itsNeko%E5%8D%9A%E4%B8%BB%E7%9A%84%E7%BB%98%E7%94%BB%E4%BD%9C%E5%93%81/index.html</loc>
+    <loc>https://www.smitten.top/gallery/itsNeko%E5%8D%9A%E4%B8%BB%E7%9A%84%E7%BB%98%E7%94%BB%E4%BD%9C%E5%93%81/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -171,30 +185,37 @@
   
 
   <url>
-    <loc>https://www.baidu.com/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>https://www.smitten.top/</loc>
+    <lastmod>2022-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.baidu.com/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>https://www.smitten.top/tags/%E5%85%B3%E4%BA%8EitsNeko%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2022-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.baidu.com/tags/%E5%85%B3%E4%BA%8EitsNeko%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>https://www.smitten.top/tags/%E5%AE%9D%E8%97%8F%E5%8F%A5%E5%AD%90/</loc>
+    <lastmod>2022-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.baidu.com/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>https://www.smitten.top/tags/Linux/</loc>
+    <lastmod>2022-12-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -202,22 +223,29 @@
 
   
   <url>
-    <loc>https://www.baidu.com/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>https://www.smitten.top/categories/itsNeko%E5%8D%9A%E5%AE%A2%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2022-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.baidu.com/categories/itsNeko%E5%8D%9A%E5%AE%A2%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>https://www.smitten.top/categories/%E6%94%B6%E8%97%8F/</loc>
+    <lastmod>2022-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.baidu.com/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>https://www.smitten.top/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-12-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
