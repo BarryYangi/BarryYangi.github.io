@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.smitten.top/posts/linux.html</loc>
-    <lastmod>2022-12-20</lastmod>
+    <lastmod>2022-12-23</lastmod>
   </url>
   <url>
     <loc>https://www.smitten.top/posts/gift.html</loc>
@@ -11,9 +11,5 @@
   <url>
     <loc>https://www.smitten.top/posts/essay.html</loc>
     <lastmod>2022-12-20</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/itsneko-opensource-blog.html</loc>
-    <lastmod>2022-11-03</lastmod>
   </url>
 </urlset> 

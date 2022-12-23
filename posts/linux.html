@@ -1219,14 +1219,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    5.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    22 分
                 </div>
                 
 
@@ -1507,6 +1507,315 @@ sudu ./vmware-install.pl
 <li><p>head显示文件的开头部分</p>
 <pre><code>head -n 2 demo.c
 </code></pre></li>
+</ul>
+<h2 id="5-1-任务管理器"><a href="#5-1-任务管理器" class="headerlink" title="5.1 任务管理器"></a>5.1 任务管理器</h2><ul>
+<li>进程、性能、用户、服务</li>
+<li>服务：监测用户行为，为用户服务</li>
+</ul>
+<h2 id="5-2-ps和top命令"><a href="#5-2-ps和top命令" class="headerlink" title="5.2 ps和top命令"></a>5.2 ps和top命令</h2><ul>
+<li><code>top</code> 可以实时动态地查看系统的整体运行情况，是一个综合了多方信息监测系统性能和运行信息的实用工具</li>
+<li><code>ps</code> (process status) linux最复杂的命令之一，是最基本同时也是非常强大的进程查看命令，使用该命令可以确定有哪些进程正在运行和运行的状态、进程是否结束、进程有没有僵死、哪些进程占用了过多的资源等等，总之大部分信息都是可以通过执行该命令得到的</li>
+<li><code>ps axo pid,comm,pcpu</code> # 查看进程的PID、名称以及CPU 占用率</li>
+<li><code>ps -aux | grep named</code> # 查看named进程详细信息</li>
+</ul>
+<h2 id="5-3-kill命令"><a href="#5-3-kill命令" class="headerlink" title="5.3 kill命令"></a>5.3 kill命令</h2><p>配合<code>ps -aux | grep named</code> # 查看named进程详细信息<br><code>kill pid</code> 杀死进程</p>
+<h2 id="5-4-挂载的含义"><a href="#5-4-挂载的含义" class="headerlink" title="5.4 挂载的含义"></a>5.4 挂载的含义</h2><p>详见：linux挂载的作用(<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35583154/article/details/86569903">https://blog.csdn.net/qq_35583154/article/details/86569903</a>)</p>
+<p>插入新硬盘，分了新磁盘区sdb1，但它现在还不属于/， 把新硬盘的区sdb1挂载到工作目录的/Share/文件夹下，之后访问这个/Share/文件夹就相当于访问这个硬盘的sdb1分区了，对/Share/的任何操作，都相当于对sdb1里文件的操作</p>
+<h2 id="5-5-mount"><a href="#5-5-mount" class="headerlink" title="5.5 mount"></a>5.5 mount</h2><ul>
+<li><code>mount</code> 用于挂载Linux系统外的文件</li>
+<li><code>/mnt</code> 为自动挂载点</li>
+<li><code>sudo fdisk -l</code> 查看硬盘及分区信息</li>
+<li><code>sudo mount /dev/sdc1 /mnt</code></li>
+<li><code>sudo umount /mnt</code></li>
+<li>自动挂载的目录不能卸载</li>
+</ul>
+<h2 id="5-5-挂载的意义——尝试使用U盘？自动播放黑客恶意？"><a href="#5-5-挂载的意义——尝试使用U盘？自动播放黑客恶意？" class="headerlink" title="5.5 挂载的意义——尝试使用U盘？自动播放黑客恶意？"></a>5.5 挂载的意义——尝试使用U盘？自动播放黑客恶意？</h2><ul>
+<li>企业里不自动挂载，防止恶意播放脚本auto病毒</li>
+</ul>
+<h2 id="5-6-安卓设备连接挂载"><a href="#5-6-安卓设备连接挂载" class="headerlink" title="5.6 安卓设备连接挂载"></a>5.6 安卓设备连接挂载</h2><ul>
+<li>安卓链接协议(SMB)挂载路径 <code>/run/suer/1000/gvfs</code></li>
+</ul>
+<h2 id="5-7-df和du"><a href="#5-7-df和du" class="headerlink" title="5.7 df和du"></a>5.7 df和du</h2><ul>
+<li><code>df</code> 用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息</li>
+<li><code>h</code>或<code>--human-readable</code>：以可读性较高的方式来显示信息</li>
+<li><code>du</code> 也是查看使用空间的，但是与<code>df</code>命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的</li>
+</ul>
+<h2 id="5-8-sort命令"><a href="#5-8-sort命令" class="headerlink" title="5.8 sort命令"></a>5.8 sort命令</h2><ul>
+<li><code>sort</code> 对文本文件中所有行进行排序</li>
+<li>默认对每一行第一个字符排序，并展示出来，并不会改变原来的文件</li>
+<li><code>-n</code>， <code>--numeric-sort</code> 根据数字排序</li>
+<li><code>-M</code>，<code>--month-sort</code> 按照非月份、一月、十二月的顺序排序</li>
+<li><code>-r</code>，<code>--reverse</code> 将结果倒序排列</li>
+</ul>
+<h2 id="5-9-grep基础认识、搜索文件"><a href="#5-9-grep基础认识、搜索文件" class="headerlink" title="5.9 grep基础认识、搜索文件"></a>5.9 grep基础认识、搜索文件</h2><ul>
+<li><p><code>grep</code> (global search regular expression(RE) and print out the</p>
+<p>line，全面搜索正则表达式并把行打印出来）是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来</p>
+</li>
+<li><p><code>grep 543 ~/Templates/1.txt</code></p>
+</li>
+</ul>
+<h2 id="5-10-打包、压缩、归档、解压缩-它们究竟区别在哪？"><a href="#5-10-打包、压缩、归档、解压缩-它们究竟区别在哪？" class="headerlink" title="5.10 打包、压缩、归档、解压缩 它们究竟区别在哪？"></a>5.10 打包、压缩、归档、解压缩 它们究竟区别在哪？</h2><ul>
+<li><code>tar</code> 打包、压缩</li>
+<li><code>tar -cvf 1.tar 1.txt</code> 仅打包，不压缩</li>
+<li><code>tar -zcvf 1.tar.gz 1.txt</code> 打包后，以 gzip 压缩</li>
+<li><code>tar -zxvf /opt/soft/test/1.tar.gz</code> 将tar包解压缩</li>
+</ul>
+<h2 id="6-1-父子shell的概念"><a href="#6-1-父子shell的概念" class="headerlink" title="6.1 父子shell的概念"></a>6.1 父子shell的概念</h2><ul>
+<li>bash</li>
+<li>ps-f</li>
+<li>ps –forest</li>
+</ul>
+<h2 id="6-2-分号在命令里有什么作用"><a href="#6-2-分号在命令里有什么作用" class="headerlink" title="6.2 分号在命令里有什么作用"></a>6.2 分号在命令里有什么作用</h2><ul>
+<li>命令之间带分号 ； 依次执行</li>
+<li>创建一个子shell去执行</li>
+</ul>
+<h2 id="6-3-sleep和jobs"><a href="#6-3-sleep和jobs" class="headerlink" title="6.3 sleep和jobs"></a>6.3 sleep和jobs</h2><ul>
+<li><p><code>sleep</code> 将目前动作延迟一段时间 ，后面可接 <code>s</code> 为秒，<code>m</code> 为 分钟，<code>h</code> 为小时，<code>d</code> 为日数</p>
+<p>挂在后台,如果要干掉，则用<code>kill</code>命令</p>
+</li>
+<li><p><code>jobs</code> 显示作业的状态，<code>-l</code> 在作业信息中额外的列出PID</p>
+</li>
+</ul>
+<h2 id="6-4-后台"><a href="#6-4-后台" class="headerlink" title="6.4 后台"></a>6.4 后台</h2><ul>
+<li>后台执行 <code>tar -zxvf ……；&amp;</code></li>
+</ul>
+<h1 id="6-5-coproc协程"><a href="#6-5-coproc协程" class="headerlink" title="6.5 coproc协程"></a>6.5 coproc协程</h1><ul>
+<li>Liunx协程处理命令。协程可以同时做两件事。在后台生成一个子shell，并在子shell中执行命令</li>
+<li><code>coproc sleep 10</code></li>
+<li><code>coproc frank_av&#123; sleep 10; sleep 300;&#125;</code></li>
+<li>一定要分号结尾，大括号内空格</li>
+</ul>
+<h2 id="6-6-外部命令和内建命令"><a href="#6-6-外部命令和内建命令" class="headerlink" title="6.6 外部命令和内建命令"></a>6.6 外部命令和内建命令</h2><ul>
+<li>Shell执行的命令可以分为内建命令（built-in）和外部命令（external） 前者是构建在shell内部</li>
+<li>后者是一个独立的文件（可以是二进制文件，也可以是一个脚本） 内建命令由当前shell本身来执行，例如echo, cd等等</li>
+<li>外部命令的执行shell进程会fork一个子进程，父进程随后挂起，然后在子进程中exec加载外部文件，子进程返回后，父进程才继续执行</li>
+</ul>
+<h2 id="6-7-alias别名"><a href="#6-7-alias别名" class="headerlink" title="6.7 alias别名"></a>6.7 alias别名</h2><ul>
+<li><code>alias</code> 定义或显示别名。</li>
+<li><code>type</code> 显示指定命令的类型。</li>
+<li><code>alias li=’ls -li’</code></li>
+<li>但是关闭当前shell就不能用了</li>
+</ul>
+<h2 id="7-1-什么是环境变量？彻底搞清楚究竟什么是环境变量！！！！！"><a href="#7-1-什么是环境变量？彻底搞清楚究竟什么是环境变量！！！！！" class="headerlink" title="7.1 什么是环境变量？彻底搞清楚究竟什么是环境变量！！！！！"></a>7.1 什么是环境变量？彻底搞清楚究竟什么是环境变量！！！！！</h2><ul>
+<li>环境变量（environment variables）一般是指在操作系统中用来指定操作系统运行环境的一些参数，如：临时文件夹位置和系统文件夹位置等</li>
+<li>文件夹写入的环境变量，意味则可以在任何位置访问该文件夹，相当于告诉系统这个目录在哪里</li>
+</ul>
+<h2 id="7-2-全局环境变量和局部环境变量"><a href="#7-2-全局环境变量和局部环境变量" class="headerlink" title="7.2 全局环境变量和局部环境变量"></a>7.2 全局环境变量和局部环境变量</h2><ul>
+<li>windows:系统变量与用户变量</li>
+<li>linux: 全局环境变量和局部环境变量</li>
+<li>全局环境变量<code>printenv</code></li>
+<li><code>printenv USER</code></li>
+<li><code>echo $USER</code></li>
+<li><code>cd $HOME</code></li>
+</ul>
+<h2 id="7-3-用户和局部变量的定义"><a href="#7-3-用户和局部变量的定义" class="headerlink" title="7.3 用户和局部变量的定义"></a>7.3 用户和局部变量的定义</h2><ul>
+<li>局部变量只能在当前shell执行，子shell或者退出后就不能用了</li>
+<li>注意 定义局部变量不要大写</li>
+<li>全局变量用大写，下划线命名法</li>
+</ul>
+<h2 id="7-4-定义全局变量"><a href="#7-4-定义全局变量" class="headerlink" title="7.4 定义全局变量"></a>7.4 定义全局变量</h2><ul>
+<li><code>export</code> 为shell变量或函数设置导出属性。</li>
+<li>可以子shell里执行，但关闭后仍失效</li>
+</ul>
+<h2 id="7-5-默认的环境变量"><a href="#7-5-默认的环境变量" class="headerlink" title="7.5 默认的环境变量"></a>7.5 默认的环境变量</h2><ul>
+<li><code>set</code></li>
+</ul>
+<h2 id="7-6-为啥要用环境变量"><a href="#7-6-为啥要用环境变量" class="headerlink" title="7.6 为啥要用环境变量"></a>7.6 为啥要用环境变量</h2><ul>
+<li>配置开发环境需要使用</li>
+<li>临时环境变量</li>
+<li><code>PATH=$PATH:/home/yeats/Templates/</code></li>
+</ul>
+<h2 id="7-7-永久配置环境变量？"><a href="#7-7-永久配置环境变量？" class="headerlink" title="7.7 永久配置环境变量？"></a>7.7 永久配置环境变量？</h2><ul>
+<li>启动文件：开机的时候默认执行的环境变量</li>
+<li><code>bash shell</code></li>
+<li>1登录shell</li>
+<li><p>2非登录就打开shell</p>
+</li>
+<li><p>3运行脚本非交互shell</p>
+</li>
+<li><p><code>cat /etc/profile</code></p>
+</li>
+<li><code>~/.bashrc</code></li>
+<li><code>~/.bash_profile</code></li>
+<li><code>~/.profile</code></li>
+<li><code>~/.bash_login</code></li>
+<li><code>cat bashrc</code></li>
+<li>加入全局环境变量(需学习vim)</li>
+</ul>
+<h2 id="8-1-PMS系统和软件安装的介绍"><a href="#8-1-PMS系统和软件安装的介绍" class="headerlink" title="8.1 PMS系统和软件安装的介绍"></a>8.1 PMS系统和软件安装的介绍</h2><ul>
+<li>PMS Package Management System</li>
+<li>解决工具依赖问题</li>
+<li><code>apt install</code></li>
+<li><code>apt-get install</code></li>
+<li><code>apt-cache</code></li>
+<li><code>aptitude(已淘汰)</code></li>
+</ul>
+<h2 id="8-2-安装、更新、卸载"><a href="#8-2-安装、更新、卸载" class="headerlink" title="8.2 安装、更新、卸载"></a>8.2 安装、更新、卸载</h2><ul>
+<li><code>apt -h</code></li>
+<li>更新 <code>sudo apt update</code></li>
+<li>升级 <code>sudo apt upgrade</code></li>
+<li>卸载 <code>sudo apt remove oneko</code></li>
+</ul>
+<h2 id="8-3-其他发行版本？"><a href="#8-3-其他发行版本？" class="headerlink" title="8.3 其他发行版本？"></a>8.3 其他发行版本？</h2><ul>
+<li><p>server版本配置镜像源</p>
+</li>
+<li><p><code>sudo vim /etc/apt/source.list</code></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://archive.ubuntu.com/ubuntu/">http://archive.ubuntu.com/ubuntu/</a></p>
+</li>
+<li><p>修改成国内阿里云库:</p>
+<p><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a></p>
+</li>
+</ul>
+<h2 id="8-4-安装第三方软件案例：例如github开源软件的指导"><a href="#8-4-安装第三方软件案例：例如github开源软件的指导" class="headerlink" title="8.4 安装第三方软件案例：例如github开源软件的指导"></a>8.4 安装第三方软件案例：例如github开源软件的指导</h2><ul>
+<li>详见：<a target="_blank" rel="noopener" href="https://github.com/nvbn/thefuck">https://github.com/nvbn/thefuck</a></li>
+</ul>
+<h2 id="9-1-用户权限的含义和作用"><a href="#9-1-用户权限的含义和作用" class="headerlink" title="9.1 用户权限的含义和作用"></a>9.1 用户权限的含义和作用</h2><ul>
+<li>用户与权限</li>
+<li>不可能让所有人有所有的权限-不安全</li>
+<li>避免被入侵</li>
+<li>用户ID UID</li>
+<li>系统用户UID&lt;500</li>
+<li><code>cat /etc/passwd</code></li>
+<li><code>sudo cat /etc/shadow</code></li>
+</ul>
+<h2 id="9-2-创建、删除、更改用户"><a href="#9-2-创建、删除、更改用户" class="headerlink" title="9.2 创建、删除、更改用户"></a>9.2 创建、删除、更改用户</h2><ul>
+<li>创建<code>sudo useradd user1</code></li>
+<li>删除<code>sudo userdel user1</code></li>
+<li>更改密码<code>sudo passwd user1</code></li>
+<li><code>chage</code> 修改帐号和密码的有效期限</li>
+</ul>
+<h2 id="9-3-group"><a href="#9-3-group" class="headerlink" title="9.3 group"></a>9.3 group</h2><ul>
+<li><p>linux组groups</p>
+<p>目的 ：共享资源的权限</p>
+</li>
+<li><p><code>tail /etc/group</code></p>
+</li>
+<li>ubuntu不允许把所有用户纳入一个组，而是每个用户都有一个单独的组</li>
+<li><code>sudo groupadd groupfrank</code></li>
+<li><code>sudo groupdel groupfrank</code></li>
+</ul>
+<h2 id="9-4-文件、文件夹权限"><a href="#9-4-文件、文件夹权限" class="headerlink" title="9.4 文件、文件夹权限"></a>9.4 文件、文件夹权限</h2><p><code>rwx</code> 文件所有者（Owner）组创始人的权限<br><code>r-x</code> 用户组（Group）组下属成员权限<br><code>r-x</code> 其它用户（Other Users）其它组成员权限</p>
+<p>详见：Linux chmod命令（<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chmod.html">Linux chmod 命令 | 菜鸟教程 (runoob.com)</a>）</p>
+<h2 id="9-5-chmod命令"><a href="#9-5-chmod命令" class="headerlink" title="9.5 chmod命令"></a>9.5 chmod命令</h2><ul>
+<li><code>usermod</code>命令 用于修改用户的基本信息。</li>
+<li><code>usermod</code> 命令不允许你改变正在线上的使用者帐号名称。</li>
+<li>当 <code>usermod</code> 命令用来改变user id，必须确认这名user没在电脑上执行任何程序</li>
+</ul>
+<h2 id="附上：vi-vim键盘图"><a href="#附上：vi-vim键盘图" class="headerlink" title="附上：vi/vim键盘图"></a>附上：vi/vim键盘图</h2><p><img src="https://img-blog.csdnimg.cn/20210510170218321.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ2MjA3MDI0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="10-1-编辑器简单介绍：vim编辑器之神；-emac神之编辑器"><a href="#10-1-编辑器简单介绍：vim编辑器之神；-emac神之编辑器" class="headerlink" title="10.1 编辑器简单介绍：vim编辑器之神； emac神之编辑器"></a>10.1 编辑器简单介绍：vim编辑器之神； emac神之编辑器</h2><ul>
+<li>emacs-神之编辑器</li>
+<li>vim-编辑器之神</li>
+<li>Vim是从 vi发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。和Emacs并列成为类Unix系统用户最喜欢的编辑器</li>
+<li>vi 编辑器通常被简称为 vi，而 vi 又是 visual editor 的简称 。它可以执行输出、删除、查找、替换、块操作等众多文本操作，而且用户可以根据自己的需要对其进行定制，这是其他编辑程序所没有的</li>
+<li>Vim 是 vi 的加强版，比 vi 更容易使用。vi 的命令几乎全部都可以在 vim 上</li>
+</ul>
+<h2 id="10-2-vim的简单使用方式"><a href="#10-2-vim的简单使用方式" class="headerlink" title="10.2 vim的简单使用方式"></a>10.2 vim的简单使用方式</h2><ul>
+<li>安装vim</li>
+<li><code>sudo apt install vim</code></li>
+</ul>
+<h3 id="vim工作模式，国外一般认为两种模式"><a href="#vim工作模式，国外一般认为两种模式" class="headerlink" title="vim工作模式，国外一般认为两种模式"></a>vim工作模式，国外一般认为两种模式</h3><ul>
+<li><p>普通模式(命令操作模式)：操作文件</p>
+</li>
+<li><p>插入模式：编辑</p>
+</li>
+<li>编辑模式到普通模式：ESC</li>
+</ul>
+<h3 id="国内一般认为三种模式"><a href="#国内一般认为三种模式" class="headerlink" title="国内一般认为三种模式"></a>国内一般认为三种模式</h3><ul>
+<li><p>一般命令模式：简称一般模式，也是最先进入的工作模式，输入vi +文件名可直接进入一般命令模式，在此模式下可进行文本内容的查看、复制、删除、替换等功 能。当不能输入相关文本内容</p>
+</li>
+<li><p>编辑模式：在一般模式下，输入 i 或 o 或 a 进入编辑模式，在此模式下可输入文本内 容。当输入 i 时，工作界面如图所示，只有此时状态才可以输入文件内容。输 入完成后，可单击 ESC 键退出编辑状态，进入一般模式</p>
+</li>
+<li><p>命令行模式：在一般模式下，输入：或/或？进入命令行模式，在此模式下可输入相关命令当输入：wq 此时命令表示保存退出命令，单击回车键，自动保存文件，并退 出 vi 编辑器或者单击 ESC 键，重新返回一般模式</p>
+</li>
+</ul>
+<h3 id="三种工作模式关系如图所示"><a href="#三种工作模式关系如图所示" class="headerlink" title="三种工作模式关系如图所示"></a>三种工作模式关系如图所示</h3><p><img src="https://img-blog.csdnimg.cn/2021051019480394.png" alt="在这里插入图片描述"></p>
+<h3 id="vim-编辑器的退出，一般分三种情况"><a href="#vim-编辑器的退出，一般分三种情况" class="headerlink" title="vim 编辑器的退出，一般分三种情况"></a>vim 编辑器的退出，一般分三种情况</h3><ul>
+<li><code>：q</code> 表示不保存退出</li>
+<li><code>：wq</code> 保存退出</li>
+<li><code>：q！</code>强制退出，此时也不保存文件</li>
+</ul>
+<h2 id="10-3-移动光标"><a href="#10-3-移动光标" class="headerlink" title="10.3 移动光标"></a>10.3 移动光标</h2><ul>
+<li>上：<code>k</code></li>
+<li>下：<code>j</code></li>
+<li>左：<code>h</code></li>
+<li>右：<code>l</code></li>
+<li>下一行：<code>b</code></li>
+<li>上一行：<code>w</code></li>
+<li>查找上一处字符：<code>N</code></li>
+<li>查找下一处字符：<code>n</code></li>
+</ul>
+<h2 id="10-4-翻页"><a href="#10-4-翻页" class="headerlink" title="10.4 翻页"></a>10.4 翻页</h2><ul>
+<li>上翻页(BACKWARD)：<code>ctrl+B</code></li>
+<li>下翻页(FORWARD)：<code>ctrl+F</code></li>
+<li>上滚：<code>ctrl+E</code></li>
+<li>下滚：<code>ctrl+Y</code></li>
+<li>移动到最后一行：<code>G 或者shift+g</code></li>
+<li>移动到第一行：<code>gg</code></li>
+</ul>
+<h2 id="10-5-不同方式编辑文本、跳跃单词操作技巧"><a href="#10-5-不同方式编辑文本、跳跃单词操作技巧" class="headerlink" title="10.5 不同方式编辑文本、跳跃单词操作技巧"></a>10.5 不同方式编辑文本、跳跃单词操作技巧</h2><ul>
+<li><code>i</code>光标位置的前面插入</li>
+<li><code>a</code> 光标位置后面的插入</li>
+<li><code>o</code> 直接enter到下一行</li>
+<li><code>x</code> 删除光标所在字符</li>
+<li><code>dd</code> 删除整个一行</li>
+<li><code>u</code> 撤销</li>
+<li><code>dw</code> 移除当前所在光标往后到单词</li>
+<li><code>b</code> 跳跃单词首字母</li>
+<li><code>e</code> 跳跃单词最后</li>
+<li><code>w</code> 跳跃单词 先跳跃到单词首字母，然后跳跃到单词最后</li>
+<li><code>shift+w</code> ;<code>shift+b</code>大跳</li>
+</ul>
+<h2 id="10-6-跳跃行首行尾技巧"><a href="#10-6-跳跃行首行尾技巧" class="headerlink" title="10.6 跳跃行首行尾技巧"></a>10.6 跳跃行首行尾技巧</h2><ul>
+<li><code>shift+6</code> <code>或者0</code> 跳跃到本行到开头</li>
+<li><code>shift+4</code> 跳跃到本行末尾</li>
+</ul>
+<h2 id="10-7-大括号跳跃函数段落技巧"><a href="#10-7-大括号跳跃函数段落技巧" class="headerlink" title="10.7 大括号跳跃函数段落技巧"></a>10.7 大括号跳跃函数段落技巧</h2><ul>
+<li><code>&#123;&#125;</code>跳跃大括号</li>
+</ul>
+<h2 id="10-8-vim复制剪切粘贴"><a href="#10-8-vim复制剪切粘贴" class="headerlink" title="10.8 vim复制剪切粘贴"></a>10.8 vim复制剪切粘贴</h2><ul>
+<li><code>p</code>粘贴</li>
+<li><code>yw</code>复制一个单词</li>
+<li><code>y$</code> 从当前开始往后复制到行末尾</li>
+</ul>
+<h2 id="10-9-Visual可视化模式"><a href="#10-9-Visual可视化模式" class="headerlink" title="10.9 Visual可视化模式"></a>10.9 Visual可视化模式</h2><ul>
+<li><code>v</code> 选择文本</li>
+<li><code>V</code> 选择行</li>
+<li><code>v G</code> 全选</li>
+<li><code>ctrl+v</code>矩阵选择</li>
+<li><code>o</code>切换文本首尾</li>
+<li><code>vaw</code>快速选择单词</li>
+<li><code>vab</code>包括括号</li>
+<li><code>vaB</code>包括大括号</li>
+<li><code>va&lt;</code> 包括尖括号</li>
+</ul>
+<h2 id="10-10-视图模式其它技巧"><a href="#10-10-视图模式其它技巧" class="headerlink" title="10.10 视图模式其它技巧"></a>10.10 视图模式其它技巧</h2><ul>
+<li><code>v shift+&lt;</code>往左缩进</li>
+<li><code>v shift+&gt;</code>往右缩进</li>
+<li><code>shift+~</code>或者<code>shift+u shift+U</code>大小写转换</li>
+</ul>
+<h2 id="10-11-查找和替换"><a href="#10-11-查找和替换" class="headerlink" title="10.11 查找和替换"></a>10.11 查找和替换</h2><ul>
+<li>查找 <code>/</code></li>
+<li>按n查找下一个</li>
+<li><code>:s /const/let/g</code> 一行const替换成let</li>
+<li><code>:%s /const/let/g</code> 所有const替换成let</li>
+<li><code>set number</code> 临时显示行号</li>
+<li><code>:9,15s /const/let/g</code> 9-15行const替换成let</li>
+<li><code>:%s /const/let/gc</code> 有提示的替换</li>
+</ul>
+<h2 id="10-12-vim的基础配置"><a href="#10-12-vim的基础配置" class="headerlink" title="10.12 vim的基础配置"></a>10.12 vim的基础配置</h2><ul>
+<li><code>touch .vimrc</code></li>
+<li><code>vim .vimrc</code></li>
+</ul>
+<p>将以下代码写入.vimrc中</p>
+<pre><code>set syntax=on
+set tabstop=4
+set softtabstop=4
+set number
+set enc=utf-8
+set showmatch
+</code></pre><ul>
+<li>source .vimrc</li>
 </ul>
 
             </div>
@@ -2175,10 +2484,10 @@ sudu ./vmware-install.pl
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/itsneko-opensource-blog.html">
+                <a href="/posts/gift.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/aboutme.JPG" class="responsive-img" alt="关于itsNeko开源博客食用方法">
+                        <img src="/medias/toc-banner/gift.png" class="responsive-img" alt="宝藏句子收藏区">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -2189,30 +2498,27 @@ sudu ./vmware-install.pl
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          关于itsNeko开源博客食用方法
+                          宝藏句子收藏区
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言：本文是关于itsNeko开源博客食用方法详解，感谢使用本开源博客。时间过的好快，还好我都记录下来了。
-
-itsNeko开源介绍
-基于itsNeko开源博客是基于Hexo博客Matery主题魔改，感谢各位对本博客的喜爱与支持。
-作者He
+                            宝藏句子收藏区引入突然有一个想法想把看到的宝藏句子都收集起来，让大家一起🤩
+英文If you reveal your secrets to the wind you should not blame the wind revealing 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/itsNeko%E5%8D%9A%E5%AE%A2%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-category">
-                                    itsNeko博客食用方法
+                            <a href="/categories/%E6%94%B6%E8%97%8F/" class="post-category">
+                                    收藏
                                 </a>
                             
                             
@@ -2222,8 +2528,8 @@ itsNeko开源介绍
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%85%B3%E4%BA%8EitsNeko%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">关于itsNeko开源博客</span>
+                    <a href="/tags/%E5%AE%9D%E8%97%8F%E5%8F%A5%E5%AD%90/">
+                        <span class="chip bg-color">宝藏句子</span>
                     </a>
                     
                 </div>
@@ -2497,7 +2803,7 @@ itsNeko开源介绍
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">8k</span>&nbsp;
+        class="white-color">9k</span>&nbsp;
       
       
       
