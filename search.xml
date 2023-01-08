@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>共勉</title>
+      <link href="/posts/encourage.html"/>
+      <url>/posts/encourage.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="共勉"><a href="#共勉" class="headerlink" title="共勉"></a>共勉</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul><li>技术：尽一切手段维护信息自由</li><li>玄学：尽一切手段促进灵性觉醒</li><li>把妹：尽一切手段维护男性权益</li><li>网赚：尽一切手段打造自动赚钱机器</li><li>文创：尽一切手段维护创作自由</li></ul><h2 id="超级个体技能树"><a href="#超级个体技能树" class="headerlink" title="超级个体技能树"></a>超级个体技能树</h2><ol><li>软件开发和游戏制作</li><li>逆向、密码学和游戏辅助</li><li>ai辅助创作（文字、音频、绘画、视频）</li><li>电商运营</li><li>算法交易</li><li>社会工程及两性心理学</li><li>神秘学</li></ol><h2 id="八大原则"><a href="#八大原则" class="headerlink" title="八大原则"></a>八大原则</h2><ul><li>性价比：在不牺牲体验的情况下，选择最便宜的，就是性价比。允许花时间省钱，只要省下来的钱按照市价高于时薪就能接受。</li><li>冗余：一、预估时间的时候，将极限时间x2就是最终时间（侯世达定律）。二、重要资料做好备份，本地至少两份在不同介质上。</li><li>标准化/流程化/自动化/智能化（IT 四化）：标准化是流程化的前提，流程化有助于外包，它是成功人士的唯一一个习惯。流程化也有助于自动化，即用机器解决问题。程序员的美德，就是能自动绝不手动。一个低级重复行为居然要手动，你好意思称自己是程序员嘛？</li><li>第一性原理：完成一个目标只有少数几个必要条件。只需要专注他们，不要总是有奇奇怪怪的无效假设。不要被乌合之众的观点/做法绑架。</li><li>热插拔：保证自己是个独立完整的系统，与别人合作但不依赖别人。优先磨练自己的议价能力而不是协作能力来增加选择面，保证自己可以随时中止合作关系，防止受限于任何人。遇到问题优先考虑终止合作并换人，而不是改善合作关系。</li><li>专注、迭代、极致：一次只专注于一件事情，允许不足，在多个迭代中反复改进，尽可能达到极致。</li><li>大数据：（1）大数据不仅仅指数字和表格本身，也包含情报，经验，教程，方法论这些非结构化数据。（2）收集数据来遍历每一种可能性，对抗不确定性，避免认知偏差，好处是无需亲身实践直接借助他人经验。（3）注意收集你暂时用不到，但是大家都需要的数据，并且改造你的存储设施来存的下更多数据。</li><li>跨界：用数字化改造一切，程序员的使命就是先消灭其它行业再消灭自身。</li></ul><h2 id="语录"><a href="#语录" class="headerlink" title="语录"></a>语录</h2><blockquote><p>渣男除了渣没其他缺点，舔狗除了舔没其他优点。</p><p>既然我们做什么都会被喷，<strong><strong><strong><em>__</em></strong></strong></strong>。</p><p>搞钱的大原则就是信息不对称</p><p>风口可能有很多个，但是对应的技术可能就那么点，所以，尽早储备一个通用的技术栈。</p><p>资本家为了奴役你给你挖了很多坑，比如消费主义，比如训练你当螺丝钉，还有最重要的就是榨干你的空闲时间。</p><p>打工的钱都是棺材费，自己从市场赚的才叫钱。尽早摆脱打工人的困境比啥都重要。</p><p>一旦你的成本很低，时间就是你的朋友，否则就是你的敌人。这好比一颗树，只要根不死，总能活过来。</p><p>在体验一样的情况下，选成本低的，但不要为此牺牲体验</p><p>如果花在开源上的时间和刷牙洗脸一样，那么可持续性就不是问题。</p><p>宣传应当是你的产品的不可分割的一部分，它和内容同等重要，并且可以借助技术做得更好。五分内容五分宣传，这就是五五开定律。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使Windows  Terminal变得更易用</title>
+      <link href="/posts/wt.html"/>
+      <url>/posts/wt.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使Windows-Terminal变得更易用"><a href="#使Windows-Terminal变得更易用" class="headerlink" title="使Windows  Terminal变得更易用"></a>使Windows  Terminal变得更易用</h1><h2 id="1-个性化美化"><a href="#1-个性化美化" class="headerlink" title="1.个性化美化"></a>1.个性化美化</h2><p>在wt(Windows  Terminal)设置面板中打开json文件，然后找到<code>defaults</code>关键字并在后面花括号里追加以下代码：</p><pre><code>亚克力毛玻璃效果&quot;useAcrylic&quot;: true, 亚克力毛玻璃效果透明度&quot;acrylicOpacity&quot;: 0.2,背景壁纸&quot;backgroundImage&quot;: &quot;C:/Users/YangChentao/Pictures/Saved Pictures/wt.jpeg&quot;, 背景壁纸透明度&quot;backgroundImageOpacity&quot;: 0.4,&quot;fontFace&quot;: &quot;JetBrainsMono Nerd Font Mono&quot;,&quot;fontSize&quot;: 14</code></pre><h2 id="2-oh-my-push"><a href="#2-oh-my-push" class="headerlink" title="2.oh-my-push"></a>2.oh-my-push</h2><p>微软商店下载oh-my-push</p><p>下载安装完成后会自动配置；</p><p>此时在wt里输入<code>code $PROFILE</code>用vscode打开该配置文件，打开后添加以下代码：</p><pre><code>oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\montys.omp.json | Invoke-Expressioncls</code></pre><p><code>cls</code>为清屏启动项。</p><h2 id="3-安装Nerd字体解决oh-my-push字体图标不显示"><a href="#3-安装Nerd字体解决oh-my-push字体图标不显示" class="headerlink" title="3.安装Nerd字体解决oh-my-push字体图标不显示"></a>3.安装Nerd字体解决oh-my-push字体图标不显示</h2><p>推荐JetBrains Mono Medium Nerd Font Complete Mono 字体</p><p>下载安装并在wt配置文件中更改</p><h2 id="4-解决ssh连接长时间不操作自动断开"><a href="#4-解决ssh连接长时间不操作自动断开" class="headerlink" title="4.解决ssh连接长时间不操作自动断开"></a>4.解决ssh连接长时间不操作自动断开</h2><p>在C:\Users\用户名\ .ssh\config 文件中添加如下代码（没有这个文件自己建一个）：</p><pre><code>Host *  ServerAliveInterval 40</code></pre><h2 id="5-最终效果图"><a href="#5-最终效果图" class="headerlink" title="5.最终效果图"></a>5.最终效果图</h2><p><img src="https://pic.imgdb.cn/item/63bad038be43e0d30e7781e2.png" alt="最终效果图"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 美化效率 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>步入Linux的现代方法</title>
       <link href="/posts/linux.html"/>
       <url>/posts/linux.html</url>
