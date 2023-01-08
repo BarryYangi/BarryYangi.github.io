@@ -6,7 +6,7 @@
   <link href="https://www.smitten.top/atom.xml" rel="self"/>
   
   <link href="https://www.smitten.top/"/>
-  <updated>2023-01-08T14:18:15.466Z</updated>
+  <updated>2023-01-08T13:42:30.000Z</updated>
   <id>https://www.smitten.top/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>使Windows  Terminal变得更易用</title>
-    <link href="https://www.smitten.top/posts/wt.html"/>
-    <id>https://www.smitten.top/posts/wt.html</id>
-    <published>2023-01-08T13:38:14.000Z</published>
-    <updated>2023-01-08T14:18:15.466Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="https://www.smitten.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="美化效率" scheme="https://www.smitten.top/tags/%E7%BE%8E%E5%8C%96%E6%95%88%E7%8E%87/"/>
-    
-  </entry>
   
   <entry>
     <title>共勉</title>
@@ -63,6 +38,31 @@
     
     
     <category term="随笔" scheme="https://www.smitten.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使Windows  Terminal变得更易用</title>
+    <link href="https://www.smitten.top/posts/wt.html"/>
+    <id>https://www.smitten.top/posts/wt.html</id>
+    <published>2023-01-08T13:38:14.000Z</published>
+    <updated>2023-01-08T14:18:15.466Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://www.smitten.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="美化效率" scheme="https://www.smitten.top/tags/%E7%BE%8E%E5%8C%96%E6%95%88%E7%8E%87/"/>
     
   </entry>
   
