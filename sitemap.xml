@@ -58,14 +58,14 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/books/index.html</loc>
+    <loc>https://www.smitten.top/about/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.smitten.top/about/index.html</loc>
+    <loc>https://www.smitten.top/books/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -93,13 +93,6 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/count/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.smitten.top/essay/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
@@ -114,7 +107,21 @@
   </url>
   
   <url>
+    <loc>https://www.smitten.top/count/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.smitten.top/friends/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/gallery/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -135,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/gallery/index.html</loc>
+    <loc>https://www.smitten.top/qingdan/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -149,14 +156,7 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/qingdan/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/tags/index.html</loc>
+    <loc>https://www.smitten.top/record/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -170,7 +170,7 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/record/index.html</loc>
+    <loc>https://www.smitten.top/tags/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
