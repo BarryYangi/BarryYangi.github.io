@@ -178,7 +178,7 @@ $(function () {
 
 // 模仿知乎卡片样式的超链接
 $(function () {
-    NProgress.done();
+    // NProgress.done(); 报错不知道为啥
     //增加 LinkCard 的 js 代码
     var LinkCards=document.getElementsByClassName('LinkCard');
     if(LinkCards.length != 0){
@@ -237,4 +237,5 @@ function switchSpringThemes() {
 };
 // 网站主题切换模式结束
  
-console.log("恭喜你喜提彩蛋！欢迎常来本博客逛逛~");
+console.log("\n _     _   _                     __                             __    _      \n' )   /   //                    /  )                   o       /  )  //      \n / / /_  // _. __ ______  _    /--<  __.  __  __  __  ,'_     /--<  // __ _, \n(_(_/</_</_(__(_)/ / / <_</_  /___/_(_/|_/ (_/ (_/ (_/_/_)_  /___/_</_(_)(_)_\n                                                    /                     /| \n                                                   '                     |/  \n");
+console.log("你真TM是个天才，竟然能发现小彩蛋！(●'◡'●)");

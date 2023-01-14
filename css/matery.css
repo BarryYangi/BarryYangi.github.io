@@ -469,7 +469,7 @@ header .side-nav .mobile-head .logo-desc {
 }
 @font-face {
     font-family:'MV Boli';
-    src:url('../font1/mvboli.ttf');
+    src:url('../fonts/mvboli.ttf');
 }
 
 header .side-nav .menu-list li {
@@ -2578,7 +2578,7 @@ nav ul li:hover a[href="/record"] span,
 nav ul li:hover a[href="/status"] span,
 nav ul li:hover a[href="/project"] span,
 nav ul li:hover a[href="/friendcircle"] span,
-nav ul li:hover a[href="https://nekodeng.github.io/running_page/"] span
+nav ul li:hover a[href="https://barryi.gitee.io/"] span
 {
     border: none!important;
 }
@@ -2609,7 +2609,7 @@ nav ul li:hover a[href="/record"] span:hover,
 nav ul li:hover a[href="/status"] span:hover,
 nav ul li:hover a[href="/project"] span:hover,
 nav ul li:hover a[href="/friendcircle"] span:hover,
-nav ul li:hover a[href="https://nekodeng.github.io/running_page/"] span:hover
+nav ul li:hover a[href="https://barryi.gitee.io/"] span:hover
 {
     border-bottom: 1px solid #fff!important;
 }
