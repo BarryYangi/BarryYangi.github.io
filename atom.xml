@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Barryの个人博客</title>
-  <icon>https://www.smitten.top/medias/favicon.webp</icon>
+  <icon>https://www.smitten.top/medias/blog.png</icon>
   
   <link href="https://www.smitten.top/atom.xml" rel="self"/>
   
