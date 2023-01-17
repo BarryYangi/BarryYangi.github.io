@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>共勉</title>
-      <link href="/posts/encourage.html"/>
-      <url>/posts/encourage.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="共勉"><a href="#共勉" class="headerlink" title="共勉"></a>共勉</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul><li>技术：尽一切手段维护信息自由</li><li>玄学：尽一切手段促进灵性觉醒</li><li>把妹：尽一切手段维护男性权益</li><li>网赚：尽一切手段打造自动赚钱机器</li><li>文创：尽一切手段维护创作自由</li></ul><h2 id="超级个体技能树"><a href="#超级个体技能树" class="headerlink" title="超级个体技能树"></a>超级个体技能树</h2><ol><li>软件开发和游戏制作</li><li>逆向、密码学和游戏辅助</li><li>ai辅助创作（文字、音频、绘画、视频）</li><li>电商运营</li><li>算法交易</li><li>社会工程及两性心理学</li><li>神秘学</li></ol><h2 id="八大原则"><a href="#八大原则" class="headerlink" title="八大原则"></a>八大原则</h2><ul><li>性价比：在不牺牲体验的情况下，选择最便宜的，就是性价比。允许花时间省钱，只要省下来的钱按照市价高于时薪就能接受。</li><li>冗余：一、预估时间的时候，将极限时间x2就是最终时间（侯世达定律）。二、重要资料做好备份，本地至少两份在不同介质上。</li><li>标准化/流程化/自动化/智能化（IT 四化）：标准化是流程化的前提，流程化有助于外包，它是成功人士的唯一一个习惯。流程化也有助于自动化，即用机器解决问题。程序员的美德，就是能自动绝不手动。一个低级重复行为居然要手动，你好意思称自己是程序员嘛？</li><li>第一性原理：完成一个目标只有少数几个必要条件。只需要专注他们，不要总是有奇奇怪怪的无效假设。不要被乌合之众的观点/做法绑架。</li><li>热插拔：保证自己是个独立完整的系统，与别人合作但不依赖别人。优先磨练自己的议价能力而不是协作能力来增加选择面，保证自己可以随时中止合作关系，防止受限于任何人。遇到问题优先考虑终止合作并换人，而不是改善合作关系。</li><li>专注、迭代、极致：一次只专注于一件事情，允许不足，在多个迭代中反复改进，尽可能达到极致。</li><li>大数据：（1）大数据不仅仅指数字和表格本身，也包含情报，经验，教程，方法论这些非结构化数据。（2）收集数据来遍历每一种可能性，对抗不确定性，避免认知偏差，好处是无需亲身实践直接借助他人经验。（3）注意收集你暂时用不到，但是大家都需要的数据，并且改造你的存储设施来存的下更多数据。</li><li>跨界：用数字化改造一切，程序员的使命就是先消灭其它行业再消灭自身。</li></ul><h2 id="语录"><a href="#语录" class="headerlink" title="语录"></a>语录</h2><blockquote><p>渣男除了渣没其他缺点，舔狗除了舔没其他优点。</p><p>既然我们做什么都会被喷，<strong><strong><strong><em>__</em></strong></strong></strong>。</p><p>搞钱的大原则就是信息不对称</p><p>风口可能有很多个，但是对应的技术可能就那么点，所以，尽早储备一个通用的技术栈。</p><p>资本家为了奴役你给你挖了很多坑，比如消费主义，比如训练你当螺丝钉，还有最重要的就是榨干你的空闲时间。</p><p>打工的钱都是棺材费，自己从市场赚的才叫钱。尽早摆脱打工人的困境比啥都重要。</p><p>一旦你的成本很低，时间就是你的朋友，否则就是你的敌人。这好比一颗树，只要根不死，总能活过来。</p><p>在体验一样的情况下，选成本低的，但不要为此牺牲体验</p><p>如果花在开源上的时间和刷牙洗脸一样，那么可持续性就不是问题。</p><p>宣传应当是你的产品的不可分割的一部分，它和内容同等重要，并且可以借助技术做得更好。五分内容五分宣传，这就是五五开定律。</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 随笔 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>使Windows  Terminal变得更易用</title>
       <link href="/posts/wt.html"/>
       <url>/posts/wt.html</url>
@@ -46,6 +21,31 @@
         <tags>
             
             <tag> 美化效率 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>共勉</title>
+      <link href="/posts/encourage.html"/>
+      <url>/posts/encourage.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="共勉"><a href="#共勉" class="headerlink" title="共勉"></a>共勉</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul><li>技术：尽一切手段维护信息自由</li><li>玄学：尽一切手段促进灵性觉醒</li><li>把妹：尽一切手段维护男性权益</li><li>网赚：尽一切手段打造自动赚钱机器</li><li>文创：尽一切手段维护创作自由</li></ul><h2 id="超级个体技能树"><a href="#超级个体技能树" class="headerlink" title="超级个体技能树"></a>超级个体技能树</h2><ol><li>软件开发和游戏制作</li><li>逆向、密码学和游戏辅助</li><li>ai辅助创作（文字、音频、绘画、视频）</li><li>电商运营</li><li>算法交易</li><li>社会工程及两性心理学</li><li>神秘学</li></ol><h2 id="八大原则"><a href="#八大原则" class="headerlink" title="八大原则"></a>八大原则</h2><ul><li>性价比：在不牺牲体验的情况下，选择最便宜的，就是性价比。允许花时间省钱，只要省下来的钱按照市价高于时薪就能接受。</li><li>冗余：一、预估时间的时候，将极限时间x2就是最终时间（侯世达定律）。二、重要资料做好备份，本地至少两份在不同介质上。</li><li>标准化/流程化/自动化/智能化（IT 四化）：标准化是流程化的前提，流程化有助于外包，它是成功人士的唯一一个习惯。流程化也有助于自动化，即用机器解决问题。程序员的美德，就是能自动绝不手动。一个低级重复行为居然要手动，你好意思称自己是程序员嘛？</li><li>第一性原理：完成一个目标只有少数几个必要条件。只需要专注他们，不要总是有奇奇怪怪的无效假设。不要被乌合之众的观点/做法绑架。</li><li>热插拔：保证自己是个独立完整的系统，与别人合作但不依赖别人。优先磨练自己的议价能力而不是协作能力来增加选择面，保证自己可以随时中止合作关系，防止受限于任何人。遇到问题优先考虑终止合作并换人，而不是改善合作关系。</li><li>专注、迭代、极致：一次只专注于一件事情，允许不足，在多个迭代中反复改进，尽可能达到极致。</li><li>大数据：（1）大数据不仅仅指数字和表格本身，也包含情报，经验，教程，方法论这些非结构化数据。（2）收集数据来遍历每一种可能性，对抗不确定性，避免认知偏差，好处是无需亲身实践直接借助他人经验。（3）注意收集你暂时用不到，但是大家都需要的数据，并且改造你的存储设施来存的下更多数据。</li><li>跨界：用数字化改造一切，程序员的使命就是先消灭其它行业再消灭自身。</li></ul><h2 id="语录"><a href="#语录" class="headerlink" title="语录"></a>语录</h2><blockquote><p>渣男除了渣没其他缺点，舔狗除了舔没其他优点。</p><p>既然我们做什么都会被喷，<strong><strong><strong><em>__</em></strong></strong></strong>。</p><p>搞钱的大原则就是信息不对称</p><p>风口可能有很多个，但是对应的技术可能就那么点，所以，尽早储备一个通用的技术栈。</p><p>资本家为了奴役你给你挖了很多坑，比如消费主义，比如训练你当螺丝钉，还有最重要的就是榨干你的空闲时间。</p><p>打工的钱都是棺材费，自己从市场赚的才叫钱。尽早摆脱打工人的困境比啥都重要。</p><p>一旦你的成本很低，时间就是你的朋友，否则就是你的敌人。这好比一颗树，只要根不死，总能活过来。</p><p>在体验一样的情况下，选成本低的，但不要为此牺牲体验</p><p>如果花在开源上的时间和刷牙洗脸一样，那么可持续性就不是问题。</p><p>宣传应当是你的产品的不可分割的一部分，它和内容同等重要，并且可以借助技术做得更好。五分内容五分宣传，这就是五五开定律。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
             
         </tags>
       
@@ -79,31 +79,6 @@
     
     
     <entry>
-      <title>宝藏句子收藏区</title>
-      <link href="/posts/gift.html"/>
-      <url>/posts/gift.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="宝藏句子收藏区"><a href="#宝藏句子收藏区" class="headerlink" title="宝藏句子收藏区"></a>宝藏句子收藏区</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>突然有一个想法想把看到的宝藏句子都收集起来，让大家一起🤩</p><h2 id="英文"><a href="#英文" class="headerlink" title="英文"></a>英文</h2><p>If you reveal your secrets to the wind you should not blame the wind revealing them to the trees. 要是你把你的秘密告诉了风，那就别怪风把秘密带给树。——纪伯伦</p><p>I love three things in the world: the sun, the moon and you. The sun for day, the moon for night and you forever. 吾独爱世间三物: 昼之日，夜之月，汝之永恒。——《暮光之城》</p><p>Had i not see the sun, i could have borne the shade. 我本可以忍受黑暗，如果我不曾见过太阳。——艾米丽 · 狄金森</p><p>In me the tiger sniffs the rose. 心有猛虎，细嗅蔷薇。——西格里夫 · 萨松</p><p>We laughed and kept saying “see u soon”,but inside we both knew we’d never see each other again. 我们笑着说再见，却深知再见遥遥无期。——《海上钢琴师》</p><p>We are all in the gutter, but some of us are looking at the stars. 我们都生活在阴沟里，但仍有人仰望星空。——奥斯卡 · 王尔德</p><p>It does not do well to depend on dreams and forget to live,remember that. 记住不要依赖梦想而忘记生活。——J.K 罗琳</p><p>Sometimes it’s hard to accept the truth because the lies sound so much better. 真相有时之所以难以被接受，是因为谎言听起来美好多了。——《达 · 芬奇》</p><p>Life is like a box of chocolates, you never know what you are going to get. 生活就像一盒巧克力，你永远不知道下一个是什么。——《阿甘正传》</p><p>The longest day has an end. 最难过的日子也有尽头。——贺韦尔</p><p>To be or not to be, that is the question. 活着还是死去，这是一个问题。——《哈姆雷特》</p><p>I can’t control their fear, only my own. 我不能掌控他人的恐惧，只能掌控自己的恐惧。——《美国队长: 内战》</p><p>Sometimes accompanied ,sometimes alone, stay awesome all the time. 聚散终有时，潇洒走一回。——《纽约纽约》</p><p>There are no easy answers , there’s only living through the questions. 生活从来没有容易的答案，只有去克服重重问题。——伊丽莎白 · 乔治</p><h2 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h2><ol><li>像每一滴酒回不了最初的葡萄，我回不到年少。</li><li>让懂的人懂，让不懂的人不懂。让世界是世界，我甘心是我的茧。</li><li>生命如浩瀚汪洋，人潮起落之中，我们难免会撞礁搁浅，会掉进诡谲的漩涡，会困在迷洞，会滚了一身刺人的沙粒，苦不堪言……无论如何，告诉自己：也许我就是带珠的蚌。</li><li>叔本华不得不低叹：“人生实如钟摆，在痛苦与倦怠之间摆动。”谁逃得过时间之蹄而不苍老?谁躲得过现实的棰而不折骨?没有。没有。</li><li>生活是一个刽子手，刀刃上没有明天。</li></ol><h2 id="精选短句"><a href="#精选短句" class="headerlink" title="精选短句"></a>精选短句</h2><ul><li><p>枕边书，怀中猫，意中人。</p></li><li><p>在等雪花、圣诞树、新年烟火、和更好的你。</p></li><li><p>喜欢是别的也行 爱是死磕。</p></li><li><p>可以回头看 但不要回头走 因为 逆行是全责。</p></li><li><p>解不开心结就把它变成蝴蝶结。</p></li><li><p>我想做一个能在你的葬礼上描述你一声的人.</p></li><li><p>真爱出现的第一征兆，在男孩身上就是胆怯。</p></li><li><p>九万七，世间欢喜十万，你独占九万七，剩余弱水三千，我皆不动心。</p></li><li><p>所以万家灯火，有没有灯为你而开？</p></li><li><p>红尘万物，你即是救赎。</p></li><li><p>我好喜欢那句“秀外慧中 好是喜欢”</p></li><li><p>多年以前，我的矫情浪费了我的天时地利，直到今天已经统统过期。</p></li><li><p>在爱情上，我只愿你永远不会有失去第一次爱过的人的那种感觉。</p></li><li><p>浅尝辄止,过犹不及。</p></li><li><p>理智的状态是有节制的热爱。</p></li><li><p>我很擅长约会，但不擅长维持一段长久的关系。</p></li><li><p>世间万物皆苦，你明目张胆的偏爱就是救赎。</p></li><li><p>白天有很多好东西，但是那里没有你。</p></li><li><p>世界灿烂盛大，欢迎回家。</p></li><li><p>暴躁且甜，温柔且善。</p></li><li><p>岁岁常欢愉,万事皆胜意。</p></li><li><p>如果夜里不能吃东西，那冰箱为什么会有灯呢？</p></li><li><p>“一块玻璃准备跳楼你猜他会说什么”</p><p>“什么呢”</p><p>“晚安 ，我碎咯”</p></li><li><p>我往宇宙撒了把盐，</p><p>如果三点前还睡不着</p><p>今晚就吃盐焗小星球～～</p></li><li><p>月亮今晚不营业，所以我来说晚安</p></li><li><p>你知道为什么月亮两头尖尖中间弯嘛？</p><p>因为锋芒对外 温柔对你。</p></li><li><p>我能抵抗一切，除了诱惑。 王尔德</p></li><li><p>你当温柔，却又力量。</p></li><li><p>想念，像十除以三。</p></li><li><p>从来如此，便对么？ ——————鲁迅狂人日记</p></li><li><p>撒娇是察觉到了被偏爱的可能。</p></li><li><p>请保持网络畅通 及时接受我的想念</p></li><li><p>温柔仅供参考，一切以生气时间为准。</p></li><li><p>对你收起所有的怦然心动，然后保持距离。</p></li><li><p>只可私藏，不准共享。</p></li><li><p>世界欠你的温柔，我给。</p></li><li><p>不辜负自己，不将就生活。你的存在，配的上世间所有的最好。</p></li><li><p>在我面前你可以不勇敢。</p></li><li><p>如果我写不出温柔漂亮的句子，你能不能直接看一下我温柔的心。</p></li><li><p>遇见了温柔的人，所以想温柔待人。</p></li><li><p>原来躲起来的星星也在努力发光啊。</p></li><li><p>你是我明目张胆的偏袒众所周知的私心。</p></li><li><p>我一扑向你，就感到无限温柔啊。</p></li><li><p>未曾谋面的也终将会相遇。</p></li><li><p>温柔的绕道</p></li><li><p>小姐是我漫漫余生里义无反顾的梦想。</p></li><li><p>你是我无限努力的理由</p></li><li><p>贩卖日落</p></li><li><p>陪伴本身就是这个世界上最了不起的安慰方式。</p></li><li><p>我会在每个有意义的时刻，远隔山海与你共存。</p></li><li><p>No one and you.无人及你</p></li><li><p>我是此间少年郎，你是天上明月光。</p></li><li><p>我与我周旋久，宁作我!</p></li><li><p>一切尽意，百事从欢。</p></li><li><p>心之何如，有似万丈迷津，横亘千里，其中并无舟子可以渡人，除了自渡，他人爱莫能助。——三毛</p></li><li><p>一约既定，万山无阻。</p></li><li><p>一如既往，万事胜意。</p></li><li><p>山高路远，一定再见。</p></li><li><p>忠于自己，热爱生活。</p></li><li><p>寒来暑往，秋收冬藏。</p></li><li><p>我有我自己的救赎，一往无前独自发光。</p></li><li><p>一个拥抱可以释放200%的压力。</p></li><li><p>满天星光沿途散播，长路尽头总有灯火。</p></li><li><p>龙应该藏在云里，你应该藏在心里。</p></li><li><p>大地丰盈，人间并不寂寞。</p></li><li><p>万物更新，旧疾当愈。</p></li><li><p>苦尽甘来的那一天，山河星月，都做贺礼。</p></li><li><p>不要因为看到别人发光，就承认自己的暗淡。别灰心，每个人都有属于自己的闪光时刻。</p></li><li><p>直到现在，我依然没有长大。我控制不了我的情绪。依然爱说反话，还是遇见挫折，就想逃走的小孩。</p></li><li><p>你是调色板上最温柔的色调。</p></li><li><p>你很可爱,不是cute,是couldbeloved.</p></li><li><p>你返航的轨迹，是所有等待的意义。</p></li><li><p>因为太想保护你，忘了你也特别勇敢。</p></li><li><p>这个世界上全是别人，只有一个自己，所以找到自己才是最重要的。</p></li><li><p>分享到朋友圈的歌，是我递给你的另一个耳机。</p></li><li><p>有时候生活给你苦难，其实是在铺垫浪漫。</p></li><li><p>你所有的努力，都有迹可循。</p></li><li><p>及时清醒，也要事事甘心。</p></li><li><p>不要被结果操控，原本因为梦想而灿烂的心。</p></li><li><p>沉默不是情绪，只是觉得说出来没意义。</p></li><li><p>开始期待冬天了，手上的热奶茶，加上沿街吹得冻人的风，还有结伴玩耍的快乐和厚衣服下裹藏着的热爱生活的心。</p></li><li><p>谁能凭爱意，将富士山私有。</p></li><li><p>我从此不敢看观音。</p></li><li><p>落俗不可避免，浪漫至死不渝。</p></li><li><p>一个能够升起月亮的身体，必然驮住了无数次的日落。</p></li><li><p>女孩子，有一个特点，需要浪漫，记得满足。</p></li></ul><p>陆续更新中~</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 收藏 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 宝藏句子 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>所有过往，皆为序章</title>
       <link href="/posts/essay.html"/>
       <url>/posts/essay.html</url>
@@ -121,6 +96,31 @@
         <tags>
             
             <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>宝藏句子收藏区</title>
+      <link href="/posts/gift.html"/>
+      <url>/posts/gift.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="宝藏句子收藏区"><a href="#宝藏句子收藏区" class="headerlink" title="宝藏句子收藏区"></a>宝藏句子收藏区</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>突然有一个想法想把看到的宝藏句子都收集起来，让大家一起🤩</p><h2 id="英文"><a href="#英文" class="headerlink" title="英文"></a>英文</h2><p>If you reveal your secrets to the wind you should not blame the wind revealing them to the trees. 要是你把你的秘密告诉了风，那就别怪风把秘密带给树。——纪伯伦</p><p>I love three things in the world: the sun, the moon and you. The sun for day, the moon for night and you forever. 吾独爱世间三物: 昼之日，夜之月，汝之永恒。——《暮光之城》</p><p>Had i not see the sun, i could have borne the shade. 我本可以忍受黑暗，如果我不曾见过太阳。——艾米丽 · 狄金森</p><p>In me the tiger sniffs the rose. 心有猛虎，细嗅蔷薇。——西格里夫 · 萨松</p><p>We laughed and kept saying “see u soon”,but inside we both knew we’d never see each other again. 我们笑着说再见，却深知再见遥遥无期。——《海上钢琴师》</p><p>We are all in the gutter, but some of us are looking at the stars. 我们都生活在阴沟里，但仍有人仰望星空。——奥斯卡 · 王尔德</p><p>It does not do well to depend on dreams and forget to live,remember that. 记住不要依赖梦想而忘记生活。——J.K 罗琳</p><p>Sometimes it’s hard to accept the truth because the lies sound so much better. 真相有时之所以难以被接受，是因为谎言听起来美好多了。——《达 · 芬奇》</p><p>Life is like a box of chocolates, you never know what you are going to get. 生活就像一盒巧克力，你永远不知道下一个是什么。——《阿甘正传》</p><p>The longest day has an end. 最难过的日子也有尽头。——贺韦尔</p><p>To be or not to be, that is the question. 活着还是死去，这是一个问题。——《哈姆雷特》</p><p>I can’t control their fear, only my own. 我不能掌控他人的恐惧，只能掌控自己的恐惧。——《美国队长: 内战》</p><p>Sometimes accompanied ,sometimes alone, stay awesome all the time. 聚散终有时，潇洒走一回。——《纽约纽约》</p><p>There are no easy answers , there’s only living through the questions. 生活从来没有容易的答案，只有去克服重重问题。——伊丽莎白 · 乔治</p><h2 id="中文"><a href="#中文" class="headerlink" title="中文"></a>中文</h2><ol><li>像每一滴酒回不了最初的葡萄，我回不到年少。</li><li>让懂的人懂，让不懂的人不懂。让世界是世界，我甘心是我的茧。</li><li>生命如浩瀚汪洋，人潮起落之中，我们难免会撞礁搁浅，会掉进诡谲的漩涡，会困在迷洞，会滚了一身刺人的沙粒，苦不堪言……无论如何，告诉自己：也许我就是带珠的蚌。</li><li>叔本华不得不低叹：“人生实如钟摆，在痛苦与倦怠之间摆动。”谁逃得过时间之蹄而不苍老?谁躲得过现实的棰而不折骨?没有。没有。</li><li>生活是一个刽子手，刀刃上没有明天。</li></ol><h2 id="精选短句"><a href="#精选短句" class="headerlink" title="精选短句"></a>精选短句</h2><ul><li><p>枕边书，怀中猫，意中人。</p></li><li><p>在等雪花、圣诞树、新年烟火、和更好的你。</p></li><li><p>喜欢是别的也行 爱是死磕。</p></li><li><p>可以回头看 但不要回头走 因为 逆行是全责。</p></li><li><p>解不开心结就把它变成蝴蝶结。</p></li><li><p>我想做一个能在你的葬礼上描述你一声的人.</p></li><li><p>真爱出现的第一征兆，在男孩身上就是胆怯。</p></li><li><p>九万七，世间欢喜十万，你独占九万七，剩余弱水三千，我皆不动心。</p></li><li><p>所以万家灯火，有没有灯为你而开？</p></li><li><p>红尘万物，你即是救赎。</p></li><li><p>我好喜欢那句“秀外慧中 好是喜欢”</p></li><li><p>多年以前，我的矫情浪费了我的天时地利，直到今天已经统统过期。</p></li><li><p>在爱情上，我只愿你永远不会有失去第一次爱过的人的那种感觉。</p></li><li><p>浅尝辄止,过犹不及。</p></li><li><p>理智的状态是有节制的热爱。</p></li><li><p>我很擅长约会，但不擅长维持一段长久的关系。</p></li><li><p>世间万物皆苦，你明目张胆的偏爱就是救赎。</p></li><li><p>白天有很多好东西，但是那里没有你。</p></li><li><p>世界灿烂盛大，欢迎回家。</p></li><li><p>暴躁且甜，温柔且善。</p></li><li><p>岁岁常欢愉,万事皆胜意。</p></li><li><p>如果夜里不能吃东西，那冰箱为什么会有灯呢？</p></li><li><p>“一块玻璃准备跳楼你猜他会说什么”</p><p>“什么呢”</p><p>“晚安 ，我碎咯”</p></li><li><p>我往宇宙撒了把盐，</p><p>如果三点前还睡不着</p><p>今晚就吃盐焗小星球～～</p></li><li><p>月亮今晚不营业，所以我来说晚安</p></li><li><p>你知道为什么月亮两头尖尖中间弯嘛？</p><p>因为锋芒对外 温柔对你。</p></li><li><p>我能抵抗一切，除了诱惑。 王尔德</p></li><li><p>你当温柔，却又力量。</p></li><li><p>想念，像十除以三。</p></li><li><p>从来如此，便对么？ ——————鲁迅狂人日记</p></li><li><p>撒娇是察觉到了被偏爱的可能。</p></li><li><p>请保持网络畅通 及时接受我的想念</p></li><li><p>温柔仅供参考，一切以生气时间为准。</p></li><li><p>对你收起所有的怦然心动，然后保持距离。</p></li><li><p>只可私藏，不准共享。</p></li><li><p>世界欠你的温柔，我给。</p></li><li><p>不辜负自己，不将就生活。你的存在，配的上世间所有的最好。</p></li><li><p>在我面前你可以不勇敢。</p></li><li><p>如果我写不出温柔漂亮的句子，你能不能直接看一下我温柔的心。</p></li><li><p>遇见了温柔的人，所以想温柔待人。</p></li><li><p>原来躲起来的星星也在努力发光啊。</p></li><li><p>你是我明目张胆的偏袒众所周知的私心。</p></li><li><p>我一扑向你，就感到无限温柔啊。</p></li><li><p>未曾谋面的也终将会相遇。</p></li><li><p>温柔的绕道</p></li><li><p>小姐是我漫漫余生里义无反顾的梦想。</p></li><li><p>你是我无限努力的理由</p></li><li><p>贩卖日落</p></li><li><p>陪伴本身就是这个世界上最了不起的安慰方式。</p></li><li><p>我会在每个有意义的时刻，远隔山海与你共存。</p></li><li><p>No one and you.无人及你</p></li><li><p>我是此间少年郎，你是天上明月光。</p></li><li><p>我与我周旋久，宁作我!</p></li><li><p>一切尽意，百事从欢。</p></li><li><p>心之何如，有似万丈迷津，横亘千里，其中并无舟子可以渡人，除了自渡，他人爱莫能助。——三毛</p></li><li><p>一约既定，万山无阻。</p></li><li><p>一如既往，万事胜意。</p></li><li><p>山高路远，一定再见。</p></li><li><p>忠于自己，热爱生活。</p></li><li><p>寒来暑往，秋收冬藏。</p></li><li><p>我有我自己的救赎，一往无前独自发光。</p></li><li><p>一个拥抱可以释放200%的压力。</p></li><li><p>满天星光沿途散播，长路尽头总有灯火。</p></li><li><p>龙应该藏在云里，你应该藏在心里。</p></li><li><p>大地丰盈，人间并不寂寞。</p></li><li><p>万物更新，旧疾当愈。</p></li><li><p>苦尽甘来的那一天，山河星月，都做贺礼。</p></li><li><p>不要因为看到别人发光，就承认自己的暗淡。别灰心，每个人都有属于自己的闪光时刻。</p></li><li><p>直到现在，我依然没有长大。我控制不了我的情绪。依然爱说反话，还是遇见挫折，就想逃走的小孩。</p></li><li><p>你是调色板上最温柔的色调。</p></li><li><p>你很可爱,不是cute,是couldbeloved.</p></li><li><p>你返航的轨迹，是所有等待的意义。</p></li><li><p>因为太想保护你，忘了你也特别勇敢。</p></li><li><p>这个世界上全是别人，只有一个自己，所以找到自己才是最重要的。</p></li><li><p>分享到朋友圈的歌，是我递给你的另一个耳机。</p></li><li><p>有时候生活给你苦难，其实是在铺垫浪漫。</p></li><li><p>你所有的努力，都有迹可循。</p></li><li><p>及时清醒，也要事事甘心。</p></li><li><p>不要被结果操控，原本因为梦想而灿烂的心。</p></li><li><p>沉默不是情绪，只是觉得说出来没意义。</p></li><li><p>开始期待冬天了，手上的热奶茶，加上沿街吹得冻人的风，还有结伴玩耍的快乐和厚衣服下裹藏着的热爱生活的心。</p></li><li><p>谁能凭爱意，将富士山私有。</p></li><li><p>我从此不敢看观音。</p></li><li><p>落俗不可避免，浪漫至死不渝。</p></li><li><p>一个能够升起月亮的身体，必然驮住了无数次的日落。</p></li><li><p>女孩子，有一个特点，需要浪漫，记得满足。</p></li></ul><p>陆续更新中~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 收藏 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 宝藏句子 </tag>
             
         </tags>
       
