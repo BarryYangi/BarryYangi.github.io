@@ -2578,8 +2578,8 @@ nav ul li:hover a[href="/record"] span,
 nav ul li:hover a[href="/status"] span,
 nav ul li:hover a[href="/project"] span,
 nav ul li:hover a[href="/friendcircle"] span,
-nav ul li:hover a[href="/clock"] span,
-nav ul li:hover a[href="https://barryi.gitee.io/"] span
+nav ul li:hover a[href="https://barryi.gitee.io/"] span,
+nav ul li:hover a[href="/clock"] span
 {
     border: none!important;
 }
@@ -2610,8 +2610,8 @@ nav ul li:hover a[href="/record"] span:hover,
 nav ul li:hover a[href="/status"] span:hover,
 nav ul li:hover a[href="/project"] span:hover,
 nav ul li:hover a[href="/friendcircle"] span:hover,
-nav ul li:hover a[href="/clock"] span:hover,
-nav ul li:hover a[href="https://barryi.gitee.io/"] span:hover
+nav ul li:hover a[href="https://barryi.gitee.io/"] span:hover,
+nav ul li:hover a[href="/clock"] span:hover
 {
     border-bottom: 1px solid #fff!important;
 }
