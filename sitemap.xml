@@ -79,6 +79,13 @@
   </url>
   
   <url>
+    <loc>https://www.smitten.top/collection/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.smitten.top/contact/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/count/index.html</loc>
+    <loc>https://www.smitten.top/donate/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.smitten.top/collection/index.html</loc>
+    <loc>https://www.smitten.top/count/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -114,28 +121,7 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/donate/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/gallery/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.smitten.top/lab/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/musics/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -149,21 +135,14 @@
   </url>
   
   <url>
+    <loc>https://www.smitten.top/musics/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.smitten.top/project/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/record/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/ticktack/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -178,6 +157,27 @@
   
   <url>
     <loc>https://www.smitten.top/videos/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/record/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/gallery/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/ticktack/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
