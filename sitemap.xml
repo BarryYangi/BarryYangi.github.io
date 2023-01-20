@@ -58,13 +58,6 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/books/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.smitten.top/about/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
@@ -72,14 +65,14 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/contact/index.html</loc>
+    <loc>https://www.smitten.top/categories/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.smitten.top/categories/index.html</loc>
+    <loc>https://www.smitten.top/books/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -94,6 +87,20 @@
   
   <url>
     <loc>https://www.smitten.top/count/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/contact/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/donate/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -128,35 +135,7 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/donate/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/musics/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/record/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.smitten.top/project/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/tags/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -170,7 +149,21 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/ticktack/index.html</loc>
+    <loc>https://www.smitten.top/musics/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/tags/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/record/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -178,6 +171,13 @@
   
   <url>
     <loc>https://www.smitten.top/videos/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/ticktack/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -214,14 +214,14 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/tags/%E5%AE%9D%E8%97%8F%E5%8F%A5%E5%AD%90/</loc>
+    <loc>https://www.smitten.top/tags/Linux/</loc>
     <lastmod>2023-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.smitten.top/tags/Linux/</loc>
+    <loc>https://www.smitten.top/tags/%E5%AE%9D%E8%97%8F%E5%8F%A5%E5%AD%90/</loc>
     <lastmod>2023-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
