@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="关于, Barry">
+    <meta name="keywords" content="整理一些常用的脚本（持续更新中）, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于 | Barryの个人博客</title>
+    <title>整理一些常用的脚本（持续更新中） | Barryの个人博客</title>
     
     <script>
         // 隐藏
@@ -1027,410 +1027,770 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-        <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    about
-                 
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['世界灿烂盛大，欢迎回家。','在等雪花、圣诞树、新年烟火、和更好的你。'],
-                        startDelay: 200,
-                        typeSpeed: 120,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img.laoda.de/i/2022/03/28/1h2hu_7.webp')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">整理一些常用的脚本（持续更新中）</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+
+<main class="post-container content">
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
+</style>
+
+<div class="row">
+    
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="VPS">
+            <style>
+    #switchspring {
+        bottom: 223px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchspring {
+            bottom: 178px!important;
+        }
+    }
+    #switchchristmas {
+        bottom: 281px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 235px!important;
+        }
+    }
+    .ititle {
+        margin: 15px 0;
+        text-align:center;
+        font-family: 'Architects Daughter', cursive;
+    }
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;	
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;    
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;           
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
+        position: relative;
+    }
+.izhengwen {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+    background-size: 100% 32px;
+}
+.izhengwen p {
+    letter-spacing: .1rem;
+}
+#articleContent p {
+    margin: 0
+}
+.ititle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem!important;
+    padding: 10px auto;
+}
+.izhengwen p {
+    position: relative;
+    line-height: 2.2rem!important;
+    text-indent: 2em;
+    font-family: 'Architects Daughter', cursive!important;
+    font-size: 1.45rem!important;
+}
+.ipage::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 52px;
+    z-index: 4;
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid #fca1a1;
+}
+.izhengwen p:nth-child(odd):before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.ipage:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    z-index: 3;
+    width: 4px;
+    height: 100%;
+    border-left: 4px double #fca1a1;
+}
+.ipage p {
+    padding: 0 2em;
+    color: #333!important;
+}
+body.dark .ipage {
+    opacity: 0.85;
+}
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 600px) {
+    .ipage {
+        padding: 15px 23px 29px;
+    }
+    .ipage:after {
+        left: 36px;
+    }
+    .ipage::before {
+        right: 36px;    
+    }
+    .ipage p, .ititle {
+        padding: 0 0.9em;
+    }
+
+}
+h3 {
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: #101012;
+    transition: 0.8s;
+    cursor: pointer;
+}
+h3:hover {
+    transform: translateX(15px);
+}
+</style>
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        
+        <div class="card-content article-info">
+            <!-- 福袋按钮 -->
+            <div class="caishendeng">        
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
+                </div>              
+            </div>
+            <!-- 圣诞按钮 -->
+            <div class="shengdandeng">        
+                <div class="shengdanxian" style="left: 50%;">
+                    <!-- <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" /> -->
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/VPS/">
+                                <span class="chip bg-color">VPS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-02-11
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    67
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="综合工具箱（强烈推荐，集成了很多脚本）"><a href="#综合工具箱（强烈推荐，集成了很多脚本）" class="headerlink" title="综合工具箱（强烈推荐，集成了很多脚本）"></a>综合工具箱（强烈推荐，集成了很多脚本）</h2><pre class=" language-lang-bash"><code class="language-lang-bash">wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && clear && ./box.sh
+</code></pre>
+<h2 id="杜甫测试"><a href="#杜甫测试" class="headerlink" title="杜甫测试"></a>杜甫测试</h2><pre class=" language-lang-bash"><code class="language-lang-bash">wget -q https://github.com/Aniverse/A/raw/i/a && bash a
+</code></pre>
+<h2 id="DD-相关"><a href="#DD-相关" class="headerlink" title="DD 相关"></a>DD 相关</h2><h3 id="1、甲骨文-DD-脚本"><a href="#1、甲骨文-DD-脚本" class="headerlink" title="1、甲骨文 DD 脚本"></a>1、甲骨文 DD 脚本</h3><p>DD成Debian 10  </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash"> bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 10 -v 64 -p "自定义root密码" -port "自定义ssh端口"
+</code></pre>
+<p>DD成Ubuntu 20.04 </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -u 20.04 -v 64 -p "自定义root密码" -port "自定义ssh端口"
+</code></pre>
+<h3 id="2、MoeClub脚本"><a href="#2、MoeClub脚本" class="headerlink" title="2、MoeClub脚本"></a>2、MoeClub脚本</h3><p><strong>重点推荐：</strong>  </p>
+<p>时间：22/11/2021 15:21 萌咖更新脚本：  </p>
+<p>1.新增对 Oracle AMD，Oracle ARM全面支持. 可支持从 Ubuntu, Oracle Linux 等系统网络重装.<br>2.更新 dd 镜像的基础系统版本.<br>3.移除对外部 wget 的依赖.<br>4.新增 -port 参数, 可更改默认SSH端口.<br>5.更新 内置的网络参数计算 逻辑.<br>6.更新 grub 配置文件定位逻辑, 可支持任意引导grub的系统.  </p>
+<p>以下系统已通过测试(其他自测):<br>Debian: 9, 10, 11;<br>Ubuntu: 18.04, 20.04;<br>CentOS: 6.10;<br>以下平台已通过测试(其他自测):<br>Oracle、Do、Azure  </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">bash <(wget --no-check-certificate -qO- 'https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh') -d 10 -v 64 -p "自定义root密码" -port "自定义ssh端口"
+</code></pre>
+<p>-d 10 -v 64<br>-d 9 -v 64<br>-u 20.04 -v 64<br>-u 18.04 -v 64  </p>
+<p>开机改密码脚本：  </p>
+<p>开机改密：  </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">#!/bin/bash  
+echo root:Vicer |sudo chpasswd root  
+sudo sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin yes/g' /etc/ssh/sshd_config;  
+sudo sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config;  
+sudo reboot
+</code></pre>
+<h3 id="3、另一位大佬的脚本"><a href="#3、另一位大佬的脚本" class="headerlink" title="3、另一位大佬的脚本"></a>3、另一位大佬的脚本</h3><pre class=" language-lang-bash"><code class="language-lang-bash">wget --no-check-certificate -O AutoReinstall.sh https://git.io/AutoReinstall.sh && bash AutoReinstall.sh
+</code></pre>
+<ul>
+<li>CentOS 默认密码 Pwd@CentOS 其它系统 Pwd@Linux  </li>
+<li>OpenVZ / LXC 架构系统不适用  </li>
+</ul>
+<p>来源： <a target="_blank" rel="noopener" href="https://blog.hicasper.com/post/135.html">https://blog.hicasper.com/post/135.html</a> 参考： <a target="_blank" rel="noopener" href="https://www.ydyno.com/archives/1245.html">https://www.ydyno.com/archives/1245.html</a> 感谢大佬的付出！  </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">bash <(wget --no-check-certificate -qO- 'https://file.geekn.net/CNODnjau/InstallNET.sh') -d 11 -v 64 -a -firmware
+</code></pre>
+<p>-firmware 额外的驱动支持<br>-d 后面是系统版本号<br>-v 后面写64位 32位<br>-a （不清楚这个干啥的但是每个脚本都带）<br>–mirror 后面是镜像源地址  </p>
+<p>-p 后面写自定义密码  </p>
+<pre><code>镜像站地址  
+官方给出的地址列表：https://www.debian.org/mirror/list  
+
+一些国内的  
+ftp.cn.debian.org  
+mirror.bjtu.edu.cn  
+mirror.lzu.edu.cn          
+mirror.nju.edu.cn          
+mirrors.163.com          
+mirrors.bfsu.edu.cn          
+mirrors.hit.edu.cn          
+mirrors.huaweicloud.com          
+mirror.sjtu.edu.cn          
+mirrors.tuna.tsinghua.edu.cn          
+mirrors.ustc.edu.cn          
+
+使用方法：（大致都是一样的）  
+
+清华源  
+--mirror &#39;https://mirrors.ustc.edu.cn/debian/&#39;  
+
+腾讯源  
+--mirror &#39;https://mirrors.aliyun.com/debian/&#39;  
+
+阿里源  
+--mirror &#39;https://mirrors.aliyun.com/debian/&#39;  
+
+华为源  
+--mirror &#39;https://mirrors.huaweicloud.com/debian/&#39;
+</code></pre><h3 id="4、秋水逸冰-Windows-2012-2016-2019-2022-10-11-DD-镜像"><a href="#4、秋水逸冰-Windows-2012-2016-2019-2022-10-11-DD-镜像" class="headerlink" title="4、秋水逸冰 Windows 2012/2016/2019/2022 10/11 DD 镜像"></a>4、秋水逸冰 Windows 2012/2016/2019/2022 10/11 DD 镜像</h3><p>适用于 UEFI 启动的多个 Windows 系统 DD 镜像：  </p>
+<p><a target="_blank" rel="noopener" href="https://teddysun.com/656.html">https://teddysun.com/656.html</a>  </p>
+<p>分别是：  </p>
+<ul>
+<li>Windows Server 2012 R2 Datacenter</li>
+<li>Windows Server 2016 Datacenter (build: 14393.5006) </li>
+<li>Windows Server 2019 Datacenter (build: 17763.2686) </li>
+<li>Windows Server 2022 Datacenter (build: 20348.587) </li>
+<li>Windows 10 Enterprise LTSC (build: 19044.1288) </li>
+<li>Windows 11 Pro for Workstations 21H2 (build: 22000.194)</li>
+</ul>
+<p>适用于 BIOS 启动的 Windows Server 2022 Datacenter DD 镜像：  </p>
+<p><a target="_blank" rel="noopener" href="https://teddysun.com/629.html">https://teddysun.com/629.html</a>  </p>
+<p>适用于 BIOS 启动的 Windows 11 Pro for Workstations 21H2 DD 镜像：  </p>
+<p><a target="_blank" rel="noopener" href="https://teddysun.com/642.html">https://teddysun.com/642.html</a>  </p>
+<p>适用于 BIOS 启动的 Windows 10 Enterprise LTSC DD 镜像：  </p>
+<p><a target="_blank" rel="noopener" href="https://teddysun.com/640.html">https://teddysun.com/640.html</a>  </p>
+<p>适用于 BIOS 启动的 Windows Server 2019/2016/2012R2 Datacenter DD 镜像：  </p>
+<p><a target="_blank" rel="noopener" href="https://teddysun.com/545.html">https://teddysun.com/545.html</a>  </p>
+<p>分别是：  </p>
+<ul>
+<li>Windows Server 2019 Datacenter（Build: 17763.2686）</li>
+<li>Windows Server 2016 Datacenter（Build: 14393.5006）</li>
+<li>Windows Server 2012 R2 Datacenter</li>
+</ul>
+<h2 id="测试相关"><a href="#测试相关" class="headerlink" title="测试相关"></a>测试相关</h2><h3 id="机器测试"><a href="#机器测试" class="headerlink" title="机器测试"></a>机器测试</h3><h4 id="单线程测试"><a href="#单线程测试" class="headerlink" title="单线程测试"></a>单线程测试</h4><pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -Lso- https://bench.im/hyperspeed)
+</code></pre>
+<h4 id="最全测速脚本"><a href="#最全测速脚本" class="headerlink" title="最全测速脚本"></a>最全测速脚本</h4><pre class=" language-lang-bash"><code class="language-lang-bash">curl -fsL https://ilemonra.in/LemonBenchIntl | bash -s fast
+</code></pre>
+<h4 id="superbench"><a href="#superbench" class="headerlink" title="superbench"></a>superbench</h4><pre class=" language-lang-bash"><code class="language-lang-bash">wget -qO- git.io/superbench.sh | bash
+</code></pre>
+<h4 id="Bench-sh"><a href="#Bench-sh" class="headerlink" title="Bench.sh"></a>Bench.sh</h4><pre class=" language-lang-bash"><code class="language-lang-bash">wget -qO- bench.sh | bash
+</code></pre>
+<h3 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h3><h4 id="显示延迟、抖动"><a href="#显示延迟、抖动" class="headerlink" title="显示延迟、抖动"></a>显示延迟、抖动</h4><pre class=" language-lang-bash"><code class="language-lang-bash">bash <(wget -qO- https://bench.im/hyperspeed)
+</code></pre>
+<h4 id="直接显示回程线路"><a href="#直接显示回程线路" class="headerlink" title="直接显示回程线路"></a>直接显示回程线路</h4><pre class=" language-lang-bash"><code class="language-lang-bash">curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bash
+</code></pre>
+<pre class=" language-lang-bash"><code class="language-lang-bash">wget -q route.f2k.pub -O route && bash route
+</code></pre>
+<p>```Plain text</p>
+<h1 id="第一个"><a href="#第一个" class="headerlink" title="第一个"></a>第一个</h1><p>wget <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/nanqinlang-script/testrace/master/testrace.sh">https://raw.githubusercontent.com/nanqinlang-script/testrace/master/testrace.sh</a><br>bash testrace.sh  </p>
+<h1 id="第二个"><a href="#第二个" class="headerlink" title="第二个"></a>第二个</h1><p>wget -qO- git.io/besttrace | bash  </p>
+<pre><code>
+#### 四网测速  
+```bash
+wget -O jcnf.sh https://raw.githubusercontent.com/Netflixxp/jcnfbesttrace/main/jcnf.sh
+bash jcnf.sh
+</code></pre><h4 id="三网测速"><a href="#三网测速" class="headerlink" title="三网测速"></a>三网测速</h4><pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -Lso- https://git.io/superspeed_uxh)
+</code></pre>
+<p>带快速四网测试版本：  </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -Lso- https://dl.233.mba/d/sh/speedtest.sh)
+</code></pre>
+<pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -Lso- https://git.io/J1SEh)
+</code></pre>
+<p>带综合测试的版本（CPU信息、Geekbench等）：  </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">bash <(wget --no-check-certificate -O- https://dl.233.mba/d/sh/superbenchpro.sh)
+</code></pre>
+<p>来源: <a target="_blank" rel="noopener" href="https://www.wrnxr.cn/163.html">https://www.wrnxr.cn/163.html</a>  </p>
+<h2 id="测试25端口是否开放"><a href="#测试25端口是否开放" class="headerlink" title="测试25端口是否开放"></a>测试25端口是否开放</h2><pre class=" language-lang-bash"><code class="language-lang-bash">telnet smtp.aol.com 25
+</code></pre>
+<h2 id="测试IPv4优先还是IPv6优先"><a href="#测试IPv4优先还是IPv6优先" class="headerlink" title="测试IPv4优先还是IPv6优先"></a>测试IPv4优先还是IPv6优先</h2><pre class=" language-lang-bash"><code class="language-lang-bash">curl ip.p3terx.com
+</code></pre>
+<h2 id="流媒体测试"><a href="#流媒体测试" class="headerlink" title="流媒体测试"></a>流媒体测试</h2><h3 id="全媒体测试"><a href="#全媒体测试" class="headerlink" title="全媒体测试"></a>全媒体测试</h3><pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
+</code></pre>
+<h3 id="奈飞测试"><a href="#奈飞测试" class="headerlink" title="奈飞测试"></a>奈飞测试</h3><pre class=" language-lang-bash"><code class="language-lang-bash">wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.5/nf_2.5_linux_amd64 && chmod +x nf && clear && ./nf
+</code></pre>
+<p>```Plain text</p>
+<h1 id="第一个-1"><a href="#第一个-1" class="headerlink" title="第一个"></a>第一个</h1><p>bash &lt;(curl -L -s <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh">https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh</a>)  </p>
+<h1 id="第二个-1"><a href="#第二个-1" class="headerlink" title="第二个"></a>第二个</h1><p>bash &lt;(curl -sSL “<a target="_blank" rel="noopener" href="https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh">https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh</a>“)  </p>
+<pre><code>
+## WARP  
+```bash
+wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/YG-tsj/CFWarp-Pro/multi.sh &amp;&amp; chmod +x multi.sh &amp;&amp; ./multi.sh
+</code></pre><p>之后进入脚本快捷方式为 bash multi.sh  </p>
+<h2 id="服务器时间"><a href="#服务器时间" class="headerlink" title="服务器时间"></a>服务器时间</h2><h3 id="CentOS-同步时间"><a href="#CentOS-同步时间" class="headerlink" title="CentOS 同步时间"></a>CentOS 同步时间</h3><pre class=" language-lang-bash"><code class="language-lang-bash">yum -y install ntpdate  
+timedatectl set-timezone Asia/Shanghai  
+ntpdate ntp1.aliyun.com
+</code></pre>
+<h2 id="BBR"><a href="#BBR" class="headerlink" title="BBR"></a>BBR</h2><h3 id="CentOS-7-BBR"><a href="#CentOS-7-BBR" class="headerlink" title="CentOS 7 BBR"></a>CentOS 7 BBR</h3><pre class=" language-lang-bash"><code class="language-lang-bash">wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+</code></pre>
+<h3 id="一键开启BBR"><a href="#一键开启BBR" class="headerlink" title="一键开启BBR"></a>一键开启BBR</h3><p>注意：需要Linux Kernel 内核升级到 4.9 及以上版本可以实现 BBR 加速  </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">uname -srm
+</code></pre>
+<p>输出结果：  </p>
+<pre><code>Linux 3.10.0-957.12.2.el7.x86_64 x86_64  
+3 - 内核版本.  
+10 - 主修订版本.  
+0-957 - 次要修订版本.  
+12 - 补丁版本.
+</code></pre><p>一般来说，Ubuntu18.04以上就可以(默认的内核4.15)  </p>
+<pre><code>echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf  
+echo &quot;net.ipv4.tcp_congestion_control=bbr&quot; &gt;&gt; /etc/sysctl.conf  
+
+sysctl -p  
+
+sysctl net.ipv4.tcp_available_congestion_control  
+
+lsmod | grep bbr
+</code></pre><h2 id="Docker相关"><a href="#Docker相关" class="headerlink" title="Docker相关"></a>Docker相关</h2><h3 id="更新、安装必备软件"><a href="#更新、安装必备软件" class="headerlink" title="更新、安装必备软件"></a>更新、安装必备软件</h3><pre class=" language-lang-bash"><code class="language-lang-bash">apt-get update && apt-get install -y wget vim
+</code></pre>
+<h3 id="海外服务器"><a href="#海外服务器" class="headerlink" title="海外服务器"></a>海外服务器</h3><h4 id="非大陆Docker安装"><a href="#非大陆Docker安装" class="headerlink" title="非大陆Docker安装"></a>非大陆Docker安装</h4><pre class=" language-lang-bash"><code class="language-lang-bash">wget -qO- get.docker.com | bash
+</code></pre>
+<h4 id="卸载Docker"><a href="#卸载Docker" class="headerlink" title="卸载Docker"></a>卸载Docker</h4><pre class=" language-lang-bash"><code class="language-lang-bash">sudo apt-get purge docker-ce docker-ce-cli containerd.io  
+sudo rm -rf /var/lib/docker  
+sudo rm -rf /var/lib/containerd
+</code></pre>
+<h4 id="非大陆Docker-compose安装"><a href="#非大陆Docker-compose安装" class="headerlink" title="非大陆Docker-compose安装"></a>非大陆Docker-compose安装</h4><pre class=" language-lang-bash"><code class="language-lang-bash"> sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose  
+sudo chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<p>查看版本  </p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">docker-compose --version
+</code></pre>
+<h3 id="大陆服务器"><a href="#大陆服务器" class="headerlink" title="大陆服务器"></a>大陆服务器</h3><h4 id="国内机安装docker"><a href="#国内机安装docker" class="headerlink" title="国内机安装docker"></a>国内机安装docker</h4><pre class=" language-lang-bash"><code class="language-lang-bash">curl -sSL https://get.daocloud.io/docker | sh
+</code></pre>
+<h4 id="国内机安装docker-compose"><a href="#国内机安装docker-compose" class="headerlink" title="国内机安装docker-compose"></a>国内机安装docker-compose</h4><pre class=" language-lang-bash"><code class="language-lang-bash">curl -L https://get.daocloud.io/docker/compose/releases/download/v2.1.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose  
+chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><pre class=" language-lang-bash"><code class="language-lang-bash">sudo apt-get remove docker docker-engine  
+rm -fr /var/lib/docker/
+</code></pre>
+<h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><h3 id="CentOS-关闭防火墙"><a href="#CentOS-关闭防火墙" class="headerlink" title="CentOS 关闭防火墙"></a>CentOS 关闭防火墙</h3><pre class=" language-lang-bash"><code class="language-lang-bash">systemctl start supervisord  
+systemctl disable firewalld  
+systemctl stop firewalld
+</code></pre>
+<h2 id="呆梨相关"><a href="#呆梨相关" class="headerlink" title="呆梨相关"></a>呆梨相关</h2><h3 id="XUI"><a href="#XUI" class="headerlink" title="XUI"></a>XUI</h3><pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -Ls https://raw.githubusercontent.com/sprov065/x-ui/master/install.sh) 0.2.0
+</code></pre>
+<h3 id="mack-a"><a href="#mack-a" class="headerlink" title="mack-a"></a>mack-a</h3><pre class=" language-lang-bash"><code class="language-lang-bash">wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+</code></pre>
+<p>持续更新中</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itsBarry</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.smitten.top/posts/VPS.html">https://www.smitten.top/posts/VPS.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itsBarry</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/VPS/">
+                                    <span class="chip bg-color">VPS</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢赞赏哦~</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
 
-
-    </div>
-    <div class="mohuxiaoguo"></div>
-</div>
-
-
-<style>
-  /* banner背景图 */
-  .bg-cover {
-      background-image: url("https://api.dujin.org/bing/1920.php")!important;
-  }
-</style>
-<style>
-  .about-cover {
-    height: 75vh;
-  }
-
-  .sitemapss {
-    margin: 27px auto;
-  }
-
-  @media only screen and (max-width: 601px) {
-    #switchspring {
-      bottom: 178px !important;
-    }
-  }
-
-  #sma {
-    bottom: 139.25px;
-  }
-
-  .comment-scroll {
-    bottom: 79.25px;
-  }
-
-  .bg-cover::before {
-    background-image: url(/medias/bggrid.png);
-  }
-
-  .about-cover {
-    height: 110vh;
-  }
-
-  @media only screen and (max-width: 600px) {
-    .about-cover {
-      height: 64vh;
-    }
-  }
-
-  iframe {
-    width: 60%;
-    margin: 0 auto;
-  }
-
-  body.dark iframe {
-    opacity: 0.7;
-  }
-</style>
-<style>
-  @media only screen and (max-width: 800px) {
-    .swbk {
-      padding: 26px 2px !important;
-      margin: 0 !important;
-    }
-
-    .swbk ol {
-      padding: 2px 10px;
-    }
-  }
-
-  .swbk {
-    position: relative;
-    padding: 26px 20px;
-    font-style: italic;
-    margin: 10px 0px;
-    -webkit-box-shadow: 0 14px 38px rgba(0, 0, 0, .08), 0 3px 8px rgba(0, 0, 0, .06);
-    box-shadow: 0 14px 38px rgba(0, 0, 0, .08), 0 3px 8px rgba(0, 0, 0, .06);
-    -webkit-transition: all .3s ease 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
-    transition: all .3s ease 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
-    transition: all .3s ease 0s, transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
-    transition: all .3s ease 0s, transform .6s cubic-bezier(.6, .2, .1, 1) 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
-  }
-
-  .swbk:hover {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-    -webkit-box-shadow: 0 14px 38px rgba(0, 0, 0, .14), 0 3px 8px rgba(0, 0, 0, .12);
-    box-shadow: 0 14px 38px rgba(0, 0, 0, .14), 0 3px 8px rgba(0, 0, 0, .12);
-  }
-
-  .swbk:before {
-    content: " “ ";
-    top: 56px;
-    left: -14px;
-  }
-
-  .swbk:after {
-    content: " ” ";
-    bottom: 8px;
-    right: 5px;
-  }
-
-  .swbk:after,
-  .swbk:before {
-    position: absolute;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 42px;
-    text-decoration: inherit;
-  }
-
-  .ziwojieshao .swbk:after,
-  .ziwojieshao .swbk:before {
-    display: none;
-  }
-
-  body.dark .swbk:after,
-  body.dark .swbk:before {
-    color: #d2c9c9;
-  }
-
-  .swbk p {
-    font-size: 19px !important;
-    line-height: 2.4rem;
-    text-indent: 2rem;
-    font-style: italic;
-    font-family: 'Architects Daughter', cursive !important;
-  }
-
-  .swbk .label {
-    display: inline-block;
-    position: relative;
-    margin-bottom: 10px;
-    padding: 0 14px 0 32px;
-    height: 32px;
-    line-height: 32px;
-    border-radius: 0 3px 3px 0;
-    background-color: currentColor;
-  }
-
-  .swbk .label span {
-    color: #fff;
-  }
-
-  .swbk .label:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    background-color: transparent;
-    border-style: solid;
-    border-width: 0 16px 16px 0;
-    border-color: transparent;
-    border-right-color: currentColor;
-    -webkit-filter: brightness(120%);
-    filter: brightness(120%);
-  }
-
-  @media screen and (min-width: 768px) {
-    .swbk .label {
-      left: -37px;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .swbk .label {
-      left: -18px;
-    }
-
-    .swbk p {
-      padding: 2px 8px;
-    }
-  }
-</style>
-
-<main class="content">
-  <div id="aboutme" class="container about-container">
-    <div class="card">
-      <div class="card-content">
-        <div class="row">
-          <div class="post-statis col l4 hide-on-med-and-down">
-            <!-- 原版 -->
-
-<div class="statis">
-    <span class="count"><a href="/">7</a></span>
-    <span class="name">文章</span>
-</div>
-
-
-
-<div class="statis">
-    <span class="count"><a href="/categories">3</a></span>
-    <span class="name">分类</span>
-</div>
-
-
-
-<div class="statis">
-    <span class="count"><a href="/tags">6</a></span>
-    <span class="name">标签</span>
-</div>
-
-
-          </div>
-          <div class="col s12 m12 l4">
-            <div class="profile center-align">
-              <div class="avatar toupic">
-                <!-- 中国节日小帽子 -->
-                <img class="xiaomaozitx" id="xiaomaozitx" src="/medias/spring-img/maozi.png" />
-                <img src="/medias/avatar.jpg" alt="itsBarry"
-                  class="circle responsive-img avatar-img">
-              </div>
-              <div class="author">
-                <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
-                  <!-- 原版 -->
-
-<div class="statis">
-    <span class="count"><a href="/">7</a></span>
-    <span class="name">文章</span>
-</div>
-
-
-
-<div class="statis">
-    <span class="count"><a href="/categories">3</a></span>
-    <span class="name">分类</span>
-</div>
-
-
-
-<div class="statis">
-    <span class="count"><a href="/tags">6</a></span>
-    <span class="name">标签</span>
-</div>
-
-
-                </div>
-                <div class="title">itsBarry</div>
-                <div class="career">itsBarry博客</div>
-                <div class="social-link hide-on-large-only" data-aos="zoom-in-left">
-                  <!--
- * @Author: error: git config user.name && git config user.email & please set dead value or install git
- * @Date: 2022-12-17 22:29:42
- * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2022-12-19 23:14:58
- * @FilePath: \hexo-theme-itsneko-master\themes\itsneko\layout\_partial\social-link.ejs
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
-
-    <a href="https://github.com/BarryYangi" class="tooltipped" target="_blank" data-tooltip="GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:2059484047@qq.com" class="tooltipped" target="_blank" data-tooltip="2059484047@qq.com" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2059484047" class="tooltipped" target="_blank" data-tooltip="2059484047" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col l4 hide-on-med-and-down">
-            <div class="social-link">
-              <!--
- * @Author: error: git config user.name && git config user.email & please set dead value or install git
- * @Date: 2022-12-17 22:29:42
- * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2022-12-19 23:14:58
- * @FilePath: \hexo-theme-itsneko-master\themes\itsneko\layout\_partial\social-link.ejs
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
-
-    <a href="https://github.com/BarryYangi" class="tooltipped" target="_blank" data-tooltip="GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:2059484047@qq.com" class="tooltipped" target="_blank" data-tooltip="2059484047@qq.com" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2059484047" class="tooltipped" target="_blank" data-tooltip="2059484047" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-
-            </div>
-          </div>
+            
         </div>
-
-        <div class="introduction center-align">
-          时间过的很快，还好我记录下来了。
-        </div>
-
-        <div class="ziwojieshao">
-          <h3>🐷 关于我哦</h3>
-          <div class="swbk">
-            <!-- 福袋按钮 -->
-            <div class="caishendeng">
-              <div class="caishenxian">
-                <img class="caishenpic lions" src="/medias/spring-img/lion.png" />
-              </div>
-            </div>
-            <div class="label" style="color: rgb(178, 143, 206);">
-              <!-- 小帽子 -->
-              <img class="labelmz" src="/medias/spring-img/maozi.png" />
-              <span>itsBarry博客</span>
-            </div>
-            <p>
-              <ol>
-                <li>你好，感谢点开这个页面来了解博主，博主现在是一名在校大学生，计算机与科学专业，创建这个博客的初衷是为了记录生活，这里会分享我的一些技术栈以及各种有意思的东西。</li>
-                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86"
-                  src="//music.163.com/outchain/player?type=2&amp;id=1397679291&amp;auto=1&amp;height=66">itsBarry宝藏歌曲</iframe>
-              </ol>
-            </p>
-          </div>
-
-          <h3>💴 关于资助itsBarry本博主</h3>
-          <div class="swbk">
-            <!-- 福袋按钮 -->
-            <div class="caishendeng">
-              <div class="caishenxian">
-                <img class="caishenpic huadengpic" src="/medias/spring-img/dragon-boat.png" />
-              </div>
-            </div>
-            <div class="label" style="color: rgb(178, 143, 206);">
-              <!-- 小帽子 -->
-              <img class="labelmz" src="/medias/spring-img/maozi.png" />
-              <span>买个馒头吃吧</span></div>
-            <p>如果你觉得本博客不错的话，可根据意愿赞赏一下itsBarry，感谢支持哦~ <a target="_blank" href="https://barryi.gitee.io/">点击感谢回馈博主 ~</a>
-            </p>
-          </div>
-
-        </div>
-      </div>
     </div>
 
-    <div class="card">
-      
+    
 
-      
+    
 
-      
+    
 
-      
+    
 
-      
-      <style>
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -1794,12 +2154,313 @@ class="themespring" -->
     });
 </script>
 
-      
+    
 
-      
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/VPS.html">
+                    <div class="card-image">
+                        
+                        <img src="https://img.laoda.de/i/2022/03/28/1h2hu_7.webp" class="responsive-img" alt="整理一些常用的脚本（持续更新中）">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          整理一些常用的脚本（持续更新中）
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            综合工具箱（强烈推荐，集成了很多脚本）wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && 
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/VPS/">
+                        <span class="chip bg-color">VPS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/AList.html">
+                    <div class="card-image">
+                        
+                        <img src="https://easyimage.smitten.top/i/2023/01/26/zcydwq-0.png" class="responsive-img" alt="五分钟搭建个人资源库">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          五分钟搭建个人资源库
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            关于 Alist一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。
+安装仅适用于 Linux amd64/arm64 平台。
+安装curl -fsSL "https://alist.nn.ci/v3.sh" | bash -
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/AList/">
+                        <span class="chip bg-color">AList</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
-  </div>
+</article>
+<style>
+  .articles .row .article {
+    position: relative;
+  }
+</style>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Barryの个人博客<br />'
+            + '文章作者: itsBarry<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+        </div>
+        
+        
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        
+        
+        <div class="toc-widget" data-spmid="VPS">
+            <div class="toc-title">
+                <i class="far fa-list-alt"></i>
+                &nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content"></div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="VPS">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
 </main>
+
+
+
 
     <style>
   footer {
