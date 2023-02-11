@@ -1476,15 +1476,16 @@ mirrors.ustc.edu.cn
 </code></pre>
 <pre class=" language-lang-bash"><code class="language-lang-bash">wget -q route.f2k.pub -O route && bash route
 </code></pre>
-<p>```Plain text</p>
-<h1 id="第一个"><a href="#第一个" class="headerlink" title="第一个"></a>第一个</h1><p>wget <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/nanqinlang-script/testrace/master/testrace.sh">https://raw.githubusercontent.com/nanqinlang-script/testrace/master/testrace.sh</a><br>bash testrace.sh  </p>
-<h1 id="第二个"><a href="#第二个" class="headerlink" title="第二个"></a>第二个</h1><p>wget -qO- git.io/besttrace | bash  </p>
-<pre><code>
-#### 四网测速  
-```bash
-wget -O jcnf.sh https://raw.githubusercontent.com/Netflixxp/jcnfbesttrace/main/jcnf.sh
+<pre><code>//第一个  
+wget https://raw.githubusercontent.com/nanqinlang-script/testrace/master/testrace.sh  
+bash testrace.sh  
+
+//第二个  
+wget -qO- git.io/besttrace | bash
+</code></pre><h4 id="四网测速"><a href="#四网测速" class="headerlink" title="四网测速"></a>四网测速</h4><pre class=" language-lang-bash"><code class="language-lang-bash">wget -O jcnf.sh https://raw.githubusercontent.com/Netflixxp/jcnfbesttrace/main/jcnf.sh
 bash jcnf.sh
-</code></pre><h4 id="三网测速"><a href="#三网测速" class="headerlink" title="三网测速"></a>三网测速</h4><pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -Lso- https://git.io/superspeed_uxh)
+</code></pre>
+<h4 id="三网测速"><a href="#三网测速" class="headerlink" title="三网测速"></a>三网测速</h4><pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -Lso- https://git.io/superspeed_uxh)
 </code></pre>
 <p>带快速四网测试版本：  </p>
 <pre class=" language-lang-bash"><code class="language-lang-bash">bash <(curl -Lso- https://dl.233.mba/d/sh/speedtest.sh)
@@ -1503,14 +1504,14 @@ bash jcnf.sh
 </code></pre>
 <h3 id="奈飞测试"><a href="#奈飞测试" class="headerlink" title="奈飞测试"></a>奈飞测试</h3><pre class=" language-lang-bash"><code class="language-lang-bash">wget -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.5/nf_2.5_linux_amd64 && chmod +x nf && clear && ./nf
 </code></pre>
-<p>```Plain text</p>
-<h1 id="第一个-1"><a href="#第一个-1" class="headerlink" title="第一个"></a>第一个</h1><p>bash &lt;(curl -L -s <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh">https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh</a>)  </p>
-<h1 id="第二个-1"><a href="#第二个-1" class="headerlink" title="第二个"></a>第二个</h1><p>bash &lt;(curl -sSL “<a target="_blank" rel="noopener" href="https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh">https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh</a>“)  </p>
-<pre><code>
-## WARP  
-```bash
-wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/YG-tsj/CFWarp-Pro/multi.sh &amp;&amp; chmod +x multi.sh &amp;&amp; ./multi.sh
-</code></pre><p>之后进入脚本快捷方式为 bash multi.sh  </p>
+<pre><code>//第一个  
+bash &lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)  
+
+//第二个  
+bash &lt;(curl -sSL &quot;https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.sh&quot;)
+</code></pre><h2 id="WARP"><a href="#WARP" class="headerlink" title="WARP"></a>WARP</h2><pre class=" language-lang-bash"><code class="language-lang-bash">wget -N --no-check-certificate https://cdn.jsdelivr.net/gh/YG-tsj/CFWarp-Pro/multi.sh && chmod +x multi.sh && ./multi.sh
+</code></pre>
+<p>之后进入脚本快捷方式为 bash multi.sh  </p>
 <h2 id="服务器时间"><a href="#服务器时间" class="headerlink" title="服务器时间"></a>服务器时间</h2><h3 id="CentOS-同步时间"><a href="#CentOS-同步时间" class="headerlink" title="CentOS 同步时间"></a>CentOS 同步时间</h3><pre class=" language-lang-bash"><code class="language-lang-bash">yum -y install ntpdate  
 timedatectl set-timezone Asia/Shanghai  
 ntpdate ntp1.aliyun.com
