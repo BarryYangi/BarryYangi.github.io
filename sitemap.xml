@@ -93,21 +93,7 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/contact/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/collection/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/count/index.html</loc>
+    <loc>https://www.smitten.top/books/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -121,14 +107,21 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/donate/index.html</loc>
+    <loc>https://www.smitten.top/collection/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.smitten.top/books/index.html</loc>
+    <loc>https://www.smitten.top/contact/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/donate/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -149,6 +142,13 @@
   </url>
   
   <url>
+    <loc>https://www.smitten.top/count/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.smitten.top/gallery/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
@@ -157,6 +157,13 @@
   
   <url>
     <loc>https://www.smitten.top/lab/index.html</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/qingdan/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -177,14 +184,14 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/qingdan/index.html</loc>
+    <loc>https://www.smitten.top/tags/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.smitten.top/tags/index.html</loc>
+    <loc>https://www.smitten.top/ticktack/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -199,13 +206,6 @@
   
   <url>
     <loc>https://www.smitten.top/videos/index.html</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/ticktack/index.html</loc>
     
     <lastmod>2022-11-03</lastmod>
     
@@ -263,14 +263,14 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/tags/VPS/</loc>
+    <loc>https://www.smitten.top/tags/Linux/</loc>
     <lastmod>2023-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.smitten.top/tags/Linux/</loc>
+    <loc>https://www.smitten.top/tags/VPS/</loc>
     <lastmod>2023-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
