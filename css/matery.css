@@ -2586,7 +2586,9 @@ nav ul li:hover a[href="https://easyimage.smitten.top/"] span,
 nav ul li:hover a[href="https://flare.smitten.top/"] span,
 nav ul li:hover a[href="https://memos.smitten.top/"] span,
 nav ul li:hover a[href="https://ward.smitten.top/"] span,
-nav ul li:hover a[href="https://ssh.yct.ee/"] span
+nav ul li:hover a[href="https://ssh.yct.ee/"] span,
+nav ul li:hover a[href="https://barrymusic.yct.ee/"] span,
+nav ul li:hover a[href="https://music.yct.ee/"] span
 {
     border: none!important;
 }
@@ -2625,7 +2627,9 @@ nav ul li:hover a[href="https://easyimage.smitten.top/"] span:hover,
 nav ul li:hover a[href="https://flare.smitten.top/"] span:hover,
 nav ul li:hover a[href="https://memos.smitten.top/"] span:hover,
 nav ul li:hover a[href="https://ward.smitten.top/"] span:hover,
-nav ul li:hover a[href="https://ssh.yct.ee/"] span:hover
+nav ul li:hover a[href="https://ssh.yct.ee/"] span:hover,
+nav ul li:hover a[href="https://barrymusic.yct.ee/"] span:hover,
+nav ul li:hover a[href="https://music.yct.ee/"] span:hover
 {
     border-bottom: 1px solid #fff!important;
 }
