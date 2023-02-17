@@ -1455,7 +1455,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    786
+                    809
                 </div>
                 
 
@@ -1478,17 +1478,17 @@ h3:hover {
 <li>系统镜像优先选择 <code>CentOS+Docker</code> 已经配置好的镜像</li>
 </ul>
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>确认服务器已经安装 Docker 和 Docker-Compose</p>
-<pre><code>docker -v
-docker-compose -v
-</code></pre><p>如能正常显示版本号，下面这一步<strong>直接跳过</strong>，否则要手动安装，这里以 <code>CentOS 7</code> 为例安装：</p>
+<pre class="language-shell" data-language="shell"><code class="language-shell">docker -v
+docker-compose -v</code></pre>
+<p>如能正常显示版本号，下面这一步<strong>直接跳过</strong>，否则要手动安装，这里以 <code>CentOS 7</code> 为例安装：</p>
 <blockquote>
 <p>搜索 <code>系统名 安装 docker compose</code> 有很多现成文档</p>
 </blockquote>
-<pre><code># 安装yum-utils
+<pre class="language-shell" data-language="shell"><code class="language-shell"># 安装yum-utils
 yum install -y yum-utils
 
 # 配置yum源
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum-config-manager --add-repo https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo
 
 # 安装docker-ce
 yum install -y docker-ce
@@ -1503,15 +1503,15 @@ systemctl start docker
 yum install -y epel-release
 
 # 安装docker-compose，如果没有python3会安装python3
-yum install -y docker-compose
-</code></pre><h2 id="配置-TeamSpeak"><a href="#配置-TeamSpeak" class="headerlink" title="配置 TeamSpeak"></a>配置 TeamSpeak</h2><p>找到合适的目录新建目录 <code>ts</code> 并切换</p>
+yum install -y docker-compose</code></pre>
+<h2 id="配置-TeamSpeak"><a href="#配置-TeamSpeak" class="headerlink" title="配置 TeamSpeak"></a>配置 TeamSpeak</h2><p>找到合适的目录新建目录 <code>ts</code> 并切换</p>
 <blockquote>
 <p>个人习惯所有 docker 配置统一放在根目录 <code>/root/data/docker_data</code> 下，具体位置没有强制要求，但是每组配置都应放在一个单独的文件夹下</p>
 </blockquote>
-<pre><code>mkdir -p /root/data/docker_data/ts3  # 创建目录
-cd /root/data/docker_data/ts3     # 切换当前目录
-</code></pre><p>新建 <code>docker-compose.yml</code> 文件，粘贴以下内容并保存，文件内容如下（<a target="_blank" rel="noopener" href="https://hub.docker.com/_/teamspeak">官方镜像 (opens new window)</a>）：</p>
-<pre><code># docker-compose.yml
+<pre class="language-shell" data-language="shell"><code class="language-shell">mkdir -p &#x2F;root&#x2F;data&#x2F;docker_data&#x2F;ts3  # 创建目录
+cd &#x2F;root&#x2F;data&#x2F;docker_data&#x2F;ts3     # 切换当前目录</code></pre>
+<p>新建 <code>docker-compose.yml</code> 文件，粘贴以下内容并保存，文件内容如下（<a target="_blank" rel="noopener" href="https://hub.docker.com/_/teamspeak">官方镜像 (opens new window)</a>）：</p>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"># docker-compose.yml
 
 version: &#39;3.1&#39;
 services:
@@ -1519,7 +1519,7 @@ services:
     image: teamspeak
     restart: always
     ports:
-      - 9987:9987/udp # 语音服务
+      - 9987:9987&#x2F;udp # 语音服务
       - 30033:30033   # 文件传输
       - 41144:41144   # DNS域名解析（可选）
       - 10011:10011   # 服务器查询 raw（可选）
@@ -1527,7 +1527,7 @@ services:
       # - 10080:10080   # 网络请求 http（可选）
       # - 10443:10443   # 网络请求 https（可选）
     volumes:
-      - ./data:/var/ts3server
+      - .&#x2F;data:&#x2F;var&#x2F;ts3server
     environment:
       TS3SERVER_DB_PLUGIN: ts3db_mariadb
       TS3SERVER_DB_SQLCREATEPATH: create_mariadb
@@ -1544,9 +1544,9 @@ services:
       MYSQL_ROOT_PASSWORD: password  # 数据库密码
       MYSQL_DATABASE: teamspeak
     volumes:
-      - ./data/mysql:/var/lib/mysql  # 必需，否则重启镜像后数据丢失
-</code></pre><p>服务器上要使用 <code>vi/vim/nano</code> 编辑文件，如果没有，CentOS 系统使用 <code>yum install nano</code> 类似的指令安装</p>
-<pre><code># [新建文件]
+      - .&#x2F;data&#x2F;mysql:&#x2F;var&#x2F;lib&#x2F;mysql  # 必需，否则重启镜像后数据丢失</code></pre>
+<p>服务器上要使用 <code>vi/vim/nano</code> 编辑文件，如果没有，CentOS 系统使用 <code>yum install nano</code> 类似的指令安装</p>
+<pre class="language-shell" data-language="shell"><code class="language-shell"># [新建文件]
 vi docker-compose.yml
 # 或
 vim docker-compose.yml
@@ -1555,11 +1555,11 @@ nano docker-compose.yml
 
 # [粘贴] ctrl+v 或 ctrl+shift+v 或 shift+insert
 
-# [保存] vi/vim: ESC :wq Enter
+# [保存] vi&#x2F;vim: ESC :wq Enter
 
-# [保存] nano: ctrl+x
-</code></pre><h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><p>确认当前在 <code>docker-compose.yml</code> 所在的目录，如 <code>cd /data/ts</code>：</p>
-<pre><code># 启动服务
+# [保存] nano: ctrl+x</code></pre>
+<h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><p>确认当前在 <code>docker-compose.yml</code> 所在的目录，如 <code>cd /data/ts</code>：</p>
+<pre class="language-shell" data-language="shell"><code class="language-shell"># 启动服务
 docker-compose up
 
 # 启动服务 一直运行 detach
@@ -1569,8 +1569,8 @@ docker-compose up -d
 docker-compose down
 
 # 重启服务
-docker-compose restart
-</code></pre><p>用TS客户端连接服务器，会弹出对话框要求输入token，输入token后这个账号就是管理员了</p>
+docker-compose restart</code></pre>
+<p>用TS客户端连接服务器，会弹出对话框要求输入token，输入token后这个账号就是管理员了</p>
 <ul>
 <li><p>第一次启动时会弹出 <code>Server Query 管理员账号密码</code> 和 <code>token</code>，<strong>务必妥善保存</strong></p>
 </li>
@@ -2277,7 +2277,7 @@ docker-compose restart
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            综合工具箱（强烈推荐，集成了很多脚本）wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && 
+                            综合工具箱（强烈推荐，集成了很多脚本）wget -O box.sh https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;BlueSkyXN&#x2F;SKY-BOX&#x2F;main&#x2F
                         
                     </div>
                     <div class="publish-info">
@@ -2340,7 +2340,7 @@ docker-compose restart
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 
@@ -2576,7 +2576,7 @@ docker-compose restart
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">14.2k</span>&nbsp;
+        class="white-color">49k</span>&nbsp;
       
       
       

@@ -1455,7 +1455,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    335
+                    316
                 </div>
                 
 
@@ -1479,25 +1479,24 @@ h3:hover {
 </ol>
 <p>接下来简单说一下如何编写</p>
 <h2 id="文字教程"><a href="#文字教程" class="headerlink" title="文字教程"></a>文字教程</h2><h3 id="本地随机图片"><a href="#本地随机图片" class="headerlink" title="本地随机图片"></a>本地随机图片</h3><p>首先创建一个文件夹 photos 和一个名为 index.php 的文件然后在 photos 的文件夹内放图片，在 index.php 内编写如下代码</p>
-<pre><code>&lt;?php
-$img_array = glob(&quot;photos/*.&amp;#123;gif,jpg,png&amp;#125;&quot;,GLOB_BRACE); 
-$img = array_rand($img_array); 
-$dz = $img_array[$img];
-header(&quot;Location:&quot;.$dz);
-?&gt;
-</code></pre><p>保存即可，通过 api 随机调用 img 文件夹中的图片, 最后访问地址: <a target="_blank" rel="noopener" href="http://域名">http://域名</a> 即可</p>
+<pre class="language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">?</span>php
+$img_array <span class="token operator">=</span> <span class="token function">glob</span><span class="token punctuation">(</span><span class="token string">"photos/*.&#123;gif,jpg,png&#125;"</span><span class="token punctuation">,</span><span class="token constant">GLOB_BRACE</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+$img <span class="token operator">=</span> <span class="token function">array_rand</span><span class="token punctuation">(</span>$img_array<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+$dz <span class="token operator">=</span> $img_array<span class="token punctuation">[</span>$img<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"Location:"</span><span class="token punctuation">.</span>$dz<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">?</span><span class="token operator">></span> </code></pre>
+<p>保存即可，通过 api 随机调用 img 文件夹中的图片, 最后访问地址: <a target="_blank" rel="noopener" href="http://域名">http://域名</a> 即可</p>
 <h3 id="外链随机图片"><a href="#外链随机图片" class="headerlink" title="外链随机图片"></a>外链随机图片</h3><p>先创建 photos.txt 和 index.php 文件然后在 photos.txt 文档内放图片外链地址 (一行一个) ，在 index.php 加入下列代码</p>
-<pre><code>&lt;?php
-$arr=file(&#39;photos.txt&#39;);
-$n=count($arr)-1;
-for ($i=1;$i&lt;=1;$i++)&amp;#123;
-$x=rand(0,$n);header(&quot;Location:&quot;.$arr[$x],&quot;\n&quot;);&amp;#125;
-?&gt;
-</code></pre><p>最后访问地址: <a target="_blank" rel="noopener" href="http://域名">http://域名</a> 即可！ 这里 photos.txt 中可以填写比如新浪那些外链图片，或者自己图床里的图片，高速稳定，而且不耗内存。</p>
+<pre class="language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">?</span>php
+$arr<span class="token operator">=</span><span class="token function">file</span><span class="token punctuation">(</span><span class="token string">'photos.txt'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+$n<span class="token operator">=</span><span class="token function">count</span><span class="token punctuation">(</span>$arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>$i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>$i<span class="token operator">&lt;=</span><span class="token number">1</span><span class="token punctuation">;</span>$i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+$x<span class="token operator">=</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>$n<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">"Location:"</span><span class="token punctuation">.</span>$arr<span class="token punctuation">[</span>$x<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token operator">?</span><span class="token operator">></span> </code></pre>
+<p>最后访问地址: <a target="_blank" rel="noopener" href="http://域名">http://域名</a> 即可！ 这里 photos.txt 中可以填写比如新浪那些外链图片，或者自己图床里的图片，高速稳定，而且不耗内存。</p>
 <h2 id="接口测试"><a href="#接口测试" class="headerlink" title="接口测试"></a>接口测试</h2><p>我用了第二种获取自己图床外链图片的方式做了<br><a target="_blank" rel="noopener" href="https://img.yct.ee">https://img.yct.ee</a></p>
 <h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2><p>如果你不想搭建可直接调用我的</p>
-<pre><code>&lt;img src=&quot;https://img.yct.ee&quot;&gt;
-</code></pre>
+<pre class="language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"https://img.yct.ee"</span><span class="token operator">></span></code></pre>
             </div>
             <hr/>
 
@@ -2096,13 +2095,12 @@ $x=rand(0,$n);header(&quot;Location:&quot;.$arr[$x],&quot;\n&quot;);&amp;#125;
         
         <div class="article col s12 m6">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/imgapi.html">
+                <a href="/posts/WeAreToghter.html">
                     <div class="card-image">
                         
-                        <img src="https://img.yct.ee" class="responsive-img" alt="五分钟搭建一个随机图片API">
+                        <img src="https://easyimage.smitten.top/i/2023/02/17/z5t7lj-0.png" class="responsive-img" alt="我要我们在一起">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -2113,44 +2111,39 @@ $x=rand(0,$n);header(&quot;Location:&quot;.$arr[$x],&quot;\n&quot;);&amp;#125;
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          五分钟搭建一个随机图片API
+                          我要我们在一起
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PHP 的随机图片 API 搭建方法有两种
+                            偶然之间看到一篇帖子, 不知道后来的我们, 十年后会怎么 🌎
 
-本地随机图片
-外链随机图片
-
-接下来简单说一下如何编写
-文字教程本地随机图片首先创建一个文件夹 photos 和一个名为 index.php 的文件然后在 photos 的文件夹内放图片，在 i
+整理后的帖子相对完整，原文缺失部分这是整理后的帖子原文： https://www.douban.com/note/260167887/原作者： 你这个贱人原文地址：豆瓣： h
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="post-category">
+                                    转载
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/API/">
-                        <span class="chip bg-color">API</span>
+                    <a href="/tags/%E7%94%9F%E6%B4%BB/">
+                        <span class="chip bg-color">生活</span>
                     </a>
                     
                 </div>
@@ -2252,7 +2245,7 @@ $x=rand(0,$n);header(&quot;Location:&quot;.$arr[$x],&quot;\n&quot;);&amp;#125;
 
         // we need a <pre> tag workaround.
         // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
             newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
 
@@ -2488,7 +2481,7 @@ $x=rand(0,$n);header(&quot;Location:&quot;.$arr[$x],&quot;\n&quot;);&amp;#125;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">14.2k</span>&nbsp;
+        class="white-color">49k</span>&nbsp;
       
       
       
