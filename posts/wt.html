@@ -127,6 +127,7 @@
             s.parentNode.insertBefore(bp, s);
         })();
     </script>
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="Barryの个人博客" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
@@ -134,6 +135,28 @@
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
 class="themespring" -->
 <body>
+    
+    <div id="loading-box">
+      <div class="loading-left-bg"></div>
+      <div class="loading-right-bg"></div>
+      <div class="spinner-box">
+        <div class="configure-border-1">
+          <div class="configure-core"></div>
+        </div>
+        <div class="configure-border-2">
+          <div class="configure-core"></div>
+        </div>
+        <div class="loading-word">加载中...</div>
+      </div>
+    </div>
+    <!-- 页面加载动画 -->
+    <script>
+      $(document).ready(function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+      })
+    </script>
+  
     <!-- 网站全局深色模式设置开始 -->
     <script>
         if (localStorage.getItem('dark') === '1') {
@@ -144,6 +167,9 @@ class="themespring" -->
         // } 
         else if (matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
+        }
+        if (localStorage.getItem('dark') !== '1'){
+            document.body.classList.remove('dark');
         }
     </script>
     <a onclick="switchNightMode()" id="sma">
@@ -335,49 +361,6 @@ class="themespring" -->
     <a href="javascript:;" class="waves-effect waves-light">
 
       
-      <span>音乐馆</span>
-      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
-    </a>
-    <ul class="sub-nav menus_item_child ">
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://barrymusic.yct.ee/">
-          
-          <span>BarryMusic</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://music.yct.ee/">
-          
-          <span>YesPlayMusic</span>
-        </a>
-      </li>
-      
-      <!-- 波浪wave条 -->
-      <div class="wavelineerji">
-        <style>
-          .wavelineerji {
-            /* background: url(/medias/wave.png) 0 0 repeat-x; */
-            height: 3px;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            background-size: 10px 3px;
-            transform: rotate(180deg);
-          }
-        </style>
-      </div>
-    </ul>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="javascript:;" class="waves-effect waves-light">
-
-      
       <span>链接库</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
@@ -514,6 +497,49 @@ class="themespring" -->
         <a target="_blank" rel="noopener" href="https://ssh.yct.ee/">
           
           <span>Sshwifty</span>
+        </a>
+      </li>
+      
+      <!-- 波浪wave条 -->
+      <div class="wavelineerji">
+        <style>
+          .wavelineerji {
+            /* background: url(/medias/wave.png) 0 0 repeat-x; */
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            background-size: 10px 3px;
+            transform: rotate(180deg);
+          }
+        </style>
+      </div>
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="javascript:;" class="waves-effect waves-light">
+
+      
+      <span>音乐馆</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://barrymusic.yct.ee/">
+          
+          <span>BarryMusic</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://music.yct.ee/">
+          
+          <span>YesPlayMusic</span>
         </a>
       </li>
       
@@ -698,37 +724,6 @@ class="themespring" -->
 			
 				<i class="fas fa-fw"></i>
 			
-			Music
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://barrymusic.yct.ee/ " style="margin-left:75px">
-				  
-		          <span>BarryMusic</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://music.yct.ee/ " style="margin-left:75px">
-				  
-		          <span>YesPlayMusic</span>
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fas fa-fw"></i>
-			
 			链接库
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
@@ -866,6 +861,37 @@ class="themespring" -->
                   <a target="_blank" rel="noopener" href="https://ssh.yct.ee/ " style="margin-left:75px">
 				  
 		          <span>Sshwifty</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw"></i>
+			
+			Music
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://barrymusic.yct.ee/ " style="margin-left:75px">
+				  
+		          <span>BarryMusic</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://music.yct.ee/ " style="margin-left:75px">
+				  
+		          <span>YesPlayMusic</span>
                   </a>
                 </li>
               
@@ -2072,66 +2098,6 @@ cls
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/AList.html">
-                    <div class="card-image">
-                        
-                        <img src="https://easyimage.smitten.top/i/2023/01/26/zcydwq-0.png" class="responsive-img" alt="五分钟搭建个人资源库">
-                        
-                        <!-- 福袋按钮 -->
-                        <div class="caishendeng">        
-                            <div class="caishenxian wenzhangxian">
-                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                            </div>              
-                        </div>
-                        <span class="card-title">
-                          <!-- 文章卡片hover线条效果 -->
-                          <span class="titlesline"></span>
-                          五分钟搭建个人资源库
-                        </span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            关于 Alist一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。
-安装仅适用于 Linux amd64/arm64 平台。
-安装curl -fsSL "https://alist.nn.ci/v3.sh" | bash -
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-24
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/AList/">
-                        <span class="chip bg-color">AList</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/posts/encourage.html">
                     <div class="card-image">
                         
@@ -2167,9 +2133,9 @@ ai辅助创作（
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-08
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-08
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -2187,6 +2153,70 @@ ai辅助创作（
                     
                     <a href="/tags/%E9%9A%8F%E7%AC%94/">
                         <span class="chip bg-color">随笔</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/linux.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/toc-banner/triangle.png" class="responsive-img" alt="步入Linux的现代方法">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          步入Linux的现代方法
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            基于Frank's Linux 课程的笔记
+
+0.0 系统的认识
+什么是系统？
+鼠标能点、键盘能输入东西、阅读看电影，还可以拓展安装一些软件， 简单来说就是人机交互所依赖的东西，开机依赖系统
+
+0.1 Linux操作系统认识，以及开源的提出
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -2959,5 +2989,15 @@ $(function () {
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
     <script type="text/javascript" src="/js/firework.js"></script>
+    <!-- 冒泡 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/libs/others/buble.js"><\/script>'
+        );
+    </script>
+
 </body>
 </html>

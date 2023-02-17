@@ -127,6 +127,7 @@
             s.parentNode.insertBefore(bp, s);
         })();
     </script>
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="Barryの个人博客" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
@@ -134,6 +135,28 @@
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
 class="themespring" -->
 <body>
+    
+    <div id="loading-box">
+      <div class="loading-left-bg"></div>
+      <div class="loading-right-bg"></div>
+      <div class="spinner-box">
+        <div class="configure-border-1">
+          <div class="configure-core"></div>
+        </div>
+        <div class="configure-border-2">
+          <div class="configure-core"></div>
+        </div>
+        <div class="loading-word">加载中...</div>
+      </div>
+    </div>
+    <!-- 页面加载动画 -->
+    <script>
+      $(document).ready(function () {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+      })
+    </script>
+  
     <!-- 网站全局深色模式设置开始 -->
     <script>
         if (localStorage.getItem('dark') === '1') {
@@ -144,6 +167,9 @@ class="themespring" -->
         // } 
         else if (matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.add('dark');
+        }
+        if (localStorage.getItem('dark') !== '1'){
+            document.body.classList.remove('dark');
         }
     </script>
     <a onclick="switchNightMode()" id="sma">
@@ -335,49 +361,6 @@ class="themespring" -->
     <a href="javascript:;" class="waves-effect waves-light">
 
       
-      <span>音乐馆</span>
-      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
-    </a>
-    <ul class="sub-nav menus_item_child ">
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://barrymusic.yct.ee/">
-          
-          <span>BarryMusic</span>
-        </a>
-      </li>
-      
-      <li>
-        <a target="_blank" rel="noopener" href="https://music.yct.ee/">
-          
-          <span>YesPlayMusic</span>
-        </a>
-      </li>
-      
-      <!-- 波浪wave条 -->
-      <div class="wavelineerji">
-        <style>
-          .wavelineerji {
-            /* background: url(/medias/wave.png) 0 0 repeat-x; */
-            height: 3px;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            background-size: 10px 3px;
-            transform: rotate(180deg);
-          }
-        </style>
-      </div>
-    </ul>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="javascript:;" class="waves-effect waves-light">
-
-      
       <span>链接库</span>
       <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
@@ -514,6 +497,49 @@ class="themespring" -->
         <a target="_blank" rel="noopener" href="https://ssh.yct.ee/">
           
           <span>Sshwifty</span>
+        </a>
+      </li>
+      
+      <!-- 波浪wave条 -->
+      <div class="wavelineerji">
+        <style>
+          .wavelineerji {
+            /* background: url(/medias/wave.png) 0 0 repeat-x; */
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            background-size: 10px 3px;
+            transform: rotate(180deg);
+          }
+        </style>
+      </div>
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="javascript:;" class="waves-effect waves-light">
+
+      
+      <span>音乐馆</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://barrymusic.yct.ee/">
+          
+          <span>BarryMusic</span>
+        </a>
+      </li>
+      
+      <li>
+        <a target="_blank" rel="noopener" href="https://music.yct.ee/">
+          
+          <span>YesPlayMusic</span>
         </a>
       </li>
       
@@ -698,37 +724,6 @@ class="themespring" -->
 			
 				<i class="fas fa-fw"></i>
 			
-			Music
-			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
-		</a>
-            <ul  style="background:  ;" >
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://barrymusic.yct.ee/ " style="margin-left:75px">
-				  
-		          <span>BarryMusic</span>
-                  </a>
-                </li>
-              
-                <li>
-
-                  <a target="_blank" rel="noopener" href="https://music.yct.ee/ " style="margin-left:75px">
-				  
-		          <span>YesPlayMusic</span>
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="javascript:;">
-			
-				<i class="fas fa-fw"></i>
-			
 			链接库
 			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
@@ -866,6 +861,37 @@ class="themespring" -->
                   <a target="_blank" rel="noopener" href="https://ssh.yct.ee/ " style="margin-left:75px">
 				  
 		          <span>Sshwifty</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fas fa-fw"></i>
+			
+			Music
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://barrymusic.yct.ee/ " style="margin-left:75px">
+				  
+		          <span>BarryMusic</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://music.yct.ee/ " style="margin-left:75px">
+				  
+		          <span>YesPlayMusic</span>
                   </a>
                 </li>
               
@@ -1236,20 +1262,20 @@ class="themespring" -->
                 </a>
                 
                 
-                <a href="/tags/%E7%BE%8E%E5%8C%96%E6%95%88%E7%8E%87/" title="美化效率: 1">
+                <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 2">
                     <span class="chip center-align waves-effect waves-light
                      chip-default "
-                            data-tagname="美化效率" style="background-color: #E8F8F5;">🔖&nbsp;美化效率
-                        <span class="tag-length">1</span>
+                            data-tagname="随笔" style="background-color: #E8F8F5;">🔖&nbsp;随笔
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E9%9A%8F%E7%AC%94/" title="随笔: 2">
+                <a href="/tags/%E7%BE%8E%E5%8C%96%E6%95%88%E7%8E%87/" title="美化效率: 1">
                     <span class="chip center-align waves-effect waves-light
                      chip-default "
-                            data-tagname="随笔" style="background-color: #FEF9E7;">🔖&nbsp;随笔
-                        <span class="tag-length">2</span>
+                            data-tagname="美化效率" style="background-color: #FEF9E7;">🔖&nbsp;美化效率
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -1272,19 +1298,19 @@ class="themespring" -->
                 </a>
                 
                 
-                <a href="/tags/Linux/" title="Linux: 1">
+                <a href="/tags/%E6%8A%96%E9%9F%B3/" title="抖音: 1">
                     <span class="chip center-align waves-effect waves-light
                      chip-default "
-                            data-tagname="Linux" style="background-color: #D7BDE2;">🔖&nbsp;Linux
+                            data-tagname="抖音" style="background-color: #D7BDE2;">🔖&nbsp;抖音
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E6%8A%96%E9%9F%B3/" title="抖音: 1">
+                <a href="/tags/Linux/" title="Linux: 1">
                     <span class="chip center-align waves-effect waves-light
                      chip-default "
-                            data-tagname="抖音" style="background-color: #A3E4D7;">🔖&nbsp;抖音
+                            data-tagname="Linux" style="background-color: #A3E4D7;">🔖&nbsp;Linux
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -1313,7 +1339,7 @@ class="themespring" -->
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"Docker","weight":1,"link":"/tags/Docker/"},{"text":"API","weight":1,"link":"/tags/API/"},{"text":"AList","weight":1,"link":"/tags/AList/"},{"text":"美化效率","weight":1,"link":"/tags/美化效率/"},{"text":"随笔","weight":2,"link":"/tags/随笔/"},{"text":"宝藏句子","weight":1,"link":"/tags/宝藏句子/"},{"text":"VPS","weight":1,"link":"/tags/VPS/"},{"text":"Linux","weight":1,"link":"/tags/Linux/"},{"text":"抖音","weight":1,"link":"/tags/抖音/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"Docker","weight":1,"link":"/tags/Docker/"},{"text":"API","weight":1,"link":"/tags/API/"},{"text":"AList","weight":1,"link":"/tags/AList/"},{"text":"随笔","weight":2,"link":"/tags/随笔/"},{"text":"美化效率","weight":1,"link":"/tags/美化效率/"},{"text":"宝藏句子","weight":1,"link":"/tags/宝藏句子/"},{"text":"VPS","weight":1,"link":"/tags/VPS/"},{"text":"抖音","weight":1,"link":"/tags/抖音/"},{"text":"Linux","weight":1,"link":"/tags/Linux/"}], {
         autoResize: true
     });
 </script>
@@ -1907,5 +1933,15 @@ $(function () {
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
     <script type="text/javascript" src="/js/firework.js"></script>
+    <!-- 冒泡 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/libs/others/buble.js"><\/script>'
+        );
+    </script>
+
 </body>
 </html>
