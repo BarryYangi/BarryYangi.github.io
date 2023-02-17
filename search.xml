@@ -154,31 +154,6 @@
     
     
     <entry>
-      <title>使Windows  Terminal变得更易用</title>
-      <link href="/posts/wt.html"/>
-      <url>/posts/wt.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使Windows-Terminal变得更易用"><a href="#使Windows-Terminal变得更易用" class="headerlink" title="使Windows  Terminal变得更易用"></a>使Windows  Terminal变得更易用</h1><h2 id="1-个性化美化"><a href="#1-个性化美化" class="headerlink" title="1.个性化美化"></a>1.个性化美化</h2><p>在wt(Windows  Terminal)设置面板中打开json文件，然后找到<code>defaults</code>关键字并在后面花括号里追加以下代码：</p><pre class="language-none"><code class="language-none">亚克力毛玻璃效果&quot;useAcrylic&quot;: true, 亚克力毛玻璃效果透明度&quot;acrylicOpacity&quot;: 0.2,背景壁纸&quot;backgroundImage&quot;: &quot;C:&#x2F;Users&#x2F;YangChentao&#x2F;Pictures&#x2F;Saved Pictures&#x2F;wt.jpeg&quot;, 背景壁纸透明度&quot;backgroundImageOpacity&quot;: 0.4,&quot;fontFace&quot;: &quot;JetBrainsMono Nerd Font Mono&quot;,&quot;fontSize&quot;: 14</code></pre><h2 id="2-oh-my-push"><a href="#2-oh-my-push" class="headerlink" title="2.oh-my-push"></a>2.oh-my-push</h2><p>微软商店下载oh-my-push</p><p>下载安装完成后会自动配置；</p><p>此时在wt里输入<code>code $PROFILE</code>用vscode打开该配置文件，打开后添加以下代码：</p><pre class="language-none"><code class="language-none">oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\montys.omp.json | Invoke-Expressioncls</code></pre><p><code>cls</code>为清屏启动项。</p><h2 id="3-安装Nerd字体解决oh-my-push字体图标不显示"><a href="#3-安装Nerd字体解决oh-my-push字体图标不显示" class="headerlink" title="3.安装Nerd字体解决oh-my-push字体图标不显示"></a>3.安装Nerd字体解决oh-my-push字体图标不显示</h2><p>推荐JetBrains Mono Medium Nerd Font Complete Mono 字体</p><p>下载安装并在wt配置文件中更改</p><h2 id="4-解决ssh连接长时间不操作自动断开"><a href="#4-解决ssh连接长时间不操作自动断开" class="headerlink" title="4.解决ssh连接长时间不操作自动断开"></a>4.解决ssh连接长时间不操作自动断开</h2><p>在C:\Users\用户名\ .ssh\config 文件中添加如下代码（没有这个文件自己建一个）：</p><pre class="language-none"><code class="language-none">Host *  ServerAliveInterval 40</code></pre><h2 id="5-启动专注模式让你的-WT-更具逼格"><a href="#5-启动专注模式让你的-WT-更具逼格" class="headerlink" title="5.启动专注模式让你的 WT 更具逼格"></a>5.启动专注模式让你的 WT 更具逼格</h2><p><img src="https://easyimage.smitten.top/i/2023/02/11/lzj6pq-0.png" alt="专注模式"> </p><h2 id="6-去掉烦人的启动版权信息并默认管理员启动"><a href="#6-去掉烦人的启动版权信息并默认管理员启动" class="headerlink" title="6.去掉烦人的启动版权信息并默认管理员启动"></a>6.去掉烦人的启动版权信息并默认管理员启动</h2><p>在 powershell 启动命令行末尾加上 <code>-nologe</code> 即可<br><img src="https://easyimage.smitten.top/i/2023/02/11/m1yvcp-0.png" alt="版权信息"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 美化效率 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>共勉</title>
       <link href="/posts/encourage.html"/>
       <url>/posts/encourage.html</url>
@@ -196,6 +171,31 @@
         <tags>
             
             <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使Windows  Terminal变得更易用</title>
+      <link href="/posts/wt.html"/>
+      <url>/posts/wt.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使Windows-Terminal变得更易用"><a href="#使Windows-Terminal变得更易用" class="headerlink" title="使Windows  Terminal变得更易用"></a>使Windows  Terminal变得更易用</h1><h2 id="1-个性化美化"><a href="#1-个性化美化" class="headerlink" title="1.个性化美化"></a>1.个性化美化</h2><p>在wt(Windows  Terminal)设置面板中打开json文件，然后找到<code>defaults</code>关键字并在后面花括号里追加以下代码：</p><pre class="language-none"><code class="language-none">亚克力毛玻璃效果&quot;useAcrylic&quot;: true, 亚克力毛玻璃效果透明度&quot;acrylicOpacity&quot;: 0.2,背景壁纸&quot;backgroundImage&quot;: &quot;C:&#x2F;Users&#x2F;YangChentao&#x2F;Pictures&#x2F;Saved Pictures&#x2F;wt.jpeg&quot;, 背景壁纸透明度&quot;backgroundImageOpacity&quot;: 0.4,&quot;fontFace&quot;: &quot;JetBrainsMono Nerd Font Mono&quot;,&quot;fontSize&quot;: 14</code></pre><h2 id="2-oh-my-push"><a href="#2-oh-my-push" class="headerlink" title="2.oh-my-push"></a>2.oh-my-push</h2><p>微软商店下载oh-my-push</p><p>下载安装完成后会自动配置；</p><p>此时在wt里输入<code>code $PROFILE</code>用vscode打开该配置文件，打开后添加以下代码：</p><pre class="language-none"><code class="language-none">oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\montys.omp.json | Invoke-Expressioncls</code></pre><p><code>cls</code>为清屏启动项。</p><h2 id="3-安装Nerd字体解决oh-my-push字体图标不显示"><a href="#3-安装Nerd字体解决oh-my-push字体图标不显示" class="headerlink" title="3.安装Nerd字体解决oh-my-push字体图标不显示"></a>3.安装Nerd字体解决oh-my-push字体图标不显示</h2><p>推荐JetBrains Mono Medium Nerd Font Complete Mono 字体</p><p>下载安装并在wt配置文件中更改</p><h2 id="4-解决ssh连接长时间不操作自动断开"><a href="#4-解决ssh连接长时间不操作自动断开" class="headerlink" title="4.解决ssh连接长时间不操作自动断开"></a>4.解决ssh连接长时间不操作自动断开</h2><p>在C:\Users\用户名\ .ssh\config 文件中添加如下代码（没有这个文件自己建一个）：</p><pre class="language-none"><code class="language-none">Host *  ServerAliveInterval 40</code></pre><h2 id="5-启动专注模式让你的-WT-更具逼格"><a href="#5-启动专注模式让你的-WT-更具逼格" class="headerlink" title="5.启动专注模式让你的 WT 更具逼格"></a>5.启动专注模式让你的 WT 更具逼格</h2><p><img src="https://easyimage.smitten.top/i/2023/02/11/lzj6pq-0.png" alt="专注模式"> </p><h2 id="6-去掉烦人的启动版权信息并默认管理员启动"><a href="#6-去掉烦人的启动版权信息并默认管理员启动" class="headerlink" title="6.去掉烦人的启动版权信息并默认管理员启动"></a>6.去掉烦人的启动版权信息并默认管理员启动</h2><p>在 powershell 启动命令行末尾加上 <code>-nologe</code> 即可<br><img src="https://easyimage.smitten.top/i/2023/02/11/m1yvcp-0.png" alt="版权信息"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 美化效率 </tag>
             
         </tags>
       
