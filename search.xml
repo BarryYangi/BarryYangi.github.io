@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>TeamSpeak服务器搭建——基于Docker-Compose</title>
-      <link href="/posts/TeamSpeak.html"/>
-      <url>/posts/TeamSpeak.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="服务器选择"><a href="#服务器选择" class="headerlink" title="服务器选择"></a>服务器选择</h2><ul><li><code>腾讯云</code> / <code>阿里云</code> 等轻量云服务器</li><li>优先选择<strong>学生优惠</strong>和<strong>香港服务器</strong></li><li>系统镜像优先选择 <code>CentOS+Docker</code> 已经配置好的镜像</li></ul><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>确认服务器已经安装 Docker 和 Docker-Compose</p><pre class="language-shell" data-language="shell"><code class="language-shell">docker -vdocker-compose -v</code></pre><p>如能正常显示版本号，下面这一步<strong>直接跳过</strong>，否则要手动安装，这里以 <code>CentOS 7</code> 为例安装：</p><blockquote><p>搜索 <code>系统名 安装 docker compose</code> 有很多现成文档</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell"># 安装yum-utilsyum install -y yum-utils# 配置yum源yum-config-manager --add-repo https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo# 安装docker-ceyum install -y docker-ce# 设置开机启动服务systemctl enable docker# 启动服务systemctl start docker# 安装epel源yum install -y epel-release# 安装docker-compose，如果没有python3会安装python3yum install -y docker-compose</code></pre><h2 id="配置-TeamSpeak"><a href="#配置-TeamSpeak" class="headerlink" title="配置 TeamSpeak"></a>配置 TeamSpeak</h2><p>找到合适的目录新建目录 <code>ts</code> 并切换</p><blockquote><p>个人习惯所有 docker 配置统一放在根目录 <code>/root/data/docker_data</code> 下，具体位置没有强制要求，但是每组配置都应放在一个单独的文件夹下</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">mkdir -p &#x2F;root&#x2F;data&#x2F;docker_data&#x2F;ts3  # 创建目录cd &#x2F;root&#x2F;data&#x2F;docker_data&#x2F;ts3     # 切换当前目录</code></pre><p>新建 <code>docker-compose.yml</code> 文件，粘贴以下内容并保存，文件内容如下（<a href="https://hub.docker.com/_/teamspeak">官方镜像 (opens new window)</a>）：</p><pre class="language-yaml" data-language="yaml"><code class="language-yaml"># docker-compose.ymlversion: &#39;3.1&#39;services:  teamspeak:    image: teamspeak    restart: always    ports:      - 9987:9987&#x2F;udp # 语音服务      - 30033:30033   # 文件传输      - 41144:41144   # DNS域名解析（可选）      - 10011:10011   # 服务器查询 raw（可选）      # - 10022:10022   # 服务器查询 SSH（可选）      # - 10080:10080   # 网络请求 http（可选）      # - 10443:10443   # 网络请求 https（可选）    volumes:      - .&#x2F;data:&#x2F;var&#x2F;ts3server    environment:      TS3SERVER_DB_PLUGIN: ts3db_mariadb      TS3SERVER_DB_SQLCREATEPATH: create_mariadb      TS3SERVER_DB_HOST: db      TS3SERVER_DB_USER: root      TS3SERVER_DB_PASSWORD: password # 数据库密码      TS3SERVER_DB_NAME: teamspeak      TS3SERVER_DB_WAITUNTILREADY: 30      TS3SERVER_LICENSE: accept  db:    image: mariadb    restart: always    environment:      MYSQL_ROOT_PASSWORD: password  # 数据库密码      MYSQL_DATABASE: teamspeak    volumes:      - .&#x2F;data&#x2F;mysql:&#x2F;var&#x2F;lib&#x2F;mysql  # 必需，否则重启镜像后数据丢失</code></pre><p>服务器上要使用 <code>vi/vim/nano</code> 编辑文件，如果没有，CentOS 系统使用 <code>yum install nano</code> 类似的指令安装</p><pre class="language-shell" data-language="shell"><code class="language-shell"># [新建文件]vi docker-compose.yml# 或vim docker-compose.yml# 或nano docker-compose.yml# [粘贴] ctrl+v 或 ctrl+shift+v 或 shift+insert# [保存] vi&#x2F;vim: ESC :wq Enter# [保存] nano: ctrl+x</code></pre><h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><p>确认当前在 <code>docker-compose.yml</code> 所在的目录，如 <code>cd /data/ts</code>：</p><pre class="language-shell" data-language="shell"><code class="language-shell"># 启动服务docker-compose up# 启动服务 一直运行 detachdocker-compose up -d# 关闭服务docker-compose down# 重启服务docker-compose restart</code></pre><p>用TS客户端连接服务器，会弹出对话框要求输入token，输入token后这个账号就是管理员了</p><ul><li><p>第一次启动时会弹出 <code>Server Query 管理员账号密码</code> 和 <code>token</code>，<strong>务必妥善保存</strong></p></li><li><p>第一次如果用 <code>docker-compose up -d</code> 启动，相关日志会保存在 <code>./data/logs</code> 下</p></li></ul><h2 id="开放规则"><a href="#开放规则" class="headerlink" title="开放规则"></a>开放规则</h2><p>云服务器的防火墙设置页添加如下入站规则：</p><ul><li>9987 UDP</li><li>30033 TCP</li><li>41144 TCP</li><li>10011 TCP</li></ul><p><a href="https://support.teamspeak.com/hc/en-us/articles/360002712257-Which-ports-does-the-TeamSpeak-3-server-use">ts官方的端口说明(opens new window)</a></p><h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><ol><li><p>添加一条 A 类型的规则，指向服务器 ip 地址。此处 <code>ts -&gt; xxx.xxx.xxx.xxx</code> 即解析域名 <code>ts.yct.ee</code>。</p></li><li><p>添加一条SRV类型的规则，如图所示：</p></li></ol><p><img src="https://easyimage.smitten.top/i/2023/02/13/qude21-0.png" alt="域名解析"></p><h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>客户端官网：<a href="https://teamspeak.com/zh-CN/">https://teamspeak.com/zh-CN/</a><br>汉化包：<a href="https://github.com/jitingcn/TS3-Translation_zh-CN/releases/latest">https://github.com/jitingcn/TS3-Translation_zh-CN/releases/latest</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Docker </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>我要我们在一起</title>
       <link href="/posts/WeAreToghter.html"/>
       <url>/posts/WeAreToghter.html</url>
@@ -96,6 +71,31 @@
         <tags>
             
             <tag> 抖音 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>TeamSpeak服务器搭建——基于Docker-Compose</title>
+      <link href="/posts/TeamSpeak.html"/>
+      <url>/posts/TeamSpeak.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="服务器选择"><a href="#服务器选择" class="headerlink" title="服务器选择"></a>服务器选择</h2><ul><li><code>腾讯云</code> / <code>阿里云</code> 等轻量云服务器</li><li>优先选择<strong>学生优惠</strong>和<strong>香港服务器</strong></li><li>系统镜像优先选择 <code>CentOS+Docker</code> 已经配置好的镜像</li></ul><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>确认服务器已经安装 Docker 和 Docker-Compose</p><pre class="language-shell" data-language="shell"><code class="language-shell">docker -vdocker-compose -v</code></pre><p>如能正常显示版本号，下面这一步<strong>直接跳过</strong>，否则要手动安装，这里以 <code>CentOS 7</code> 为例安装：</p><blockquote><p>搜索 <code>系统名 安装 docker compose</code> 有很多现成文档</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell"># 安装yum-utilsyum install -y yum-utils# 配置yum源yum-config-manager --add-repo https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo# 安装docker-ceyum install -y docker-ce# 设置开机启动服务systemctl enable docker# 启动服务systemctl start docker# 安装epel源yum install -y epel-release# 安装docker-compose，如果没有python3会安装python3yum install -y docker-compose</code></pre><h2 id="配置-TeamSpeak"><a href="#配置-TeamSpeak" class="headerlink" title="配置 TeamSpeak"></a>配置 TeamSpeak</h2><p>找到合适的目录新建目录 <code>ts</code> 并切换</p><blockquote><p>个人习惯所有 docker 配置统一放在根目录 <code>/root/data/docker_data</code> 下，具体位置没有强制要求，但是每组配置都应放在一个单独的文件夹下</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">mkdir -p &#x2F;root&#x2F;data&#x2F;docker_data&#x2F;ts3  # 创建目录cd &#x2F;root&#x2F;data&#x2F;docker_data&#x2F;ts3     # 切换当前目录</code></pre><p>新建 <code>docker-compose.yml</code> 文件，粘贴以下内容并保存，文件内容如下（<a href="https://hub.docker.com/_/teamspeak">官方镜像 (opens new window)</a>）：</p><pre class="language-yaml" data-language="yaml"><code class="language-yaml"># docker-compose.ymlversion: &#39;3.1&#39;services:  teamspeak:    image: teamspeak    restart: always    ports:      - 9987:9987&#x2F;udp # 语音服务      - 30033:30033   # 文件传输      - 41144:41144   # DNS域名解析（可选）      - 10011:10011   # 服务器查询 raw（可选）      # - 10022:10022   # 服务器查询 SSH（可选）      # - 10080:10080   # 网络请求 http（可选）      # - 10443:10443   # 网络请求 https（可选）    volumes:      - .&#x2F;data:&#x2F;var&#x2F;ts3server    environment:      TS3SERVER_DB_PLUGIN: ts3db_mariadb      TS3SERVER_DB_SQLCREATEPATH: create_mariadb      TS3SERVER_DB_HOST: db      TS3SERVER_DB_USER: root      TS3SERVER_DB_PASSWORD: password # 数据库密码      TS3SERVER_DB_NAME: teamspeak      TS3SERVER_DB_WAITUNTILREADY: 30      TS3SERVER_LICENSE: accept  db:    image: mariadb    restart: always    environment:      MYSQL_ROOT_PASSWORD: password  # 数据库密码      MYSQL_DATABASE: teamspeak    volumes:      - .&#x2F;data&#x2F;mysql:&#x2F;var&#x2F;lib&#x2F;mysql  # 必需，否则重启镜像后数据丢失</code></pre><p>服务器上要使用 <code>vi/vim/nano</code> 编辑文件，如果没有，CentOS 系统使用 <code>yum install nano</code> 类似的指令安装</p><pre class="language-shell" data-language="shell"><code class="language-shell"># [新建文件]vi docker-compose.yml# 或vim docker-compose.yml# 或nano docker-compose.yml# [粘贴] ctrl+v 或 ctrl+shift+v 或 shift+insert# [保存] vi&#x2F;vim: ESC :wq Enter# [保存] nano: ctrl+x</code></pre><h2 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h2><p>确认当前在 <code>docker-compose.yml</code> 所在的目录，如 <code>cd /data/ts</code>：</p><pre class="language-shell" data-language="shell"><code class="language-shell"># 启动服务docker-compose up# 启动服务 一直运行 detachdocker-compose up -d# 关闭服务docker-compose down# 重启服务docker-compose restart</code></pre><p>用TS客户端连接服务器，会弹出对话框要求输入token，输入token后这个账号就是管理员了</p><ul><li><p>第一次启动时会弹出 <code>Server Query 管理员账号密码</code> 和 <code>token</code>，<strong>务必妥善保存</strong></p></li><li><p>第一次如果用 <code>docker-compose up -d</code> 启动，相关日志会保存在 <code>./data/logs</code> 下</p></li></ul><h2 id="开放规则"><a href="#开放规则" class="headerlink" title="开放规则"></a>开放规则</h2><p>云服务器的防火墙设置页添加如下入站规则：</p><ul><li>9987 UDP</li><li>30033 TCP</li><li>41144 TCP</li><li>10011 TCP</li></ul><p><a href="https://support.teamspeak.com/hc/en-us/articles/360002712257-Which-ports-does-the-TeamSpeak-3-server-use">ts官方的端口说明(opens new window)</a></p><h2 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h2><ol><li><p>添加一条 A 类型的规则，指向服务器 ip 地址。此处 <code>ts -&gt; xxx.xxx.xxx.xxx</code> 即解析域名 <code>ts.yct.ee</code>。</p></li><li><p>添加一条SRV类型的规则，如图所示：</p></li></ol><p><img src="https://easyimage.smitten.top/i/2023/02/13/qude21-0.png" alt="域名解析"></p><h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>客户端官网：<a href="https://teamspeak.com/zh-CN/">https://teamspeak.com/zh-CN/</a><br>汉化包：<a href="https://github.com/jitingcn/TS3-Translation_zh-CN/releases/latest">https://github.com/jitingcn/TS3-Translation_zh-CN/releases/latest</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
             
         </tags>
       
