@@ -79,14 +79,21 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/posts/linux.html</loc>
+    <loc>https://www.smitten.top/gallery/index.html</loc>
     
     <lastmod>2023-02-18</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.smitten.top/posts/test.html</loc>
+    <loc>https://www.smitten.top/posts/encourage.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/posts/linux.html</loc>
     
     <lastmod>2023-02-18</lastmod>
     
@@ -100,7 +107,21 @@
   </url>
   
   <url>
+    <loc>https://www.smitten.top/posts/imgapi.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.smitten.top/posts/dy.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/posts/TeamSpeak.html</loc>
     
     <lastmod>2023-02-18</lastmod>
     
@@ -114,7 +135,35 @@
   </url>
   
   <url>
+    <loc>https://www.smitten.top/posts/AList.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/posts/wt.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/posts/gift.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.smitten.top/posts/essay.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/404.html</loc>
     
     <lastmod>2023-02-18</lastmod>
     
@@ -178,62 +227,6 @@
   
   <url>
     <loc>https://www.smitten.top/friends/index.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/gallery/index.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/posts/encourage.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/posts/imgapi.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/posts/TeamSpeak.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/posts/AList.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/posts/wt.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/posts/gift.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/404.html</loc>
     
     <lastmod>2023-02-18</lastmod>
     
@@ -306,13 +299,6 @@
   
   <url>
     <loc>https://www.smitten.top/tags/Linux/</loc>
-    <lastmod>2023-02-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/tags/test/</loc>
     <lastmod>2023-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>自动部署测试</title>
-      <link href="/posts/test.html"/>
-      <url>/posts/test.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>just a test!</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> test </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>我要我们在一起</title>
       <link href="/posts/WeAreToghter.html"/>
       <url>/posts/WeAreToghter.html</url>
