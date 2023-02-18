@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>自动部署测试</title>
+      <link href="/posts/test.html"/>
+      <url>/posts/test.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>just a test!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我要我们在一起</title>
       <link href="/posts/WeAreToghter.html"/>
       <url>/posts/WeAreToghter.html</url>
@@ -134,31 +159,6 @@
       <url>/posts/AList.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="关于-Alist"><a href="#关于-Alist" class="headerlink" title="关于 Alist"></a>关于 Alist</h1><p>一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>仅适用于 Linux amd64/arm64 平台。</p><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><pre class="language-shell" data-language="shell"><code class="language-shell">curl -fsSL &quot;https:&#x2F;&#x2F;alist.nn.ci&#x2F;v3.sh&quot; | bash -s install</code></pre><h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><pre class="language-shell" data-language="shell"><code class="language-shell">curl -fsSL &quot;https:&#x2F;&#x2F;alist.nn.ci&#x2F;v3.sh&quot; | bash -s update</code></pre><h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><pre class="language-shell" data-language="shell"><code class="language-shell">curl -fsSL &quot;https:&#x2F;&#x2F;alist.nn.ci&#x2F;v3.sh&quot; | bash -s uninstall</code></pre><h2 id="自定义路径"><a href="#自定义路径" class="headerlink" title="自定义路径"></a>自定义路径</h2><p>默认安装在 <code>/opt/alist</code> 中。 自定义安装路径，将安装路径作为第二个参数添加，必须是绝对路径（如果路径以 alist 结尾，则直接安装到给定路径，否则会安装在给定路径 alist 目录下），如 安装到 <code>/root</code>：</p><pre class="language-shell" data-language="shell"><code class="language-shell"># Installcurl -fsSL &quot;https:&#x2F;&#x2F;alist.nn.ci&#x2F;v3.sh&quot; | bash -s install &#x2F;root# updatecurl -fsSL &quot;https:&#x2F;&#x2F;alist.nn.ci&#x2F;v3.sh&quot; | bash -s update &#x2F;root# Uninstallcurl -fsSL &quot;https:&#x2F;&#x2F;alist.nn.ci&#x2F;v3.sh&quot; | bash -s uninstall &#x2F;root</code></pre><ul><li>启动: <code>systemctl start alist</code></li><li>关闭: <code>systemctl stop alist</code></li><li>状态: <code>systemctl status alist</code></li><li>重启: <code>systemctl restart alist</code></li></ul><h1 id="简单设置"><a href="#简单设置" class="headerlink" title="简单设置"></a>简单设置</h1><p>若是服务器先在服务器中开放 5244 端口，在浏览器中访问服务器 ip：5244 即可打开 Alist，在服务器终端中进入 <code>/opt/alist</code> 中输入 <code>./alist admin</code> 即可查看默认后台管理员账号密码</p><h2 id="挂载资源"><a href="#挂载资源" class="headerlink" title="挂载资源"></a>挂载资源</h2><p>Alist 支持绝大多数的网盘挂在以及本地挂载，详情参考 <a href="[Home | AList文档 (nn.ci">Alist 官方中文文档</a>](<a href="https://alist.nn.ci/zh/">https://alist.nn.ci/zh/</a>))</p><h2 id="搞定"><a href="#搞定" class="headerlink" title="搞定"></a>搞定</h2><p><img src="https://easyimage.smitten.top/i/2023/01/26/zcydwq-0.png" alt="效果图"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> AList </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>五分钟搭建个人资源库</title>
-      <link href="/posts/AList.html"/>
-      <url>/posts/AList.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>just a test!</p>]]></content>
       
       
       <categories>
