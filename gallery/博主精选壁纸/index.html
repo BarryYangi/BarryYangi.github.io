@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="🐈 博客打赏记录, Barry">
+    <meta name="keywords" content="博主精选壁纸, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>🐈 博客打赏记录 | Barryの小站</title>
+    <title>博主精选壁纸 | Barryの小站</title>
     
     <script>
         // 隐藏
@@ -1147,14 +1147,31 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
+    <!-- 加密功能 -->
+
+    <script src="/libs/cryptojs/crypto-js.min.js"></script>
+    <script>
+        (function() {
+            let pwd = '';
+
+            if (pwd && pwd.length > 0) {
+                if (pwd !== CryptoJS.SHA256(prompt('请输入密码才可访问哒~')).toString(CryptoJS.enc.Hex)) {
+                    alert('密码错误哦，将返回相册页面哦~');
+                    location.href = '/gallery';
+                }
+            }
+        })();
+    </script>
+
+
+<!-- <div class="bg-cover pd-header about-cover">
     <div class="container">
         <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                    🐈 博客打赏记录
+                    博主精选壁纸
                  
             </div>
 
@@ -1190,802 +1207,234 @@ class="themespring" -->
     <div class="mohuxiaoguo"></div>
 </div>
 
+ -->
 
-<style>
-    /* .bg-cover {
-        background-image: url("/medias/banner/donatebg.jpg")!important;
-    } */
-    .bg-cover::before {
-        background-image: url(/medias/bggrid.png);
+<link rel="stylesheet" href="/libs/MyGallery/css/baguetteBox.css">
+<!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
+<script src="/libs/MyGallery/js/baguetteBox.js"></script> 
+<style>    
+    #sma {
+        bottom: 150px;
     }
-    .card-content {
-        padding: 12px!important;
+    .my-gallery .photo img {
+        transition: all 0.6s ease-in-out; 
+    }     
+    .my-gallery .photo:hover img {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }      
+    .my-gallery {
+        margin: 20px auto;
+    }   
+    .miaoshus .title {
+        font-family: MV Boli;
     }
-    body.dark .dashang tr, body.dark .dashang th {
-        color: rgba(255, 255, 255, 0.4);
-    }
-    body.dark .dashang, body.dark .dashang th, body.dark .dashang tr, body.dark .dashang td {
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    body.dark .dashang td {
-        background-color: #282c34;
-    }
-    body.dark .dashang td a {
-        color: #039be5;
-    }
-    #switchspring {
-        bottom: 223px;
-    }
-    .tangguo {
-        vertical-align: middle;
-        width: 34px;
-    }
-    .dashang th, .dashang td {
-        text-align: center;
-    }
-    @media only screen and (max-width: 601px) {
-        #switchspring {
-            bottom: 178px!important;
-        }
-    }
-</style>
-
-<style>
-    @media only screen and (max-width: 800px) {
-        .swbk {
-            padding: 26px 2px!important;
-            margin: 14px 0px!important;
-        }
-    }
-    @media only screen and (max-width: 412px) {
-        .cishunone {
-            display: none;
-        }
-    }
-    @media only screen and (max-width: 370px) {
-        .jietunone {
-            display: none;
-        }
-    }
-    .swbk {
+    .miaoshus {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
         position: relative;
-        padding: 26px 20px;
-        font-style: italic;
-        margin: 10px 0px;
-        border-radius: 8px;
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    .swbk:hover {
-        -webkit-transform: translateY(-4px);
-        transform: translateY(-4px);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-        box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-    }
-    .swbk:before {
-        content: " “ ";
-        top: 56px;
-        /* left: -14px; */
-    }
-    .swbk:after {
-        content: " ” ";
-        bottom: 8px;
-        right: 5px;
-    }
-    .swbk:after, .swbk:before {
-        position: absolute;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 42px;
-        text-decoration: inherit;
-    }
-    .ziwojieshao .swbk:after, .ziwojieshao .swbk:before {
-        display: none;
-    }
-    body.dark .swbk:after, body.dark .swbk:before {
-        color: #d2c9c9;
-    }
-    .swbk p {
-        font-size: 19px!important;
-        line-height: 2rem;
-        text-indent: 2rem;
-        font-style: italic;
-        font-family: 'Architects Daughter', cursive!important;
-    }
-    .swbk .label {
         display: inline-block;
-        position: relative;
-        margin-bottom: 10px;
-        padding: 0 14px 0 32px;
-        height: 32px;
-        line-height: 32px;
-        border-radius: 0 3px 3px 0;
-        background-color: currentColor;
+        width: 75%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+        font-size: 16px;
+        margin: 24px auto 12px;
+        
     }
-    .swbk .label span {
-        color: #fff;
+    body.dark .miaoshus {
+        background: 0 0;
+        border: 1px dashed #888;
     }
-    .swbk .label:after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 0;
-        height: 0;
-        background-color: transparent;
-        border-style: solid;
-        border-width: 0 16px 16px 0;
-        border-color: transparent;
-        border-right-color: currentColor;
-        -webkit-filter: brightness(120%);
-        filter: brightness(120%);
+    body {
+        overflow: visible!important;
     }
-    @media screen and (min-width: 768px) {
-        .swbk .label {
-            left: -37px;
+    .box {
+            position: relative;
+            max-width: 1064px;
         }
-    }
-    @media screen and (max-width: 767px) {
-        .swbk .label {
-            left: -18px;
-        }
-        .swbk p {
-            line-height: 2.02rem;
-            padding: 2px 10px;
-        }
-    }
-</style>
-
-<main class="content">
-    <div class="container">
-        <div class="card">
-            <!-- 福袋按钮 -->
-            <div class="caishendeng">        
-                <div class="guguxian">
-                    <img class="caishenpic gugus" src="/medias/spring-img/tang.png" />
-                </div>              
-            </div>
-            
-            <div class="card-content">
-                <div class="swbk">
-                    <!-- 福袋按钮 -->
-                    <div class="caishendeng">        
-                        <div class="caishenxian">
-                            <img class="caishenpic lions" src="/medias/spring-img/gugu.png" />
-                        </div>              
-                    </div>
-                    
-                    <div class="label" style="color: rgb(178, 143, 206);">
-                      <!-- 小帽子 -->
-                      <img class="labelmz" src="/medias/spring-img/maozi.png" />
-                      <span>买个馒头吃吧</span></div>
-                    <p>如果你觉得itsBarry的博客还不错的话，欢迎赞赏一下itsBarry，感谢支持哦~ 
-                    </p>
-                </div>
-
-                <!-- 二维码模块 -->
-                <div class="swbk">
-                    <!-- 福袋按钮 -->
-                    <div class="caishendeng">        
-                        <div class="caishenxian">
-                            <img class="caishenpic huadengpic" src="/medias/spring-img/jiaozi.png" />
-                        </div>              
-                    </div>    
-                    <div class="label" style="color: rgb(134, 193, 102);">
-                        <!-- 小帽子 -->
-                        <img class="labelmz" src="/medias/spring-img/maozi.png" />
-                        <span>支付宝（左），微信（右）</span></div>
-                    <p>
-                        <style>
-                            .xiangjipicss {
-                                margin-top: 16px;
-                            }
-                            .xiangjipic {
-                                width: 240px;
-                                vertical-align: middle;
-                                padding: 8px;
-                                border-radius: 14px;
-                                display: inline-block;
-                                margin: 2px 53px;
-                            }
-                            @media only screen and (max-width: 770px) {
-                                .xiangjipic {
-                                    display: list-item;
-                                    margin: 2px auto;
-                                    width: 310px;
-                                }
-                            } 
-                            @media only screen and (max-width: 380px) {
-                                .xiangjipic {
-                                    width: 270px;
-                                }
-                            } 
-                            @media only screen and (max-width: 361px) {
-                                .xiangjipic {
-                                    width: 222px;
-                                }
-                            } 
-                            @media only screen and (min-width: 1000px) and (max-width: 1130px) {
-                                .xiangjipic {
-                                    margin: 2px 20px;
-                                }
-                            }
-                            
-                        </style>
-                        <div class="xiangjipicss col s12 m6 l4">
-                            <img src="/medias/reward/alipay.jpg" class="xiangjipic" title="支付宝，谢谢支持" alt="支付宝，谢谢支持" />
-                            <img src="/medias/miao.jpg" class="xiangjipic" title="你资助博主的样子真好看，哈哈哈" alt="谢谢支持" />
-                            <img src="/medias/reward/wechat.png" class="xiangjipic" title="微信，谢谢支持" alt="微信，谢谢支持" />
-                        </div>
-                    </p>
-                </div>
-
-                <div class="swbk">
-                    <!-- 福袋按钮 -->
-                    <div class="caishendeng">        
-                        <div class="caishenxian">
-                            <img class="caishenpic huadengpic" src="/medias/spring-img/huadeng.png" />
-                        </div>              
-                    </div>
-                    
-                    <div class="label" style="color: rgb(251, 150, 110);">
-                        <!-- 小帽子 -->
-                        <img class="labelmz" src="/medias/spring-img/maozi.png" />
-                        <span>打赏记录</span></div>
-                    <p>
-                        打赏规则：1 软妹币 = 1000 糖果 （打赏时可在支付页面填写自己的网址，博客名，备注信息哦，再次感谢支持）
-                    </p>
-                </div>
-
-                <!-- 打赏表格模块 -->
-                <table class="dashang">
-                    <tbody>
-                    <tr>
-                        <th>时间</th><th>人物</th><th>糖果数</th><th class="cishunone">次数</th><th class="jietunone">截图</th><th>备注</th>
-                    </tr>
-                    <!-- 以下每一个tr标签代表一个打赏者信息 -->
-                    <!-- <tr>
-                      <td><font color="Hotpink">2021-12-06</font></td><td><a href="javascript:;">晴城</a></td><td>6000 x <img src="/medias/candy.png" class="tangguo" /></td><td class="cishunone">1</td><td class="jietunone"><a href="https://s2.loli.net/2021/12/06/njkGDxQcamdrbA1.jpg" target="_blank">微信支付</a></td><td><font color="Hotpink"><img src="/medias/laba.png" class="tangguo" style="width: 26px;" /> 加油哈，老哥，很喜欢你的博客，今天成为你的新一个粉丝 ~</font></td>
-                  </tr>
-                    <tr>
-                        <td><font color="Hotpink">2021-03-24</font></td><td><a href="javascript:;">*杨</a></td><td>2000 x <img src="/medias/candy.png" class="tangguo" /></td><td class="cishunone">1</td><td class="jietunone"><a href="https://7.dusays.com/2021/03/25/b5467a0019cf0.jpeg" target="_blank">微信支付</a></td><td><font color="Hotpink"><img src="/medias/laba.png" class="tangguo" style="width: 26px;" /> 未留言，感谢你 ~</font></td>
-                    </tr>
-                    <tr>
-                        <td><font color="Hotpink">2021-01-10</font></td><td><a href="https://mx142.cn/" target="_blank">Ming xin</a></td><td>10000 x <img src="/medias/candy.png" class="tangguo" /></td><td class="cishunone">1</td><td class="jietunone"><a href="https://7.dusays.com/2021/01/10/ff5c2559322e2.jpeg" target="_blank">微信转账</a></td><td><font color="Hotpink"><img src="/medias/laba.png" class="tangguo" style="width: 26px;" /> 感谢hxd ~</font></td>
-                    </tr>
-                    <tr>
-                        <td><font color="Hotpink">2020-12-22</font></td><td><a href="javascript:;" target="">*奥</a></td><td>2000 x <img src="/medias/candy.png" class="tangguo" /></td><td class="cishunone">1</td><td class="jietunone"><a href="https://7.dusays.com/2020/12/24/7e5bda45c8f98.jpeg" target="_blank">微信支付</a></td><td><font color="Hotpink"><img src="/medias/laba.png" class="tangguo" style="width: 26px;" /> 想看看源码，学习一下~ </font></td>
-                    </tr>
-                    <tr>
-                        <td><font color="Hotpink">2020-12-11</font></td><td><a href="javascript:;" target="">*然</a></td><td>2000 x <img src="/medias/candy.png" class="tangguo" /></td><td class="cishunone">1</td><td class="jietunone"><a href="https://7.dusays.com/2020/12/24/2769bb3f4afca.jpeg" target="_blank">公众号赞赏</a></td><td><font color="Hotpink"><img src="/medias/laba.png" class="tangguo" style="width: 26px;" /> 未留言，希望这位博主看到了能来留言板告诉我，感谢你~ </font></td>
-                    </tr>
-                    <tr>
-                        <td><font color="Hotpink">2020-12-06</font></td><td><a href="https://www.xiezhrspace.cn/" target="_blank">xie zhr</a></td><td>2000 x <img src="/medias/candy.png" class="tangguo" /></td><td class="cishunone">1</td><td class="jietunone"><a href="https://7.dusays.com/2020/12/24/b49afcaa062e4.jpeg" target="_blank">公众号赞赏</a></td><td><font color="Hotpink"><img src="/medias/laba.png" class="tangguo" style="width: 26px;" /> 博主加油~ </font></td>
-                    </tr>
-                    <tr>
-                        <td><font color="Hotpink">2020-11-26</font></td><td><a href="https://mx142.cn/" target="_blank">Ming xin</a></td><td>20000 x <img src="/medias/candy.png" class="tangguo" /></td><td class="cishunone">2</td><td class="jietunone"><a href="https://7.dusays.com/2020/12/24/e69228166e878.jpeg" target="_blank">微信支付</a></td><td><font color="Hotpink"><img src="/medias/laba.png" class="tangguo" style="width: 26px;" /> 网络安全 后期制作 ~</font></td>
-                    </tr> -->
-                    <tr>
-                        <td><font color="Hotpink">2022-12-20</font></td><td><a href="http://barryyangi.github.io/" target="_blank">itsBarry</a></td><td>3000 x <img src="/medias/candy.png" class="tangguo" /></td><td class="cishunone">1</td><td class="jietunone"><a href="javascript:;">微信支付</a></td><td><font color="Hotpink"><img src="/medias/laba.png" class="tangguo" style="width: 26px;" /> 博主加油！卟卟 ~</font></td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                
-                    <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
+    .box img {
+        width: 350px;
         height: 350px;
+        vertical-align: top;
+        padding: 8px;
+        border-radius: 20px;
+        transition: all 0.5s;
     }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
+    .box img:hover {
+        transform: scale(1.05);
     }
-
-    #rewardModal .modal-content {
-        padding: 10px;
+    .page-footer {
+        display: none
     }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
+    body {
+        overflow-y: visible!important;
     }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
+    header {
+        background-color: #000;
     }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
+    .biaotiss {
+            font-family: MV Boli;
+        }   
+    canvas {
+        opacity: 0.3!important;
     }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
+    @media only screen and (max-width: 1058px) {
+        .box {
+            margin-left: 145px;
+        }
     }
-
-    .reward-content ul {
-        padding-left: 0 !important;
+    @media only screen and (max-width: 770px) {
+        .box {
+            margin-left: 15px;
+        }
     }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
+    @media only screen and (max-width: 500px) {
+        #previous-button, #next-button {
+            display: none;
+        }
     }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
+    @media only screen and (max-width: 380px) {
+        .box {
+            margin-left: -5px;
+        }
     }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
+    @media only screen and (max-width: 323px) {
+        .box img {
+            width: 296px;
+            left: 0;
+        }
     }
 </style>
 
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">感谢赞赏哦~</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
+<div class="tag-title center-align">
+        <div class="miaoshus">
+            <!-- 福袋按钮 -->
+        <div class="caishendeng">        
+            <div class="guguxian">
+                <img class="caishenpic gugus" src="/medias/spring-img/jiaozi.png" />
+            </div>              
         </div>
+        <div class="title center-align">
+            “ 
+                博主精选壁纸
+              ”
+        </div>
+        “ 光影流年 ”
+        “ 这里有光影流年，还有两朵穿衣裳的云。”
     </div>
 </div>
 
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
+<!-- 相册 -->
+<section class="gallery">
+    <div id="myGallery" class="my-gallery">
+        <div class="row">
+            <div class="box">
+            
                 
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/z5xlyp.png" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5xlyp.png" alt="img"+0 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/z5xqzs.jpg" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5xqzs.jpg" alt="img"+1 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/z5xo4h.png" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5xo4h.png" alt="img"+2 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/z5xnge.webp" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5xnge.webp" alt="img"+3 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/z5xc42.webp" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5xc42.webp" alt="img"+4 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/z5xa96.png" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5xa96.png" alt="img"+5 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/z5x6vq.png" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5x6vq.png" alt="img"+6 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/z5wqgq.png" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5wqgq.png" alt="img"+7 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/xata78.png" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/xata78.png" alt="img"+8 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/xakvzc.webp" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/xakvzc.webp" alt="img"+9 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/14/xa6yzt.webp" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/xa6yzt.webp" alt="img"+10 >
+                        </a>                   
+                
+                                       
+                        <a target="_blank" rel="noopener" href="https://easyimage.smitten.top/i/2023/02/17/z5t7lj-0.png" data-caption="博主精选壁纸">
+                            <img class="mat" src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/17/z5t7lj-0.png" alt="img"+11 >
+                        </a>                   
+                
+            
             </div>
         </div>
-      
-        <!-- 评论模块 -->
-        <div class="card">
-            
-
-            
-
-            
-
-            
-
-            
-            <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
-    .v[data-class=v] .emoji, .v[data-class=v] .vemoji {
-        max-height: 20px;
-        overflow: hidden;
-        max-width: 20px!important;
-    }
-    .v[data-class=v] .vwrap .vemojis {
-        text-align: center;
-    }
-    .roboterbb {
-        position: absolute;
-        right: 87px;
-        padding-top: 3px;
-    }
-    .robot-check-text:hover {
-        color: #26a69a;
-    }
-    .roboter:hover .robot-check-text::before {
-        border: 2px solid #5a5a5a;
-    }
-    .robotxian {
-        background: #5a5a5a;
-        top: 21px;
-        left: 11px!important;
-        transform-origin: 50% -17px;
-        animation: swing 3.5s infinite ease-in-out;
-        -webkit-transform-origin: 50% -17px;
-        -webkit-animation: swing 2.85s infinite ease-in-out;
-    }
-    .v[data-class=v] .vwrap {
-        padding-bottom: 23px;
-    }
-    .robotimg {
-        width: 28px!important;
-        height: 28px!important;
-        top: 14px!important;
-        left: -13px!important;
-        max-width: none!important;
-        z-index: 99;
-        cursor: none!important;
-    }
-    .v[data-class=v] .vbtn:disabled {
-        color: #b2b2b5;
-        border-color: #b2b2b5;
-    }
-    .v[data-class=v] .vbtn:disabled {
-        background-color: transparent;
-    }
-    .valine-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-    .v[data-class=v] .vwrap {
-        border-radius: 8px;
-    }
-    /* #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/medias/comment_bg1.webp") 100% 100% no-repeat;
-    } */
-    #vcomments textarea {
-        background: url(/medias/comment_bg1.webp) no-repeat;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-        background-color: rgba(255,255,255,0);
-        resize: vertical;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-</style>
-
-<div class="card valine-card" id="vcomments-top">
-
-    <!-- 福袋按钮 -->
-    <div class="caishendeng">        
-        <div class="caishenxian fudaixian">
-            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png" />
-        </div>              
     </div>
-   
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评 论</span>
-    </div>
-    <div id="vcomments" class="card-content" style="display: grid"></div>
-</div>
+</section>
 
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
 <script>
-    new Valine({
-        el: '#vcomments',
-        enableQQ: true,
-        boolean: true,
-        appId: 'k5N8XhsMfL71uDYEah6HoN6B-gzGzoHsz',
-        appKey: 'Q4JIAdUGaDEKrFZxjrymW7VX',
-        notify: 'false' === 'true',
-        verify: 'false' === 'true',
-        visitor: 'true' === 'true',
-        // avatar: 'mm',
-        avatar: '/medias/robot.png',
-        pageSize: '16',
-        lang: 'zh-cn',
-        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
-
-        adminEmailMd5: '',
-
-        master: ["6b922a7268ecf15b7de33e844cfb9fba"],
-        friends: [""],
-        tagMeta: ["博主", "小伙伴", "访客"],
-        // tagMeta: '博主,小伙伴,访客',
-        // master: '6b922a7268ecf15b7de33e844cfb9fba',
-        // friends: '',
-        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest"]
+    baguetteBox.run('.gallery', {
+        // 配置参数
+        buttons:Boolean,//是否显示导航按钮。
+        noScrollbars:true,//是否在显示时隐藏滚动条。
+        titleTag:true,//是否使用图片上的title属性作为图片标题
+        async:true,//是否异步加载文件。
     });
+
+    start()
+        $(window).on('scroll', function(){
+         start();
+    })
+
+    function start(){
+          //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
+        $('.gallery img').not('[data-isLoaded]').each(function(){
+            var $node = $(this)
+            if( isShow($node) ){
+                loadImg($node);
+            }
+        });
+     }
+
+    //判断一个元素是不是出现在窗口(视野)
+    function isShow($node){
+        return $node.offset().top <= $(window).height() + $(window).scrollTop();
+    }
+    //加载图片
+    function loadImg($img){
+    //.attr(值)
+    //.attr(属性名称,值)
+        $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
+        $img.attr('data-isLoaded', 1);//已加载的图片做标记
+    }
 </script>
-<!-- 直达评论 -->
-<div id="to_comment" class="comment-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
-        <i class="fas fa-comments"></i>
-    </a>
-</div>
-
-
-<!-- 评论机器人验证 -->
-<script>
-    $('.roboter').on('click',function(){
-        $('.robot-check-text').html('·&nbsp;&nbsp;&nbsp;验证成功！');
-        $('.roboter:hover .robot-check-text::before').css('border','2px solid #26a69a');
-        $('.robotxian').css('background','#26a69a');
-        $('.robotimg').attr('src','/medias/robot.png');
-        $('.robot-check-text').css('color','#26a69a');
-    });
-    
-    if(!$('.robot-check').checked) {
-        // alert("请勾选机器人验证后再发表评论！");
-        $('.vsubmit').attr('disabled',true).attr('title','评论前勾选机器人验证按钮');
-    } 
-    $('.robot-check').on('click',function(){
-        $('.vsubmit').attr('disabled',false).attr('title','欢迎畅所欲言');
-    });
-</script>
-
-            
-			
-			
-        </div>
-    </div>
-</main>
 
 
     <style>
