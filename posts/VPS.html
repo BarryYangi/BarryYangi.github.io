@@ -128,8 +128,9 @@
         })();
     </script>
     <link rel="stylesheet" type="text/css" href="/css/loading.css">
+    <link rel="stylesheet" href="/css/prism.css">
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="Barryの小站" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1475,14 +1476,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    9 分
                 </div>
                 
 
@@ -1492,25 +1493,24 @@ h3:hover {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="综合工具箱（强烈推荐，集成了很多脚本）"><a href="#综合工具箱（强烈推荐，集成了很多脚本）" class="headerlink" title="综合工具箱（强烈推荐，集成了很多脚本）"></a>综合工具箱（强烈推荐，集成了很多脚本）</h2><pre class="language-bash" data-language="bash"><code class="language-bash">wget -O box.sh https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;BlueSkyXN&#x2F;SKY-BOX&#x2F;main&#x2F;box.sh &amp;&amp; chmod +x box.sh &amp;&amp; clear &amp;&amp; .&#x2F;box.sh</code></pre>
-<h2 id="杜甫测试"><a href="#杜甫测试" class="headerlink" title="杜甫测试"></a>杜甫测试</h2><pre class="language-bash" data-language="bash"><code class="language-bash">wget -q https:&#x2F;&#x2F;github.com&#x2F;Aniverse&#x2F;A&#x2F;raw&#x2F;i&#x2F;a &amp;&amp; bash a</code></pre>
-<h2 id="DD-相关"><a href="#DD-相关" class="headerlink" title="DD 相关"></a>DD 相关</h2><h3 id="1、甲骨文-DD-脚本"><a href="#1、甲骨文-DD-脚本" class="headerlink" title="1、甲骨文 DD 脚本"></a>1、甲骨文 DD 脚本</h3><p>DD成Debian 10<br>&lt;!—hexoPostRenderEscape:<pre class="language-bash" data-language="bash"><code class="language-bash"> bash &lt;(wget —no-check-certificate -qO- &#39;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;MoeClub&#x2F;Note&#x2F;master&#x2F;InstallNET.sh&#39;) -d 10 -v 64 -p &quot;自定义root密码&quot; -port &quot;自定义ssh端口&quot;<br>&#96;&#96;&#96; </code></pre></p>
-<p>DD成Ubuntu 20.04<br>&#96;&#96;&#96;bash<br>bash &lt;(wget —no-check-certificate -qO- &#39;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;MoeClub&#x2F;Note&#x2F;master&#x2F;InstallNET.sh&#39;) -u 20.04 -v 64 -p &quot;自定义root密码&quot; -port &quot;自定义ssh端口&quot;&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</p>
+                <h2 id="综合工具箱（强烈推荐，集成了很多脚本）"><a href="#综合工具箱（强烈推荐，集成了很多脚本）" class="headerlink" title="综合工具箱（强烈推荐，集成了很多脚本）"></a>综合工具箱（强烈推荐，集成了很多脚本）</h2><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x box.sh <span class="token operator">&amp;&amp;</span> <span class="token function">clear</span> <span class="token operator">&amp;&amp;</span> ./box.sh</code></pre>
+<h2 id="杜甫测试"><a href="#杜甫测试" class="headerlink" title="杜甫测试"></a>杜甫测试</h2><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -q https://github.com/Aniverse/A/raw/i/a <span class="token operator">&amp;&amp;</span> <span class="token function">bash</span> a</code></pre>
+<h2 id="DD-相关"><a href="#DD-相关" class="headerlink" title="DD 相关"></a>DD 相关</h2><h3 id="1、甲骨文-DD-脚本"><a href="#1、甲骨文-DD-脚本" class="headerlink" title="1、甲骨文 DD 脚本"></a>1、甲骨文 DD 脚本</h3><p>DD成Debian 10<br>&lt;!—hexoPostRenderEscape:<pre class="language-bash" data-language="bash"><code class="language-bash"> <span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">wget</span> —no-check-certificate -qO- <span class="token string">‘<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh">https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh</a>‘</span><span class="token punctuation">)</span> -d <span class="token number">10</span> -v <span class="token number">64</span> -p <span class="token string">“自定义root密码”</span> -port <span class="token string">“自定义ssh端口”</span><br><code>`&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;</code>&lt;/span&gt; </code></pre></p>
+<p>DD成Ubuntu <span class="token number">20.04</span><br><span class="token variable">`</span>&lt;/span&gt;``bash<br><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">wget</span> —no-check-certificate -qO- <span class="token string">‘<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh">https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh</a>‘</span><span class="token punctuation">)</span> -u <span class="token number">20.04</span> -v <span class="token number">64</span> -p <span class="token string">“自定义root密码”</span> -port <span class="token string">“自定义ssh端口”</span>&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</p>
 <h3 id="2、MoeClub脚本"><a href="#2、MoeClub脚本" class="headerlink" title="2、MoeClub脚本"></a>2、MoeClub脚本</h3><p><strong>重点推荐：</strong>  </p>
 <p>时间：22/11/2021 15:21 萌咖更新脚本：  </p>
 <p>1.新增对 Oracle AMD，Oracle ARM全面支持. 可支持从 Ubuntu, Oracle Linux 等系统网络重装.<br>2.更新 dd 镜像的基础系统版本.<br>3.移除对外部 wget 的依赖.<br>4.新增 -port 参数, 可更改默认SSH端口.<br>5.更新 内置的网络参数计算 逻辑.<br>6.更新 grub 配置文件定位逻辑, 可支持任意引导grub的系统.  </p>
-<p>以下系统已通过测试(其他自测):<br>Debian: 9, 10, 11;<br>Ubuntu: 18.04, 20.04;<br>CentOS: 6.10;<br>以下平台已通过测试(其他自测):<br>Oracle、Do、Azure<br>&lt;!—hexoPostRenderEscape:<pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(wget —no-check-certificate -qO- &#39;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;MoeClub&#x2F;Note&#x2F;master&#x2F;InstallNET.sh&#39;) -d 10 -v 64 -p &quot;自定义root密码&quot; -port &quot;自定义ssh端口&quot;<br>&#96;&#96;&#96;  </code></pre></p>
-<p>-d 10 -v 64<br>-d 9 -v 64<br>-u 20.04 -v 64<br>-u 18.04 -v 64  </p>
+<p>以下系统已通过测试(其他自测):<br>Debian: 9, 10, 11;<br>Ubuntu: 18.04, 20.04;<br>CentOS: 6.10;<br>以下平台已通过测试(其他自测):<br>Oracle、Do、Azure<br>&lt;!—hexoPostRenderEscape:<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">wget</span> —no-check-certificate -qO- <span class="token string">‘<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh">https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh</a>‘</span><span class="token punctuation">)</span> -d <span class="token number">10</span> -v <span class="token number">64</span> -p <span class="token string">“自定义root密码”</span> -port <span class="token string">“自定义ssh端口”</span><br><code>`&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;</code>&lt;/span&gt;  </code></pre></p>
+<p>-d <span class="token number">10</span> -v <span class="token number">64</span><br>-d <span class="token number">9</span> -v <span class="token number">64</span><br>-u <span class="token number">20.04</span> -v <span class="token number">64</span><br>-u <span class="token number">18.04</span> -v <span class="token number">64</span>  </p>
 <p>开机改密码脚本：  </p>
-<p>开机改密：<br>&#96;&#96;&#96;bash</p>
-<h1 id="x2F-bin-x2F-bash"><a href="#x2F-bin-x2F-bash" class="headerlink" title="!&#x2F;bin&#x2F;bash"></a>!&#x2F;bin&#x2F;bash</h1><p>echo root:Vicer |sudo chpasswd root<br>sudo sed -i &#39;s&#x2F;^#\?PermitRootLogin.<em>&#x2F;PermitRootLogin yes&#x2F;g&#39; &#x2F;etc&#x2F;ssh&#x2F;sshd_config;<br>sudo sed -i &#39;s&#x2F;^#\?PasswordAuthentication.</em>&#x2F;PasswordAuthentication yes&#x2F;g&#39; &#x2F;etc&#x2F;ssh&#x2F;sshd_config;<br>sudo reboot &lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</p>
-<h3 id="3、另一位大佬的脚本"><a href="#3、另一位大佬的脚本" class="headerlink" title="3、另一位大佬的脚本"></a>3、另一位大佬的脚本</h3><pre class="language-bash" data-language="bash"><code class="language-bash">wget --no-check-certificate -O AutoReinstall.sh https:&#x2F;&#x2F;git.io&#x2F;AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</code></pre>
+<p>开机改密：<br><span class="token variable">`</span>&lt;/span&gt;``bash<br><span class="token comment">#!/bin/bash  </span><br><span class="token builtin class-name">echo</span> root:Vicer <span class="token operator">|</span><span class="token function">sudo</span> chpasswd root<br><span class="token function">sudo</span> <span class="token function">sed</span> -i <span class="token string">‘s/^#\?PermitRootLogin.*/PermitRootLogin yes/g’</span> /etc/ssh/sshd_config<span class="token punctuation">;</span><br><span class="token function">sudo</span> <span class="token function">sed</span> -i <span class="token string">‘s/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g’</span> /etc/ssh/sshd_config<span class="token punctuation">;</span><br><span class="token function">sudo</span> <span class="token function">reboot</span> &lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</p>
+<h3 id="3、另一位大佬的脚本"><a href="#3、另一位大佬的脚本" class="headerlink" title="3、另一位大佬的脚本"></a>3、另一位大佬的脚本</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> --no-check-certificate -O AutoReinstall.sh https://git.io/AutoReinstall.sh <span class="token operator">&amp;&amp;</span> <span class="token function">bash</span> AutoReinstall.sh</code></pre>
 <ul>
 <li>CentOS 默认密码 Pwd@CentOS 其它系统 Pwd@Linux  </li>
 <li>OpenVZ / LXC 架构系统不适用  </li>
 </ul>
 <p>来源： <a target="_blank" rel="noopener" href="https://blog.hicasper.com/post/135.html">https://blog.hicasper.com/post/135.html</a> 参考： <a target="_blank" rel="noopener" href="https://www.ydyno.com/archives/1245.html">https://www.ydyno.com/archives/1245.html</a> 感谢大佬的付出！  </p>
-<pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(wget --no-check-certificate -qO- &#39;https:&#x2F;&#x2F;file.geekn.net&#x2F;CNODnjau&#x2F;InstallNET.sh&#39;) -d 11 -v 64 -a -firmware  </code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">wget</span> --no-check-certificate -qO- <span class="token string">'https://file.geekn.net/CNODnjau/InstallNET.sh'</span><span class="token punctuation">)</span> -d <span class="token number">11</span> -v <span class="token number">64</span> -a -firmware  </code></pre>
 <p>-firmware 额外的驱动支持<br>-d 后面是系统版本号<br>-v 后面写64位 32位<br>-a （不清楚这个干啥的但是每个脚本都带）<br>–mirror 后面是镜像源地址  </p>
 <p>-p 后面写自定义密码  </p>
 <pre class="language-none"><code class="language-none">镜像站地址  
@@ -1567,43 +1567,43 @@ mirrors.ustc.edu.cn
 <li>Windows Server 2016 Datacenter（Build: 14393.5006）</li>
 <li>Windows Server 2012 R2 Datacenter</li>
 </ul>
-<h2 id="测试相关"><a href="#测试相关" class="headerlink" title="测试相关"></a>测试相关</h2><h3 id="机器测试"><a href="#机器测试" class="headerlink" title="机器测试"></a>机器测试</h3><h4 id="单线程测试"><a href="#单线程测试" class="headerlink" title="单线程测试"></a>单线程测试</h4><pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(curl -Lso- https:&#x2F;&#x2F;bench.im&#x2F;hyperspeed) </code></pre>
-<h4 id="最全测速脚本"><a href="#最全测速脚本" class="headerlink" title="最全测速脚本"></a>最全测速脚本</h4><pre class="language-bash" data-language="bash"><code class="language-bash">curl -fsL https:&#x2F;&#x2F;ilemonra.in&#x2F;LemonBenchIntl | bash -s fast  </code></pre>
-<h4 id="superbench"><a href="#superbench" class="headerlink" title="superbench"></a>superbench</h4><pre class="language-bash" data-language="bash"><code class="language-bash">wget -qO- git.io&#x2F;superbench.sh | bash  </code></pre>
-<h4 id="Bench-sh"><a href="#Bench-sh" class="headerlink" title="Bench.sh"></a>Bench.sh</h4><pre class="language-bash" data-language="bash"><code class="language-bash">wget -qO- bench.sh | bash  </code></pre>
-<h3 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h3><h4 id="显示延迟、抖动"><a href="#显示延迟、抖动" class="headerlink" title="显示延迟、抖动"></a>显示延迟、抖动</h4><pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(wget -qO- https:&#x2F;&#x2F;bench.im&#x2F;hyperspeed)</code></pre>
-<h4 id="直接显示回程线路"><a href="#直接显示回程线路" class="headerlink" title="直接显示回程线路"></a>直接显示回程线路</h4><pre class="language-bash" data-language="bash"><code class="language-bash">curl https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;zhucaidan&#x2F;mtr_trace&#x2F;main&#x2F;mtr_trace.sh|bash </code></pre>
-<pre class="language-bash" data-language="bash"><code class="language-bash">wget -q route.f2k.pub -O route &amp;&amp; bash route  </code></pre>
+<h2 id="测试相关"><a href="#测试相关" class="headerlink" title="测试相关"></a>测试相关</h2><h3 id="机器测试"><a href="#机器测试" class="headerlink" title="机器测试"></a>机器测试</h3><h4 id="单线程测试"><a href="#单线程测试" class="headerlink" title="单线程测试"></a>单线程测试</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -Lso- https://bench.im/hyperspeed<span class="token punctuation">)</span> </code></pre>
+<h4 id="最全测速脚本"><a href="#最全测速脚本" class="headerlink" title="最全测速脚本"></a>最全测速脚本</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -fsL https://ilemonra.in/LemonBenchIntl <span class="token operator">|</span> <span class="token function">bash</span> -s fast  </code></pre>
+<h4 id="superbench"><a href="#superbench" class="headerlink" title="superbench"></a>superbench</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -qO- git.io/superbench.sh <span class="token operator">|</span> <span class="token function">bash</span>  </code></pre>
+<h4 id="Bench-sh"><a href="#Bench-sh" class="headerlink" title="Bench.sh"></a>Bench.sh</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -qO- bench.sh <span class="token operator">|</span> <span class="token function">bash</span>  </code></pre>
+<h3 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h3><h4 id="显示延迟、抖动"><a href="#显示延迟、抖动" class="headerlink" title="显示延迟、抖动"></a>显示延迟、抖动</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">wget</span> -qO- https://bench.im/hyperspeed<span class="token punctuation">)</span></code></pre>
+<h4 id="直接显示回程线路"><a href="#直接显示回程线路" class="headerlink" title="直接显示回程线路"></a>直接显示回程线路</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh<span class="token operator">|</span><span class="token function">bash</span> </code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -q route.f2k.pub -O route <span class="token operator">&amp;&amp;</span> <span class="token function">bash</span> route  </code></pre>
 <pre class="language-none"><code class="language-none">&#x2F;&#x2F;第一个  
 wget https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nanqinlang-script&#x2F;testrace&#x2F;master&#x2F;testrace.sh  
 bash testrace.sh  
 
 &#x2F;&#x2F;第二个  
 wget -qO- git.io&#x2F;besttrace | bash  </code></pre>
-<h4 id="四网测速"><a href="#四网测速" class="headerlink" title="四网测速"></a>四网测速</h4><pre class="language-bash" data-language="bash"><code class="language-bash">wget -O jcnf.sh https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Netflixxp&#x2F;jcnfbesttrace&#x2F;main&#x2F;jcnf.sh
-bash jcnf.sh  </code></pre>
-<h4 id="三网测速"><a href="#三网测速" class="headerlink" title="三网测速"></a>三网测速</h4><pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(curl -Lso- https:&#x2F;&#x2F;git.io&#x2F;superspeed_uxh)  </code></pre>
-<p>带快速四网测试版本：<br><pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(curl -Lso- https:&#x2F;&#x2F;dl.233.mba&#x2F;d&#x2F;sh&#x2F;speedtest.sh)</code></pre></p>
-<pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(curl -Lso- https:&#x2F;&#x2F;git.io&#x2F;J1SEh)  </code></pre>
-<p>带综合测试的版本（CPU信息、Geekbench等）：<br><pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(wget --no-check-certificate -O- https:&#x2F;&#x2F;dl.233.mba&#x2F;d&#x2F;sh&#x2F;superbenchpro.sh)</code></pre></p>
+<h4 id="四网测速"><a href="#四网测速" class="headerlink" title="四网测速"></a>四网测速</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -O jcnf.sh https://raw.githubusercontent.com/Netflixxp/jcnfbesttrace/main/jcnf.sh
+<span class="token function">bash</span> jcnf.sh  </code></pre>
+<h4 id="三网测速"><a href="#三网测速" class="headerlink" title="三网测速"></a>三网测速</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -Lso- https://git.io/superspeed_uxh<span class="token punctuation">)</span>  </code></pre>
+<p>带快速四网测试版本：<br><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -Lso- https://dl.233.mba/d/sh/speedtest.sh<span class="token punctuation">)</span></code></pre></p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -Lso- https://git.io/J1SEh<span class="token punctuation">)</span>  </code></pre>
+<p>带综合测试的版本（CPU信息、Geekbench等）：<br><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">wget</span> --no-check-certificate -O- https://dl.233.mba/d/sh/superbenchpro.sh<span class="token punctuation">)</span></code></pre></p>
 <p>来源: <a target="_blank" rel="noopener" href="https://www.wrnxr.cn/163.html">https://www.wrnxr.cn/163.html</a>  </p>
-<h2 id="测试25端口是否开放"><a href="#测试25端口是否开放" class="headerlink" title="测试25端口是否开放"></a>测试25端口是否开放</h2><pre class="language-bash" data-language="bash"><code class="language-bash">telnet smtp.aol.com 25 </code></pre>
-<h2 id="测试IPv4优先还是IPv6优先"><a href="#测试IPv4优先还是IPv6优先" class="headerlink" title="测试IPv4优先还是IPv6优先"></a>测试IPv4优先还是IPv6优先</h2><pre class="language-bash" data-language="bash"><code class="language-bash">curl ip.p3terx.com</code></pre>
-<h2 id="流媒体测试"><a href="#流媒体测试" class="headerlink" title="流媒体测试"></a>流媒体测试</h2><h3 id="全媒体测试"><a href="#全媒体测试" class="headerlink" title="全媒体测试"></a>全媒体测试</h3><pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(curl -L -s https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;lmc999&#x2F;RegionRestrictionCheck&#x2F;main&#x2F;check.sh)</code></pre>
-<h3 id="奈飞测试"><a href="#奈飞测试" class="headerlink" title="奈飞测试"></a>奈飞测试</h3><pre class="language-bash" data-language="bash"><code class="language-bash">wget -O nf https:&#x2F;&#x2F;github.com&#x2F;sjlleo&#x2F;netflix-verify&#x2F;releases&#x2F;download&#x2F;2.5&#x2F;nf_2.5_linux_amd64 &amp;&amp; chmod +x nf &amp;&amp; clear &amp;&amp; .&#x2F;nf  </code></pre>
+<h2 id="测试25端口是否开放"><a href="#测试25端口是否开放" class="headerlink" title="测试25端口是否开放"></a>测试25端口是否开放</h2><pre class="language-bash" data-language="bash"><code class="language-bash">telnet smtp.aol.com <span class="token number">25</span> </code></pre>
+<h2 id="测试IPv4优先还是IPv6优先"><a href="#测试IPv4优先还是IPv6优先" class="headerlink" title="测试IPv4优先还是IPv6优先"></a>测试IPv4优先还是IPv6优先</h2><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> ip.p3terx.com</code></pre>
+<h2 id="流媒体测试"><a href="#流媒体测试" class="headerlink" title="流媒体测试"></a>流媒体测试</h2><h3 id="全媒体测试"><a href="#全媒体测试" class="headerlink" title="全媒体测试"></a>全媒体测试</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh<span class="token punctuation">)</span></code></pre>
+<h3 id="奈飞测试"><a href="#奈飞测试" class="headerlink" title="奈飞测试"></a>奈飞测试</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -O nf https://github.com/sjlleo/netflix-verify/releases/download/2.5/nf_2.5_linux_amd64 <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x nf <span class="token operator">&amp;&amp;</span> <span class="token function">clear</span> <span class="token operator">&amp;&amp;</span> ./nf  </code></pre>
 <pre class="language-none"><code class="language-none">&#x2F;&#x2F;第一个  
 bash &lt;(curl -L -s https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;lmc999&#x2F;RegionRestrictionCheck&#x2F;main&#x2F;check.sh)  
 
 &#x2F;&#x2F;第二个  
 bash &lt;(curl -sSL &quot;https:&#x2F;&#x2F;github.com&#x2F;CoiaPrant&#x2F;MediaUnlock_Test&#x2F;raw&#x2F;main&#x2F;check.sh&quot;)  </code></pre>
-<h2 id="WARP"><a href="#WARP" class="headerlink" title="WARP"></a>WARP</h2><pre class="language-bash" data-language="bash"><code class="language-bash">wget -N --no-check-certificate https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;YG-tsj&#x2F;CFWarp-Pro&#x2F;multi.sh &amp;&amp; chmod +x multi.sh &amp;&amp; .&#x2F;multi.sh  </code></pre>
+<h2 id="WARP"><a href="#WARP" class="headerlink" title="WARP"></a>WARP</h2><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -N --no-check-certificate https://cdn.jsdelivr.net/gh/YG-tsj/CFWarp-Pro/multi.sh <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x multi.sh <span class="token operator">&amp;&amp;</span> ./multi.sh  </code></pre>
 <p>之后进入脚本快捷方式为 bash multi.sh  </p>
-<h2 id="服务器时间"><a href="#服务器时间" class="headerlink" title="服务器时间"></a>服务器时间</h2><h3 id="CentOS-同步时间"><a href="#CentOS-同步时间" class="headerlink" title="CentOS 同步时间"></a>CentOS 同步时间</h3><pre class="language-bash" data-language="bash"><code class="language-bash">yum -y install ntpdate  
-timedatectl set-timezone Asia&#x2F;Shanghai  
+<h2 id="服务器时间"><a href="#服务器时间" class="headerlink" title="服务器时间"></a>服务器时间</h2><h3 id="CentOS-同步时间"><a href="#CentOS-同步时间" class="headerlink" title="CentOS 同步时间"></a>CentOS 同步时间</h3><pre class="language-bash" data-language="bash"><code class="language-bash">yum -y <span class="token function">install</span> ntpdate  
+timedatectl set-timezone Asia/Shanghai  
 ntpdate ntp1.aliyun.com </code></pre>
-<h2 id="BBR"><a href="#BBR" class="headerlink" title="BBR"></a>BBR</h2><h3 id="CentOS-7-BBR"><a href="#CentOS-7-BBR" class="headerlink" title="CentOS 7 BBR"></a>CentOS 7 BBR</h3><pre class="language-bash" data-language="bash"><code class="language-bash">wget -N --no-check-certificate &quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;chiakge&#x2F;Linux-NetSpeed&#x2F;master&#x2F;tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; .&#x2F;tcp.sh </code></pre>
+<h2 id="BBR"><a href="#BBR" class="headerlink" title="BBR"></a>BBR</h2><h3 id="CentOS-7-BBR"><a href="#CentOS-7-BBR" class="headerlink" title="CentOS 7 BBR"></a>CentOS 7 BBR</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -N --no-check-certificate <span class="token string">"https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"</span> <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x tcp.sh <span class="token operator">&amp;&amp;</span> ./tcp.sh </code></pre>
 <h3 id="一键开启BBR"><a href="#一键开启BBR" class="headerlink" title="一键开启BBR"></a>一键开启BBR</h3><p>注意：需要Linux Kernel 内核升级到 4.9 及以上版本可以实现 BBR 加速  </p>
-<pre class="language-bash" data-language="bash"><code class="language-bash">uname -srm</code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">uname</span> -srm</code></pre>
 <p>输出结果：  </p>
 <pre class="language-none"><code class="language-none">Linux 3.10.0-957.12.2.el7.x86_64 x86_64  
 3 - 内核版本.  
@@ -1614,24 +1614,24 @@ ntpdate ntp1.aliyun.com </code></pre>
 <p>sysctl -p  </p>
 <p>sysctl net.ipv4.tcp_available_congestion_control  </p>
 <p>lsmod | grep bbr  &lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</p>
-<h2 id="Docker相关"><a href="#Docker相关" class="headerlink" title="Docker相关"></a>Docker相关</h2><h3 id="更新、安装必备软件"><a href="#更新、安装必备软件" class="headerlink" title="更新、安装必备软件"></a>更新、安装必备软件</h3><pre class="language-bash" data-language="bash"><code class="language-bash">apt-get update &amp;&amp; apt-get install -y wget vim  </code></pre>
-<h3 id="海外服务器"><a href="#海外服务器" class="headerlink" title="海外服务器"></a>海外服务器</h3><h4 id="非大陆Docker安装"><a href="#非大陆Docker安装" class="headerlink" title="非大陆Docker安装"></a>非大陆Docker安装</h4><pre class="language-bash" data-language="bash"><code class="language-bash">wget -qO- get.docker.com | bash  </code></pre>
-<h4 id="卸载Docker"><a href="#卸载Docker" class="headerlink" title="卸载Docker"></a>卸载Docker</h4><pre class="language-bash" data-language="bash"><code class="language-bash">sudo apt-get purge docker-ce docker-ce-cli containerd.io  
-sudo rm -rf &#x2F;var&#x2F;lib&#x2F;docker  
-sudo rm -rf &#x2F;var&#x2F;lib&#x2F;containerd  </code></pre>
-<h4 id="非大陆Docker-compose安装"><a href="#非大陆Docker-compose安装" class="headerlink" title="非大陆Docker-compose安装"></a>非大陆Docker-compose安装</h4><pre class="language-bash" data-language="bash"><code class="language-bash"> sudo curl -L &quot;https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;compose&#x2F;releases&#x2F;download&#x2F;1.29.2&#x2F;docker-compose-$(uname -s)-$(uname -m)&quot; -o &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose  
-sudo chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose </code></pre>
+<h2 id="Docker相关"><a href="#Docker相关" class="headerlink" title="Docker相关"></a>Docker相关</h2><h3 id="更新、安装必备软件"><a href="#更新、安装必备软件" class="headerlink" title="更新、安装必备软件"></a>更新、安装必备软件</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">apt-get</span> update <span class="token operator">&amp;&amp;</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y <span class="token function">wget</span> <span class="token function">vim</span>  </code></pre>
+<h3 id="海外服务器"><a href="#海外服务器" class="headerlink" title="海外服务器"></a>海外服务器</h3><h4 id="非大陆Docker安装"><a href="#非大陆Docker安装" class="headerlink" title="非大陆Docker安装"></a>非大陆Docker安装</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -qO- get.docker.com <span class="token operator">|</span> <span class="token function">bash</span>  </code></pre>
+<h4 id="卸载Docker"><a href="#卸载Docker" class="headerlink" title="卸载Docker"></a>卸载Docker</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> purge docker-ce docker-ce-cli containerd.io  
+<span class="token function">sudo</span> <span class="token function">rm</span> -rf /var/lib/docker  
+<span class="token function">sudo</span> <span class="token function">rm</span> -rf /var/lib/containerd  </code></pre>
+<h4 id="非大陆Docker-compose安装"><a href="#非大陆Docker-compose安装" class="headerlink" title="非大陆Docker-compose安装"></a>非大陆Docker-compose安装</h4><pre class="language-bash" data-language="bash"><code class="language-bash"> <span class="token function">sudo</span> <span class="token function">curl</span> -L <span class="token string">"https://github.com/docker/compose/releases/download/1.29.2/docker-compose-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -m<span class="token variable">)</span></span>"</span> -o /usr/local/bin/docker-compose  
+<span class="token function">sudo</span> <span class="token function">chmod</span> +x /usr/local/bin/docker-compose </code></pre>
 <p>查看版本<br><pre class="language-bash" data-language="bash"><code class="language-bash">docker-compose --version </code></pre></p>
-<h3 id="大陆服务器"><a href="#大陆服务器" class="headerlink" title="大陆服务器"></a>大陆服务器</h3><h4 id="国内机安装docker"><a href="#国内机安装docker" class="headerlink" title="国内机安装docker"></a>国内机安装docker</h4><pre class="language-bash" data-language="bash"><code class="language-bash">curl -sSL https:&#x2F;&#x2F;get.daocloud.io&#x2F;docker | sh </code></pre>
-<h4 id="国内机安装docker-compose"><a href="#国内机安装docker-compose" class="headerlink" title="国内机安装docker-compose"></a>国内机安装docker-compose</h4><pre class="language-bash" data-language="bash"><code class="language-bash">curl -L https:&#x2F;&#x2F;get.daocloud.io&#x2F;docker&#x2F;compose&#x2F;releases&#x2F;download&#x2F;v2.1.1&#x2F;docker-compose-&#96;uname -s&#96;-&#96;uname -m&#96; &gt; &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose  
-chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose</code></pre>
-<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><pre class="language-bash" data-language="bash"><code class="language-bash">sudo apt-get remove docker docker-engine  
-rm -fr &#x2F;var&#x2F;lib&#x2F;docker&#x2F; </code></pre>
+<h3 id="大陆服务器"><a href="#大陆服务器" class="headerlink" title="大陆服务器"></a>大陆服务器</h3><h4 id="国内机安装docker"><a href="#国内机安装docker" class="headerlink" title="国内机安装docker"></a>国内机安装docker</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -sSL https://get.daocloud.io/docker <span class="token operator">|</span> <span class="token function">sh</span> </code></pre>
+<h4 id="国内机安装docker-compose"><a href="#国内机安装docker-compose" class="headerlink" title="国内机安装docker-compose"></a>国内机安装docker-compose</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -L https://get.daocloud.io/docker/compose/releases/download/v2.1.1/docker-compose-<span class="token variable"><span class="token variable">`</span><span class="token function">uname</span> -s<span class="token variable">`</span></span>-<span class="token variable"><span class="token variable">`</span><span class="token function">uname</span> -m<span class="token variable">`</span></span> <span class="token operator">></span> /usr/local/bin/docker-compose  
+<span class="token function">chmod</span> +x /usr/local/bin/docker-compose</code></pre>
+<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> remove docker docker-engine  
+<span class="token function">rm</span> -fr /var/lib/docker/ </code></pre>
 <h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><h3 id="CentOS-关闭防火墙"><a href="#CentOS-关闭防火墙" class="headerlink" title="CentOS 关闭防火墙"></a>CentOS 关闭防火墙</h3><pre class="language-bash" data-language="bash"><code class="language-bash">systemctl start supervisord  
 systemctl disable firewalld  
 systemctl stop firewalld </code></pre>
-<h2 id="呆梨相关"><a href="#呆梨相关" class="headerlink" title="呆梨相关"></a>呆梨相关</h2><h3 id="XUI"><a href="#XUI" class="headerlink" title="XUI"></a>XUI</h3><pre class="language-bash" data-language="bash"><code class="language-bash">bash &lt;(curl -Ls https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;sprov065&#x2F;x-ui&#x2F;master&#x2F;install.sh) 0.2.0 </code></pre>
-<h3 id="mack-a"><a href="#mack-a" class="headerlink" title="mack-a"></a>mack-a</h3><pre class="language-bash" data-language="bash"><code class="language-bash">wget -P &#x2F;root -N --no-check-certificate &quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;mack-a&#x2F;v2ray-agent&#x2F;master&#x2F;install.sh&quot; &amp;&amp; chmod 700 &#x2F;root&#x2F;install.sh &amp;&amp; &#x2F;root&#x2F;install.sh </code></pre>
+<h2 id="呆梨相关"><a href="#呆梨相关" class="headerlink" title="呆梨相关"></a>呆梨相关</h2><h3 id="XUI"><a href="#XUI" class="headerlink" title="XUI"></a>XUI</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -Ls https://raw.githubusercontent.com/sprov065/x-ui/master/install.sh<span class="token punctuation">)</span> <span class="token number">0.2</span>.0 </code></pre>
+<h3 id="mack-a"><a href="#mack-a" class="headerlink" title="mack-a"></a>mack-a</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> -P /root -N --no-check-certificate <span class="token string">"https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh"</span> <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> <span class="token number">700</span> /root/install.sh <span class="token operator">&amp;&amp;</span> /root/install.sh </code></pre>
 <p>持续更新中</p>
 
             </div>
@@ -2621,7 +2621,7 @@ docker -v
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">51.9k</span>&nbsp;
+        class="white-color">51.7k</span>&nbsp;
       
       
       
@@ -2747,7 +2747,7 @@ docker -v
 
 <!-- 底部进度条 -->
 <div class="progress-bar" style="z-index: 999"></div>
-
+<script src="/js/prism.js" async></script>
 
     <!-- 搜索遮罩框 -->
 <style>

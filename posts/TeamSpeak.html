@@ -128,8 +128,9 @@
         })();
     </script>
     <link rel="stylesheet" type="text/css" href="/css/loading.css">
+    <link rel="stylesheet" href="/css/prism.css">
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="Barryの小站" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+</head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1475,7 +1476,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    809
+                    798
                 </div>
                 
 
@@ -1531,40 +1532,40 @@ yum install -y docker-compose</code></pre>
 <pre class="language-shell" data-language="shell"><code class="language-shell">mkdir -p &#x2F;root&#x2F;data&#x2F;docker_data&#x2F;ts3  # 创建目录
 cd &#x2F;root&#x2F;data&#x2F;docker_data&#x2F;ts3     # 切换当前目录</code></pre>
 <p>新建 <code>docker-compose.yml</code> 文件，粘贴以下内容并保存，文件内容如下（<a target="_blank" rel="noopener" href="https://hub.docker.com/_/teamspeak">官方镜像 (opens new window)</a>）：</p>
-<pre class="language-yaml" data-language="yaml"><code class="language-yaml"># docker-compose.yml
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># docker-compose.yml</span>
 
-version: &#39;3.1&#39;
-services:
-  teamspeak:
-    image: teamspeak
-    restart: always
-    ports:
-      - 9987:9987&#x2F;udp # 语音服务
-      - 30033:30033   # 文件传输
-      - 41144:41144   # DNS域名解析（可选）
-      - 10011:10011   # 服务器查询 raw（可选）
-      # - 10022:10022   # 服务器查询 SSH（可选）
-      # - 10080:10080   # 网络请求 http（可选）
-      # - 10443:10443   # 网络请求 https（可选）
-    volumes:
-      - .&#x2F;data:&#x2F;var&#x2F;ts3server
-    environment:
-      TS3SERVER_DB_PLUGIN: ts3db_mariadb
-      TS3SERVER_DB_SQLCREATEPATH: create_mariadb
-      TS3SERVER_DB_HOST: db
-      TS3SERVER_DB_USER: root
-      TS3SERVER_DB_PASSWORD: password # 数据库密码
-      TS3SERVER_DB_NAME: teamspeak
-      TS3SERVER_DB_WAITUNTILREADY: 30
-      TS3SERVER_LICENSE: accept
-  db:
-    image: mariadb
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: password  # 数据库密码
-      MYSQL_DATABASE: teamspeak
-    volumes:
-      - .&#x2F;data&#x2F;mysql:&#x2F;var&#x2F;lib&#x2F;mysql  # 必需，否则重启镜像后数据丢失</code></pre>
+<span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3.1'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">teamspeak</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> teamspeak
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> 9987<span class="token punctuation">:</span>9987/udp <span class="token comment"># 语音服务</span>
+      <span class="token punctuation">-</span> 30033<span class="token punctuation">:</span><span class="token number">30033</span>   <span class="token comment"># 文件传输</span>
+      <span class="token punctuation">-</span> 41144<span class="token punctuation">:</span><span class="token number">41144</span>   <span class="token comment"># DNS域名解析（可选）</span>
+      <span class="token punctuation">-</span> 10011<span class="token punctuation">:</span><span class="token number">10011</span>   <span class="token comment"># 服务器查询 raw（可选）</span>
+      <span class="token comment"># - 10022:10022   # 服务器查询 SSH（可选）</span>
+      <span class="token comment"># - 10080:10080   # 网络请求 http（可选）</span>
+      <span class="token comment"># - 10443:10443   # 网络请求 https（可选）</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./data<span class="token punctuation">:</span>/var/ts3server
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">TS3SERVER_DB_PLUGIN</span><span class="token punctuation">:</span> ts3db_mariadb
+      <span class="token key atrule">TS3SERVER_DB_SQLCREATEPATH</span><span class="token punctuation">:</span> create_mariadb
+      <span class="token key atrule">TS3SERVER_DB_HOST</span><span class="token punctuation">:</span> db
+      <span class="token key atrule">TS3SERVER_DB_USER</span><span class="token punctuation">:</span> root
+      <span class="token key atrule">TS3SERVER_DB_PASSWORD</span><span class="token punctuation">:</span> password <span class="token comment"># 数据库密码</span>
+      <span class="token key atrule">TS3SERVER_DB_NAME</span><span class="token punctuation">:</span> teamspeak
+      <span class="token key atrule">TS3SERVER_DB_WAITUNTILREADY</span><span class="token punctuation">:</span> <span class="token number">30</span>
+      <span class="token key atrule">TS3SERVER_LICENSE</span><span class="token punctuation">:</span> accept
+  <span class="token key atrule">db</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mariadb
+    <span class="token key atrule">restart</span><span class="token punctuation">:</span> always
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+      <span class="token key atrule">MYSQL_ROOT_PASSWORD</span><span class="token punctuation">:</span> password  <span class="token comment"># 数据库密码</span>
+      <span class="token key atrule">MYSQL_DATABASE</span><span class="token punctuation">:</span> teamspeak
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> ./data/mysql<span class="token punctuation">:</span>/var/lib/mysql  <span class="token comment"># 必需，否则重启镜像后数据丢失</span></code></pre>
 <p>服务器上要使用 <code>vi/vim/nano</code> 编辑文件，如果没有，CentOS 系统使用 <code>yum install nano</code> 类似的指令安装</p>
 <pre class="language-shell" data-language="shell"><code class="language-shell"># [新建文件]
 vi docker-compose.yml
@@ -2297,7 +2298,7 @@ docker-compose restart</code></pre>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            综合工具箱（强烈推荐，集成了很多脚本）wget -O box.sh https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;BlueSkyXN&#x2F;SKY-BOX&#x2F;main&#x2F
+                            综合工具箱（强烈推荐，集成了很多脚本）wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh &amp;&amp; chmod +x bo
                         
                     </div>
                     <div class="publish-info">
@@ -2596,7 +2597,7 @@ docker-compose restart</code></pre>
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">51.9k</span>&nbsp;
+        class="white-color">51.7k</span>&nbsp;
       
       
       
@@ -2722,7 +2723,7 @@ docker-compose restart</code></pre>
 
 <!-- 底部进度条 -->
 <div class="progress-bar" style="z-index: 999"></div>
-
+<script src="/js/prism.js" async></script>
 
     <!-- 搜索遮罩框 -->
 <style>
