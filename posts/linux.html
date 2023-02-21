@@ -1537,10 +1537,10 @@ h3:hover {
 <li>配置Ubuntu镜像源</li>
 <li>VMware Tools安装</li>
 </ul>
-<pre class="language-none"><code class="language-none">tar zxvf VMwareTools-10.3.22-15902021.tar.gz \
-cd vmware-tools-distrib&#x2F;
-ls
-sudu .&#x2F;vmware-install.pl</code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">tar</span> zxvf VMwareTools-10.3.22-15902021.tar.gz <span class="token punctuation">\</span>
+<span class="token builtin class-name">cd</span> vmware-tools-distrib/
+<span class="token function">ls</span>
+sudu ./vmware-install.pl</code></pre>
 <h2 id="2-3-Ubuntu-20-04设置"><a href="#2-3-Ubuntu-20-04设置" class="headerlink" title="2.3 Ubuntu 20.04设置"></a>2.3 Ubuntu 20.04设置</h2><p>详见2.1视频链接</p>
 <h2 id="2-4-Linux其他发行版本的安装指导"><a href="#2-4-Linux其他发行版本的安装指导" class="headerlink" title="2.4 Linux其他发行版本的安装指导"></a>2.4 Linux其他发行版本的安装指导</h2><ul>
 <li>商业发行版</li>
@@ -1597,7 +1597,7 @@ sudu .&#x2F;vmware-install.pl</code></pre>
 <li><em>Theme Varian</em>t 主题变换<br><em>Open new terminals in</em> 打开一个新终端的方式，Tab代表在同一窗口下创建新终端，Window代表开一个新窗口打开新终端<br><em>New tab position</em> 新终端位置，默认为上一次位置</li>
 <li>快捷方式设置，Ctrl+Alt+T 打开新终端</li>
 </ul>
-<h2 id="4-2-CLI-Terminal"><a href="#4-2-CLI-Terminal" class="headerlink" title="4.2 CLI Terminal"></a>4.2 CLI Terminal</h2><pre class="language-none"><code class="language-none">yeats@yeats-virtual-machine:~$</code></pre>
+<h2 id="4-2-CLI-Terminal"><a href="#4-2-CLI-Terminal" class="headerlink" title="4.2 CLI Terminal"></a>4.2 CLI Terminal</h2><pre class="language-bash" data-language="bash"><code class="language-bash">yeats@yeats-virtual-machine:~$</code></pre>
 <ul>
 <li>用户名@机器名：当前所在目录 $表示等待用户输入</li>
 <li>~表示用户home目录</li>
@@ -1641,9 +1641,9 @@ sudu .&#x2F;vmware-install.pl</code></pre>
 </ul>
 <p><a href="https://www.pathname.com/fhs/" class="LinkCard" target="_blank">FHS文件系统层级标准</a></p>
 <h2 id="4-6-cd命令"><a href="#4-6-cd命令" class="headerlink" title="4.6 cd命令"></a>4.6 cd命令</h2><ul>
-<li>cd 进入用户主目录</li>
-<li>cd.. 切换到上一层</li>
-<li>cd – 返回到上一次的工作目录。</li>
+<li><code>cd</code> 进入用户主目录</li>
+<li><code>cd..</code> 切换到上一层</li>
+<li><code>cd –</code> 返回到上一次的工作目录。</li>
 </ul>
 <h2 id="4-7-Ctrl-C？-拉到吧，在Linux上可不是复制"><a href="#4-7-Ctrl-C？-拉到吧，在Linux上可不是复制" class="headerlink" title="4.7 Ctrl + C？ 拉到吧，在Linux上可不是复制"></a>4.7 Ctrl + C？ 拉到吧，在Linux上可不是复制</h2><ul>
 <li>Ctrl+c( kill foreground process ) 发送SIGINT信号给前台进程组中的所有进程，强制终止程序的执行</li>
@@ -1656,10 +1656,10 @@ sudu .&#x2F;vmware-install.pl</code></pre>
 <li>不全路径 \Frank_FuckPPT\Linux</li>
 </ul>
 <h2 id="4-10-Linux上的路径与Windows上的路径"><a href="#4-10-Linux上的路径与Windows上的路径" class="headerlink" title="4.10 Linux上的路径与Windows上的路径"></a>4.10 Linux上的路径与Windows上的路径</h2><ul>
-<li>gedit /Doucument/doc/1.txt 操作根目录 绝对路径</li>
-<li>gedit ~/Document/doc/1.txt 当前目录 相对路径</li>
-<li>gedit ./Document/doc/1.txt 当前目录 相对路径</li>
-<li>gedit Document/doc/1.txt 当前目录 相对路径</li>
+<li><code>gedit /Doucument/doc/1.txt</code> 操作根目录 绝对路径</li>
+<li><code>gedit ~/Document/doc/1.txt</code> 当前目录 相对路径</li>
+<li><code>gedit ./Document/doc/1.txt</code> 当前目录 相对路径</li>
+<li><code>gedit Document/doc/1.txt</code> 当前目录 相对路径</li>
 </ul>
 <h2 id="4-11-如何练习？经验课"><a href="#4-11-如何练习？经验课" class="headerlink" title="4.11 如何练习？经验课"></a>4.11 如何练习？经验课</h2><ul>
 <li>单点符号.当前文件</li>
@@ -1686,7 +1686,7 @@ sudu .&#x2F;vmware-install.pl</code></pre>
 <li><code>-R/r</code>递归处理，将指定目录下的所有文件与子目录一并处理</li>
 </ul>
 <h2 id="4-15-cp递归练习技巧"><a href="#4-15-cp递归练习技巧" class="headerlink" title="4.15 cp递归练习技巧"></a>4.15 cp递归练习技巧</h2><p>pwd 显示当前工作目录</p>
-<pre class="language-none"><code class="language-none">cp -R .&#x2F;*java ~&#x2F;Documents&#x2F;temp&#x2F;</code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">cp</span> -R ./*.java ~/Documents/temp/</code></pre>
 <h2 id="4-16-Linux终端光标移动技巧"><a href="#4-16-Linux终端光标移动技巧" class="headerlink" title="4.16 Linux终端光标移动技巧"></a>4.16 Linux终端光标移动技巧</h2><ul>
 <li>Tab自动补全</li>
 <li>Ctrl + E 跳到行尾</li>
@@ -1759,10 +1759,10 @@ sudu .&#x2F;vmware-install.pl</code></pre>
 </ul>
 <h2 id="4-25-tail-和-head命令"><a href="#4-25-tail-和-head命令" class="headerlink" title="4.25 tail 和 head命令"></a>4.25 tail 和 head命令</h2><ul>
 <li><p><code>tail</code> 在屏幕上显示指定文件的末尾若干行</p>
-<pre class="language-none"><code class="language-none">tail -n 2 demo.c</code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">tail</span> -n <span class="token number">2</span> demo.c</code></pre>
 </li>
 <li><p>head显示文件的开头部分</p>
-<pre class="language-none"><code class="language-none">head -n 2 demo.c</code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">head</span> -n <span class="token number">2</span> demo.c</code></pre>
 </li>
 </ul>
 <h2 id="5-1-任务管理器"><a href="#5-1-任务管理器" class="headerlink" title="5.1 任务管理器"></a>5.1 任务管理器</h2><ul>
@@ -2065,12 +2065,12 @@ sudu .&#x2F;vmware-install.pl</code></pre>
 <li><code>vim .vimrc</code></li>
 </ul>
 <p>将以下代码写入.vimrc中</p>
-<pre class="language-none"><code class="language-none">set syntax&#x3D;on
-set tabstop&#x3D;4
-set softtabstop&#x3D;4
-set number
-set enc&#x3D;utf-8
-set showmatch</code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> <span class="token assign-left variable">syntax</span><span class="token operator">=</span>on
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">tabstop</span><span class="token operator">=</span><span class="token number">4</span>
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">softtabstop</span><span class="token operator">=</span><span class="token number">4</span>
+<span class="token builtin class-name">set</span> number
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">enc</span><span class="token operator">=</span>utf-8
+<span class="token builtin class-name">set</span> showmatch</code></pre>
 <ul>
 <li>source .vimrc</li>
 </ul>
