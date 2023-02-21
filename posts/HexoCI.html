@@ -1646,9 +1646,10 @@ themes&#x2F;matery&#x2F;.git</code></pre>
 git commit -m &quot;github action update&quot;
 git push origin master
 #2020年10月后github新建仓库默认分支改为main，注意更改</code></pre></li>
-<li>可能遇到的 bug </li>
+<li><p>可能遇到的 bug </p>
+<p> 因为 butterfly 主题文件夹下的.git 文件夹的存在，那么主题文件夹会被识别子项目。从而无法被上传到源码仓库。若是遇到添加屏蔽项，但是还是无法正常上传主题文件夹的情况。请先将本地源码中的 themes 文件夹移动到别的目录下。然后 commit 一次。接着将 themes 文件夹移动回来，再 commit 一次。 </p>
+</li>
 </ol>
-<p>因为 butterfly 主题文件夹下的.git 文件夹的存在，那么主题文件夹会被识别子项目。从而无法被上传到源码仓库。若是遇到添加屏蔽项，但是还是无法正常上传主题文件夹的情况。请先将本地源码中的 themes 文件夹移动到别的目录下。然后 commit 一次。接着将 themes 文件夹移动回来，再 commit 一次。 </p>
 <h3 id="查看部署情况"><a href="#查看部署情况" class="headerlink" title="查看部署情况"></a>查看部署情况</h3><p>此时，打开 GIthub 存放源码的私有仓库，找到 action。<br>根据刚刚的 Commit 记录找到相应的任务<br>点击 Deploy 查看部署情况<br>若全部打钩，恭喜你，你现在可以享受自动部署的快感了。</p>
 <h2 id="Obsidian-备份配置"><a href="#Obsidian-备份配置" class="headerlink" title="Obsidian 备份配置"></a>Obsidian 备份配置</h2><h3 id="插件下载"><a href="#插件下载" class="headerlink" title="插件下载"></a>插件下载</h3><p>首先先在 Obsidian 插件市场中下载 Obsidian git 插件（需要戴莉）<br><img src="https://easyimage.smitten.top/i/2023/02/21/nzk0of-0.png" alt="Obsidian git"></p>
 <h3 id="git-备份仓库设置"><a href="#git-备份仓库设置" class="headerlink" title="git 备份仓库设置"></a>git 备份仓库设置</h3><p>先在 github 建立一个私人仓库，当然你想让你的笔记让别人看到公开仓库也行：）<br>然后进行本地仓库设置<br>打开 Obsidian 本地仓库的文件夹，新建 <code>.gitignore</code> 文件，来屏蔽一些我们不需要进行备份的文件内容如下：<br><pre class="language-none"><code class="language-none">.obsidian
