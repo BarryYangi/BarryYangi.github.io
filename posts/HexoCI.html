@@ -1691,7 +1691,8 @@ git checkout -b master # 切换到master分支，
 git commit -m &quot;github action update&quot;
 git push origin master
 #2020年10月后github新建仓库默认分支改为main，注意更改</code></pre>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>然后你可以在你设置的发布文章的文件夹中新建一篇文章，这里推荐使用 QuickAdd 结合 templater 快速生成带有 hexo 文章 yaml 的模板文件，然后随便写几句话保存。<br>然后按 <code>ctrl</code> + <code>p</code><br><img src="https://easyimage.smitten.top/i/2023/02/21/p263hb-0.jpg" alt="git"><br>选择着两项都能立即同步仓库<br>随后看你的 obsidian 备份仓库的 action 是不是成功执行，不出意外的话到此你就已经可以开始享受全自动化的工作流了。</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>然后你可以在你设置的发布文章的文件夹中新建一篇文章，这里推荐使用 QuickAdd 结合 templater 快速生成带有 hexo 文章 yaml 的模板文件，然后随便写几句话保存。<br>然后按 <code>ctrl</code> + <code>p</code><br><img src="https://easyimage.smitten.top/i/2023/02/21/t16eg8.webp" alt="git"></p>
+<p>选择着两项都能立即同步仓库<br>随后看你的 obsidian 备份仓库的 action 是不是成功执行，不出意外的话到此你就已经可以开始享受全自动化的工作流了。</p>
 <h2 id="Vercel-部署-Hexo"><a href="#Vercel-部署-Hexo" class="headerlink" title="Vercel 部署 Hexo"></a>Vercel 部署 Hexo</h2><h3 id="git-仓库添加-vercel-配置文件"><a href="#git-仓库添加-vercel-配置文件" class="headerlink" title="git 仓库添加 vercel 配置文件"></a>git 仓库添加 vercel 配置文件</h3><p>此步非必须，但是不做后续可能会遇到很多奇奇怪怪的问题，其实就是让 vercel 取消当访问以正斜杠结尾的路径时，将以 308 状态代码响应，并重定向到不带尾部斜杠的路径。如果 hexo 的路径不尾随 <code>/</code> 的话可能非根页面都会 404，并且有些 hexo 的第三方的评论也是通过路径返回数据到前端页面的，路径不一致的话评论都不一样。<br>配置很简单只需在 <code>[Blogroot]</code> 目录加上 <code>vercel.json</code> 文件：<br><pre class="language-none"><code class="language-none">&#123;
   &quot;trailingSlash&quot;: true
 &#125;</code></pre><br>即可。</p>
