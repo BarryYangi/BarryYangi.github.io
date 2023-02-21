@@ -1565,6 +1565,7 @@ CI\CD 其实说的是三件事情：「持续集成（Continuous Integration）�
 <h3 id="创建存放源码的私有仓库"><a href="#创建存放源码的私有仓库" class="headerlink" title="创建存放源码的私有仓库"></a>创建存放源码的私有仓库</h3><p>我们需要创建一个用来存放 <code>Hexo</code> 博客源码的私有仓库 <code>[SourceRepo]</code><br>这里之所以是私有仓库，是因为在接下来的配置中会用到 <code>Token</code>，如果 <code>Token</code> 被盗用，别人可以肆意操作你的 github 仓库内容，为了避免这一风险，才选择的博客源码闭源。<br>创建完成后，需要把博客的源码 push 到这里。首先获取远程仓库地址，此处虽然 SSH 和 HTTPS 均可。SSH 在绑定过 ssh key 的设备上无需再输入密码，HTTPS 则需要输入密码，但是 SSH 偶尔会遇到端口占用的情况。请自主选择。</p>
 <h3 id="配置-Github-Action"><a href="#配置-Github-Action" class="headerlink" title="配置 Github Action"></a>配置 Github Action</h3><ol>
 <li>在 <code>[Blogroot]</code> 新建 <code>.github</code> 文件夹, 注意开头是有个 <code>.</code> 的。然后在 <code>.github</code> 内新建 <code>workflows</code> 文件夹，再在 <code>workflows</code> 文件夹内新建 <code>autodeploy.yml</code>, 在 <code>[Blogroot]/.github/workflows/autodeploy.yml</code> 里面输入<pre class="language-yaml" data-language="yaml"><code class="language-yaml">name: 自动部署
+#当有改动推送到master分支时，启动Action
 on:
 push:
 branches:
@@ -1621,7 +1622,8 @@ steps:
 <h3 id="重新设置远程仓库和分支"><a href="#重新设置远程仓库和分支" class="headerlink" title="重新设置远程仓库和分支"></a>重新设置远程仓库和分支</h3><ol>
 <li>删除或者先把 <code>[Blogroot]/themes/butterfly/.git</code> 移动到非博客文件夹目录下, 原因是主题文件夹下的 <code>.git</code> 文件夹的存在会导致其被识别成子项目，从而无法被上传到源码仓库。</li>
 <li>在博客根目录<code>[Blogroot]</code>路径下运行指令<pre class="language-BASH" data-language="BASH"><code class="language-BASH">git init #初始化
-git remote add origin git@github.com:[GithubUsername]&#x2F;[SourceRepo].git #[SourceRepo]为存放源码的github私有仓库
+git remote add origin git@github.com:[GithubUsername]&#x2F;[SourceRepo].git 
+#[SourceRepo]为存放源码的github私有仓库
 git checkout -b master # 切换到master分支，
 #2020年10月后github新建仓库默认分支改为main，注意更改
 #如果不是，后面的所有设置的分支记得保持一致</code></pre></li>
@@ -1643,36 +1645,45 @@ themes&#x2F;matery&#x2F;.git</code></pre>
 git commit -m &quot;github action update&quot;
 git push origin master
 #2020年10月后github新建仓库默认分支改为main，注意更改</code></pre></li>
-<li>可能遇到的 bug<br>因为 butterfly 主题文件夹下的.git 文件夹的存在，那么主题文件夹会被识别子项目。从而无法被上传到源码仓库。若是遇到添加屏蔽项，但是还是无法正常上传主题文件夹的情况。请先将本地源码中的 themes 文件夹移动到别的目录下。然后 commit 一次。接着将 themes 文件夹移动回来，再 commit 一次。 </li>
+<li>可能遇到的 bug </li>
 </ol>
+<p>因为 butterfly 主题文件夹下的.git 文件夹的存在，那么主题文件夹会被识别子项目。从而无法被上传到源码仓库。若是遇到添加屏蔽项，但是还是无法正常上传主题文件夹的情况。请先将本地源码中的 themes 文件夹移动到别的目录下。然后 commit 一次。接着将 themes 文件夹移动回来，再 commit 一次。 </p>
 <h3 id="查看部署情况"><a href="#查看部署情况" class="headerlink" title="查看部署情况"></a>查看部署情况</h3><p>此时，打开 GIthub 存放源码的私有仓库，找到 action。<br>根据刚刚的 Commit 记录找到相应的任务<br>点击 Deploy 查看部署情况<br>若全部打钩，恭喜你，你现在可以享受自动部署的快感了。</p>
 <h2 id="Obsidian-备份配置"><a href="#Obsidian-备份配置" class="headerlink" title="Obsidian 备份配置"></a>Obsidian 备份配置</h2><h3 id="插件下载"><a href="#插件下载" class="headerlink" title="插件下载"></a>插件下载</h3><p>首先先在 Obsidian 插件市场中下载 Obsidian git 插件（需要戴莉）<br><img src="https://easyimage.smitten.top/i/2023/02/21/nzk0of-0.png" alt="Obsidian git"></p>
 <h3 id="git-备份仓库设置"><a href="#git-备份仓库设置" class="headerlink" title="git 备份仓库设置"></a>git 备份仓库设置</h3><p>先在 github 建立一个私人仓库，当然你想让你的笔记让别人看到公开仓库也行：）<br>然后进行本地仓库设置<br>打开 Obsidian 本地仓库的文件夹，新建 <code>.gitignore</code> 文件，来屏蔽一些我们不需要进行备份的文件内容如下：<br><pre class="language-none"><code class="language-none">.obsidian
-.trash</code></pre><br>然后建立 <code>.github/workflows</code> 目录，在该目录下配置工作流：<code>ci.yml</code>:<br>&lt;!—hexoPostRenderEscape:<pre class="language-yaml" data-language="yaml"><code class="language-yaml">name: 上传文章<br>on:<br>  push:<br>    branches:</code></pre></p>
-<pre><code>  - master
-paths:
-  - &amp;#39;已发布文章&amp;#x2F;**&amp;#39;
-</code></pre><p>jobs:<br>  deploy_job:<br>    runs-on: ubuntu-latest<br>    name: build<br>    steps:</p>
-<pre><code>  # check out the repository
-  - name: Checkout    
-    uses: actions&amp;#x2F;checkout@v2
-  - name: Pushes to another repository
-    uses: cpina&amp;#x2F;github-action-push-to-another-repository@main
-    env:
-      API_TOKEN_GITHUB: [GithubToken]
-    with:
-      source-directory: &amp;#39;已发布文章&amp;#39;
-      destination-github-username: [GithubUserName]
-      destination-repository-name: [SourceRepo]
-      target-directory: &amp;#39;source&amp;#x2F;_posts&amp;#39; # hexo中发布文章目录
-      user-email: [GithubEmail]
-      target-branch: master&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape--&gt;
-</code></pre><p>然后在本地 obsidian 根目录（能看到 <code>.obsidian</code> 的哪个目录）下运行运行指令</p>
+.trash</code></pre><br>然后建立 <code>.github/workflows</code> 目录，在该目录下配置工作流：<code>ci.yml</code>:</p>
+<pre class="language-yaml" data-language="yaml"><code class="language-yaml">name: 上传文章
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - &#39;已发布文章&#x2F;**&#39;
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: build
+    steps:
+      # check out the repository
+      - name: Checkout    
+        uses: actions&#x2F;checkout@v2
+      - name: Pushes to another repository
+        uses: cpina&#x2F;github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: [GithubToken]
+        with:
+          source-directory: &#39;已发布文章&#39;
+          destination-github-username: [GithubUserName]
+          destination-repository-name: [SourceRepo]
+          target-directory: &#39;source&#x2F;_posts&#39; # hexo中发布文章目录
+          user-email: [GithubEmail]
+          target-branch: master</code></pre>
+<p>然后在本地 obsidian 根目录（能看到 <code>.obsidian</code> 的哪个目录）下运行运行指令</p>
 <pre class="language-shell" data-language="shell"><code class="language-shell">git init #初始化
 git remote add origin git@github.com:[GithubUsername]&#x2F;[备份仓库名].git
 git checkout -b master # 切换到master分支，
 #2020年10月后github新建仓库默认分支改为main，注意更改
-# 如果不是，后面的所有设置的分支记得保持一致</code></pre>
+#如果不是，后面的所有设置的分支记得保持一致</code></pre>
 <p>之后再运行 git 提交指令，将博客源码提交到 github 上。</p>
  <pre class="language-BASH" data-language="BASH"><code class="language-BASH">git add .
 git commit -m &quot;github action update&quot;
