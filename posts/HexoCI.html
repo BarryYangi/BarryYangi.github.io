@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="归档: 2020/3, Barry">
+    <meta name="keywords" content="hexo博客工作流CI（一键部署的快乐）, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>归档: 2020/3 | Barryの小站</title>
+    <title>hexo博客工作流CI（一键部署的快乐） | Barryの小站</title>
     
     <script>
         // 隐藏
@@ -1147,351 +1147,1518 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-        <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    
-                 
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['世界灿烂盛大，欢迎回家。','在等雪花、圣诞树、新年烟火、和更好的你。'],
-                        startDelay: 200,
-                        typeSpeed: 120,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://easyimage.smitten.top/i/2023/02/21/pluevq-0.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hexo博客工作流CI（一键部署的快乐）</h1>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
+<main class="post-container content">
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
+</style>
+
+<div class="row">
+    
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="CI/CD">
+            <style>
+    #switchspring {
+        bottom: 223px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchspring {
+            bottom: 178px!important;
+        }
+    }
+    #switchchristmas {
+        bottom: 281px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 235px!important;
+        }
+    }
+    .ititle {
+        margin: 15px 0;
+        text-align:center;
+        font-family: 'Architects Daughter', cursive;
+    }
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;	
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;    
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;           
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
+        position: relative;
+    }
+.izhengwen {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+    background-size: 100% 32px;
+}
+.izhengwen p {
+    letter-spacing: .1rem;
+}
+#articleContent p {
+    margin: 0
+}
+.ititle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem!important;
+    padding: 10px auto;
+}
+.izhengwen p {
+    position: relative;
+    line-height: 2.2rem!important;
+    text-indent: 2em;
+    font-family: 'Architects Daughter', cursive!important;
+    font-size: 1.45rem!important;
+}
+.ipage::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 52px;
+    z-index: 4;
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid #fca1a1;
+}
+.izhengwen p:nth-child(odd):before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.ipage:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    z-index: 3;
+    width: 4px;
+    height: 100%;
+    border-left: 4px double #fca1a1;
+}
+.ipage p {
+    padding: 0 2em;
+    color: #333!important;
+}
+body.dark .ipage {
+    opacity: 0.85;
+}
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 600px) {
+    .ipage {
+        padding: 15px 23px 29px;
+    }
+    .ipage:after {
+        left: 36px;
+    }
+    .ipage::before {
+        right: 36px;    
+    }
+    .ipage p, .ititle {
+        padding: 0 0.9em;
+    }
+
+}
+h3 {
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: #101012;
+    transition: 0.8s;
+    cursor: pointer;
+}
+h3:hover {
+    transform: translateX(15px);
+}
+</style>
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        
+        <div class="card-content article-info">
+            <!-- 福袋按钮 -->
+            <div class="caishendeng">        
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
+                </div>              
+            </div>
+            <!-- 圣诞按钮 -->
+            <div class="shengdandeng">        
+                <div class="shengdanxian" style="left: 50%;">
+                    <!-- <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" /> -->
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/CI-CD/">
+                                <span class="chip bg-color">CI/CD</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-02-21
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    12 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>一直都想尝试一下基于 Github Action 来进行全自动化的 hexo 博客内容的输出，今天终于闲下来尝试了一下，发现是真滴香！</p>
+<pre><code>CI/CD 解释：
+    CI\CD 其实说的是三件事情：「持续集成（Continuous Integration）」、「持续交付（Continuous Delivery）」、「持续部署（Continuous Deployment）」。  
+    因为「持续交付」和「持续部署」的英文缩写是一样的，所以这三件事情缩写成了 CI\CD 。
+</code></pre><hr>
+<h1 id="Github-Action-优点"><a href="#Github-Action-优点" class="headerlink" title="Github Action 优点"></a>Github Action 优点</h1><ol>
+<li>可以多域名多站点部署</li>
+<li>不会出现从服务器去连接github连接不上的情况</li>
+<li>可以一键多处全部部署完成✅</li>
+<li>不再需要使用繁杂的前置命令<blockquote>
+<p>hexo clean<br>hexo generate  </p>
+</blockquote>
+</li>
+</ol>
+<p>比如我自己是在 <a target="_blank" rel="noopener" href="https://vercel.com/">vercel</a>, <a target="_blank" rel="noopener" href="https://github.com/">github page</a> 两处来部署的站点。</p>
+<blockquote>
+<p>vercel 站点：<a target="_blank" rel="noopener" href="https://blog.yct.ee/">Barryの小站 (yct.ee)</a><br>github 站点：<a href="https://www.smitten.top/">Barryの小站 (smitten.top)</a></p>
+</blockquote>
+<p>其中 vercel 是白嫖的 <a target="_blank" rel="noopener" href="http://cloudflare.com/">cloudflare</a> 免费的 CDN，github 站点用的是 <a target="_blank" rel="noopener" href="https://dcdn.console.aliyun.com/">aliyun DCDN</a> 但是目测有时候 DCDN 会慢一点而且有时候缓存会清理不掉，也可能是我自己的设置问题。</p>
+<p>不过如此确实大大提高可用性与速度。</p>
+<h1 id="工作流"><a href="#工作流" class="headerlink" title="工作流"></a>工作流</h1><p>在这里分享一下我的工作流，大概步骤是这样的：</p>
+<blockquote>
+<p>Obsidian 新建 post 文章编辑完成后通过 git 自动保存到备份仓库，当备份仓库接收到 push 的信息时并发现 <strong>已发布文章</strong> 里有新文章时触发工作流，将新文章 push 到 hexo 源码仓库的 posts 文件夹，此时 hexo 源码仓库接收到 push 信息触发工作流进行自动部署到主站</p>
+</blockquote>
+<p><img src="https://easyimage.smitten.top/i/2023/02/21/naz1ta-0.png" alt="Obsidian git"></p>
+<p>这个插件配合着 github action 来用简直无敌, 平时除非要改动博客源码，不然根本都不需要去动网站源码，在编辑器专注于写作即可，写完文章稍等这个插件便会自动备份数据，同时将要发布的文章自动拉取到 github 上的 hexo 仓库进行部署，vercel 检测到 push 也会进行同步更新，这样就实现了一个全自动化的工作流</p>
+<h1 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h1><p>如果你和我有着同样的需求，可以参考以下内容，可能会给你省下很多时间。</p>
+<h2 id="GitHub-自动部署-Hexo"><a href="#GitHub-自动部署-Hexo" class="headerlink" title="GitHub 自动部署 Hexo"></a>GitHub 自动部署 Hexo</h2><p>实现以上工作流的第一步就是先要将自己的 hexo 源码上传到 GitHub 仓库上并配置好工作流来进行自动部署。</p>
+<h3 id="教程常量声明"><a href="#教程常量声明" class="headerlink" title="教程常量声明"></a>教程常量声明</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">常量名</th>
+<th style="text-align:left">常量释义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>[Blogroot]</strong></td>
+<td style="text-align:left">本地存放博客源码的文件夹路径</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>[SourceRepo]</strong></td>
+<td style="text-align:left">存放博客源码的私有仓库名</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>[SiteBlogRepo]</strong></td>
+<td style="text-align:left">存放编译好的博客页面的公有仓库名 Site 指站点，教程中会替换成 Github、Gitee、Coding</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>[SiteUsername]</strong></td>
+<td style="text-align:left">用户名 Site 指站点，教程中会替换成 Github、Gitee、Coding</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>[SiteToken]</strong></td>
+<td style="text-align:left">申请到的令牌码 Site 指站点，教程中会替换成 Github、Gitee、Coding</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>[GithubEmail]</strong></td>
+<td style="text-align:left">与 github 绑定的主邮箱，建议使用 Gmail</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>[TokenUser]</strong></td>
+<td style="text-align:left">Coding 配置特有的令牌用户名</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Github-Action-使用教程"><a href="#Github-Action-使用教程" class="headerlink" title="Github Action 使用教程"></a>Github Action 使用教程</h3><p>为了确保交由 <code>Github Action</code> 来持续部署时，<code>Github Action</code> 具备足够的权限来进行 <code>hexo deploy</code> 操作, 需要先获取 <code>Token</code>。<br>访问 Github-&gt;头像（右上角）-&gt;Settings-&gt;Developer Settings-&gt;Personal access tokens-&gt;generate new token, 创建的 Token 名称随意，但必须勾选 repo 项和 workflows 项。</p>
+<p>token 只会显示这一次，之后将无法查看，所以务必保证你已经记录下了 Token。之后如果忘记了就只能重新生成重新配置了。</p>
+<h3 id="创建存放源码的私有仓库"><a href="#创建存放源码的私有仓库" class="headerlink" title="创建存放源码的私有仓库"></a>创建存放源码的私有仓库</h3><p>我们需要创建一个用来存放 <code>Hexo</code> 博客源码的私有仓库 <code>[SourceRepo]</code><br>这里之所以是私有仓库，是因为在接下来的配置中会用到 <code>Token</code>，如果 <code>Token</code> 被盗用，别人可以肆意操作你的 github 仓库内容，为了避免这一风险，才选择的博客源码闭源。<br>创建完成后，需要把博客的源码 push 到这里。首先获取远程仓库地址，此处虽然 SSH 和 HTTPS 均可。SSH 在绑定过 ssh key 的设备上无需再输入密码，HTTPS 则需要输入密码，但是 SSH 偶尔会遇到端口占用的情况。请自主选择。</p>
+<h3 id="配置-Github-Action"><a href="#配置-Github-Action" class="headerlink" title="配置 Github Action"></a>配置 Github Action</h3><ol>
+<li>在 <code>[Blogroot]</code> 新建 <code>.github</code> 文件夹, 注意开头是有个 <code>.</code> 的。然后在 <code>.github</code> 内新建 <code>workflows</code> 文件夹，再在 <code>workflows</code> 文件夹内新建 <code>autodeploy.yml</code>, 在 <code>[Blogroot]/.github/workflows/autodeploy.yml</code> 里面输入<br>&lt;!—hexoPostRenderEscape:<pre class="language-yaml" data-language="yaml"><code class="language-yaml">name: 自动部署</code></pre></li>
+</ol>
+<h1 id="当有改动推送到master分支时，启动Action"><a href="#当有改动推送到master分支时，启动Action" class="headerlink" title="当有改动推送到master分支时，启动Action"></a>当有改动推送到master分支时，启动Action</h1><p>on:</p>
+<p>  push:</p>
+<pre><code>branches:
+
+  - master
+
+  #2020年10月后github新建仓库默认分支改为main，注意更改
+</code></pre><p>  release:</p>
+<pre><code>types:
+
+  - published
+</code></pre><p>jobs:</p>
+<p>  deploy:</p>
+<pre><code>runs-on: ubuntu-latest
+
+steps:
+
+  - name: 检查分支
+
+    uses: actions&amp;#x2F;checkout@v2
+
+    with:
+
+      ref: master
+
+
+
+  - name: 安装 Node
+
+    uses: actions&amp;#x2F;setup-node@v1
+
+    with:
+
+      node-version: &amp;quot;18.x&amp;quot;
+
+
+
+  - name: 安装 Hexo
+
+    run: |
+
+      export TZ&amp;#x3D;&amp;#39;Asia&amp;#x2F;Shanghai&amp;#39;
+
+      npm install hexo-cli -g
+
+
+
+  - name: 缓存 Hexo
+
+    id: cache-npm
+
+    uses: actions&amp;#x2F;cache@v3
+
+    env:
+
+      cache-name: cache-node-modules
+
+    with:
+
+      path: node_modules
+
+      key: $&amp;#123;&amp;#123; runner.os &amp;#125;&amp;#125;-build-$&amp;#123;&amp;#123; env.cache-name &amp;#125;&amp;#125;-$&amp;#123;&amp;#123; hashFiles(&amp;#39;**&amp;#x2F;package-lock.json&amp;#39;) &amp;#125;&amp;#125;
+
+      restore-keys: |
+
+        $&amp;#123;&amp;#123; runner.os &amp;#125;&amp;#125;-build-$&amp;#123;&amp;#123; env.cache-name &amp;#125;&amp;#125;-
+
+        $&amp;#123;&amp;#123; runner.os &amp;#125;&amp;#125;-build-
+
+        $&amp;#123;&amp;#123; runner.os &amp;#125;&amp;#125;-
+
+
+
+  - name: 安装依赖
+
+    if: $&amp;#123;&amp;#123; steps.cache-npm.outputs.cache-hit !&amp;#x3D; &amp;#39;true&amp;#39; &amp;#125;&amp;#125;
+
+    run: |
+
+      npm install --save
+
+
+
+  - name: 生成静态文件
+
+    run: |
+
+      hexo clean
+
+      hexo generate
+
+
+
+  - name: 部署到Github
+
+    uses: JamesIves&amp;#x2F;github-pages-deploy-action@v4
+
+    with:
+
+      token: ghp_xxxxxxxxxxxxxxxxxxxxxxx
+
+      repository-name: BarryYangi&amp;#x2F;BarryYangi.github.io
+
+      branch: main
+
+      folder: public
+
+      commit-message: &amp;quot;$&amp;#123;&amp;#123; github.event.head_commit.message &amp;#125;&amp;#125; Updated By Github Actions&amp;quot;&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape--&gt;
+</code></pre><ol>
+<li>之后需要自己到仓库的 Settings-&gt;Secrets-&gt;actions 下添加环境变量，变量名参考脚本中出现的，依次添加</li>
+</ol>
+<h3 id="重新设置远程仓库和分支"><a href="#重新设置远程仓库和分支" class="headerlink" title="重新设置远程仓库和分支"></a>重新设置远程仓库和分支</h3><ol>
+<li>删除或者先把 <code>[Blogroot]/themes/butterfly/.git</code> 移动到非博客文件夹目录下, 原因是主题文件夹下的 <code>.git</code> 文件夹的存在会导致其被识别成子项目，从而无法被上传到源码仓库。</li>
+<li>在博客根目录<code>[Blogroot]</code>路径下运行指令<pre class="language-BASH" data-language="BASH"><code class="language-BASH">git init #初始化
+git remote add origin git@github.com:[GithubUsername]&#x2F;[SourceRepo].git #[SourceRepo]为存放源码的github私有仓库
+git checkout -b master # 切换到master分支，
+#2020年10月后github新建仓库默认分支改为main，注意更改
+# 如果不是，后面的所有设置的分支记得保持一致</code></pre></li>
+<li><p>添加屏蔽项因为能够使用指令进行安装的内容不包括在需要提交的源码内，所有我们需要将这些内容添加到屏蔽项，表示不上传到 github 上。这样可以显著减少需要提交的文件量和加快提交速度。打开<code>[Blogroot]/.gitignore</code>,输入以下内容：</p>
+<pre class="language-txt" data-language="txt"><code class="language-txt">.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules&#x2F;
+public&#x2F;
+.deploy*&#x2F;
+.deploy_git*&#x2F;
+.idea
+themes&#x2F;matery&#x2F;.git</code></pre>
+<p>如果不是 <code>matery</code> 主题，记得替换最后一行内容为你自己当前使用的主题。</p>
+</li>
+<li><p>之后再运行 git 提交指令，将博客源码提交到 github 上。</p>
+</li>
+</ol>
+<pre><code>&lt;!--hexoPostRenderEscape:&lt;pre class=&quot;language-BASH&quot; data-language=&quot;BASH&quot;&gt;&lt;code class=&quot;language-BASH&quot;&gt;git add .
+</code></pre><p>git commit -m &quot;github action update&quot;<br>git push origin master</p>
+<h1 id="2020年10月后github新建仓库默认分支改为main，注意更改-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#2020年10月后github新建仓库默认分支改为main，注意更改-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="2020年10月后github新建仓库默认分支改为main，注意更改&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>2020年10月后github新建仓库默认分支改为main，注意更改&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><p>5.可能遇到的 bug<br>因为 butterfly 主题文件夹下的.git 文件夹的存在，那么主题文件夹会被识别子项目。从而无法被上传到源码仓库。若是遇到添加屏蔽项，但是还是无法正常上传主题文件夹的情况。请先将本地源码中的 themes 文件夹移动到别的目录下。然后 commit 一次。接着将 themes 文件夹移动回来，再 commit 一次。 </p>
+<h3 id="查看部署情况"><a href="#查看部署情况" class="headerlink" title="查看部署情况"></a>查看部署情况</h3><p>此时，打开 GIthub 存放源码的私有仓库，找到 action。<br>根据刚刚的 Commit 记录找到相应的任务<br>点击 Deploy 查看部署情况<br>若全部打钩，恭喜你，你现在可以享受自动部署的快感了。</p>
+<h2 id="Obsidian-备份配置"><a href="#Obsidian-备份配置" class="headerlink" title="Obsidian 备份配置"></a>Obsidian 备份配置</h2><h3 id="插件下载"><a href="#插件下载" class="headerlink" title="插件下载"></a>插件下载</h3><p>首先先在 Obsidian 插件市场中下载 Obsidian git 插件（需要戴莉）<br><img src="https://easyimage.smitten.top/i/2023/02/21/nzk0of-0.png" alt="Obsidian git"></p>
+<h3 id="git-备份仓库设置"><a href="#git-备份仓库设置" class="headerlink" title="git 备份仓库设置"></a>git 备份仓库设置</h3><p>先在 github 建立一个私人仓库，当然你想让你的笔记让别人看到公开仓库也行：）<br>然后进行本地仓库设置<br>打开 Obsidian 本地仓库的文件夹，新建 <code>.gitignore</code> 文件，来屏蔽一些我们不需要进行备份的文件内容如下：<br><pre class="language-none"><code class="language-none">.obsidian
+.trash</code></pre><br>然后建立 <code>.github/workflows</code> 目录，在该目录下配置工作流：<code>ci.yml</code>:<br>&lt;!—hexoPostRenderEscape:<pre class="language-yaml" data-language="yaml"><code class="language-yaml">name: 上传文章</code></pre></p>
+<p>on:</p>
+<p>  push:</p>
+<pre><code>branches:
+
+  - master
+
+paths:
+
+  - &amp;#39;已发布文章&amp;#x2F;**&amp;#39; # 本地obsidian库中需要同步的文章的位置
+</code></pre><p>jobs:</p>
+<p>  deploy_job:</p>
+<pre><code>runs-on: ubuntu-latest
+
+name: build
+
+steps:
+
+  # check out the repository
+
+  - name: Checkout    
+
+    uses: actions&amp;#x2F;checkout@v2
+
+  - name: Pushes to another repository
+
+    uses: cpina&amp;#x2F;github-action-push-to-another-repository@main
+
+    env:
+
+      API_TOKEN_GITHUB: [GithubToken]
+
+    with:
+
+      source-directory: &amp;#39;已发布文章&amp;#39;
+
+      destination-github-username: [GithubUserName]
+
+      destination-repository-name: [SourceRepo]
+
+      target-directory: &amp;#39;source&amp;#x2F;_posts&amp;#39; # hexo中发布文章目录
+
+      user-email: [GithubEmail]
+
+      target-branch: master
+      #2020年10月后github新建仓库默认分支改为main，注意更改&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape--&gt;
+</code></pre><p>然后在本地 obsidian 根目录（能看到 <code>.obsidian</code> 的哪个目录）下运行运行指令<br>&lt;!—hexoPostRenderEscape:<pre class="language-shell" data-language="shell"><code class="language-shell">git init #初始化<br>git remote add origin git@github.com:[GithubUsername]&#x2F;[备份仓库名].git<br>git checkout -b master # 切换到master分支，</code></pre></p>
+<h1 id="2020年10月后github新建仓库默认分支改为main，注意更改"><a href="#2020年10月后github新建仓库默认分支改为main，注意更改" class="headerlink" title="2020年10月后github新建仓库默认分支改为main，注意更改"></a>2020年10月后github新建仓库默认分支改为main，注意更改</h1><h1 id="如果不是，后面的所有设置的分支记得保持一致-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#如果不是，后面的所有设置的分支记得保持一致-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="如果不是，后面的所有设置的分支记得保持一致&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>如果不是，后面的所有设置的分支记得保持一致&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><p>之后再运行 git 提交指令，将博客源码提交到 github 上。</p>
+ <pre class="language-BASH" data-language="BASH"><code class="language-BASH">git add .
+git commit -m &quot;github action update&quot;
+git push origin master
+#2020年10月后github新建仓库默认分支改为main，注意更改</code></pre>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>然后你可以在你设置的发布文章的文件夹中新建一篇文章，这里推荐使用 QuickAdd 结合 templater 快速生成带有 hexo 文章 yaml 的模板文件，然后随便写几句话保存。<br>然后按 <code>ctrl</code> + <code>p</code><br><img src="https://easyimage.smitten.top/i/2023/02/21/p263hb-0.jpg" alt="git"><br>选择着两项都能立即同步仓库<br>随后看你的 obsidian 备份仓库的 action 是不是成功执行，不出意外的话到此你就已经可以开始享受全自动化的工作流了。</p>
+<h2 id="Vercel-部署-Hexo"><a href="#Vercel-部署-Hexo" class="headerlink" title="Vercel 部署 Hexo"></a>Vercel 部署 Hexo</h2><h3 id="git-仓库添加-vercel-配置文件"><a href="#git-仓库添加-vercel-配置文件" class="headerlink" title="git 仓库添加 vercel 配置文件"></a>git 仓库添加 vercel 配置文件</h3><p>此步非必须，但是不做后续可能会遇到很多奇奇怪怪的问题，其实就是让 vercel 取消当访问以正斜杠结尾的路径时，将以 308 状态代码响应，并重定向到不带尾部斜杠的路径。如果 hexo 的路径不尾随 <code>/</code> 的话可能非根页面都会 404，并且有些 hexo 的第三方的评论也是通过路径返回数据到前端页面的，路径不一致的话评论都不一样。<br>配置很简单只需在 <code>[Blogroot]</code> 目录加上 <code>vercel.json</code> 文件：<br><pre class="language-none"><code class="language-none">&#123;
+  &quot;trailingSlash&quot;: true
+&#125;</code></pre><br>即可。</p>
+<h3 id="vercel-配置"><a href="#vercel-配置" class="headerlink" title="vercel 配置"></a>vercel 配置</h3><p>首先你得去注册一个 <a target="_blank" rel="noopener" href="https://vercel.com/">vercel</a> 账号，然后在 dashboard 页面点击 Add New-&gt;Project, 绑定你的 github 账号并选择刚刚你自己 Hexo 的源码仓库，你应该是可以在看到一个 Hexo 的图标的哪个仓库，点击导入，然后什么都不用设置点击 Deploy 就 ok 了，等待他自动构建完成，如果没用报错网页一切访问正常，那么恭喜你，vercel 的部署就这么简单的完成了。</p>
+<h3 id="vercel-绑定域名"><a href="#vercel-绑定域名" class="headerlink" title="vercel 绑定域名"></a>vercel 绑定域名</h3><p>如果你想更优雅的访问 vercel 站点的话就想要绑定一个自定义域名，步骤也很简单<br>在 vercel dashbord 面板点击你的 hexo 项目-&gt;Settings-&gt;Domains, 在上方输入你购买的域名<br>然后来到 dns 服务商这里绑定解析<br><img src="https://easyimage.smitten.top/i/2023/02/21/pi49z8-0.jpg" alt="dns"><br>这里在国内可以绑定国内的 vercel dns</p>
+<p>至此，全部的博客部署工作已经完成。</p>
+<p>EOF</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itsBarry</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.smitten.top/posts/HexoCI.html">https://www.smitten.top/posts/HexoCI.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itsBarry</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/CI-CD/">
+                                    <span class="chip bg-color">CI/CD</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢赞赏哦~</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+    .v[data-class=v] .emoji, .v[data-class=v] .vemoji {
+        max-height: 20px;
+        overflow: hidden;
+        max-width: 20px!important;
+    }
+    .v[data-class=v] .vwrap .vemojis {
+        text-align: center;
+    }
+    .roboterbb {
+        position: absolute;
+        right: 87px;
+        padding-top: 3px;
+    }
+    .robot-check-text:hover {
+        color: #26a69a;
+    }
+    .roboter:hover .robot-check-text::before {
+        border: 2px solid #5a5a5a;
+    }
+    .robotxian {
+        background: #5a5a5a;
+        top: 21px;
+        left: 11px!important;
+        transform-origin: 50% -17px;
+        animation: swing 3.5s infinite ease-in-out;
+        -webkit-transform-origin: 50% -17px;
+        -webkit-animation: swing 2.85s infinite ease-in-out;
+    }
+    .v[data-class=v] .vwrap {
+        padding-bottom: 23px;
+    }
+    .robotimg {
+        width: 28px!important;
+        height: 28px!important;
+        top: 14px!important;
+        left: -13px!important;
+        max-width: none!important;
+        z-index: 99;
+        cursor: none!important;
+    }
+    .v[data-class=v] .vbtn:disabled {
+        color: #b2b2b5;
+        border-color: #b2b2b5;
+    }
+    .v[data-class=v] .vbtn:disabled {
+        background-color: transparent;
+    }
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+    .v[data-class=v] .vwrap {
+        border-radius: 8px;
+    }
+    /* #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg1.webp") 100% 100% no-repeat;
+    } */
+    #vcomments textarea {
+        background: url(/medias/comment_bg1.webp) no-repeat;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: rgba(255,255,255,0);
+        resize: vertical;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" id="vcomments-top">
+
+    <!-- 福袋按钮 -->
+    <div class="caishendeng">        
+        <div class="caishenxian fudaixian">
+            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png" />
+        </div>              
+    </div>
+   
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评 论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        enableQQ: true,
+        boolean: true,
+        appId: 'k5N8XhsMfL71uDYEah6HoN6B-gzGzoHsz',
+        appKey: 'Q4JIAdUGaDEKrFZxjrymW7VX',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        // avatar: 'mm',
+        avatar: '/medias/robot.png',
+        pageSize: '16',
+        lang: 'zh-cn',
+        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
+
+        adminEmailMd5: '',
+
+        master: ["6b922a7268ecf15b7de33e844cfb9fba"],
+        friends: [""],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        // tagMeta: '博主,小伙伴,访客',
+        // master: '6b922a7268ecf15b7de33e844cfb9fba',
+        // friends: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest"]
+    });
+</script>
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+
+
+<!-- 评论机器人验证 -->
+<script>
+    $('.roboter').on('click',function(){
+        $('.robot-check-text').html('·&nbsp;&nbsp;&nbsp;验证成功！');
+        $('.roboter:hover .robot-check-text::before').css('border','2px solid #26a69a');
+        $('.robotxian').css('background','#26a69a');
+        $('.robotimg').attr('src','/medias/robot.png');
+        $('.robot-check-text').css('color','#26a69a');
+    });
+    
+    if(!$('.robot-check').checked) {
+        // alert("请勾选机器人验证后再发表评论！");
+        $('.vsubmit').attr('disabled',true).attr('title','评论前勾选机器人验证按钮');
+    } 
+    $('.robot-check').on('click',function(){
+        $('.vsubmit').attr('disabled',false).attr('title','欢迎畅所欲言');
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/HexoCI.html">
+                    <div class="card-image">
+                        
+                        <img src="https://easyimage.smitten.top/i/2023/02/21/pluevq-0.png" class="responsive-img" alt="hexo博客工作流CI（一键部署的快乐）">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          hexo博客工作流CI（一键部署的快乐）
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言一直都想尝试一下基于 Github Action 来进行全自动化的 hexo 博客内容的输出，今天终于闲下来尝试了一下，发现是真滴香！
+CI/CD 解释：
+    CI\CD 其实说的是三件事情：「持续集成（Continuous Int
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CI-CD/">
+                        <span class="chip bg-color">CI/CD</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/WeAreToghter.html">
+                    <div class="card-image">
+                        
+                        <img src="https://easyimage.smitten.top/i/2023/02/17/z5t7lj-0.png" class="responsive-img" alt="我要我们在一起">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          我要我们在一起
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            偶然之间看到一篇帖子, 不知道后来的我们, 十年后会怎么 🌎
+
+整理后的帖子相对完整，原文缺失部分这是整理后的帖子原文： https://www.douban.com/note/260167887/原作者： 你这个贱人原文地址：豆瓣： h
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="post-category">
+                                    转载
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%94%9F%E6%B4%BB/">
+                        <span class="chip bg-color">生活</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+<style>
+  .articles .row .article {
+    position: relative;
+  }
+</style>
+
 </div>
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Barryの小站<br />'
+            + '文章作者: itsBarry<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
 </script>
 
 
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+        </div>
+        
+        
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        
+        
+        <div class="toc-widget" data-spmid="CI/CD">
+            <div class="toc-title">
+                <i class="far fa-list-alt"></i>
+                &nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content"></div>
+        </div>
+        
+        
     </div>
-    <div class="mohuxiaoguo"></div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="CI/CD">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
 </div>
 
 
-<style>
-    /* banner背景图 */
-    .bg-cover {
-        background-image: url("/medias/banner/3.jpg")!important;
-    }
-  </style>
-<style>
-    #sma {
-        bottom: 155px;
-    }
-    .bg-cover::before {
-        background-image: url(/medias/bggrid.png);
-    }
-    #switchspring {
-        bottom: 223px;
-    }
-</style>
-<main class="content">
 
-    
-    <div class="container archive-calendar">
-    <div class="card">
-        <div id="post-calendar" class="card-content"></div>
-    </div>
-</div>
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
 
-    
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
 
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
             }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2022-02-21", "2023-02-21"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2022-02-21", 0], ["2022-02-22", 0], ["2022-02-23", 0], ["2022-02-24", 0], ["2022-02-25", 0], ["2022-02-26", 0], ["2022-02-27", 0], ["2022-02-28", 0], ["2022-03-01", 0], ["2022-03-02", 0], ["2022-03-03", 0], ["2022-03-04", 0], ["2022-03-05", 0], ["2022-03-06", 0], ["2022-03-07", 0], ["2022-03-08", 0], ["2022-03-09", 0], ["2022-03-10", 0], ["2022-03-11", 0], ["2022-03-12", 0], ["2022-03-13", 0], ["2022-03-14", 0], ["2022-03-15", 0], ["2022-03-16", 0], ["2022-03-17", 0], ["2022-03-18", 0], ["2022-03-19", 0], ["2022-03-20", 0], ["2022-03-21", 0], ["2022-03-22", 0], ["2022-03-23", 0], ["2022-03-24", 0], ["2022-03-25", 0], ["2022-03-26", 0], ["2022-03-27", 0], ["2022-03-28", 0], ["2022-03-29", 0], ["2022-03-30", 0], ["2022-03-31", 0], ["2022-04-01", 0], ["2022-04-02", 0], ["2022-04-03", 0], ["2022-04-04", 0], ["2022-04-05", 0], ["2022-04-06", 0], ["2022-04-07", 0], ["2022-04-08", 0], ["2022-04-09", 0], ["2022-04-10", 0], ["2022-04-11", 0], ["2022-04-12", 0], ["2022-04-13", 0], ["2022-04-14", 0], ["2022-04-15", 0], ["2022-04-16", 0], ["2022-04-17", 0], ["2022-04-18", 0], ["2022-04-19", 0], ["2022-04-20", 0], ["2022-04-21", 0], ["2022-04-22", 0], ["2022-04-23", 0], ["2022-04-24", 0], ["2022-04-25", 0], ["2022-04-26", 0], ["2022-04-27", 0], ["2022-04-28", 0], ["2022-04-29", 0], ["2022-04-30", 0], ["2022-05-01", 0], ["2022-05-02", 0], ["2022-05-03", 0], ["2022-05-04", 0], ["2022-05-05", 0], ["2022-05-06", 0], ["2022-05-07", 0], ["2022-05-08", 0], ["2022-05-09", 0], ["2022-05-10", 0], ["2022-05-11", 0], ["2022-05-12", 0], ["2022-05-13", 0], ["2022-05-14", 0], ["2022-05-15", 0], ["2022-05-16", 0], ["2022-05-17", 0], ["2022-05-18", 0], ["2022-05-19", 0], ["2022-05-20", 0], ["2022-05-21", 0], ["2022-05-22", 0], ["2022-05-23", 0], ["2022-05-24", 0], ["2022-05-25", 0], ["2022-05-26", 0], ["2022-05-27", 0], ["2022-05-28", 0], ["2022-05-29", 0], ["2022-05-30", 0], ["2022-05-31", 0], ["2022-06-01", 0], ["2022-06-02", 0], ["2022-06-03", 0], ["2022-06-04", 0], ["2022-06-05", 0], ["2022-06-06", 0], ["2022-06-07", 0], ["2022-06-08", 0], ["2022-06-09", 0], ["2022-06-10", 0], ["2022-06-11", 0], ["2022-06-12", 0], ["2022-06-13", 0], ["2022-06-14", 0], ["2022-06-15", 0], ["2022-06-16", 0], ["2022-06-17", 0], ["2022-06-18", 0], ["2022-06-19", 0], ["2022-06-20", 0], ["2022-06-21", 0], ["2022-06-22", 0], ["2022-06-23", 0], ["2022-06-24", 0], ["2022-06-25", 0], ["2022-06-26", 0], ["2022-06-27", 0], ["2022-06-28", 0], ["2022-06-29", 0], ["2022-06-30", 0], ["2022-07-01", 0], ["2022-07-02", 0], ["2022-07-03", 0], ["2022-07-04", 0], ["2022-07-05", 0], ["2022-07-06", 0], ["2022-07-07", 0], ["2022-07-08", 0], ["2022-07-09", 0], ["2022-07-10", 0], ["2022-07-11", 0], ["2022-07-12", 0], ["2022-07-13", 0], ["2022-07-14", 0], ["2022-07-15", 0], ["2022-07-16", 0], ["2022-07-17", 0], ["2022-07-18", 0], ["2022-07-19", 0], ["2022-07-20", 0], ["2022-07-21", 0], ["2022-07-22", 0], ["2022-07-23", 0], ["2022-07-24", 0], ["2022-07-25", 0], ["2022-07-26", 0], ["2022-07-27", 0], ["2022-07-28", 0], ["2022-07-29", 0], ["2022-07-30", 0], ["2022-07-31", 0], ["2022-08-01", 0], ["2022-08-02", 0], ["2022-08-03", 0], ["2022-08-04", 0], ["2022-08-05", 0], ["2022-08-06", 0], ["2022-08-07", 0], ["2022-08-08", 0], ["2022-08-09", 0], ["2022-08-10", 0], ["2022-08-11", 0], ["2022-08-12", 0], ["2022-08-13", 0], ["2022-08-14", 0], ["2022-08-15", 0], ["2022-08-16", 0], ["2022-08-17", 0], ["2022-08-18", 0], ["2022-08-19", 0], ["2022-08-20", 0], ["2022-08-21", 0], ["2022-08-22", 0], ["2022-08-23", 0], ["2022-08-24", 0], ["2022-08-25", 0], ["2022-08-26", 0], ["2022-08-27", 0], ["2022-08-28", 0], ["2022-08-29", 0], ["2022-08-30", 0], ["2022-08-31", 0], ["2022-09-01", 0], ["2022-09-02", 0], ["2022-09-03", 0], ["2022-09-04", 0], ["2022-09-05", 0], ["2022-09-06", 0], ["2022-09-07", 0], ["2022-09-08", 0], ["2022-09-09", 0], ["2022-09-10", 0], ["2022-09-11", 0], ["2022-09-12", 0], ["2022-09-13", 0], ["2022-09-14", 0], ["2022-09-15", 0], ["2022-09-16", 0], ["2022-09-17", 0], ["2022-09-18", 0], ["2022-09-19", 0], ["2022-09-20", 0], ["2022-09-21", 0], ["2022-09-22", 0], ["2022-09-23", 0], ["2022-09-24", 0], ["2022-09-25", 0], ["2022-09-26", 0], ["2022-09-27", 0], ["2022-09-28", 0], ["2022-09-29", 0], ["2022-09-30", 0], ["2022-10-01", 0], ["2022-10-02", 0], ["2022-10-03", 0], ["2022-10-04", 0], ["2022-10-05", 0], ["2022-10-06", 0], ["2022-10-07", 0], ["2022-10-08", 0], ["2022-10-09", 0], ["2022-10-10", 0], ["2022-10-11", 0], ["2022-10-12", 0], ["2022-10-13", 0], ["2022-10-14", 0], ["2022-10-15", 0], ["2022-10-16", 0], ["2022-10-17", 0], ["2022-10-18", 0], ["2022-10-19", 0], ["2022-10-20", 0], ["2022-10-21", 0], ["2022-10-22", 0], ["2022-10-23", 0], ["2022-10-24", 0], ["2022-10-25", 0], ["2022-10-26", 0], ["2022-10-27", 0], ["2022-10-28", 0], ["2022-10-29", 0], ["2022-10-30", 0], ["2022-10-31", 0], ["2022-11-01", 0], ["2022-11-02", 0], ["2022-11-03", 0], ["2022-11-04", 0], ["2022-11-05", 0], ["2022-11-06", 0], ["2022-11-07", 0], ["2022-11-08", 0], ["2022-11-09", 0], ["2022-11-10", 0], ["2022-11-11", 0], ["2022-11-12", 0], ["2022-11-13", 0], ["2022-11-14", 0], ["2022-11-15", 0], ["2022-11-16", 0], ["2022-11-17", 0], ["2022-11-18", 0], ["2022-11-19", 0], ["2022-11-20", 0], ["2022-11-21", 0], ["2022-11-22", 0], ["2022-11-23", 0], ["2022-11-24", 0], ["2022-11-25", 0], ["2022-11-26", 0], ["2022-11-27", 0], ["2022-11-28", 0], ["2022-11-29", 0], ["2022-11-30", 0], ["2022-12-01", 0], ["2022-12-02", 0], ["2022-12-03", 0], ["2022-12-04", 0], ["2022-12-05", 0], ["2022-12-06", 0], ["2022-12-07", 0], ["2022-12-08", 0], ["2022-12-09", 0], ["2022-12-10", 0], ["2022-12-11", 0], ["2022-12-12", 0], ["2022-12-13", 0], ["2022-12-14", 0], ["2022-12-15", 0], ["2022-12-16", 0], ["2022-12-17", 0], ["2022-12-18", 0], ["2022-12-19", 0], ["2022-12-20", 0], ["2022-12-21", 1], ["2022-12-22", 0], ["2022-12-23", 0], ["2022-12-24", 0], ["2022-12-25", 0], ["2022-12-26", 0], ["2022-12-27", 0], ["2022-12-28", 0], ["2022-12-29", 0], ["2022-12-30", 0], ["2022-12-31", 0], ["2023-01-01", 0], ["2023-01-02", 0], ["2023-01-03", 0], ["2023-01-04", 0], ["2023-01-05", 0], ["2023-01-06", 0], ["2023-01-07", 0], ["2023-01-08", 2], ["2023-01-09", 0], ["2023-01-10", 0], ["2023-01-11", 0], ["2023-01-12", 0], ["2023-01-13", 0], ["2023-01-14", 0], ["2023-01-15", 0], ["2023-01-16", 0], ["2023-01-17", 0], ["2023-01-18", 0], ["2023-01-19", 0], ["2023-01-20", 0], ["2023-01-21", 0], ["2023-01-22", 0], ["2023-01-23", 0], ["2023-01-24", 1], ["2023-01-25", 0], ["2023-01-26", 0], ["2023-01-27", 0], ["2023-01-28", 0], ["2023-01-29", 0], ["2023-01-30", 0], ["2023-01-31", 0], ["2023-02-01", 0], ["2023-02-02", 0], ["2023-02-03", 0], ["2023-02-04", 0], ["2023-02-05", 0], ["2023-02-06", 0], ["2023-02-07", 0], ["2023-02-08", 0], ["2023-02-09", 0], ["2023-02-10", 0], ["2023-02-11", 1], ["2023-02-12", 0], ["2023-02-13", 1], ["2023-02-14", 2], ["2023-02-15", 0], ["2023-02-16", 0], ["2023-02-17", 1], ["2023-02-18", 0], ["2023-02-19", 0], ["2023-02-20", 0], ["2023-02-21", 1]]
-        }]
+        });
 
-    };
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
 
-    myChart.setOption(option);
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
 </script>
 
     
-
-    
-
-    <div id="cd-timeline" class="container">
-        
-        <div class="cd-timeline-block">
-
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/archives/2020">2020</a>
-            </div>
-            
-
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2020/03">03</a>
-            </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>10</span>
-            </div>
-            <article class="cd-timeline-content">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/gift.html">
-                            <div class="card-image">
-                                
-                                <img src="/medias/toc-banner/gift.png" class="responsive-img" alt="宝藏句子收藏区">
-                                
-                                <span class="card-title">
-                                  <!-- 文章卡片hover线条效果 -->
-                                  <span class="titlesline">
-                                    <style>
-                                      .titlesline {
-                                        width: 0px;
-                                        height: 4px;
-                                        background-color: pink;
-                                        border-radius: 2px;
-                                        position: absolute;
-                                        top: 10px;
-                                        left: 24px;
-                                      }
-                                      body.dark .titlesline {
-                                        filter: brightness(.7);
-                                      }
-                                      article .card .titlesline {
-                                        transition: all 0.36s ease;
-                                      }
-                                      article .card-image:hover .titlesline {
-                                        width: 36px;
-                                      }
-                                    </style>
-                                  </span>
-                                  宝藏句子收藏区
-                                </span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    宝藏句子收藏区引入突然有一个想法想把看到的宝藏句子都收集起来，让大家一起🤩
-英文If you reveal your secrets to the wind you should not blame the wind revealing 
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2020-03-10
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E6%94%B6%E8%97%8F/" class="post-category">
-                                    收藏
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E5%AE%9D%E8%97%8F%E5%8F%A5%E5%AD%90/"><span class="chip bg-color">宝藏句子</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-        <div class="cd-timeline-block">
-
-            
-            
-
-            
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>10</span>
-            </div>
-            <article class="cd-timeline-content">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/essay.html">
-                            <div class="card-image">
-                                
-                                <img src="/medias/toc-banner/essay.png" class="responsive-img" alt="所有过往，皆为序章">
-                                
-                                <span class="card-title">
-                                  <!-- 文章卡片hover线条效果 -->
-                                  <span class="titlesline">
-                                    <style>
-                                      .titlesline {
-                                        width: 0px;
-                                        height: 4px;
-                                        background-color: pink;
-                                        border-radius: 2px;
-                                        position: absolute;
-                                        top: 10px;
-                                        left: 24px;
-                                      }
-                                      body.dark .titlesline {
-                                        filter: brightness(.7);
-                                      }
-                                      article .card .titlesline {
-                                        transition: all 0.36s ease;
-                                      }
-                                      article .card-image:hover .titlesline {
-                                        width: 36px;
-                                      }
-                                    </style>
-                                  </span>
-                                  所有过往，皆为序章
-                                </span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    
-    所有过往，皆为序章
-  
-  当韶华散去，便不问一切是否可以重来。
-
-
-   这是我单曲循环了许久的一首歌。
-
-第一次是在日推里发现它的，初次听到这首歌的旋律时，
-
-一瞬间它就直击我内心，当听到:
-我们只是共享了几个故事
-
-对你来
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2020-03-10
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/%E9%9A%8F%E7%AC%94/"><span class="chip bg-color">随笔</span></a>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-            </article>
-        </div>
-        
-    </div>
-
 </main>
 
 
