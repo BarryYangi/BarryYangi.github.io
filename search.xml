@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Hi,Regex</title>
+      <link href="/posts/Regex.html"/>
+      <url>/posts/Regex.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。</p></blockquote><p>一个正则表达式是一种从左到右匹配主体字符串的模式。 “Regular expression”这个词比较拗口，我们常使用缩写的术语“regex”或“regexp”。 正则表达式可以从一个基础字符串中根据一定的匹配模式替换文本中的字符串、验证表单、提取字符串等等。</p><p><a href="https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md">学习正则表达式(learn-regex)</a><br><a href="https://regexlearn.com/zh-cn">https://regexlearn.com/zh-cn</a><br><a href="http://louiszhai.github.io/2016/06/13/regexp/">正则表达式前端使用手册</a><br><a href="https://www.runoob.com/regexp/regexp-tutorial.html">菜鸟教程</a><br><a href="https://regex101.com/">Regex101</a><br><a href="https://regexr.com/">Regexr</a><br><a href="https://github.com/geongeorge/i-hate-regex.git">iHateRegex</a><br><a href="https://jex.im/regulex/">Regulex</a> - Regulex is a JavaScript Regular Expression Parser &amp; Visualizer.<br><a href="https://github.com/any86/any-rule">any86/any-rule: 🦕 常用正则大全, 支持web / vscode / idea / Alfred Workflow多平台 (github.com)</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Regex </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>三分钟让你的Web网页变优雅</title>
+      <link href="/posts/font.html"/>
+      <url>/posts/font.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://easyimage.smitten.top/i/2023/03/07/jwfdfu-0.webp" alt="霞鹜文楷"></p><p>项目地址：<a href="https://github.com/chawyehsu/lxgw-wenkai-webfont">https://github.com/chawyehsu/lxgw-wenkai-webfont</a></p><p>直接调用 CDN。</p><pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css<span class="token punctuation">"</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>print<span class="token punctuation">"</span></span> <span class="token attr-name">onload</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>this.media=<span class="token punctuation">'</span>all<span class="token punctuation">'</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre><p>或 @一蓑烟雨 分享的 staticfile CDN</p><pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css<span class="token punctuation">"</span></span> <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>print<span class="token punctuation">"</span></span> <span class="token attr-name">onload</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>this.media=<span class="token punctuation">'</span>all<span class="token punctuation">'</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre><pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">&#123;</span>  <span class="token comment">/* Screen version */</span>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"LXGW WenKai Screen"</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span><span class="token punctuation">&#125;</span></code></pre><p>Perfect.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 在线字体 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo博客工作流CI（一键部署的快乐）</title>
       <link href="/posts/HexoCI.html"/>
       <url>/posts/HexoCI.html</url>
