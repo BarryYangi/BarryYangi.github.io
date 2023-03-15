@@ -1681,11 +1681,11 @@ git push origin master
           user<span class="token punctuation">-</span><span class="token key atrule">email</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>GithubEmail<span class="token punctuation">]</span>
           target<span class="token punctuation">-</span><span class="token key atrule">branch</span><span class="token punctuation">:</span> master</code></pre>
 <p>然后在本地 obsidian 根目录（能看到 <code>.obsidian</code> 的哪个目录）下运行运行指令</p>
-<pre class="language-shell" data-language="shell"><code class="language-shell">git init #初始化
-git remote add origin git@github.com:[GithubUsername]&#x2F;[备份仓库名].git
-git checkout -b master # 切换到master分支，
-#2020年10月后github新建仓库默认分支改为main，注意更改
-#如果不是，后面的所有设置的分支记得保持一致</code></pre>
+<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token function">git</span> init <span class="token comment">#初始化</span>
+<span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:<span class="token punctuation">[</span>GithubUsername<span class="token punctuation">]</span>/<span class="token punctuation">[</span>备份仓库名<span class="token punctuation">]</span>.git
+<span class="token function">git</span> checkout -b master <span class="token comment"># 切换到master分支，</span>
+<span class="token comment">#2020年10月后github新建仓库默认分支改为main，注意更改</span>
+<span class="token comment">#如果不是，后面的所有设置的分支记得保持一致</span></code></pre>
 <p>之后再运行 git 提交指令，将博客源码提交到 github 上。</p>
  <pre class="language-BASH" data-language="BASH"><code class="language-BASH">git add .
 git commit -m &quot;github action update&quot;
@@ -2685,7 +2685,7 @@ git push origin master
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">51.9k</span>&nbsp;
+        class="white-color">56k</span>&nbsp;
       
       
       
