@@ -1517,216 +1517,131 @@ h3:hover {
 <h3 id="2-打开「-github」-gt-「workflows」-gt-「run-data-sync-yml」文件，修改平台类型及信息。不同平台的配置信息可以前往-说明页面-进行查看。"><a href="#2-打开「-github」-gt-「workflows」-gt-「run-data-sync-yml」文件，修改平台类型及信息。不同平台的配置信息可以前往-说明页面-进行查看。" class="headerlink" title="2.打开「.github」&gt;「workflows」&gt;「run_data_sync.yml」文件，修改平台类型及信息。不同平台的配置信息可以前往 说明页面 进行查看。"></a>2.打开「.github」&gt;「workflows」&gt;「run_data_sync.yml」文件，修改平台类型及信息。不同平台的配置信息可以前往 <a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page/blob/master/README-CN.md#%E6%94%AF%E6%8C%81">说明页面</a> 进行查看。</h3><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Run Data Sync
 
 <span class="token key atrule">on</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">schedule</span><span class="token punctuation">:</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 0 * * *"</span>
+  <span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
+  <span class="token key atrule">schedule</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 0 * * *"</span>
 
 <span class="token key atrule">env</span><span class="token punctuation">:</span>
-
-<span class="token comment"># please change to your own config.</span>
-
-<span class="token key atrule">RUN_TYPE</span><span class="token punctuation">:</span> keep <span class="token comment"># support strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn, Please change the 'pass' it to your own</span>
-
-<span class="token key atrule">ATHLETE</span><span class="token punctuation">:</span> BarryYangi
-
-<span class="token key atrule">TITLE</span><span class="token punctuation">:</span> Barry Running
-
-<span class="token key atrule">MIN_GRID_DISTANCE</span><span class="token punctuation">:</span> <span class="token number">4</span> <span class="token comment"># change min distance here</span>
-
-<span class="token key atrule">TITLE_GRID</span><span class="token punctuation">:</span> Over 4km Runs <span class="token comment"># also here</span>
-
-<span class="token key atrule">GITHUB_NAME</span><span class="token punctuation">:</span> BarryYangi
-
-<span class="token key atrule">GITHUB_EMAIL</span><span class="token punctuation">:</span> 2059484047@qq.com
+  <span class="token comment"># please change to your own config.</span>
+  <span class="token key atrule">RUN_TYPE</span><span class="token punctuation">:</span> keep <span class="token comment"># support strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn, Please change the 'pass' it to your own</span>
+  <span class="token key atrule">ATHLETE</span><span class="token punctuation">:</span> BarryYangi
+  <span class="token key atrule">TITLE</span><span class="token punctuation">:</span> Barry Running
+  <span class="token key atrule">MIN_GRID_DISTANCE</span><span class="token punctuation">:</span> <span class="token number">4</span> <span class="token comment"># change min distance here</span>
+  <span class="token key atrule">TITLE_GRID</span><span class="token punctuation">:</span> Over 4km Runs <span class="token comment"># also here</span>
+  <span class="token key atrule">GITHUB_NAME</span><span class="token punctuation">:</span> BarryYangi
+  <span class="token key atrule">GITHUB_EMAIL</span><span class="token punctuation">:</span> 2059484047@qq.com
 
 <span class="token key atrule">jobs</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">sync</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">name</span><span class="token punctuation">:</span> Sync
-
-<span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
-
-<span class="token key atrule">steps</span><span class="token punctuation">:</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
-
-<span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python
-
-<span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v1
-
-<span class="token key atrule">with</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.7</span>
-
-<span class="token comment"># from pdm</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set Variables
-
-<span class="token key atrule">id</span><span class="token punctuation">:</span> set_variables
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-echo "PY=$(python <span class="token punctuation">-</span>c 'import hashlib<span class="token punctuation">,</span> sys;print(hashlib.sha256(sys.version.encode()+sys.executable.encode()).hexdigest())')" <span class="token punctuation">></span><span class="token punctuation">></span> $GITHUB_OUTPUT
-
-echo "PIP_CACHE=$(pip cache dir)" <span class="token punctuation">></span><span class="token punctuation">></span> $GITHUB_OUTPUT
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Cache PIP
-
-<span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v2
-
-<span class="token key atrule">with</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">path</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PIP_CACHE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token key atrule">key</span><span class="token punctuation">:</span> Ubuntu<span class="token punctuation">-</span>pip<span class="token punctuation">-</span>$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PY <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python <span class="token punctuation">-</span>m pip install <span class="token punctuation">-</span><span class="token punctuation">-</span>upgrade pip
-
-pip install <span class="token punctuation">-</span>r requirements.txt
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> steps.pip<span class="token punctuation">-</span>cache.outputs.cache<span class="token punctuation">-</span>hit <span class="token tag">!=</span> 'true'
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/nike_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.NIKE_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike to Strava(Run with nike data backup and show with strava)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike_to_strava'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/nike_to_strava_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.NIKE_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Keep script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'keep'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/keep_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.KEEP_MOBILE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.KEEP_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>with<span class="token punctuation">-</span>gpx
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/strava_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token comment"># for garmin if you want generate `tcx` you can add --tcx command in the args.</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/garmin_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token comment"># If you only want to sync `type running` add args --only-run, default script is to sync all data (rides and runs).</span>
-
-<span class="token comment"># python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; --only-run</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin CN script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_cn'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/garmin_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>is<span class="token punctuation">-</span>cn
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Only GPX script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'only_gpx'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/gpx_sync.py
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin(Run with strava(or others upload to strava) data backup in Garmin)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/strava_to_garmin_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin<span class="token punctuation">-</span>cn(Run with strava(or others upload to strava) data backup in Garmin<span class="token punctuation">-</span>cn)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin_cn'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/strava_to_garmin_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>is<span class="token punctuation">-</span>cn
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin<span class="token punctuation">-</span>cn to Strava(Run with Garmin data backup in Strava)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava_cn'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/garmin_to_strava_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>is<span class="token punctuation">-</span>cn
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin to Strava(Run with Garmin data backup in Strava)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/garmin_to_strava_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Tulipsport script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'tulipsport'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/tulipsport_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.TULIPSPORT_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>with<span class="token punctuation">-</span>gpx
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Make svg GitHub profile
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE <span class="token tag">!=</span> 'pass'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/gen_svg.py <span class="token punctuation">-</span><span class="token punctuation">-</span>from<span class="token punctuation">-</span>db <span class="token punctuation">-</span><span class="token punctuation">-</span>title "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.TITLE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>type github <span class="token punctuation">-</span><span class="token punctuation">-</span>athlete "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.ATHLETE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance 10 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance2 20 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color yellow <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color2 red <span class="token punctuation">-</span><span class="token punctuation">-</span>output assets/github.svg <span class="token punctuation">-</span><span class="token punctuation">-</span>use<span class="token punctuation">-</span>localtime <span class="token punctuation">-</span><span class="token punctuation">-</span>min<span class="token punctuation">-</span>distance 0.5
-
-python scripts/gen_svg.py <span class="token punctuation">-</span><span class="token punctuation">-</span>from<span class="token punctuation">-</span>db <span class="token punctuation">-</span><span class="token punctuation">-</span>title "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.TITLE_GRID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>type grid <span class="token punctuation">-</span><span class="token punctuation">-</span>athlete "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.ATHLETE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>output assets/grid.svg <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color yellow <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color2 red <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance 20 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance2 40 <span class="token punctuation">-</span><span class="token punctuation">-</span>use<span class="token punctuation">-</span>localtime <span class="token punctuation">-</span><span class="token punctuation">-</span>min<span class="token punctuation">-</span>distance "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.MIN_GRID_DISTANCE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>"
-
-python scripts/gen_svg.py <span class="token punctuation">-</span><span class="token punctuation">-</span>from<span class="token punctuation">-</span>db <span class="token punctuation">-</span><span class="token punctuation">-</span>type circular <span class="token punctuation">-</span><span class="token punctuation">-</span>use<span class="token punctuation">-</span>localtime
-
-python scripts/gen_svg.py <span class="token punctuation">-</span><span class="token punctuation">-</span>from<span class="token punctuation">-</span>db <span class="token punctuation">-</span><span class="token punctuation">-</span>year $(date +"%Y") <span class="token punctuation">-</span><span class="token punctuation">-</span>language zh_CN <span class="token punctuation">-</span><span class="token punctuation">-</span>title "$(date +"%Y") Running" <span class="token punctuation">-</span><span class="token punctuation">-</span>type github <span class="token punctuation">-</span><span class="token punctuation">-</span>athlete "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.ATHLETE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance 10 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance2 20 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color yellow <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color2 red <span class="token punctuation">-</span><span class="token punctuation">-</span>output assets/github_$(date +"%Y").svg <span class="token punctuation">-</span><span class="token punctuation">-</span>use<span class="token punctuation">-</span>localtime <span class="token punctuation">-</span><span class="token punctuation">-</span>min<span class="token punctuation">-</span>distance 0.5
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy site
-
-<span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
-
-<span class="token key atrule">with</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.MY_GIT_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> vercel<span class="token punctuation">-</span>pages
-
-<span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> .
-
-<span class="token key atrule">force_orphan</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-
-<span class="token comment"># keep_files: true</span></code></pre>
+  <span class="token key atrule">sync</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> Sync
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v1
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.7</span>
+
+      <span class="token comment"># from pdm</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set Variables
+        <span class="token key atrule">id</span><span class="token punctuation">:</span> set_variables
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          echo "PY=$(python -c 'import hashlib, sys;print(hashlib.sha256(sys.version.encode()+sys.executable.encode()).hexdigest())')" >> $GITHUB_OUTPUT
+          echo "PIP_CACHE=$(pip cache dir)" >> $GITHUB_OUTPUT</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Cache PIP
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PIP_CACHE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> Ubuntu<span class="token punctuation">-</span>pip<span class="token punctuation">-</span>$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PY <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt</span>
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> steps.pip<span class="token punctuation">-</span>cache.outputs.cache<span class="token punctuation">-</span>hit <span class="token tag">!=</span> 'true'
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/nike_sync.py $&#123;&#123; secrets.NIKE_REFRESH_TOKEN &#125;&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike to Strava(Run with nike data backup and show with strava)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike_to_strava'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/nike_to_strava_sync.py $&#123;&#123; secrets.NIKE_REFRESH_TOKEN &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Keep script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'keep'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/keep_sync.py $&#123;&#123; secrets.KEEP_MOBILE &#125;&#125; $&#123;&#123; secrets.KEEP_PASSWORD &#125;&#125; --with-gpx</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;</span>
+
+      <span class="token comment"># for garmin if you want generate `tcx` you can add --tcx command in the args.</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125;</span>
+        <span class="token comment"># If you only want to sync `type running` add args --only-run, default script is to sync all data (rides and runs).</span>
+        <span class="token comment"># python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; --only-run</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin CN script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_cn'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; --is-cn</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Only GPX script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'only_gpx'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/gpx_sync.py</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin(Run with strava(or others upload to strava) data backup in Garmin)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/strava_to_garmin_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; $&#123;&#123; secrets.STRAVA_EMAIL &#125;&#125; $&#123;&#123; secrets.STRAVA_PASSWORD &#125;&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin<span class="token punctuation">-</span>cn(Run with strava(or others upload to strava) data backup in Garmin<span class="token punctuation">-</span>cn)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin_cn'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/strava_to_garmin_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; $&#123;&#123; secrets.STRAVA_EMAIL &#125;&#125; $&#123;&#123; secrets.STRAVA_PASSWORD &#125;&#125; --is-cn</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin<span class="token punctuation">-</span>cn to Strava(Run with Garmin data backup in Strava)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava_cn'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/garmin_to_strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; --is-cn</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin to Strava(Run with Garmin data backup in Strava)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/garmin_to_strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Tulipsport script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'tulipsport'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/tulipsport_sync.py $&#123;&#123; secrets.TULIPSPORT_TOKEN &#125;&#125; --with-gpx</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Make svg GitHub profile
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE <span class="token tag">!=</span> 'pass'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/gen_svg.py --from-db --title "$&#123;&#123; env.TITLE &#125;&#125;" --type github --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github.svg --use-localtime --min-distance 0.5
+          python scripts/gen_svg.py --from-db --title "$&#123;&#123; env.TITLE_GRID &#125;&#125;" --type grid --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --output assets/grid.svg --special-color yellow --special-color2 red --special-distance 20 --special-distance2 40 --use-localtime --min-distance "$&#123;&#123; env.MIN_GRID_DISTANCE &#125;&#125;"
+          python scripts/gen_svg.py --from-db --type circular --use-localtime
+          python scripts/gen_svg.py --from-db --year $(date +"%Y")  --language zh_CN --title "$(date +"%Y") Running" --type github --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy site
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+            <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.MY_GIT_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+            <span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> vercel<span class="token punctuation">-</span>pages
+            <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> .
+            <span class="token key atrule">force_orphan</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+            <span class="token comment"># keep_files: true</span></code></pre>
 <p>这里推荐我们删掉剩下三个 workflows 配置 yml，因为我们不需要，后面我们将会将站点配置到 vercel 上，然后复制我的 <code>run_data_sync.yml</code> 文件内容到该文件覆盖。</p>
 <h3 id="3-找到自己所对应的平台需要完善的帐户信息"><a href="#3-找到自己所对应的平台需要完善的帐户信息" class="headerlink" title="3.找到自己所对应的平台需要完善的帐户信息"></a>3.找到自己所对应的平台需要完善的帐户信息</h3><p>列如 keep：<br><pre class="language-bash" data-language="bash"><code class="language-bash">python scripts/keep_sync.py <span class="token variable">$&#123;&#123; secrets.KEEP_MOBILE &#125;</span><span class="token punctuation">&#125;</span> <span class="token variable">$&#123;&#123; secrets.KEEP_PASSWORD &#125;</span><span class="token punctuation">&#125;</span> --with-gpx</code></pre><br>我们需要能够登录 keep 的手机账号以及密码，随后我们需要用到。</p>
 <h3 id="4-Running-Page-使用-Mapbox-进行地图展示，需要前往-Mapbox-站点-注册一个开发者账号。"><a href="#4-Running-Page-使用-Mapbox-进行地图展示，需要前往-Mapbox-站点-注册一个开发者账号。" class="headerlink" title="4.Running Page 使用 Mapbox 进行地图展示，需要前往 Mapbox 站点 注册一个开发者账号。"></a>4.Running Page 使用 Mapbox 进行地图展示，需要前往 <a target="_blank" rel="noopener" href="https://www.mapbox.com/">Mapbox 站点</a> 注册一个开发者账号。</h3><p>登录账号后，选择「Create a token」创建一个令牌，并完善相关信息。提交后会得到一串令牌信息，编辑「src」&gt;「utils」&gt;「const.js」文件，将自己的令牌替换到 MAPBOX_TOKEN 当中。</p>
@@ -2776,216 +2691,131 @@ h3:hover {
 <h3 id="2-打开「-github」-gt-「workflows」-gt-「run-data-sync-yml」文件，修改平台类型及信息。不同平台的配置信息可以前往-说明页面-进行查看。"><a href="#2-打开「-github」-gt-「workflows」-gt-「run-data-sync-yml」文件，修改平台类型及信息。不同平台的配置信息可以前往-说明页面-进行查看。" class="headerlink" title="2.打开「.github」&gt;「workflows」&gt;「run_data_sync.yml」文件，修改平台类型及信息。不同平台的配置信息可以前往 说明页面 进行查看。"></a>2.打开「.github」&gt;「workflows」&gt;「run_data_sync.yml」文件，修改平台类型及信息。不同平台的配置信息可以前往 <a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page/blob/master/README-CN.md#%E6%94%AF%E6%8C%81">说明页面</a> 进行查看。</h3><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Run Data Sync
 
 <span class="token key atrule">on</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">schedule</span><span class="token punctuation">:</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 0 * * *"</span>
+  <span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
+  <span class="token key atrule">schedule</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 0 * * *"</span>
 
 <span class="token key atrule">env</span><span class="token punctuation">:</span>
-
-<span class="token comment"># please change to your own config.</span>
-
-<span class="token key atrule">RUN_TYPE</span><span class="token punctuation">:</span> keep <span class="token comment"># support strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn, Please change the 'pass' it to your own</span>
-
-<span class="token key atrule">ATHLETE</span><span class="token punctuation">:</span> BarryYangi
-
-<span class="token key atrule">TITLE</span><span class="token punctuation">:</span> Barry Running
-
-<span class="token key atrule">MIN_GRID_DISTANCE</span><span class="token punctuation">:</span> <span class="token number">4</span> <span class="token comment"># change min distance here</span>
-
-<span class="token key atrule">TITLE_GRID</span><span class="token punctuation">:</span> Over 4km Runs <span class="token comment"># also here</span>
-
-<span class="token key atrule">GITHUB_NAME</span><span class="token punctuation">:</span> BarryYangi
-
-<span class="token key atrule">GITHUB_EMAIL</span><span class="token punctuation">:</span> 2059484047@qq.com
+  <span class="token comment"># please change to your own config.</span>
+  <span class="token key atrule">RUN_TYPE</span><span class="token punctuation">:</span> keep <span class="token comment"># support strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn, Please change the 'pass' it to your own</span>
+  <span class="token key atrule">ATHLETE</span><span class="token punctuation">:</span> BarryYangi
+  <span class="token key atrule">TITLE</span><span class="token punctuation">:</span> Barry Running
+  <span class="token key atrule">MIN_GRID_DISTANCE</span><span class="token punctuation">:</span> <span class="token number">4</span> <span class="token comment"># change min distance here</span>
+  <span class="token key atrule">TITLE_GRID</span><span class="token punctuation">:</span> Over 4km Runs <span class="token comment"># also here</span>
+  <span class="token key atrule">GITHUB_NAME</span><span class="token punctuation">:</span> BarryYangi
+  <span class="token key atrule">GITHUB_EMAIL</span><span class="token punctuation">:</span> 2059484047@qq.com
 
 <span class="token key atrule">jobs</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">sync</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">name</span><span class="token punctuation">:</span> Sync
-
-<span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
-
-<span class="token key atrule">steps</span><span class="token punctuation">:</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
-
-<span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python
-
-<span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v1
-
-<span class="token key atrule">with</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.7</span>
-
-<span class="token comment"># from pdm</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set Variables
-
-<span class="token key atrule">id</span><span class="token punctuation">:</span> set_variables
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-echo "PY=$(python <span class="token punctuation">-</span>c 'import hashlib<span class="token punctuation">,</span> sys;print(hashlib.sha256(sys.version.encode()+sys.executable.encode()).hexdigest())')" <span class="token punctuation">></span><span class="token punctuation">></span> $GITHUB_OUTPUT
-
-echo "PIP_CACHE=$(pip cache dir)" <span class="token punctuation">></span><span class="token punctuation">></span> $GITHUB_OUTPUT
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Cache PIP
-
-<span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v2
-
-<span class="token key atrule">with</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">path</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PIP_CACHE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token key atrule">key</span><span class="token punctuation">:</span> Ubuntu<span class="token punctuation">-</span>pip<span class="token punctuation">-</span>$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PY <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python <span class="token punctuation">-</span>m pip install <span class="token punctuation">-</span><span class="token punctuation">-</span>upgrade pip
-
-pip install <span class="token punctuation">-</span>r requirements.txt
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> steps.pip<span class="token punctuation">-</span>cache.outputs.cache<span class="token punctuation">-</span>hit <span class="token tag">!=</span> 'true'
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/nike_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.NIKE_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike to Strava(Run with nike data backup and show with strava)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike_to_strava'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/nike_to_strava_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.NIKE_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Keep script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'keep'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/keep_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.KEEP_MOBILE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.KEEP_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>with<span class="token punctuation">-</span>gpx
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/strava_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token comment"># for garmin if you want generate `tcx` you can add --tcx command in the args.</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/garmin_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token comment"># If you only want to sync `type running` add args --only-run, default script is to sync all data (rides and runs).</span>
-
-<span class="token comment"># python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; --only-run</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin CN script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_cn'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/garmin_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>is<span class="token punctuation">-</span>cn
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Only GPX script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'only_gpx'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/gpx_sync.py
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin(Run with strava(or others upload to strava) data backup in Garmin)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/strava_to_garmin_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin<span class="token punctuation">-</span>cn(Run with strava(or others upload to strava) data backup in Garmin<span class="token punctuation">-</span>cn)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin_cn'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/strava_to_garmin_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>is<span class="token punctuation">-</span>cn
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin<span class="token punctuation">-</span>cn to Strava(Run with Garmin data backup in Strava)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava_cn'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/garmin_to_strava_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_CN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>is<span class="token punctuation">-</span>cn
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin to Strava(Run with Garmin data backup in Strava)
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/garmin_to_strava_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_ID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_SECRET <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.STRAVA_CLIENT_REFRESH_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_EMAIL <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GARMIN_PASSWORD <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Tulipsport script
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'tulipsport'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/tulipsport_sync.py $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.TULIPSPORT_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>with<span class="token punctuation">-</span>gpx
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Make svg GitHub profile
-
-<span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE <span class="token tag">!=</span> 'pass'
-
-<span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
-
-python scripts/gen_svg.py <span class="token punctuation">-</span><span class="token punctuation">-</span>from<span class="token punctuation">-</span>db <span class="token punctuation">-</span><span class="token punctuation">-</span>title "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.TITLE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>type github <span class="token punctuation">-</span><span class="token punctuation">-</span>athlete "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.ATHLETE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance 10 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance2 20 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color yellow <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color2 red <span class="token punctuation">-</span><span class="token punctuation">-</span>output assets/github.svg <span class="token punctuation">-</span><span class="token punctuation">-</span>use<span class="token punctuation">-</span>localtime <span class="token punctuation">-</span><span class="token punctuation">-</span>min<span class="token punctuation">-</span>distance 0.5
-
-python scripts/gen_svg.py <span class="token punctuation">-</span><span class="token punctuation">-</span>from<span class="token punctuation">-</span>db <span class="token punctuation">-</span><span class="token punctuation">-</span>title "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.TITLE_GRID <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>type grid <span class="token punctuation">-</span><span class="token punctuation">-</span>athlete "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.ATHLETE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>output assets/grid.svg <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color yellow <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color2 red <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance 20 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance2 40 <span class="token punctuation">-</span><span class="token punctuation">-</span>use<span class="token punctuation">-</span>localtime <span class="token punctuation">-</span><span class="token punctuation">-</span>min<span class="token punctuation">-</span>distance "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.MIN_GRID_DISTANCE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>"
-
-python scripts/gen_svg.py <span class="token punctuation">-</span><span class="token punctuation">-</span>from<span class="token punctuation">-</span>db <span class="token punctuation">-</span><span class="token punctuation">-</span>type circular <span class="token punctuation">-</span><span class="token punctuation">-</span>use<span class="token punctuation">-</span>localtime
-
-python scripts/gen_svg.py <span class="token punctuation">-</span><span class="token punctuation">-</span>from<span class="token punctuation">-</span>db <span class="token punctuation">-</span><span class="token punctuation">-</span>year $(date +"%Y") <span class="token punctuation">-</span><span class="token punctuation">-</span>language zh_CN <span class="token punctuation">-</span><span class="token punctuation">-</span>title "$(date +"%Y") Running" <span class="token punctuation">-</span><span class="token punctuation">-</span>type github <span class="token punctuation">-</span><span class="token punctuation">-</span>athlete "$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> env.ATHLETE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>" <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance 10 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>distance2 20 <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color yellow <span class="token punctuation">-</span><span class="token punctuation">-</span>special<span class="token punctuation">-</span>color2 red <span class="token punctuation">-</span><span class="token punctuation">-</span>output assets/github_$(date +"%Y").svg <span class="token punctuation">-</span><span class="token punctuation">-</span>use<span class="token punctuation">-</span>localtime <span class="token punctuation">-</span><span class="token punctuation">-</span>min<span class="token punctuation">-</span>distance 0.5
-
-<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy site
-
-<span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
-
-<span class="token key atrule">with</span><span class="token punctuation">:</span>
-
-<span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.MY_GIT_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-<span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> vercel<span class="token punctuation">-</span>pages
-
-<span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> .
-
-<span class="token key atrule">force_orphan</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-
-<span class="token comment"># keep_files: true</span></code></pre>
+  <span class="token key atrule">sync</span><span class="token punctuation">:</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> Sync
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v1
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.7</span>
+
+      <span class="token comment"># from pdm</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set Variables
+        <span class="token key atrule">id</span><span class="token punctuation">:</span> set_variables
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          echo "PY=$(python -c 'import hashlib, sys;print(hashlib.sha256(sys.version.encode()+sys.executable.encode()).hexdigest())')" >> $GITHUB_OUTPUT
+          echo "PIP_CACHE=$(pip cache dir)" >> $GITHUB_OUTPUT</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Cache PIP
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PIP_CACHE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+          <span class="token key atrule">key</span><span class="token punctuation">:</span> Ubuntu<span class="token punctuation">-</span>pip<span class="token punctuation">-</span>$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PY <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt</span>
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> steps.pip<span class="token punctuation">-</span>cache.outputs.cache<span class="token punctuation">-</span>hit <span class="token tag">!=</span> 'true'
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/nike_sync.py $&#123;&#123; secrets.NIKE_REFRESH_TOKEN &#125;&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike to Strava(Run with nike data backup and show with strava)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike_to_strava'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/nike_to_strava_sync.py $&#123;&#123; secrets.NIKE_REFRESH_TOKEN &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Keep script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'keep'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/keep_sync.py $&#123;&#123; secrets.KEEP_MOBILE &#125;&#125; $&#123;&#123; secrets.KEEP_PASSWORD &#125;&#125; --with-gpx</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;</span>
+
+      <span class="token comment"># for garmin if you want generate `tcx` you can add --tcx command in the args.</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125;</span>
+        <span class="token comment"># If you only want to sync `type running` add args --only-run, default script is to sync all data (rides and runs).</span>
+        <span class="token comment"># python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; --only-run</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin CN script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_cn'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; --is-cn</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Only GPX script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'only_gpx'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/gpx_sync.py</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin(Run with strava(or others upload to strava) data backup in Garmin)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/strava_to_garmin_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; $&#123;&#123; secrets.STRAVA_EMAIL &#125;&#125; $&#123;&#123; secrets.STRAVA_PASSWORD &#125;&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin<span class="token punctuation">-</span>cn(Run with strava(or others upload to strava) data backup in Garmin<span class="token punctuation">-</span>cn)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin_cn'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/strava_to_garmin_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; $&#123;&#123; secrets.STRAVA_EMAIL &#125;&#125; $&#123;&#123; secrets.STRAVA_PASSWORD &#125;&#125; --is-cn</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin<span class="token punctuation">-</span>cn to Strava(Run with Garmin data backup in Strava)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava_cn'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/garmin_to_strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; --is-cn</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin to Strava(Run with Garmin data backup in Strava)
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/garmin_to_strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125;</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Tulipsport script
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'tulipsport'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/tulipsport_sync.py $&#123;&#123; secrets.TULIPSPORT_TOKEN &#125;&#125; --with-gpx</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Make svg GitHub profile
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE <span class="token tag">!=</span> 'pass'
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          python scripts/gen_svg.py --from-db --title "$&#123;&#123; env.TITLE &#125;&#125;" --type github --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github.svg --use-localtime --min-distance 0.5
+          python scripts/gen_svg.py --from-db --title "$&#123;&#123; env.TITLE_GRID &#125;&#125;" --type grid --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --output assets/grid.svg --special-color yellow --special-color2 red --special-distance 20 --special-distance2 40 --use-localtime --min-distance "$&#123;&#123; env.MIN_GRID_DISTANCE &#125;&#125;"
+          python scripts/gen_svg.py --from-db --type circular --use-localtime
+          python scripts/gen_svg.py --from-db --year $(date +"%Y")  --language zh_CN --title "$(date +"%Y") Running" --type github --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy site
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+            <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.MY_GIT_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+            <span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> vercel<span class="token punctuation">-</span>pages
+            <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> .
+            <span class="token key atrule">force_orphan</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+            <span class="token comment"># keep_files: true</span></code></pre>
 <p>这里推荐我们删掉剩下三个 workflows 配置 yml，因为我们不需要，后面我们将会将站点配置到 vercel 上，然后复制我的 <code>run_data_sync.yml</code> 文件内容到该文件覆盖。</p>
 <h3 id="3-找到自己所对应的平台需要完善的帐户信息"><a href="#3-找到自己所对应的平台需要完善的帐户信息" class="headerlink" title="3.找到自己所对应的平台需要完善的帐户信息"></a>3.找到自己所对应的平台需要完善的帐户信息</h3><p>列如 keep：<br><pre class="language-bash" data-language="bash"><code class="language-bash">python scripts/keep_sync.py <span class="token variable">$&#123;&#123; secrets.KEEP_MOBILE &#125;</span><span class="token punctuation">&#125;</span> <span class="token variable">$&#123;&#123; secrets.KEEP_PASSWORD &#125;</span><span class="token punctuation">&#125;</span> --with-gpx</code></pre><br>我们需要能够登录 keep 的手机账号以及密码，随后我们需要用到。</p>
 <h3 id="4-Running-Page-使用-Mapbox-进行地图展示，需要前往-Mapbox-站点-注册一个开发者账号。"><a href="#4-Running-Page-使用-Mapbox-进行地图展示，需要前往-Mapbox-站点-注册一个开发者账号。" class="headerlink" title="4.Running Page 使用 Mapbox 进行地图展示，需要前往 Mapbox 站点 注册一个开发者账号。"></a>4.Running Page 使用 Mapbox 进行地图展示，需要前往 <a target="_blank" rel="noopener" href="https://www.mapbox.com/">Mapbox 站点</a> 注册一个开发者账号。</h3><p>登录账号后，选择「Create a token」创建一个令牌，并完善相关信息。提交后会得到一串令牌信息，编辑「src」&gt;「utils」&gt;「const.js」文件，将自己的令牌替换到 MAPBOX_TOKEN 当中。</p>
