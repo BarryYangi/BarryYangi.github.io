@@ -1,6 +1,8 @@
+https://www.smitten.top/posts/GitHubNeverDie.html
 https://www.smitten.top/posts/KeepRunning.html
 https://www.smitten.top/posts/PCVideo.html
 https://www.smitten.top/posts/LinuxToGo.html
+https://www.smitten.top/posts/VPSDocker.html
 https://www.smitten.top/posts/Regex.html
 https://www.smitten.top/posts/font.html
 https://www.smitten.top/posts/HexoCI.html
