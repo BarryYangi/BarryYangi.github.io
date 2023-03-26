@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="gallery, Barry">
+    <meta name="keywords" content="关于Memos, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>gallery | Barryの小站</title>
+    <title>关于Memos | Barryの小站</title>
     
     <script>
         // 隐藏
@@ -1148,281 +1148,689 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-        <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    gallery
-                 
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['世界灿烂盛大，欢迎回家。','在等雪花、圣诞树、新年烟火、和更好的你。'],
-                        startDelay: 200,
-                        typeSpeed: 120,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">关于Memos</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-    <div class="mohuxiaoguo"></div>
-</div>
-
-
+<main class="post-container content">
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
-    #sma {
-        bottom: 150px;
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
     }
-    .comment-scroll {
-        bottom: 83px;
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
+</style>
+
+<div class="row">
+    
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="Memos">
+            <style>
+    #switchspring {
+        bottom: 223px!important;
     }
     @media only screen and (max-width: 601px) {
         #switchspring {
             bottom: 178px!important;
         }
     }
-    #switchspring {
-        bottom: 223px;
+    #switchchristmas {
+        bottom: 281px!important;
     }
-</style>
-<!-- 增加相册显示的特效样式 -->
-<style>
-    .bg-cover {
-        background-image: url("/medias/banner/6.jpg")!important;
-    }
-    .bg-cover::before {
-        background-image: url(/medias/bggrid.png);
-    }
-    @media only screen and (max-width: 600px) {
-        .about-cover {
-            height: 64vh;
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 235px!important;
         }
     }
-    .photo {
-        padding: 0 40px!important;
-        display: inline-block;
+    .ititle {
+        margin: 15px 0;
+        text-align:center;
+        font-family: 'Architects Daughter', cursive;
+    }
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;	
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;    
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;           
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
         position: relative;
-        transition: all .6s;
     }
-    .biaotiss {
-        padding: 8px 10px;
-        color: #4c4c4e;
-        text-align: center;
-        font-weight: 400;
-        font-size: 18px;
+.izhengwen {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+    background-size: 100% 32px;
+}
+.izhengwen p {
+    letter-spacing: .1rem;
+}
+#articleContent p {
+    margin: 0
+}
+.ititle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem!important;
+    padding: 10px auto;
+}
+.izhengwen p {
+    position: relative;
+    line-height: 2.2rem!important;
+    text-indent: 2em;
+    font-family: 'Architects Daughter', cursive!important;
+    font-size: 1.45rem!important;
+}
+.ipage::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 52px;
+    z-index: 4;
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid #fca1a1;
+}
+.izhengwen p:nth-child(odd):before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.ipage:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    z-index: 3;
+    width: 4px;
+    height: 100%;
+    border-left: 4px double #fca1a1;
+}
+.ipage p {
+    padding: 0 2em;
+    color: #333!important;
+}
+body.dark .ipage {
+    opacity: 0.85;
+}
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 600px) {
+    .ipage {
+        padding: 15px 23px 29px;
     }
-    .img-item {
-        padding: .2rem;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 1px 2px 2px 0 #aaa;
-        transition: all .4s cubic-bezier(.63,.15,.03,1.12);
-        margin-bottom: 20px;
+    .ipage:after {
+        left: 36px;
     }
-    .photo:nth-child(odd) {
-        transform: rotateZ(-5deg);
-    }    
-    .photo:nth-child(even) {
-        transform: rotateZ(5deg);
+    .ipage::before {
+        right: 36px;    
     }
-    .text_des{
-        position: absolute;
-        width: 92%;
-        height: 100%;
-        top: 0;
-        color: #000;
-        overflow: hidden;
-    }
-    .text_des h3{
-        margin: 5px 0 8px 0px;
-        right: 40px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-        position: absolute;
-        top: 10%;
-        font-style: italic;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-        /*transform: translateX(200px);  */
-    }
-    .text_des p{
-        left: 15px;
-        position: absolute;
-        top: 50%;
-    /*    transform: translateX(-200px); 
-        transition-delay: 0.2s;    */
-    }
-    .my-gallery .photo img {
-        border-radius: 10px;
-        height: 240px;
-    }
-    .card .card-content {
-        padding: 24px 24px 24px 24px;
-    }
-    .miaoshus {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 95%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 12px auto;
-    }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
-    }
-    .img-item {
-            transition: all 0.4s ease-out;
-        }
-        .img-item a img{
-            opacity: 1;
-            transition: all 0.4s ease-out;
-        }
-        .img-item a:hover img{
-            opacity: 0.8;
-        }   
-        .biaotiss {
-            font-family: MV Boli;
-        }   
-        .miaoshus .title {
-        font-family: MV Boli;
-    } 
-    .my-gallery .row  .photo[data-spmid="./特辑-十年一梦-回顾湖人2019-2020赛季夺冠之旅"],
-    .my-gallery .row  .photo[data-spmid="./盘点-詹姆斯总决赛数据排名"],
-    .my-gallery .row  .photo[data-spmid="./知名摄影师最爱的24张科比图集"]
-        {
-            display: none;
-        }
-     /*大屏幕下(桌面类)的样式*/
-    @media only screen and (min-width: 993px) {
-        .text_des h3{
-            transform: translateX(200px);
-        }
-        .text_des p{
-            transform: translateX(-200px); 
-            transition-delay: 0.2s;
-        }
-        .animate-text {
-            opacity: 0;
-            transition: all 0.6s ease-in-out; 
-        }
-    }
-    /*小屏幕下(桌面类)的样式*/
-    @media only screen and (max-width: 500px) {
-        .my-gallery .photo img {
-            height: 186px;
-        }
+    .ipage p, .ititle {
+        padding: 0 0.9em;
     }
 
+}
+h3 {
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: #101012;
+    transition: 0.8s;
+    cursor: pointer;
+}
+h3:hover {
+    transform: translateX(15px);
+}
 </style>
-<main class="content">
-    <div class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <!-- 福袋按钮 -->
-                <div class="caishendeng">        
-                    <div class="guguxian">
-                        <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
-                    </div>              
-                </div>
-                <div class="tag-title center-align">
-                    <div class="miaoshus">
-                        <div class="title center-align">“ 光影流年 ”</div>
-                        “ 日子过的好快，还好我都记录下来了。 ”                      
-                    </div>
-                </div>
-                <div class="my-gallery">
-                    <div class="row">
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        
+        <div class="card-content article-info">
+            <!-- 福袋按钮 -->
+            <div class="caishendeng">        
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
+                </div>              
+            </div>
+            <!-- 圣诞按钮 -->
+            <div class="shengdandeng">        
+                <div class="shengdanxian" style="left: 50%;">
+                    <!-- <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" /> -->
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
                     
+                    <div class="article-tag">
                         
+                            <a href="/tags/Memos/">
+                                <span class="chip bg-color">Memos</span>
+                            </a>
                         
-                            
-                            
-                            <div class="photo col s12 m6 l4" data-spmid="./itsBarry原神摄影作品">
-                                <div class="img-item">
-                                    <a href="./itsBarry原神摄影作品" target="_blank">
-                                        
-                                        <img src="/medias/loading.svg" data-src="images/1.png" class="responsive-img" alt="img"+0 />
-                                        <div class="biaotiss">
-                                            <!-- 福袋按钮 -->
-                                            <div class="caishendeng">        
-                                                <div class="caishenxian xiangcesd">
-                                                    <img class="caishenpic lions" src="/medias/spring-img/lion.png" />
-                                                </div>              
-                                            </div>
-                                            “ itsBarry原神摄影作品 ”<br>“ 叫我原神摄影师 ”
-                                        </div>
-                                    </a>
-                                </div>                              
-                            </div>
-                            
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            
-                            
-                            <div class="photo col s12 m6 l4" data-spmid="./博主精选壁纸">
-                                <div class="img-item">
-                                    <a href="./博主精选壁纸" target="_blank">
-                                        
-                                        <img src="/medias/loading.svg" data-src="https://easyimage.smitten.top/i/2023/02/14/z5xlyp.png" class="responsive-img" alt="img"+1 />
-                                        <div class="biaotiss">
-                                            <!-- 福袋按钮 -->
-                                            <div class="caishendeng">        
-                                                <div class="caishenxian xiangcesd">
-                                                    <img class="caishenpic lions" src="/medias/spring-img/lion.png" />
-                                                </div>              
-                                            </div>
-                                            “ 博主精选壁纸 ”<br>“ 2023年2月20 ”
-                                        </div>
-                                    </a>
-                                </div>                              
-                            </div>
-                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
                         
+                    </div>
                     
                 </div>
             </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-03-26
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+
+                
             </div>
         </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我从接触独立博客开始，就一直在博客的子栏目中部署了一个类似 <a target="_blank" rel="noopener" href="https://www.barryi.me/personal/digu/">嘀咕</a> 的微博客。<br>最初的作用是备份 QQ 空间、Twitter 和朋友圈等。<br>可是慢慢发现，不知道为什么自己在这些社交媒体的分享欲变得越来越弱，只想有一个地方来记录我平时的一些想法，于是有了嘀咕。</p>
+<p>现在在独立博客圈少部博主中流行的这种“B 言 B 语”，最早来源于少数派上的一篇文章——<a target="_blank" rel="noopener" href="https://sspai.com/post/60024">《保卫表达：用后端 BaaS 快速搭建专属无点赞评论版微博——b 言 b 语》</a>，“B 言 B 语”也叫“废话胶囊”。</p>
+<p>由此也衍生出了：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/daibor/nonsense.fun">LeanCloud 版</a>（原版）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/songquanpeng/microblog">Golang 版</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ibearye/talk">腾讯云 CloudBase 版</a></li>
+<li><a target="_blank" rel="noopener" href="https://immmmm.com/bb-by-wechat-pro/">木木老师修改版</a> 《「哔哔点啥」微信公众号 2.0》</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/BBtalkJS/BBtalk">BBTalk</a>Vercel 版</li>
+</ul>
+<p>目前以上版本均可使用，不过可能有些版本的使用成本有点高。</p>
+<p>今天要介绍的是另一个能提供类似功能的应用——<a target="_blank" rel="noopener" href="https://github.com/usememos/memos">Memos</a><br>Memos 自己对标的竞品是 Flomo ，我们是不是把它用歪了？</p>
+<h2 id="部署-Memos"><a href="#部署-Memos" class="headerlink" title="部署 Memos"></a>部署 Memos</h2><blockquote>
+<p>前置条件：<br>1.一台 VPS 服务器或本地电脑（或 Docker SaaS 平台）<br>2.一点点 WebStack 技能（Docker、Nginx）</p>
+</blockquote>
+<p>安装<code>docker-compose-plugin</code>插件后，<code>docker compose</code>命令可以去掉中间的”<code>-</code>“，Docker Compose V1 版本已经结束生命周期。</p>
+<p>暂时不建议把 Memos 部署到网站二级目录，如：<a target="_blank" rel="noopener" href="https://example.com/memos">https://example.com/memos</a><br>而应该部署到一个二级域名，如：<a target="_blank" rel="noopener" href="https://memos.example.com/">https://memos.example.com</a></p>
+<p>1.<strong>新建 <code>docker-compose.yml</code></strong><br>一般在准备用于 Memos 的域名的目录下新建 <code>docker-compose.yml</code> 文件：<br><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /www/wwwroot/memos.example.com
+<span class="token function">vim</span> docker-compose.yml</code></pre><br>输入以下内容：<br><pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">"3.0"</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+    <span class="token key atrule">memos</span><span class="token punctuation">:</span>
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> neosmemo/memos
+        <span class="token key atrule">container_name</span><span class="token punctuation">:</span> memos
+        <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> ./memos/<span class="token punctuation">:</span>/var/opt/memos
+        <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> 5230<span class="token punctuation">:</span><span class="token number">5230</span>
+        <span class="token key atrule">restart</span><span class="token punctuation">:</span> always</code></pre></p>
+<p>2.<strong>启动 Memos</strong><br>启动 Memos<br><pre class="language-bash" data-language="bash"><code class="language-bash">docker compose up -d</code></pre></p>
+<p>等待镜像拉取完成，Memos 就运行在服务器的<code>5230</code>端口了。<br>此时，打开<code>http://127.0.0.1:5230</code>就能访问 Memos 了。<br>如果有公网 IP，那就打开<code>IP</code>+<code>端口</code>，如： <code>http://119.29.29.29:5230</code> 。<br>用域名反代 IP 见下文第 4 点。<br>常用的命令有：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">docker compose up -d
+docker compose down
+docker compose pull
+docker compose up -d --force-recreate</code></pre>
+<p>3.<strong>升级 Memos</strong></p>
+<p>Memos 官方提供的升级命令</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">docker-compose down <span class="token operator">&amp;&amp;</span> docker image <span class="token function">rm</span> neosmemo/memos:latest <span class="token operator">&amp;&amp;</span> docker-compose up -d</code></pre>
+<p>会导致 Memos 在升级期间掉线，因为 <code>down</code> 了，特别是境内服务器网速不好的情况下，掉线时间会随着 <code>pull</code> 时间无限延长。</p>
+<p>最新版 Docker 升级 Memos 的命令有改进空间：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">docker compose pull <span class="token operator">&amp;&amp;</span> docker compose up -d --force-recreate</code></pre>
+<p>但是如果用了镜像加速服务，因为缓存的原因也可能有 <code>pull</code> 不到最新镜像的问题。</p>
+<p>4.<strong>Nginx 反代</strong><br>如果打算对互联网提供 Memos 访问服务，就需要反代 Memos，一般都是用 Nginx，反代<code>5230</code>端口即可。</p>
+<pre class="language-nginx" data-language="nginx"><code class="language-nginx"><span class="token keyword">location</span> <span class="token operator">^</span><span class="token operator">~</span> <span class="token operator">/</span>
+<span class="token punctuation">&#123;</span>
+<span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">5230</span><span class="token punctuation">;</span>
+<span class="token keyword">proxy_set_header</span> Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+<span class="token keyword">proxy_set_header</span> X<span class="token operator">-</span>Real<span class="token operator">-</span>IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+<span class="token keyword">proxy_set_header</span> X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+<span class="token keyword">proxy_set_header</span> REMOTE<span class="token operator">-</span>HOST <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+<span class="token keyword">proxy_set_header</span> Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
+<span class="token keyword">proxy_set_header</span> Connection <span class="token variable">$connection_upgrade</span><span class="token punctuation">;</span>
+<span class="token keyword">add_header</span> X<span class="token operator">-</span>Cache <span class="token variable">$upstream_cache_status</span><span class="token punctuation">;</span>
+<span class="token comment"># cache</span>
+<span class="token keyword">add_header</span> Cache<span class="token operator">-</span>Control no<span class="token operator">-</span>cache<span class="token punctuation">;</span>
+<span class="token keyword">expires</span> <span class="token number">12</span>h<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+<p>一些主机管理面板或者 NPM 反代面板提供可视化反代设置，那更简单。</p>
+<p>5.<strong>备份数据</strong><br>在第 1 步中的<code>docker-compose.yml</code>文件中，</p>
+<pre class="language-yml" data-language="yml"><code class="language-yml"><span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> ./memos/<span class="token punctuation">:</span>/var/opt/memos</code></pre>
+<p>这段就是数据持久化配置，如果不做数据持久化，Docker 容器重启后，所有 Memos 都会消失。<br>“<code>:</code>”冒号前面的内容是物理宿主机上的目录，例子中对应的目录为：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">/www/wwwroot/memos.example.com/memos</code></pre>
+<p>需要备份的数据是此目录下的<code>memos_prod.db</code>文件，是一个 SQLite 数据库文件，Memos 的所有设置、用户信息、附件和 Memos 都保存在这个文件中。<br>官方提供的示例中，数据卷为家目录<code>/home/username</code>下的<code>.memos</code>目录，是一个隐藏目录，注意对比。</p>
+<h2 id="Memos-美化代码"><a href="#Memos-美化代码" class="headerlink" title="Memos 美化代码"></a>Memos 美化代码</h2><p><img src="https://easyimage.smitten.top/i/2023/03/26/pdjv28-0.webp" alt="效果"></p>
+<h3 id="调用-Bing-每日背景"><a href="#调用-Bing-每日背景" class="headerlink" title="调用 Bing 每日背景"></a>调用 Bing 每日背景</h3><p>适配 <code>v0.11.2</code></p>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">html</span><span class="token punctuation">&#123;</span><span class="token property">background-image</span><span class="token punctuation">:</span><span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'https://bing.immmmm.com/img/bing?region=zh-CN&amp;type=image'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span><span class="token property">width</span><span class="token punctuation">:</span>100%<span class="token punctuation">;</span><span class="token property">height</span><span class="token punctuation">:</span>100vh<span class="token punctuation">;</span><span class="token property">background-position</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span><span class="token property">background-size</span><span class="token punctuation">:</span>cover<span class="token punctuation">;</span><span class="token property">background-attachment</span><span class="token punctuation">:</span>fixed<span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">.w-full.bg-zinc-100,.bg-white,.hover\:bg-white:hover,.dark .dark\:bg-zinc-700,.dark .dark\:hover\:bg-zinc-700:hover,.memo-wrapper,.bg-gray-200,.dark .memo-wrapper,.memo-editor-container</span><span class="token punctuation">&#123;</span><span class="token property">--tw-bg-opacity</span><span class="token punctuation">:</span>0.66 <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">.dark header.dark\:bg-zinc-800,aside.dark\:bg-zinc-800,.bg-gray-100,.dark html,.dark body</span><span class="token punctuation">&#123;</span><span class="token property">--tw-bg-opacity</span><span class="token punctuation">:</span>0 <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">.memo-editor-container>.memo-editor</span><span class="token punctuation">&#123;</span><span class="token property">background-color</span><span class="token punctuation">:</span> transparent <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span></code></pre>
+<p>加送界面细节微调：</p>
+<pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">.status-text</span><span class="token punctuation">&#123;</span><span class="token property">font-size</span><span class="token punctuation">:</span>10px <span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">border</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span><span class="token function">rgb</span><span class="token punctuation">(</span>156<span class="token punctuation">,</span>163<span class="token punctuation">,</span>175<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">.tag-span,.dark .tag-span</span><span class="token punctuation">&#123;</span><span class="token property">border</span><span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span><span class="token property">border-radius</span><span class="token punctuation">:</span>6px<span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span>0px 6px<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span><span class="token function">rgb</span><span class="token punctuation">(</span>22<span class="token punctuation">,</span>163<span class="token punctuation">,</span>74<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span>12px <span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">-webkit-transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span><span class="token function">calc</span><span class="token punctuation">(</span>10 / 12<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">transform-origin</span><span class="token punctuation">:</span> left center<span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">.memo-content-text .link</span><span class="token punctuation">&#123;</span><span class="token property">color</span><span class="token punctuation">:</span><span class="token function">rgb</span><span class="token punctuation">(</span>22<span class="token punctuation">,</span>163<span class="token punctuation">,</span>74<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span><span class="token property">margin-right</span><span class="token punctuation">:</span>-6px<span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">header .bg-blue-600</span><span class="token punctuation">&#123;</span><span class="token property">display</span><span class="token punctuation">:</span>none <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">.text-lg</span> <span class="token punctuation">&#123;</span><span class="token property">font-size</span><span class="token punctuation">:</span> 1rem <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">.header-wrapper,.sidebar-wrapper</span><span class="token punctuation">&#123;</span><span class="token property">width</span><span class="token punctuation">:</span> 11rem <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+<span class="token selector">.filter-query-container</span><span class="token punctuation">&#123;</span><span class="token property">padding-bottom</span><span class="token punctuation">:</span>0.5rem<span class="token punctuation">;</span><span class="token punctuation">&#125;</span></code></pre>
+<h3 id="加载「霞鹜文楷」在线字体"><a href="#加载「霞鹜文楷」在线字体" class="headerlink" title="加载「霞鹜文楷」在线字体"></a>加载「霞鹜文楷」在线字体</h3><pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">body</span><span class="token punctuation">&#123;</span><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"LXGW WenKai Screen"</span><span class="token punctuation">,</span> sans-serif <span class="token important">!important</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">changeFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> 
+  <span class="token keyword">const</span> link <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"link"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  link<span class="token punctuation">.</span>rel <span class="token operator">=</span> <span class="token string">"stylesheet"</span><span class="token punctuation">;</span>
+  link<span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">"text/css"</span><span class="token punctuation">;</span>
+  link<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token string">"https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css"</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span>head<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>link<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token function">changeFont</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h2 id="Hexo-博客嵌入"><a href="#Hexo-博客嵌入" class="headerlink" title="Hexo 博客嵌入"></a>Hexo 博客嵌入</h2><p>懒得搬过来了<br>参考链接:<br><a target="_blank" rel="noopener" href="https://blog.leonus.cn/2023/memeos.html">基于Memos实现说说和清单功能。 | Leonus</a><br><a target="_blank" rel="noopener" href="https://blog.leonus.cn/2023/photos.html">基于memos实现动态相册 | Leonus</a></p>
+<p>可能大家需要自行适配一下自己的博客，相信以大家的聪明才智肯定没问题的啦。</p>
+<h2 id="Memos-Awesome"><a href="#Memos-Awesome" class="headerlink" title="Memos Awesome"></a>Memos Awesome</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://memos.top/">https://memos.top</a></li>
+<li>Discuss in <a target="_blank" rel="noopener" href="https://t.me/+-_tNF1k70UU4ZTc9">Telegram</a> 👾</li>
+<li>Docker Hub：<a target="_blank" rel="noopener" href="https://hub.docker.com/r/neosmemo/memos">https://hub.docker.com/r/neosmemo/memos</a></li>
+<li>Docker Hub Nightly：<a target="_blank" rel="noopener" href="https://hub.docker.com/r/eallion/memos">https://hub.docker.com/r/eallion/memos</a></li>
+<li>Moe Memos 客户端：<a target="_blank" rel="noopener" href="https://memos.moe/">https://memos.moe/</a></li>
+<li>Memos-bber Chrome 扩展：<a target="_blank" rel="noopener" href="https://github.com/lmm214/memos-bber">https://github.com/lmm214/memos-bber</a></li>
+<li>Memos 微信小程序：<a target="_blank" rel="noopener" href="https://github.com/Rabithua/memos_wmp">https://github.com/Rabithua/memos_wmp</a></li>
+<li>Telegram Bot：<a target="_blank" rel="noopener" href="https://github.com/qazxcdswe123/telegramMemoBot">https://github.com/qazxcdswe123/telegramMemoBot</a></li>
+<li><a target="_blank" rel="noopener" href="https://immmmm.com/bbs-by-memos/">哔哔广场</a>：<a target="_blank" rel="noopener" href="https://immmmm.com/bbs/">https://immmmm.com/bbs/</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/usememos/memos/discussions/315">「分享」Android 使用 HTTP Shortcuts 录入笔记</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/usememos/memos/discussions/52">「分享」使用 iOS 快捷指令录入笔记，支持多图上传，支持标签选择</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/usememos/memos/discussions/451">「分享」在 Fly.io 平台上搭建 memos 并自动备份到 B2/S3</a></li>
+<li><a target="_blank" rel="noopener" href="https://immmmm.com/memos-api-description/">Memos API 非官方不完全说明：：木木木木木 (immmmm.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://memosweb.yct.ee/">Memos Web (yct.ee)</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Quorafind/Obsidian-Memos">Obsidian-Memos</a></li>
+</ul>
+<h2 id="Some-Tips"><a href="#Some-Tips" class="headerlink" title="Some Tips"></a>Some Tips</h2><ol>
+<li>发图尽量把图片传到第三方图床，（至少近期版本）别上传到 Memos 资源库。</li>
+<li>附件也一样别传到 Memos 资源库，可以传到第三方网盘，贴上分享链接。</li>
+<li>备份<code>memos_prod.db</code>数据库遵循两地三中心原则，多处备份，且是单向的。</li>
+<li>如果你意识不到数据对你有多珍贵或重要，用 SaaS 服务即可，不用自建。</li>
+<li>没有那么多人来看你的 Memos，自娱自乐即可。</li>
+<li>如果要用 Memos 里的 Ask AI 可通过<a target="_blank" rel="noopener" href="https://github.com/noobnooc/noobnooc/discussions/9">自建 OpenAI API Host</a> 在墙内使用。</li>
+</ol>
 
-        <!-- 评论板块 -->
-        <div class="card">
+            </div>
+            <hr/>
+
             
 
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itsBarry</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.smitten.top/posts/Memos.html">https://www.smitten.top/posts/Memos.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itsBarry</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Memos/">
+                                    <span class="chip bg-color">Memos</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢赞赏哦~</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
 
             
+        </div>
+    </div>
 
-            
+    
 
-            
-            <style>
+    
+
+    
+
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -1786,40 +2194,315 @@ class="themespring" -->
     });
 </script>
 
-            
-			
-			
-        </div>
-
-    </div>
     
-    <script>
-        start()
-            $(window).on('scroll', function(){
-             start();
-        })
-        function start(){
-              //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
-            $('.container img').not('[data-isLoaded]').each(function(){
-                var $node = $(this)
-                if( isShow($node) ){
-                    loadImg($node);
-                }
-            });
-         }
-        //判断一个元素是不是出现在窗口(视野)
-        function isShow($node){
-            return $node.offset().top <= $(window).height() + $(window).scrollTop();
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/Memos.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/banner/2.jpg" class="responsive-img" alt="关于Memos">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          关于Memos
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言我从接触独立博客开始，就一直在博客的子栏目中部署了一个类似 嘀咕 的微博客。最初的作用是备份 QQ 空间、Twitter 和朋友圈等。可是慢慢发现，不知道为什么自己在这些社交媒体的分享欲变得越来越弱，只想有一个地方来记录我平时的一些想法
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Memos/">
+                        <span class="chip bg-color">Memos</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/GitHubNeverDie.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="People Die, but Long Live GitHub">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          People Die, but Long Live GitHub
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            不知道有没有人注意到，Joe Armstrong 最近几个月都在忙着迁移博客到 TiddlyWiki。我很早就关注了他的 Twitter，然而之前并没多想。听闻大师在 4 月 20 号去世，我才反应过来，原来他之前的举动是在未雨绸缪。
+
+T
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="post-category">
+                                    转载
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/GitHub/">
+                        <span class="chip bg-color">GitHub</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+<style>
+  .articles .row .article {
+    position: relative;
+  }
+</style>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
         }
-        //加载图片
-        function loadImg($img){
-        //.attr(值)
-        //.attr(属性名称,值)
-            $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
-            $img.attr('data-isLoaded', 1);//已加载的图片做标记
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
         }
-    </script>
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Barryの小站<br />'
+            + '文章作者: itsBarry<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+        </div>
+        
+        
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        
+        
+        <div class="toc-widget" data-spmid="Memos">
+            <div class="toc-title">
+                <i class="far fa-list-alt"></i>
+                &nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content"></div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="Memos">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
 </main>
+
+
+
 
     <style>
   footer {
