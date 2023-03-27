@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="步入Linux的现代方法, Barry">
+    <meta name="keywords" content="前端300+实用工具分享【转载】, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>步入Linux的现代方法 | Barryの小站</title>
+    <title>前端300+实用工具分享【转载】 | Barryの小站</title>
     
     <script>
         // 隐藏
@@ -1152,12 +1152,12 @@ class="themespring" -->
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/toc-banner/triangle.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">步入Linux的现代方法</h1>
+                    <h1 class="description center-align post-title">前端300+实用工具分享【转载】</h1>
                 </div>
             </div>
         </div>
@@ -1275,7 +1275,7 @@ class="themespring" -->
 <div class="row">
     
     
-        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="Linux">
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="Tool">
             <style>
     #switchspring {
         bottom: 223px!important;
@@ -1442,8 +1442,8 @@ h3:hover {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/Tool/">
+                                <span class="chip bg-color">Tool</span>
                             </a>
                         
                     </div>
@@ -1454,8 +1454,8 @@ h3:hover {
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                技术
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="post-category">
+                                转载
                             </a>
                         
                     </div>
@@ -1467,7 +1467,7 @@ h3:hover {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-12-21
+                    2023-03-27
                 </div>
                 
 
@@ -1476,14 +1476,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.9k
+                    8.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    22 分
+                    35 分
                 </div>
                 
 
@@ -1493,587 +1493,341 @@ h3:hover {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div class="note info">基于Frank's Linux 课程的笔记</div>
-
-<h2 id="0-0-系统的认识"><a href="#0-0-系统的认识" class="headerlink" title="0.0 系统的认识"></a>0.0 系统的认识</h2><ul>
-<li>什么是系统？</li>
-<li>鼠标能点、键盘能输入东西、阅读看电影，还可以拓展安装一些软件， 简单来说就是人机交互所依赖的东西，开机依赖系统</li>
-</ul>
-<h2 id="0-1-Linux操作系统认识，以及开源的提出：Linux的千奇百怪的版本"><a href="#0-1-Linux操作系统认识，以及开源的提出：Linux的千奇百怪的版本" class="headerlink" title="0.1 Linux操作系统认识，以及开源的提出：Linux的千奇百怪的版本"></a>0.1 Linux操作系统认识，以及开源的提出：Linux的千奇百怪的版本</h2><ul>
-<li>目前世界上流行的电脑系统：</li>
-<li>Windows- Bill Gates (比尔·盖茨)</li>
-<li>GNU/Linux-Linus Benedict Torvalds(林納斯·托瓦茲)-开源</li>
-<li>Unix(Linux的爸爸)- 湯普遜和里奇合-给政府机关、公司等机构付费使用</li>
-<li>Linux发行版本：Ubuntu Centos Red Hat Kali ……</li>
-</ul>
-<h2 id="0-2-开源的含义"><a href="#0-2-开源的含义" class="headerlink" title="0.2 开源的含义"></a>0.2 开源的含义</h2><ul>
-<li>公开、分享、共同进步</li>
-<li>开源不一定免费</li>
-</ul>
-<h2 id="0-3-Linux的用途，各类发行版本"><a href="#0-3-Linux的用途，各类发行版本" class="headerlink" title="0.3 Linux的用途，各类发行版本"></a>0.3 Linux的用途，各类发行版本</h2><ul>
-<li>Linux主要运用在服务器上</li>
-<li>Linux严格来说是单指操作系统的内核，因操作系统中包含了许多用户图形接口和其他实用工具<br>只要遵循GNU 通用公共许可证（GPL），任何个人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布<br>Linux衍生：</li>
-<li>Debian—Ubuntu,Deepin,Raspberry Pi OS,Knopix<br>Fedora—RedHat,Centos,Moblin<br>OpenSUSE—GeckoLinux,openSUSE EcoLab Spin</li>
-</ul>
-<h2 id="1-1-Vmware虚拟机"><a href="#1-1-Vmware虚拟机" class="headerlink" title="1.1 Vmware虚拟机"></a>1.1 Vmware虚拟机</h2><p>安装系统的方式</p>
-<ul>
-<li><p>实体机</p>
-</li>
-<li><p>双系统</p>
-</li>
-<li>虚拟机</li>
-</ul>
-<h2 id="1-2-VMware-16"><a href="#1-2-VMware-16" class="headerlink" title="1.2 VMware 16"></a>1.2 VMware 16</h2><ul>
-<li>软件版本，大多数人追求新版本，企业里更多需要的是稳定，我们应该根据企业标准去学习，企业要什么我们学什么</li>
-</ul>
-<h2 id="1-3-关于从15更新到16的说法"><a href="#1-3-关于从15更新到16的说法" class="headerlink" title="1.3 关于从15更新到16的说法"></a>1.3 关于从15更新到16的说法</h2><ul>
-<li><p>Vmware15不支持Ubuntu20.04</p>
-<p>更新版本并不会影响虚拟机的还原</p>
-</li>
-</ul>
-<h2 id="2-1-先尝试Ubuntu"><a href="#2-1-先尝试Ubuntu" class="headerlink" title="2.1 先尝试Ubuntu"></a>2.1 先尝试Ubuntu</h2><p>详见：Linux(Ubuntu)零基础体验教学</p>
-<p>PS：查看软件安装过执行内容，有助于学习</p>
-<h2 id="2-2-VMware-Tools"><a href="#2-2-VMware-Tools" class="headerlink" title="2.2 VMware Tools"></a>2.2 VMware Tools</h2><ul>
-<li>配置Ubuntu镜像源</li>
-<li>VMware Tools安装</li>
-</ul>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">tar</span> zxvf VMwareTools-10.3.22-15902021.tar.gz <span class="token punctuation">\</span>
-<span class="token builtin class-name">cd</span> vmware-tools-distrib/
-<span class="token function">ls</span>
-sudu ./vmware-install.pl</code></pre>
-<h2 id="2-3-Ubuntu-20-04设置"><a href="#2-3-Ubuntu-20-04设置" class="headerlink" title="2.3 Ubuntu 20.04设置"></a>2.3 Ubuntu 20.04设置</h2><p>详见2.1视频链接</p>
-<h2 id="2-4-Linux其他发行版本的安装指导"><a href="#2-4-Linux其他发行版本的安装指导" class="headerlink" title="2.4 Linux其他发行版本的安装指导"></a>2.4 Linux其他发行版本的安装指导</h2><ul>
-<li>商业发行版</li>
-<li>社区发行版</li>
-</ul>
-<h2 id="2-5-下载指导"><a href="#2-5-下载指导" class="headerlink" title="2.5 下载指导"></a>2.5 下载指导</h2><ul>
-<li>从官网下载</li>
-</ul>
-<h2 id="3-1-Linux究竟需要我们学习什么？——Linux四大组成部分"><a href="#3-1-Linux究竟需要我们学习什么？——Linux四大组成部分" class="headerlink" title="3.1 Linux究竟需要我们学习什么？——Linux四大组成部分"></a>3.1 Linux究竟需要我们学习什么？——Linux四大组成部分</h2><p>Linux入门不是学“Linux”，先体验各发行版Linux，比较和其他系统的不同和相同点，Linux究竟学习的是Shell</p>
-<p>Linux操作系统四个部分</p>
-<ul>
-<li>Linux Kernel 内核</li>
-<li>GNU(“GNU’s Not Unix!”)工具</li>
-<li>GUI Desktop环境</li>
-<li>Application 应用</li>
-<li>PS：IT术语，它并不是遵循通常的英语音标，而是专业术语</li>
-</ul>
-<h2 id="3-2-Linux是命令还是图形界面？——GUI-是什么？-那GNU是什么东西？GNU-Linux-和Linux有什么区别？"><a href="#3-2-Linux是命令还是图形界面？——GUI-是什么？-那GNU是什么东西？GNU-Linux-和Linux有什么区别？" class="headerlink" title="3.2 Linux是命令还是图形界面？——GUI 是什么？ 那GNU是什么东西？GNU/Linux 和Linux有什么区别？"></a>3.2 Linux是命令还是图形界面？——GUI 是什么？ 那GNU是什么东西？GNU/Linux 和Linux有什么区别？</h2><p>Linux内核基于</p>
-<ul>
-<li><p>GUI-界面</p>
-</li>
-<li><p>GNU-命令、系统工具</p>
-</li>
-</ul>
-<h2 id="3-3-Linux内核组成部分"><a href="#3-3-Linux内核组成部分" class="headerlink" title="3.3 Linux内核组成部分"></a>3.3 Linux内核组成部分</h2><p>Linux Kernel</p>
-<ul>
-<li>1.硬件设备的管理</li>
-<li>2.软件程序(系统)、操作软件</li>
-<li>3.系统内存</li>
-<li>4.文件管理</li>
-</ul>
-<h2 id="3-4-文件系统"><a href="#3-4-文件系统" class="headerlink" title="3.4 文件系统"></a>3.4 文件系统</h2><p>文件系统就是读、写标准</p>
-<ul>
-<li>Linux中分区概念ext ext2 ext3 ext4</li>
-<li>Windows 磁盘文件管理概念FAT32 NTFS exFAT</li>
-</ul>
-<h2 id="3-5-GNU核心：-coreutils-and-shell"><a href="#3-5-GNU核心：-coreutils-and-shell" class="headerlink" title="3.5 GNU核心： coreutils and shell"></a>3.5 GNU核心： coreutils and shell</h2><p>GNU组织<br>Unix上具有的一些软件，Linux内核本身没有，所以GNU他们模仿Unix，为Linux写了一些必要的软件</p>
-<p>GNU核心Coreutils<br>指原本在Unix上的一些命令和工具，被移植到了Linux上，供Linux使用的一套工具、coreutilities软件包，包括:</p>
-<ul>
-<li>用来处理文件的工具</li>
-<li>用来操作文本的工具</li>
-<li>用来管理进程的工具</li>
-<li>GNU核心Shell</li>
-<li><p>提供给用户使用的软件，用户拿它使用电脑，实现交互</p>
-</li>
-<li><p>命令行壳层提供一个命令行界面（CLI）</p>
-</li>
-<li>图像壳层提供一个图形用户界面（GUI）</li>
-</ul>
-<h2 id="3-6-Shell：CLI和GUI，命令和界面"><a href="#3-6-Shell：CLI和GUI，命令和界面" class="headerlink" title="3.6 Shell：CLI和GUI，命令和界面"></a>3.6 Shell：CLI和GUI，命令和界面</h2><p>Shell类型：bash，zsh，korn，tcsh，oh-my-zsh</p>
-<h2 id="3-7-GUI-Desktop"><a href="#3-7-GUI-Desktop" class="headerlink" title="3.7 GUI Desktop"></a>3.7 GUI Desktop</h2><p>Xwindows，KDE，GNOME，Unity<br>结束语：经验介绍<br>重点在于Shell<br>画思维图总结Linux操作系统关系</p>
-<h2 id="4-1-CLI准备"><a href="#4-1-CLI准备" class="headerlink" title="4.1 CLI准备"></a>4.1 CLI准备</h2><ul>
-<li>CLI相关设置，选择Preferences</li>
-<li><em>Theme Varian</em>t 主题变换<br><em>Open new terminals in</em> 打开一个新终端的方式，Tab代表在同一窗口下创建新终端，Window代表开一个新窗口打开新终端<br><em>New tab position</em> 新终端位置，默认为上一次位置</li>
-<li>快捷方式设置，Ctrl+Alt+T 打开新终端</li>
-</ul>
-<h2 id="4-2-CLI-Terminal"><a href="#4-2-CLI-Terminal" class="headerlink" title="4.2 CLI Terminal"></a>4.2 CLI Terminal</h2><pre class="language-bash" data-language="bash"><code class="language-bash">yeats@yeats-virtual-machine:~$</code></pre>
-<ul>
-<li>用户名@机器名：当前所在目录 $表示等待用户输入</li>
-<li>~表示用户home目录</li>
-<li><code>/home</code>是存放所有用户文件的根目录</li>
-</ul>
-<p>Settings中About可以查看机器名与相关信息</p>
-<h2 id="4-3-搞定Linux命令参数，得心应手使用各类命令——授之于渔-先拿ls开张"><a href="#4-3-搞定Linux命令参数，得心应手使用各类命令——授之于渔-先拿ls开张" class="headerlink" title="4.3 搞定Linux命令参数，得心应手使用各类命令——授之于渔 先拿ls开张"></a>4.3 搞定Linux命令参数，得心应手使用各类命令——授之于渔 先拿ls开张</h2><ul>
-<li><code>ls</code>命令 用来显示目标列表，在Linux中是使用率较高的命令</li>
-<li><code>ls -l</code> 的缩写就是 ll ，列出当前目录可见文件详细信息，输出的信息从左到右依次包括文件名、文件类型、权限、硬链接数、所有者名、组名、大小（byte）</li>
-<li><code>man</code>命令是Linux下的帮助指令，通过man指令可以查看Linux中的指令帮助、配置文件帮助和编程帮助等信息</li>
-</ul>
-<p>推荐：Linux命令搜索</p>
-<p><a href="https://wangchujiang.com/linux-command/" class="LinkCard" target="_blank">Linux命令搜索</a></p>
-<h2 id="4-4-Linux根目录，它们和Windows有什么区别"><a href="#4-4-Linux根目录，它们和Windows有什么区别" class="headerlink" title="4.4 Linux根目录，它们和Windows有什么区别"></a>4.4 Linux根目录，它们和Windows有什么区别</h2><ul>
-<li>Windows 盘符，文件目录 \反斜线</li>
-<li>Linux一切皆文件，文件目录 / 斜线</li>
-</ul>
-<h2 id="4-5-Linux根目录解析，fhs权威论文，搞定所有的发行版本文件夹分布"><a href="#4-5-Linux根目录解析，fhs权威论文，搞定所有的发行版本文件夹分布" class="headerlink" title="4.5 Linux根目录解析，fhs权威论文，搞定所有的发行版本文件夹分布"></a>4.5 Linux根目录解析，fhs权威论文，搞定所有的发行版本文件夹分布</h2><ul>
-<li><code>/ linux</code>根目录</li>
-<li><code>/bin</code> 二进制目录 GUN工具 命令</li>
-<li><code>/cdrom</code> 光盘</li>
-<li><code>/etc</code> 系统配置文件</li>
-<li><code>/home</code> 用户主目录</li>
-<li><code>/lib</code> 库目录 存放库文件</li>
-<li><code>/lost+found</code> 当系统发生错误时，将一些遗失的片段放置在这个目录下</li>
-<li><code>/mnt</code> 挂载（外在的设备和电脑进行连接）目录</li>
-<li><code>/proc</code> 伪文件系统</li>
-<li><code>/run</code> 运行目录</li>
-<li><code>/snap</code> 包管理，软件包安装管理方式</li>
-<li><code>/tmp</code> 临时目录</li>
-<li><code>/var</code> 可变目录</li>
-<li><code>/boot</code> 启动目录</li>
-<li><code>/dev</code> 设备目录</li>
-<li><code>/media</code> 媒体目录</li>
-<li><code>/opt</code> 可选目录</li>
-<li><code>/root</code> root用户的主目录 管理员</li>
-<li><code>/sbin</code> 系统二进制目录，GNU高级管理员使用的命令或工具</li>
-<li><code>/srv</code> 服务目录</li>
-<li><code>/usr</code> 用户二进制目录，GNU工具</li>
-<li>详见：FHS文件系统层级标准</li>
-</ul>
-<p><a href="https://www.pathname.com/fhs/" class="LinkCard" target="_blank">FHS文件系统层级标准</a></p>
-<h2 id="4-6-cd命令"><a href="#4-6-cd命令" class="headerlink" title="4.6 cd命令"></a>4.6 cd命令</h2><ul>
-<li><code>cd</code> 进入用户主目录</li>
-<li><code>cd..</code> 切换到上一层</li>
-<li><code>cd –</code> 返回到上一次的工作目录。</li>
-</ul>
-<h2 id="4-7-Ctrl-C？-拉到吧，在Linux上可不是复制"><a href="#4-7-Ctrl-C？-拉到吧，在Linux上可不是复制" class="headerlink" title="4.7 Ctrl + C？ 拉到吧，在Linux上可不是复制"></a>4.7 Ctrl + C？ 拉到吧，在Linux上可不是复制</h2><ul>
-<li>Ctrl+c( kill foreground process ) 发送SIGINT信号给前台进程组中的所有进程，强制终止程序的执行</li>
-<li>Ctrl+l 清屏</li>
-</ul>
-<h2 id="4-8-绝对路径"><a href="#4-8-绝对路径" class="headerlink" title="4.8 绝对路径"></a>4.8 绝对路径</h2><ul>
-<li>全路径 D:\Study\Frank_FuckPPT\Linux</li>
-</ul>
-<h2 id="4-9-相对路径"><a href="#4-9-相对路径" class="headerlink" title="4.9 相对路径"></a>4.9 相对路径</h2><ul>
-<li>不全路径 \Frank_FuckPPT\Linux</li>
-</ul>
-<h2 id="4-10-Linux上的路径与Windows上的路径"><a href="#4-10-Linux上的路径与Windows上的路径" class="headerlink" title="4.10 Linux上的路径与Windows上的路径"></a>4.10 Linux上的路径与Windows上的路径</h2><ul>
-<li><code>gedit /Doucument/doc/1.txt</code> 操作根目录 绝对路径</li>
-<li><code>gedit ~/Document/doc/1.txt</code> 当前目录 相对路径</li>
-<li><code>gedit ./Document/doc/1.txt</code> 当前目录 相对路径</li>
-<li><code>gedit Document/doc/1.txt</code> 当前目录 相对路径</li>
-</ul>
-<h2 id="4-11-如何练习？经验课"><a href="#4-11-如何练习？经验课" class="headerlink" title="4.11 如何练习？经验课"></a>4.11 如何练习？经验课</h2><ul>
-<li>单点符号.当前文件</li>
-<li>双点符号..当前目录的父目录</li>
-</ul>
-<h2 id="4-12-ls进阶用法：文件夹下各种匹配过滤符号"><a href="#4-12-ls进阶用法：文件夹下各种匹配过滤符号" class="headerlink" title="4.12 ls进阶用法：文件夹下各种匹配过滤符号"></a>4.12 ls进阶用法：文件夹下各种匹配过滤符号</h2><ul>
-<li><code>*</code>号替代多个符号</li>
-<li><code>？</code>号替代一个符号</li>
-<li><code>-a,，--all</code> 列出目录中所有文件，包括以“.”开头的文件</li>
-<li><code>-l， --format=long，--format=verbose</code>除每个文件名外，增加显示文件类型、权限、硬链接数等信息</li>
-<li><code>-F，--classify， --file-type</code>在每个文件名后附上一个字符以说明该文件的类型</li>
-</ul>
-<h2 id="4-13-touch命令"><a href="#4-13-touch命令" class="headerlink" title="4.13 touch命令"></a>4.13 touch命令</h2><p><code>touch</code>命令 两个功能</p>
-<ul>
-<li>一是用于把已存在文件的时间标签更新为系统当前的时间（默认方式）</li>
-<li>二是用来创建新的空文件</li>
-</ul>
-<h2 id="4-14-cp命令"><a href="#4-14-cp命令" class="headerlink" title="4.14 cp命令"></a>4.14 cp命令</h2><ul>
-<li><code>cp</code>命令 将源文件或目录复制到目标文件或目录中</li>
-<li>源文件：制定源文件列表。默认情况下，cp命令不能复制目录，如果要复制目录，则必须使用-R选项</li>
-<li>目标文件：指定目标文件。当“源文件”为多个文件时，要求“目标文件”为指定的目录</li>
-<li><code>cp</code> 你想复制的文件？ 你想复制到哪？</li>
-<li>-i覆盖既有文件之前先询问用户</li>
-<li><code>-R/r</code>递归处理，将指定目录下的所有文件与子目录一并处理</li>
-</ul>
-<h2 id="4-15-cp递归练习技巧"><a href="#4-15-cp递归练习技巧" class="headerlink" title="4.15 cp递归练习技巧"></a>4.15 cp递归练习技巧</h2><p>pwd 显示当前工作目录</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">cp</span> -R ./*.java ~/Documents/temp/</code></pre>
-<h2 id="4-16-Linux终端光标移动技巧"><a href="#4-16-Linux终端光标移动技巧" class="headerlink" title="4.16 Linux终端光标移动技巧"></a>4.16 Linux终端光标移动技巧</h2><ul>
-<li>Tab自动补全</li>
-<li>Ctrl + E 跳到行尾</li>
-<li>Ctrl + B 光标向左移动</li>
-<li>Ctrl + H 删除光标前一个字符 相当于退格</li>
-<li>Ctrl + T 把光标前一个字符往后移动</li>
-<li>Ctrl + R 搜索之前用过的命令</li>
-<li>Ctrl + W 删除光标前一个单词</li>
-<li>Ctrl + U 删掉光标前面的内容</li>
-<li>Ctrl + K 删掉光标后面的内容</li>
-</ul>
-<h2 id="4-17-lnk链接文件的介绍"><a href="#4-17-lnk链接文件的介绍" class="headerlink" title="4.17 lnk链接文件的介绍"></a>4.17 lnk链接文件的介绍</h2><ul>
-<li><p>.lnk快捷方式</p>
-</li>
-<li><p>Linux链接文件</p>
-</li>
-<li><p>1.符号链接(软链接)</p>
-<p>指快捷方式 原来的文件/文件夹必须存在</p>
-</li>
-<li><p>2.硬链接</p>
-<p>指副本 原来的文件/文件夹必须存在</p>
-</li>
-</ul>
-<h2 id="4-18-符号链接和硬链接"><a href="#4-18-符号链接和硬链接" class="headerlink" title="4.18 符号链接和硬链接"></a>4.18 符号链接和硬链接</h2><ul>
-<li><code>ln</code>命令 用来为文件创建链接，链接类型分为硬链接和符号链接两种，默认的链接类型是硬链接。如果要创建符号链接必须使用”-s”选项</li>
-<li><code>ln</code> 原文件名 链接的文件名</li>
-<li><code>ls -l</code> 查看</li>
-<li>软链接：有指向，是一个单独的文件，不同介质</li>
-<li>硬链接：无指向，同一介质</li>
-<li>软链接复制的是链接文件</li>
-</ul>
-<h2 id="4-19-注意事项"><a href="#4-19-注意事项" class="headerlink" title="4.19 注意事项"></a>4.19 注意事项</h2><ul>
-<li>符号链接Symbolic links</li>
-<li>软链接 Soft links</li>
-</ul>
-<h2 id="4-20-mv命令"><a href="#4-20-mv命令" class="headerlink" title="4.20 mv命令"></a>4.20 mv命令</h2><ul>
-<li>mv命令 用来对文件或目录重新命名，或者将文件从一个目录移到另一个目录中</li>
-<li>做重命名，mv 重命名谁 命名成什么</li>
-</ul>
-<h2 id="4-20-移动和骚操作"><a href="#4-20-移动和骚操作" class="headerlink" title="4.20 移动和骚操作"></a>4.20 移动和骚操作</h2><ul>
-<li>做移动，<code>mv</code> 移动的文件 移动到的目录</li>
-<li>输入完之后，<code>cd !$</code></li>
-<li>!$是列出并执行你的命令历史里面最近的一条记录</li>
-</ul>
-<h2 id="4-21-rm——最佳年度删库跑路"><a href="#4-21-rm——最佳年度删库跑路" class="headerlink" title="4.21 rm——最佳年度删库跑路"></a>4.21 rm——最佳年度删库跑路</h2><ul>
-<li><code>sudo rm -rf /*</code> 该命令极度危险</li>
-<li><code>rm</code> 命令可以删除一个目录中的一个或多个文件或目录，也可以将某个目录及其下属的所有文件及其子目录均删除掉。对于链接文件，只是删除整个链接文件，而原有文件保持不变</li>
-<li><code>rm -i</code> 有提示</li>
-<li><code>rm -i -rf</code> 无提示</li>
-<li>注意： linux没有回收站</li>
-</ul>
-<h2 id="4-22-创建文件夹以及删除文件夹"><a href="#4-22-创建文件夹以及删除文件夹" class="headerlink" title="4.22 创建文件夹以及删除文件夹"></a>4.22 创建文件夹以及删除文件夹</h2><ul>
-<li><code>mkdir</code> 用来创建目录</li>
-<li><code>rmdir</code> 用来删除空目录</li>
-</ul>
-<h2 id="4-23-文件类型"><a href="#4-23-文件类型" class="headerlink" title="4.23 文件类型"></a>4.23 文件类型</h2><ul>
-<li><code>file</code>用来探测给定文件的类型</li>
-<li>Windows 文本是txt</li>
-<li>linux 文本是text</li>
-</ul>
-<h2 id="4-24-cat-，more-，less"><a href="#4-24-cat-，more-，less" class="headerlink" title="4.24 cat ，more ，less"></a>4.24 cat ，more ，less</h2><ul>
-<li><code>cat</code> 连接多个文件并打印到标准输出，适用于短文本</li>
-<li><code>-n, --number</code> 对所有行编号，从1开始编号</li>
-<li><code>more</code> 显示文件内容，每次显示一，以全屏方式显示</li>
-<li>b上一页 space 下一页 q退出</li>
-<li><code>less</code>分屏上下翻页浏览文件内容</li>
-<li><code>less</code>命令允许用户向前或向后浏览文件，而<code>more</code>命令只能向前浏览。</li>
-<li>用<code>less</code>命令显示文件时，用PageUp键向上翻页，用PageDown键向下翻页。要退出less程序，应按Q键</li>
-<li>浏览文件中输入 / 用于搜索</li>
-</ul>
-<h2 id="4-25-tail-和-head命令"><a href="#4-25-tail-和-head命令" class="headerlink" title="4.25 tail 和 head命令"></a>4.25 tail 和 head命令</h2><ul>
-<li><p><code>tail</code> 在屏幕上显示指定文件的末尾若干行</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">tail</span> -n <span class="token number">2</span> demo.c</code></pre>
-</li>
-<li><p>head显示文件的开头部分</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">head</span> -n <span class="token number">2</span> demo.c</code></pre>
-</li>
-</ul>
-<h2 id="5-1-任务管理器"><a href="#5-1-任务管理器" class="headerlink" title="5.1 任务管理器"></a>5.1 任务管理器</h2><ul>
-<li>进程、性能、用户、服务</li>
-<li>服务：监测用户行为，为用户服务</li>
-</ul>
-<h2 id="5-2-ps和top命令"><a href="#5-2-ps和top命令" class="headerlink" title="5.2 ps和top命令"></a>5.2 ps和top命令</h2><ul>
-<li><code>top</code> 可以实时动态地查看系统的整体运行情况，是一个综合了多方信息监测系统性能和运行信息的实用工具</li>
-<li><code>ps</code> (process status) linux最复杂的命令之一，是最基本同时也是非常强大的进程查看命令，使用该命令可以确定有哪些进程正在运行和运行的状态、进程是否结束、进程有没有僵死、哪些进程占用了过多的资源等等，总之大部分信息都是可以通过执行该命令得到的</li>
-<li><code>ps axo pid,comm,pcpu</code> # 查看进程的PID、名称以及CPU 占用率</li>
-<li><code>ps -aux | grep named</code> # 查看named进程详细信息</li>
-</ul>
-<h2 id="5-3-kill命令"><a href="#5-3-kill命令" class="headerlink" title="5.3 kill命令"></a>5.3 kill命令</h2><p>配合<code>ps -aux | grep named</code> # 查看named进程详细信息<br><code>kill pid</code> 杀死进程</p>
-<h2 id="5-4-挂载的含义"><a href="#5-4-挂载的含义" class="headerlink" title="5.4 挂载的含义"></a>5.4 挂载的含义</h2><p>详见：linux挂载的作用(<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35583154/article/details/86569903">https://blog.csdn.net/qq_35583154/article/details/86569903</a>)</p>
-<p>插入新硬盘，分了新磁盘区sdb1，但它现在还不属于/， 把新硬盘的区sdb1挂载到工作目录的/Share/文件夹下，之后访问这个/Share/文件夹就相当于访问这个硬盘的sdb1分区了，对/Share/的任何操作，都相当于对sdb1里文件的操作</p>
-<h2 id="5-5-mount"><a href="#5-5-mount" class="headerlink" title="5.5 mount"></a>5.5 mount</h2><ul>
-<li><code>mount</code> 用于挂载Linux系统外的文件</li>
-<li><code>/mnt</code> 为自动挂载点</li>
-<li><code>sudo fdisk -l</code> 查看硬盘及分区信息</li>
-<li><code>sudo mount /dev/sdc1 /mnt</code></li>
-<li><code>sudo umount /mnt</code></li>
-<li>自动挂载的目录不能卸载</li>
-</ul>
-<h2 id="5-5-挂载的意义——尝试使用U盘？自动播放黑客恶意？"><a href="#5-5-挂载的意义——尝试使用U盘？自动播放黑客恶意？" class="headerlink" title="5.5 挂载的意义——尝试使用U盘？自动播放黑客恶意？"></a>5.5 挂载的意义——尝试使用U盘？自动播放黑客恶意？</h2><ul>
-<li>企业里不自动挂载，防止恶意播放脚本auto病毒</li>
-</ul>
-<h2 id="5-6-安卓设备连接挂载"><a href="#5-6-安卓设备连接挂载" class="headerlink" title="5.6 安卓设备连接挂载"></a>5.6 安卓设备连接挂载</h2><ul>
-<li>安卓链接协议(SMB)挂载路径 <code>/run/suer/1000/gvfs</code></li>
-</ul>
-<h2 id="5-7-df和du"><a href="#5-7-df和du" class="headerlink" title="5.7 df和du"></a>5.7 df和du</h2><ul>
-<li><code>df</code> 用于显示磁盘分区上的可使用的磁盘空间。默认显示单位为KB。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息</li>
-<li><code>h</code>或<code>--human-readable</code>：以可读性较高的方式来显示信息</li>
-<li><code>du</code> 也是查看使用空间的，但是与<code>df</code>命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的</li>
-</ul>
-<h2 id="5-8-sort命令"><a href="#5-8-sort命令" class="headerlink" title="5.8 sort命令"></a>5.8 sort命令</h2><ul>
-<li><code>sort</code> 对文本文件中所有行进行排序</li>
-<li>默认对每一行第一个字符排序，并展示出来，并不会改变原来的文件</li>
-<li><code>-n</code>， <code>--numeric-sort</code> 根据数字排序</li>
-<li><code>-M</code>，<code>--month-sort</code> 按照非月份、一月、十二月的顺序排序</li>
-<li><code>-r</code>，<code>--reverse</code> 将结果倒序排列</li>
-</ul>
-<h2 id="5-9-grep基础认识、搜索文件"><a href="#5-9-grep基础认识、搜索文件" class="headerlink" title="5.9 grep基础认识、搜索文件"></a>5.9 grep基础认识、搜索文件</h2><ul>
-<li><p><code>grep</code> (global search regular expression(RE) and print out the</p>
-<p>line，全面搜索正则表达式并把行打印出来）是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来</p>
-</li>
-<li><p><code>grep 543 ~/Templates/1.txt</code></p>
-</li>
-</ul>
-<h2 id="5-10-打包、压缩、归档、解压缩-它们究竟区别在哪？"><a href="#5-10-打包、压缩、归档、解压缩-它们究竟区别在哪？" class="headerlink" title="5.10 打包、压缩、归档、解压缩 它们究竟区别在哪？"></a>5.10 打包、压缩、归档、解压缩 它们究竟区别在哪？</h2><ul>
-<li><code>tar</code> 打包、压缩</li>
-<li><code>tar -cvf 1.tar 1.txt</code> 仅打包，不压缩</li>
-<li><code>tar -zcvf 1.tar.gz 1.txt</code> 打包后，以 gzip 压缩</li>
-<li><code>tar -zxvf /opt/soft/test/1.tar.gz</code> 将tar包解压缩</li>
-</ul>
-<h2 id="6-1-父子shell的概念"><a href="#6-1-父子shell的概念" class="headerlink" title="6.1 父子shell的概念"></a>6.1 父子shell的概念</h2><ul>
-<li>bash</li>
-<li>ps-f</li>
-<li>ps –forest</li>
-</ul>
-<h2 id="6-2-分号在命令里有什么作用"><a href="#6-2-分号在命令里有什么作用" class="headerlink" title="6.2 分号在命令里有什么作用"></a>6.2 分号在命令里有什么作用</h2><ul>
-<li>命令之间带分号 ； 依次执行</li>
-<li>创建一个子shell去执行</li>
-</ul>
-<h2 id="6-3-sleep和jobs"><a href="#6-3-sleep和jobs" class="headerlink" title="6.3 sleep和jobs"></a>6.3 sleep和jobs</h2><ul>
-<li><p><code>sleep</code> 将目前动作延迟一段时间 ，后面可接 <code>s</code> 为秒，<code>m</code> 为 分钟，<code>h</code> 为小时，<code>d</code> 为日数</p>
-<p>挂在后台,如果要干掉，则用<code>kill</code>命令</p>
-</li>
-<li><p><code>jobs</code> 显示作业的状态，<code>-l</code> 在作业信息中额外的列出PID</p>
-</li>
-</ul>
-<h2 id="6-4-后台"><a href="#6-4-后台" class="headerlink" title="6.4 后台"></a>6.4 后台</h2><ul>
-<li>后台执行 <code>tar -zxvf ……；&amp;</code></li>
-</ul>
-<h1 id="6-5-coproc协程"><a href="#6-5-coproc协程" class="headerlink" title="6.5 coproc协程"></a>6.5 coproc协程</h1><ul>
-<li>Liunx协程处理命令。协程可以同时做两件事。在后台生成一个子shell，并在子shell中执行命令</li>
-<li><code>coproc sleep 10</code></li>
-<li><code>coproc frank_av&#123; sleep 10; sleep 300;&#125;</code></li>
-<li>一定要分号结尾，大括号内空格</li>
-</ul>
-<h2 id="6-6-外部命令和内建命令"><a href="#6-6-外部命令和内建命令" class="headerlink" title="6.6 外部命令和内建命令"></a>6.6 外部命令和内建命令</h2><ul>
-<li>Shell执行的命令可以分为内建命令（built-in）和外部命令（external） 前者是构建在shell内部</li>
-<li>后者是一个独立的文件（可以是二进制文件，也可以是一个脚本） 内建命令由当前shell本身来执行，例如echo, cd等等</li>
-<li>外部命令的执行shell进程会fork一个子进程，父进程随后挂起，然后在子进程中exec加载外部文件，子进程返回后，父进程才继续执行</li>
-</ul>
-<h2 id="6-7-alias别名"><a href="#6-7-alias别名" class="headerlink" title="6.7 alias别名"></a>6.7 alias别名</h2><ul>
-<li><code>alias</code> 定义或显示别名。</li>
-<li><code>type</code> 显示指定命令的类型。</li>
-<li><code>alias li=’ls -li’</code></li>
-<li>但是关闭当前shell就不能用了</li>
-</ul>
-<h2 id="7-1-什么是环境变量？彻底搞清楚究竟什么是环境变量！！！！！"><a href="#7-1-什么是环境变量？彻底搞清楚究竟什么是环境变量！！！！！" class="headerlink" title="7.1 什么是环境变量？彻底搞清楚究竟什么是环境变量！！！！！"></a>7.1 什么是环境变量？彻底搞清楚究竟什么是环境变量！！！！！</h2><ul>
-<li>环境变量（environment variables）一般是指在操作系统中用来指定操作系统运行环境的一些参数，如：临时文件夹位置和系统文件夹位置等</li>
-<li>文件夹写入的环境变量，意味则可以在任何位置访问该文件夹，相当于告诉系统这个目录在哪里</li>
-</ul>
-<h2 id="7-2-全局环境变量和局部环境变量"><a href="#7-2-全局环境变量和局部环境变量" class="headerlink" title="7.2 全局环境变量和局部环境变量"></a>7.2 全局环境变量和局部环境变量</h2><ul>
-<li>windows:系统变量与用户变量</li>
-<li>linux: 全局环境变量和局部环境变量</li>
-<li>全局环境变量<code>printenv</code></li>
-<li><code>printenv USER</code></li>
-<li><code>echo $USER</code></li>
-<li><code>cd $HOME</code></li>
-</ul>
-<h2 id="7-3-用户和局部变量的定义"><a href="#7-3-用户和局部变量的定义" class="headerlink" title="7.3 用户和局部变量的定义"></a>7.3 用户和局部变量的定义</h2><ul>
-<li>局部变量只能在当前shell执行，子shell或者退出后就不能用了</li>
-<li>注意 定义局部变量不要大写</li>
-<li>全局变量用大写，下划线命名法</li>
-</ul>
-<h2 id="7-4-定义全局变量"><a href="#7-4-定义全局变量" class="headerlink" title="7.4 定义全局变量"></a>7.4 定义全局变量</h2><ul>
-<li><code>export</code> 为shell变量或函数设置导出属性。</li>
-<li>可以子shell里执行，但关闭后仍失效</li>
-</ul>
-<h2 id="7-5-默认的环境变量"><a href="#7-5-默认的环境变量" class="headerlink" title="7.5 默认的环境变量"></a>7.5 默认的环境变量</h2><ul>
-<li><code>set</code></li>
-</ul>
-<h2 id="7-6-为啥要用环境变量"><a href="#7-6-为啥要用环境变量" class="headerlink" title="7.6 为啥要用环境变量"></a>7.6 为啥要用环境变量</h2><ul>
-<li>配置开发环境需要使用</li>
-<li>临时环境变量</li>
-<li><code>PATH=$PATH:/home/yeats/Templates/</code></li>
-</ul>
-<h2 id="7-7-永久配置环境变量？"><a href="#7-7-永久配置环境变量？" class="headerlink" title="7.7 永久配置环境变量？"></a>7.7 永久配置环境变量？</h2><ul>
-<li>启动文件：开机的时候默认执行的环境变量</li>
-<li><code>bash shell</code></li>
-<li>1登录shell</li>
-<li><p>2非登录就打开shell</p>
-</li>
-<li><p>3运行脚本非交互shell</p>
-</li>
-<li><p><code>cat /etc/profile</code></p>
-</li>
-<li><code>~/.bashrc</code></li>
-<li><code>~/.bash_profile</code></li>
-<li><code>~/.profile</code></li>
-<li><code>~/.bash_login</code></li>
-<li><code>cat bashrc</code></li>
-<li>加入全局环境变量(需学习vim)</li>
-</ul>
-<h2 id="8-1-PMS系统和软件安装的介绍"><a href="#8-1-PMS系统和软件安装的介绍" class="headerlink" title="8.1 PMS系统和软件安装的介绍"></a>8.1 PMS系统和软件安装的介绍</h2><ul>
-<li>PMS Package Management System</li>
-<li>解决工具依赖问题</li>
-<li><code>apt install</code></li>
-<li><code>apt-get install</code></li>
-<li><code>apt-cache</code></li>
-<li><code>aptitude(已淘汰)</code></li>
-</ul>
-<h2 id="8-2-安装、更新、卸载"><a href="#8-2-安装、更新、卸载" class="headerlink" title="8.2 安装、更新、卸载"></a>8.2 安装、更新、卸载</h2><ul>
-<li><code>apt -h</code></li>
-<li>更新 <code>sudo apt update</code></li>
-<li>升级 <code>sudo apt upgrade</code></li>
-<li>卸载 <code>sudo apt remove oneko</code></li>
-</ul>
-<h2 id="8-3-其他发行版本？"><a href="#8-3-其他发行版本？" class="headerlink" title="8.3 其他发行版本？"></a>8.3 其他发行版本？</h2><ul>
-<li><p>server版本配置镜像源</p>
-</li>
-<li><p><code>sudo vim /etc/apt/source.list</code></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="http://archive.ubuntu.com/ubuntu/">http://archive.ubuntu.com/ubuntu/</a></p>
-</li>
-<li><p>修改成国内阿里云库:</p>
-<p><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu/">http://mirrors.aliyun.com/ubuntu/</a></p>
-</li>
-</ul>
-<h2 id="8-4-安装第三方软件案例：例如github开源软件的指导"><a href="#8-4-安装第三方软件案例：例如github开源软件的指导" class="headerlink" title="8.4 安装第三方软件案例：例如github开源软件的指导"></a>8.4 安装第三方软件案例：例如github开源软件的指导</h2><ul>
-<li>详见：<a target="_blank" rel="noopener" href="https://github.com/nvbn/thefuck">https://github.com/nvbn/thefuck</a></li>
-</ul>
-<h2 id="9-1-用户权限的含义和作用"><a href="#9-1-用户权限的含义和作用" class="headerlink" title="9.1 用户权限的含义和作用"></a>9.1 用户权限的含义和作用</h2><ul>
-<li>用户与权限</li>
-<li>不可能让所有人有所有的权限-不安全</li>
-<li>避免被入侵</li>
-<li>用户ID UID</li>
-<li>系统用户UID&lt;500</li>
-<li><code>cat /etc/passwd</code></li>
-<li><code>sudo cat /etc/shadow</code></li>
-</ul>
-<h2 id="9-2-创建、删除、更改用户"><a href="#9-2-创建、删除、更改用户" class="headerlink" title="9.2 创建、删除、更改用户"></a>9.2 创建、删除、更改用户</h2><ul>
-<li>创建<code>sudo useradd user1</code></li>
-<li>删除<code>sudo userdel user1</code></li>
-<li>更改密码<code>sudo passwd user1</code></li>
-<li><code>chage</code> 修改帐号和密码的有效期限</li>
-</ul>
-<h2 id="9-3-group"><a href="#9-3-group" class="headerlink" title="9.3 group"></a>9.3 group</h2><ul>
-<li><p>linux组groups</p>
-<p>目的 ：共享资源的权限</p>
-</li>
-<li><p><code>tail /etc/group</code></p>
-</li>
-<li>ubuntu不允许把所有用户纳入一个组，而是每个用户都有一个单独的组</li>
-<li><code>sudo groupadd groupfrank</code></li>
-<li><code>sudo groupdel groupfrank</code></li>
-</ul>
-<h2 id="9-4-文件、文件夹权限"><a href="#9-4-文件、文件夹权限" class="headerlink" title="9.4 文件、文件夹权限"></a>9.4 文件、文件夹权限</h2><p><code>rwx</code> 文件所有者（Owner）组创始人的权限<br><code>r-x</code> 用户组（Group）组下属成员权限<br><code>r-x</code> 其它用户（Other Users）其它组成员权限</p>
-<p>详见：Linux chmod命令（<a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-chmod.html">Linux chmod 命令 | 菜鸟教程 (runoob.com)</a>）</p>
-<h2 id="9-5-chmod命令"><a href="#9-5-chmod命令" class="headerlink" title="9.5 chmod命令"></a>9.5 chmod命令</h2><ul>
-<li><code>usermod</code>命令 用于修改用户的基本信息。</li>
-<li><code>usermod</code> 命令不允许你改变正在线上的使用者帐号名称。</li>
-<li>当 <code>usermod</code> 命令用来改变user id，必须确认这名user没在电脑上执行任何程序</li>
-</ul>
-<h2 id="附上：vi-vim键盘图"><a href="#附上：vi-vim键盘图" class="headerlink" title="附上：vi/vim键盘图"></a>附上：vi/vim键盘图</h2><p><img src="https://img-blog.csdnimg.cn/20210510170218321.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ2MjA3MDI0,size_16,color_FFFFFF,t_70" alt="vi/vim键盘图"></p>
-<h2 id="10-1-编辑器简单介绍：vim编辑器之神；-emac神之编辑器"><a href="#10-1-编辑器简单介绍：vim编辑器之神；-emac神之编辑器" class="headerlink" title="10.1 编辑器简单介绍：vim编辑器之神； emac神之编辑器"></a>10.1 编辑器简单介绍：vim编辑器之神； emac神之编辑器</h2><ul>
-<li>emacs-神之编辑器</li>
-<li>vim-编辑器之神</li>
-<li>Vim是从 vi发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。和Emacs并列成为类Unix系统用户最喜欢的编辑器</li>
-<li>vi 编辑器通常被简称为 vi，而 vi 又是 visual editor 的简称 。它可以执行输出、删除、查找、替换、块操作等众多文本操作，而且用户可以根据自己的需要对其进行定制，这是其他编辑程序所没有的</li>
-<li>Vim 是 vi 的加强版，比 vi 更容易使用。vi 的命令几乎全部都可以在 vim 上</li>
-</ul>
-<h2 id="10-2-vim的简单使用方式"><a href="#10-2-vim的简单使用方式" class="headerlink" title="10.2 vim的简单使用方式"></a>10.2 vim的简单使用方式</h2><ul>
-<li>安装vim</li>
-<li><code>sudo apt install vim</code></li>
-</ul>
-<h3 id="vim工作模式，国外一般认为两种模式"><a href="#vim工作模式，国外一般认为两种模式" class="headerlink" title="vim工作模式，国外一般认为两种模式"></a>vim工作模式，国外一般认为两种模式</h3><ul>
-<li><p>普通模式(命令操作模式)：操作文件</p>
-</li>
-<li><p>插入模式：编辑</p>
-</li>
-<li>编辑模式到普通模式：ESC</li>
-</ul>
-<h3 id="国内一般认为三种模式"><a href="#国内一般认为三种模式" class="headerlink" title="国内一般认为三种模式"></a>国内一般认为三种模式</h3><ul>
-<li><p>一般命令模式：简称一般模式，也是最先进入的工作模式，输入vi +文件名可直接进入一般命令模式，在此模式下可进行文本内容的查看、复制、删除、替换等功 能。当不能输入相关文本内容</p>
-</li>
-<li><p>编辑模式：在一般模式下，输入 i 或 o 或 a 进入编辑模式，在此模式下可输入文本内 容。当输入 i 时，工作界面如图所示，只有此时状态才可以输入文件内容。输 入完成后，可单击 ESC 键退出编辑状态，进入一般模式</p>
-</li>
-<li><p>命令行模式：在一般模式下，输入：或/或？进入命令行模式，在此模式下可输入相关命令当输入：wq 此时命令表示保存退出命令，单击回车键，自动保存文件，并退 出 vi 编辑器或者单击 ESC 键，重新返回一般模式</p>
-</li>
-</ul>
-<h3 id="三种工作模式关系如图所示"><a href="#三种工作模式关系如图所示" class="headerlink" title="三种工作模式关系如图所示"></a>三种工作模式关系如图所示</h3><p><img src="https://img-blog.csdnimg.cn/2021051019480394.png" alt="VIM三种工作模式关系"></p>
-<h3 id="vim-编辑器的退出，一般分三种情况"><a href="#vim-编辑器的退出，一般分三种情况" class="headerlink" title="vim 编辑器的退出，一般分三种情况"></a>vim 编辑器的退出，一般分三种情况</h3><ul>
-<li><code>：q</code> 表示不保存退出</li>
-<li><code>：wq</code> 保存退出</li>
-<li><code>：q！</code>强制退出，此时也不保存文件</li>
-</ul>
-<h2 id="10-3-移动光标"><a href="#10-3-移动光标" class="headerlink" title="10.3 移动光标"></a>10.3 移动光标</h2><ul>
-<li>上：<code>k</code></li>
-<li>下：<code>j</code></li>
-<li>左：<code>h</code></li>
-<li>右：<code>l</code></li>
-<li>下一行：<code>b</code></li>
-<li>上一行：<code>w</code></li>
-<li>查找上一处字符：<code>N</code></li>
-<li>查找下一处字符：<code>n</code></li>
-</ul>
-<h2 id="10-4-翻页"><a href="#10-4-翻页" class="headerlink" title="10.4 翻页"></a>10.4 翻页</h2><ul>
-<li>上翻页(BACKWARD)：<code>ctrl+B</code></li>
-<li>下翻页(FORWARD)：<code>ctrl+F</code></li>
-<li>上滚：<code>ctrl+E</code></li>
-<li>下滚：<code>ctrl+Y</code></li>
-<li>移动到最后一行：<code>G 或者shift+g</code></li>
-<li>移动到第一行：<code>gg</code></li>
-</ul>
-<h2 id="10-5-不同方式编辑文本、跳跃单词操作技巧"><a href="#10-5-不同方式编辑文本、跳跃单词操作技巧" class="headerlink" title="10.5 不同方式编辑文本、跳跃单词操作技巧"></a>10.5 不同方式编辑文本、跳跃单词操作技巧</h2><ul>
-<li><code>i</code>光标位置的前面插入</li>
-<li><code>a</code> 光标位置后面的插入</li>
-<li><code>o</code> 直接enter到下一行</li>
-<li><code>x</code> 删除光标所在字符</li>
-<li><code>dd</code> 删除整个一行</li>
-<li><code>u</code> 撤销</li>
-<li><code>dw</code> 移除当前所在光标往后到单词</li>
-<li><code>b</code> 跳跃单词首字母</li>
-<li><code>e</code> 跳跃单词最后</li>
-<li><code>w</code> 跳跃单词 先跳跃到单词首字母，然后跳跃到单词最后</li>
-<li><code>shift+w</code> ;<code>shift+b</code>大跳</li>
-</ul>
-<h2 id="10-6-跳跃行首行尾技巧"><a href="#10-6-跳跃行首行尾技巧" class="headerlink" title="10.6 跳跃行首行尾技巧"></a>10.6 跳跃行首行尾技巧</h2><ul>
-<li><code>shift+6</code> <code>或者0</code> 跳跃到本行到开头</li>
-<li><code>shift+4</code> 跳跃到本行末尾</li>
-</ul>
-<h2 id="10-7-大括号跳跃函数段落技巧"><a href="#10-7-大括号跳跃函数段落技巧" class="headerlink" title="10.7 大括号跳跃函数段落技巧"></a>10.7 大括号跳跃函数段落技巧</h2><ul>
-<li><code>&#123;&#125;</code>跳跃大括号</li>
-</ul>
-<h2 id="10-8-vim复制剪切粘贴"><a href="#10-8-vim复制剪切粘贴" class="headerlink" title="10.8 vim复制剪切粘贴"></a>10.8 vim复制剪切粘贴</h2><ul>
-<li><code>p</code>粘贴</li>
-<li><code>yw</code>复制一个单词</li>
-<li><code>y$</code> 从当前开始往后复制到行末尾</li>
-</ul>
-<h2 id="10-9-Visual可视化模式"><a href="#10-9-Visual可视化模式" class="headerlink" title="10.9 Visual可视化模式"></a>10.9 Visual可视化模式</h2><ul>
-<li><code>v</code> 选择文本</li>
-<li><code>V</code> 选择行</li>
-<li><code>v G</code> 全选</li>
-<li><code>ctrl+v</code>矩阵选择</li>
-<li><code>o</code>切换文本首尾</li>
-<li><code>vaw</code>快速选择单词</li>
-<li><code>vab</code>包括括号</li>
-<li><code>vaB</code>包括大括号</li>
-<li><code>va&lt;</code> 包括尖括号</li>
-</ul>
-<h2 id="10-10-视图模式其它技巧"><a href="#10-10-视图模式其它技巧" class="headerlink" title="10.10 视图模式其它技巧"></a>10.10 视图模式其它技巧</h2><ul>
-<li><code>v shift+&lt;</code>往左缩进</li>
-<li><code>v shift+&gt;</code>往右缩进</li>
-<li><code>shift+~</code>或者<code>shift+u shift+U</code>大小写转换</li>
-</ul>
-<h2 id="10-11-查找和替换"><a href="#10-11-查找和替换" class="headerlink" title="10.11 查找和替换"></a>10.11 查找和替换</h2><ul>
-<li>查找 <code>/</code></li>
-<li>按n查找下一个</li>
-<li><code>:s /const/let/g</code> 一行const替换成let</li>
-<li><code>:%s /const/let/g</code> 所有const替换成let</li>
-<li><code>set number</code> 临时显示行号</li>
-<li><code>:9,15s /const/let/g</code> 9-15行const替换成let</li>
-<li><code>:%s /const/let/gc</code> 有提示的替换</li>
-</ul>
-<h2 id="10-12-vim的基础配置"><a href="#10-12-vim的基础配置" class="headerlink" title="10.12 vim的基础配置"></a>10.12 vim的基础配置</h2><ul>
-<li><code>touch .vimrc</code></li>
-<li><code>vim .vimrc</code></li>
-</ul>
-<p>将以下代码写入.vimrc中</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">set</span> <span class="token assign-left variable">syntax</span><span class="token operator">=</span>on
-<span class="token builtin class-name">set</span> <span class="token assign-left variable">tabstop</span><span class="token operator">=</span><span class="token number">4</span>
-<span class="token builtin class-name">set</span> <span class="token assign-left variable">softtabstop</span><span class="token operator">=</span><span class="token number">4</span>
-<span class="token builtin class-name">set</span> number
-<span class="token builtin class-name">set</span> <span class="token assign-left variable">enc</span><span class="token operator">=</span>utf-8
-<span class="token builtin class-name">set</span> showmatch</code></pre>
-<ul>
-<li>source .vimrc</li>
-</ul>
+                <blockquote>
+<p>本文内容来自 B 站 UP 主 <a target="_blank" rel="noopener" href="https://space.bilibili.com/165659472">@技术胖</a>的视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ke4y1v7Xd/">前端老司机 300+实用工具分享</a> 若造成侵权请联系我进行删除。</p>
+<h2 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h2><h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><ul>
+<li>Underscore.js<br>一套完善的函数式编程的接口，更方便地在JavaScript中实现函数式编程<br><a target="_blank" rel="noopener" href="https://underscorejs.org/">https://underscorejs.org/</a></li>
+<li>fastclick<br>用于消除物理点击和click移动浏览器上事件触发之间的 300 毫秒延迟<br><a target="_blank" rel="noopener" href="https://github.com/ftlabs/fastclick">https://github.com/ftlabs/fastclick</a></li>
+<li>Lodash<br>一致性、模块化、高性能的 JavaScript 实用工具库<br><a target="_blank" rel="noopener" href="https://lodash.com/">https://lodash.com/</a></li>
+<li>crypto-js<br>加密标准的 JavaScript 库。<br><a target="_blank" rel="noopener" href="https://github.com/brix/crypto-js">https://github.com/brix/crypto-js</a></li>
+<li>zxcvbn<br>JavaScript密码强度估算库<br><a target="_blank" rel="noopener" href="https://github.com/dropbox/zxcvbn">https://github.com/dropbox/zxcvbn</a></li>
+<li>zxcvbn-ts<br>支持Typescript的密码强度估算库<br><a target="_blank" rel="noopener" href="https://github.com/zxcvbn-ts/zxcvbn">https://github.com/zxcvbn-ts/zxcvbn</a></li>
+<li>clipboard.js<br>将文本复制到剪贴板的轻量级JS 库<br><a target="_blank" rel="noopener" href="https://clipboardjs.com/">https://clipboardjs.com/</a></li>
+<li>tesseract.js<br>Javascript的OCR引擎，在浏览器离线识别图片中的文字<br><a target="_blank" rel="noopener" href="https://tesseract.projectnaptha.com/">https://tesseract.projectnaptha.com/</a></li>
+<li>number-precision<br>小而快的库，用于精确地进行加法、减法、乘法和除法运算<br><a target="_blank" rel="noopener" href="https://github.com/nefe/number-precision">https://github.com/nefe/number-precision</a></li>
+<li>fingerprintjs<br>具有高准确度和稳定性的浏览器指纹库<br><a target="_blank" rel="noopener" href="https://fingerprint.com/">https://fingerprint.com/</a></li>
+<li>ViteShot<br>基于Vite的快速简单的截图工具。<br><a target="_blank" rel="noopener" href="https://viteshot.com/">https://viteshot.com/</a></li>
+<li>Valine<br>快速、简洁且高效的无后端评论系统<br><a target="_blank" rel="noopener" href="https://valine.js.org/">https://valine.js.org/</a></li>
+<li>cnpm<br>淘宝提供的一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 一次以保证尽量与官方服务同步<br><a target="_blank" rel="noopener" href="https://npmmirror.com/">https://npmmirror.com/</a></li>
+<li>yarn<br>快速、可靠和安全的依赖管理<br><a target="_blank" rel="noopener" href="https://yarnpkg.com/">https://yarnpkg.com/</a></li>
+<li>responsively-app<br>一种改进的 Web 浏览器，有助于响应式 Web 开发。Web 开发人员必须拥有开发工具<br><a target="_blank" rel="noopener" href="https://responsively.app/">https://responsively.app/</a></li>
+<li>javascript-obfuscator<br>功能强大的免费 JavaScript 混淆器，包含多种功能，可为源代码提供保护<br><a target="_blank" rel="noopener" href="https://obfuscator.io/">https://obfuscator.io/</a></li>
+<li>Nano ID<br>小巧的、安全的、URL 友好的、独特的 JavaScript 字符串 唯一 ID 生成器<br><a target="_blank" rel="noopener" href="https://zelark.github.io/nano-id-cc/">https://zelark.github.io/nano-id-cc/</a></li>
+<li>spy-debugger<br>一站式页面调试、抓包工具。远程调试任何手机浏览器页面，任何手机移动端webview（如：微信，HybridApp等）。支持HTTP/HTTPS，无需USB连接设备<br><a target="_blank" rel="noopener" href="https://responsively.app/">https://responsively.app/</a></li>
+<li>fuite<br>用于查找 Web 应用程序中的内存泄漏的工具<br><a target="_blank" rel="noopener" href="https://github.com/nolanlawson/fuite">https://github.com/nolanlawson/fuite</a></li>
+<li>qs<br>查询字符串解析和字符串化库<br><a target="_blank" rel="noopener" href="https://github.com/ljharb/qs">https://github.com/ljharb/qs</a></li>
+<li>js-cookie<br>用于处理 cookie 的简单、轻量级 JavaScript API<br><a target="_blank" rel="noopener" href="https://github.com/js-cookie/js-cookie">https://github.com/js-cookie/js-cookie</a></li>
+<li>tinymce<br>排名第一的可定制、可扩展和灵活的富文本编辑器<br><a target="_blank" rel="noopener" href="https://www.tiny.cloud/">https://www.tiny.cloud/</a></li>
+<li>html2canvas<br>允许在用户浏览器上对网页或其部分进行“截图”<br><a target="_blank" rel="noopener" href="https://html2canvas.hertzen.com/">https://html2canvas.hertzen.com/</a></li>
+<li>shepherd<br>引导用户浏览您的应用<br><a target="_blank" rel="noopener" href="https://shepherdjs.dev/">https://shepherdjs.dev/</a></li>
+<li>tinykeys<br>极小的键盘事件监听库<br><a target="_blank" rel="noopener" href="https://jamiebuilds.github.io/tinykeys/">https://jamiebuilds.github.io/tinykeys/</a></li>
+<li>ag-grid<br>用于构建企业应用程序的最佳 JavaScript 数据表<br><a target="_blank" rel="noopener" href="https://www.ag-grid.com/">https://www.ag-grid.com/</a></li>
+<li>tui.calendar<br>功能齐全的 JavaScript 日程表<br><a target="_blank" rel="noopener" href="https://ui.toast.com/tui-calendar">https://ui.toast.com/tui-calendar</a></li>
+<li>screenfull<br>用于跨浏览器使用 JavaScript Fullscreen API 的简单包装器<br><a target="_blank" rel="noopener" href="https://sindresorhus.com/screenfull/">https://sindresorhus.com/screenfull/</a></li>
+<li>Fuse.js<br>JavaScript 中的轻量级模糊搜索<br><a target="_blank" rel="noopener" href="https://fusejs.io/">https://fusejs.io/</a></li>
+<li>i18next<br>用于浏览器或任何其他 javascript 环境（例如 Node.js、Deno）的国际化框架<br><a target="_blank" rel="noopener" href="https://www.i18next.com/">https://www.i18next.com/</a></li>
+<li>JsBarcode<br>适用于 Web 和 Node.js 的易于使用但功能强大的条形码生成器<br><a target="_blank" rel="noopener" href="https://lindell.me/JsBarcode/">https://lindell.me/JsBarcode/</a></li>
+<li>path-to-regexp<br>将 <code>/user/:name</code> 等路径字符串转换为正则表达式<br><a target="_blank" rel="noopener" href="https://github.com/pillarjs/path-to-regexp">https://github.com/pillarjs/path-to-regexp</a></li>
+<li>await-to-js<br>异步等待包装器，无需 try-catch 即可轻松处理错误<br><a target="_blank" rel="noopener" href="https://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/">https://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/</a></li>
+<li>md5<br>用 MD5 散列消息的 JavaScript 函数<br><a target="_blank" rel="noopener" href="https://github.com/pvorb/node-md5">https://github.com/pvorb/node-md5</a></li>
+<li>mitt.js<br>它足够小，仅有200bytes，其次支持全部事件的监听和批量移除，替代EventBus<br><a target="_blank" rel="noopener" href="https://npm.im/mitt">https://npm.im/mitt</a></li>
+<li>js-spark-md5<br>MD5 算法的快速 md5 实现<br><a target="_blank" rel="noopener" href="https://github.com/satazor/js-spark-md5">https://github.com/satazor/js-spark-md5</a></li>
+<li>nano<br>小型（130 字节）、安全、URL 友好、唯一的 JavaScript 字符串 ID 生成器<br><a target="_blank" rel="noopener" href="https://zelark.github.io/nano-id-cc/">https://zelark.github.io/nano-id-cc/</a></li>
+<li>jsPDF<br>用 JavaScript 生成 PDF<br><a target="_blank" rel="noopener" href="https://parall.ax/products/jspdf">https://parall.ax/products/jspdf</a> </li>
+<li>ua-parser-js<br>从User-Agen中检测浏览器、引擎、操作系统、CPU 和设备类型/型号，占用空间相对较小（压缩后约 17KB，压缩后约 6KB），支持浏览器和 node.js 环境<br><a target="_blank" rel="noopener" href="http://faisalman.github.io/ua-parser-js/">http://faisalman.github.io/ua-parser-js/</a></li>
+<li>togetherjs<br>网站添加实时协作功能的JavaScript库，两个人可以在同一页面上进行交互，查看彼此的光标、编辑并一起浏览网站<br><a target="_blank" rel="noopener" href="https://togetherjs.com/">https://togetherjs.com/</a></li>
+<li>Clusterize.js<br>开源的长列表渲染库，轻量级的原生大数据量展示<br><a target="_blank" rel="noopener" href="https://clusterize.js.org/">https://clusterize.js.org/</a></li>
+<li>crypto-js-wasm<br>加密标准的 javascript 库，比 crypto-js快16 倍<br><a target="_blank" rel="noopener" href="https://github.com/originjs/crypto-js-wasm">https://github.com/originjs/crypto-js-wasm</a></li>
+<li>pdfkit<br>用于 Node 和浏览器的 JavaScript PDF 生成库<br><a target="_blank" rel="noopener" href="http://pdfkit.org/">http://pdfkit.org/</a></li>
+<li>zx<br>使用js编写更便捷shell脚本<br><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/zx">https://www.npmjs.com/package/zx</a></li>
+<li>NProgress.js<br>适用于应用程序的进度条，受 Google、YouTube 和 Medium 的启发<br><a target="_blank" rel="noopener" href="https://ricostacruz.com/nprogress/">https://ricostacruz.com/nprogress/</a><h3 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h3></li>
+<li>highlight.js<br>JavaScript 语法高亮器，具有语言自动检测和零依赖项<br><a target="_blank" rel="noopener" href="https://highlightjs.org/">https://highlightjs.org/</a></li>
+<li>Drawflow<br>创建简单的流程库<br><a target="_blank" rel="noopener" href="https://jerosoler.github.io/Drawflow/">https://jerosoler.github.io/Drawflow/</a></li>
+<li>tui.image-editor<br>HTML5 Canvas 的全功能图像编辑器。它易于使用并提供强大的过滤器<br><a target="_blank" rel="noopener" href="https://ui.toast.com/tui-image-editor">https://ui.toast.com/tui-image-editor</a></li>
+<li>viewerjs<br>JavaScript 图像查看器<br><a target="_blank" rel="noopener" href="https://fengyuanchen.github.io/viewerjs/">https://fengyuanchen.github.io/viewerjs/</a></li>
+<li>prism.js<br>轻量级、健壮、优雅的语法高亮库<br><a target="_blank" rel="noopener" href="https://prismjs.com/">https://prismjs.com/</a></li>
+<li>fabric.js<br>功能强大且简单的 Canvas库，轻松处理 HTML5 画布元素。是画布元素之上的交互式对象模型，也是一个SVG-to-canvas 解析器<br><a target="_blank" rel="noopener" href="http://fabricjs.com/">http://fabricjs.com/</a></li>
+<li>fullPage.js<br>用于创建全屏滚动网站（也称为单页网站或一页网站），并在该网站的各个部分内添加横向滑块<br><a target="_blank" rel="noopener" href="https://alvarotrigo.com/fullPage/">https://alvarotrigo.com/fullPage/</a></li>
+<li>opentype.js<br>OpenType 和 TrueType 字体解析器和编写器。它允许您从浏览器或 node.js访问文本的字母形式<br><a target="_blank" rel="noopener" href="https://opentype.js.org/">https://opentype.js.org/</a></li>
+<li>icones.js<br>具有即时搜索功能的图标资源管理器，由 Iconify 提供支持<br><a target="_blank" rel="noopener" href="https://icones.js.org/">https://icones.js.org/</a></li>
+<li>reveal.js<br>创建功能齐全且精美的演示文稿<br><a target="_blank" rel="noopener" href="https://revealjs.com/">https://revealjs.com/</a></li>
+<li>carbon<br>创建和共享源代码的精美图像<br><a target="_blank" rel="noopener" href="https://carbon.now.sh/">https://carbon.now.sh/</a></li>
+<li>lucky-canvas<br>基于 TS + Canvas 开发的【大转盘 / 九宫格 / 老虎机】抽奖插件， 一套源码适配多端框架 JS / Vue / React / Taro / UniApp / 微信小程序等<br><a target="_blank" rel="noopener" href="https://100px.net/">https://100px.net/</a></li>
+<li>Darkmode.js<br>在几秒钟内为您的网站添加暗模式/夜间模式<br><a target="_blank" rel="noopener" href="https://darkmodejs.learn.uno/?_360safeparam=8406218">https://darkmodejs.learn.uno/?_360safeparam=8406218</a></li>
+<li>ECharts<br>强大的交互式图表和浏览器数据可视化库<br><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/index.html">https://echarts.apache.org/zh/index.html</a></li>
+<li>PixiJS<br>使用最快，最灵活的2D WebGL渲染器创建精美的内容<br><a target="_blank" rel="noopener" href="https://pixijs.com/">https://pixijs.com/</a></li>
+<li>AntV - G2<br>数据驱动，高度易用，可扩展的可视化图形语法。<br><a target="_blank" rel="noopener" href="https://g2plot.antv.vision/zh/">https://g2plot.antv.vision/zh/</a></li>
+<li>ApexCharts.js<br>基于SVG的JavaScript图表库，可使用简单的API构建交互式图表和可视化文件</li>
+<li>OpenLayers<br>高性能，功能丰富的库，用于在Web上创建交互式地图。它可以显示从任何网页上的任何来源加载的地图图块，矢量数据和标记<br><a target="_blank" rel="noopener" href="https://openlayers.org/">https://openlayers.org/</a></li>
+<li>Two.js<br>面向现代Web浏览器的二维绘图api，渲染不可知实现相同的API在多种环境中得出：svg，canvas，和webgl<br><a target="_blank" rel="noopener" href="https://two.js.org/">https://two.js.org/</a></li>
+<li>Paper.js<br>基于HTML5 Canvas的矢量图形的图形库<br><a target="_blank" rel="noopener" href="http://paperjs.org/">http://paperjs.org/</a></li>
+<li>Panolens.js<br>事件驱动的基于WebGL的全景查看器。轻巧而灵活。它建立在Three.JS之上<br><a target="_blank" rel="noopener" href="https://pchen66.github.io/Panolens/">https://pchen66.github.io/Panolens/</a></li>
+<li>A-Frame<br>用于构建 3D/AR/VR 体验的 Web 框架<br><a target="_blank" rel="noopener" href="https://aframe.io/">https://aframe.io/</a></li>
+<li>mermaid-js<br>以与 Markdown 类似的方式从文本生成图表和流程图<br><a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/">https://mermaid-js.github.io/mermaid/</a></li>
+<li>mo · js<br>为网站添加基于JavaScript的动态图形<br><a target="_blank" rel="noopener" href="https://mojs.github.io/">https://mojs.github.io/</a></li>
+<li>trianglify<br>Javascript 库，用于创建独特的、美观的三角形图案<br><a target="_blank" rel="noopener" href="http://qrohlf.com/trianglify/">http://qrohlf.com/trianglify/</a></li>
+<li>Babylon.js<br>能强大、美观、简单、开放的游戏和渲染引擎<br><a target="_blank" rel="noopener" href="https://www.babylonjs.com/">https://www.babylonjs.com/</a></li>
+<li>Oasis Engine<br>高性能 Web 蚂蚁图形引擎<br><a target="_blank" rel="noopener" href="https://oasisengine.cn/">https://oasisengine.cn/</a></li>
+<li>Butterfly<br>基于JS的数据驱动的节点式编排组件库<br><a target="_blank" rel="noopener" href="https://butterfly-dag.gitee.io/butterfly-dag/home">https://butterfly-dag.gitee.io/butterfly-dag/home</a></li>
+<li>image-optimizer<br>使用 Electron、Vue 和 Vite 用于优化图像和矢量图形的免费开源工具<br><a target="_blank" rel="noopener" href="https://github.com/antonreshetov/image-optimizer">https://github.com/antonreshetov/image-optimizer</a></li>
+<li>Sketchfab<br>需任何插件即可在Web页面里嵌入交互式3D模型<br><a target="_blank" rel="noopener" href="https://sketchfab.com/">https://sketchfab.com/</a></li>
+<li>vConsole<br>用于移动网页的轻量级、可扩展的前端开发工具<br><a target="_blank" rel="noopener" href="https://github.com/Tencent/vConsole">https://github.com/Tencent/vConsole</a></li>
+<li>swiper<br>免费且最现代的移动触摸滑块，具有硬件加速过渡和惊人的原生行为<br><a target="_blank" rel="noopener" href="https://swiperjs.com/">https://swiperjs.com/</a></li>
+<li>Slidev<br>面向开发人员的演示幻灯片<br><a target="_blank" rel="noopener" href="https://sli.dev/">https://sli.dev/</a></li>
+<li>konva<br>HTML5 Canvas JavaScript 框架，它支持桌面和移动应用程序的高性能动画、过渡、节点嵌套、分层、过滤、缓存、事件处理等等<br><a target="_blank" rel="noopener" href="https://konvajs.org/">https://konvajs.org/</a></li>
+<li>p5.j​​s<br>开源的JavaScript可视化库，processing的js实现版本<br><a target="_blank" rel="noopener" href="https://p5js.org/zh-Hans/">https://p5js.org/zh-Hans/</a></li>
+<li>cesium<br>用于世界级 3D 地球仪和地图的开源 JavaScript 库<br><a target="_blank" rel="noopener" href="https://cesium.com/platform/cesiumjs/">https://cesium.com/platform/cesiumjs/</a></li>
+<li>driver.js<br>一个轻量级、无依赖的用户引导组件<br><a target="_blank" rel="noopener" href="https://kamranahmed.info/driver.js/">https://kamranahmed.info/driver.js/</a></li>
+<li>vanilla-tilt.js<br>平滑的 3D 倾斜 JavaScript 库<br><a target="_blank" rel="noopener" href="https://micku7zu.github.io/vanilla-tilt.js/index.html">https://micku7zu.github.io/vanilla-tilt.js/index.html</a></li>
+<li>parallax.js<br>对智能设备的方向引擎响应的视差<br><a target="_blank" rel="noopener" href="http://matthew.wagerfield.com/parallax/">http://matthew.wagerfield.com/parallax/</a></li>
+<li>signature_pad<br>基于 HTML5 canvas 的平滑签名绘制<br><a target="_blank" rel="noopener" href="http://szimek.github.io/signature_pad/">http://szimek.github.io/signature_pad/</a></li>
+<li>compressorjs<br>JavaScript 图像压缩器<br><a target="_blank" rel="noopener" href="https://fengyuanchen.github.io/compressorjs/">https://fengyuanchen.github.io/compressorjs/</a></li>
+<li>eva.js<br>用于创建交互式游戏项目的前端游戏引擎<br><a target="_blank" rel="noopener" href="https://eva.js.org/">https://eva.js.org/</a></li>
+<li>d3<br>基于数据来操作文档的JavaScript库<br><a target="_blank" rel="noopener" href="https://d3js.org/">https://d3js.org/</a><h3 id="动画插件"><a href="#动画插件" class="headerlink" title="动画插件"></a>动画插件</h3></li>
+<li>countUp.js<br>无依赖项的轻量级Javascript类，可用于快速创建以更有趣的方式显示数字数据的动画<br><a target="_blank" rel="noopener" href="https://inorganik.github.io/countUp.js/">https://inorganik.github.io/countUp.js/</a></li>
+<li>impress.js<br>CSS3 转换和过渡的强大功能的演示框架<br><a target="_blank" rel="noopener" href="https://impress.js.org/">https://impress.js.org/</a></li>
+<li>Anime.js<br>轻量级的 JavaScript 动画库，具有简单而强大的 API<br><a target="_blank" rel="noopener" href="https://animejs.com/">https://animejs.com/</a></li>
+<li>tween.js<br>用于简单动画的 JavaScript 补间引擎，包含优化的 Robert Penner 方程<br><a target="_blank" rel="noopener" href="http://tweenjs.github.io/tween.js/">http://tweenjs.github.io/tween.js/</a></li>
+<li>Popmotion<br>制作数字、颜色和复杂字符串的动画。该库的主要动画功能只有5kb左右，整个库的容量在12kb左右<br><a target="_blank" rel="noopener" href="https://popmotion.io/">https://popmotion.io/</a></li>
+<li>Typed.js<br>打字动画库<br><a target="_blank" rel="noopener" href="https://mattboldt.com/demos/typed-js/">https://mattboldt.com/demos/typed-js/</a></li>
+<li>vivus.js<br>在 SVG 上制作绘图动画的 JavaScript 库<br><a target="_blank" rel="noopener" href="https://maxwellito.github.io/vivus/">https://maxwellito.github.io/vivus/</a></li>
+<li>ScrollReveal<br>在元素滚入或滚出视口时为其制作动画<br><a target="_blank" rel="noopener" href="https://scrollrevealjs.org/">https://scrollrevealjs.org/</a></li>
+<li>canvas-confetti<br>按需 五彩纸屑<br><a target="_blank" rel="noopener" href="https://catdad.github.io/canvas-confetti/">https://catdad.github.io/canvas-confetti/</a></li>
+<li>GSAP<br>强大的 JavaScript 工具集，构建适用于所有主流浏览器的高性能动画。动画 CSS、SVG、画布、React、Vue、WebGL、颜色、字符串、运动路径、通用对象<br><a target="_blank" rel="noopener" href="https://greensock.com/">https://greensock.com/</a></li>
+<li>lax.js<br>轻量级（&lt;4kb gzipped）香草 JavaScript 库，可在您滚动时创建流畅美观的动画<br><a target="_blank" rel="noopener" href="https://github.com/alexfoxy/lax.js">https://github.com/alexfoxy/lax.js</a></li>
+<li>animxyz<br>AnimXYZ 可帮助您为您的网站创建、自定义和组合动画<br><a target="_blank" rel="noopener" href="https://animxyz.com/">https://animxyz.com/</a></li>
+<li>svg.js<br>用于操作和动画 SVG 的轻量级库<br><a target="_blank" rel="noopener" href="https://svgjs.dev/docs/3.0/">https://svgjs.dev/docs/3.0/</a></li>
+<li>zdog<br>用于画布和 SVG 的扁平、圆形、设计师友好的伪 3D 引擎<br><a target="_blank" rel="noopener" href="https://zzz.dog/">https://zzz.dog/</a></li>
+<li>dynamics.js<br>用于创建基于物理的动画的 JavaScript 库<br><a target="_blank" rel="noopener" href="http://dynamicsjs.com/">http://dynamicsjs.com/</a></li>
+<li>Proton<br>Javascript粒子动画库<br><a target="_blank" rel="noopener" href="https://drawcall.github.io/Proton/">https://drawcall.github.io/Proton/</a><h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3></li>
+<li>SheetJS<br>可读取和导出excel的工具库，功能强大，支持格式众多，支持xls、xlsx、ods(一种OpenOffice专有表格文件格式)等十几种格式<br><a target="_blank" rel="noopener" href="https://sheetjs.com/">https://sheetjs.com/</a></li>
+<li>revogrid<br>具有高级定制功能的强大虚拟数据表格<br><a target="_blank" rel="noopener" href="https://revolist.github.io/revogrid/">https://revolist.github.io/revogrid/</a></li>
+<li>FileSaver.js<br>客户端保存文件的解决方案<br><a target="_blank" rel="noopener" href="https://eligrey.com/blog/saving-generated-files-on-the-client-side/">https://eligrey.com/blog/saving-generated-files-on-the-client-side/</a></li>
+<li>jszip<br>使用 Javascript 创建、读取和编辑 .zip 文件<br><a target="_blank" rel="noopener" href="https://stuk.github.io/jszip/">https://stuk.github.io/jszip/</a></li>
+<li>Print.js<br>帮助从网络打印的小型 javascript 库<br><a target="_blank" rel="noopener" href="https://printjs.crabbly.com/">https://printjs.crabbly.com/</a></li>
+<li>mammoth.js<br>将 Word 文档（.docx 文件）转换为 HTML<br><a target="_blank" rel="noopener" href="https://github.com/mwilliamson/mammoth.js">https://github.com/mwilliamson/mammoth.js</a></li>
+<li>StreamSaver.js<br>直接异步将流写入文件系统，适合大文件下载<br><a target="_blank" rel="noopener" href="https://jimmywarting.github.io/StreamSaver.js/example.html">https://jimmywarting.github.io/StreamSaver.js/example.html</a></li>
+<li>PDF.js<br>使用 HTML5 构建的可移植文档格式 (PDF) 查看器<br><a target="_blank" rel="noopener" href="https://github.com/mozilla/pdf.js">https://github.com/mozilla/pdf.js</a></li>
+<li>pdfmake<br>用于服务器端和客户端的 PDF 文档生成库<br><a target="_blank" rel="noopener" href="http://pdfmake.org/">http://pdfmake.org/</a></li>
+<li>pdf-lib<br>在任何 JavaScript 环境中创建和修改 PDF 文档<br><a target="_blank" rel="noopener" href="https://pdf-lib.js.org/">https://pdf-lib.js.org/</a></li>
+<li>uppy<br>JavaScript 文件上传器<br><a target="_blank" rel="noopener" href="https://uppy.io/">https://uppy.io/</a><h3 id="音视频"><a href="#音视频" class="headerlink" title="音视频"></a>音视频</h3></li>
+<li>moovie.js<br>专注于电影的 HTML5 播放器<br><a target="_blank" rel="noopener" href="https://mooviejs.com/">https://mooviejs.com/</a></li>
+<li>meyda.js<br>JavaScript 音频特征提取库<br><a target="_blank" rel="noopener" href="https://meyda.js.org/">https://meyda.js.org/</a></li>
+<li>howler.js<br>Javascript 音频库<br><a target="_blank" rel="noopener" href="https://howlerjs.com/">https://howlerjs.com/</a></li>
+<li>flv.js<br>HTML5 FLV 播放器<br><a target="_blank" rel="noopener" href="https://github.com/Bilibili/flv.js/">https://github.com/Bilibili/flv.js/</a></li>
+<li>plyr<br>HTML5、YouTube 和 Vimeo 播放器<br><a target="_blank" rel="noopener" href="https://plyr.io/">https://plyr.io/</a></li>
+<li>xgplayer 西瓜播放器<br>网络视频和音频播放器库<br><a target="_blank" rel="noopener" href="https://h5player.bytedance.com/">https://h5player.bytedance.com/</a></li>
+<li>hls.js<br>可在支持 MSE 的浏览器中播放 HLS<br><a target="_blank" rel="noopener" href="https://hls-js.netlify.app/demo/">https://hls-js.netlify.app/demo/</a><h3 id="智能化"><a href="#智能化" class="headerlink" title="智能化"></a>智能化</h3></li>
+<li>tensorflow.js<br>用于在浏览器和 Node.js 训练和部署机器学习模型<br><a target="_blank" rel="noopener" href="https://tensorflow.google.cn/">https://tensorflow.google.cn/</a></li>
+<li>face-api.js<br>用于在浏览器和 nodejs 中使用 tensorflow.js 进行人脸检测和人脸识别的 JavaScript API<br><a target="_blank" rel="noopener" href="https://github.com/justadudewhohacks/face-api.js/">https://github.com/justadudewhohacks/face-api.js/</a></li>
+<li>tracking.js<br>将不同的计算机视觉算法和技术引入浏览器环境。通过使用现代HTML5规范，我们使您能够进行实时颜色跟踪，人脸检测等<br><a target="_blank" rel="noopener" href="https://trackingjs.com/">https://trackingjs.com/</a></li>
+<li>pose-animator<br>识别出人类的表情变化和肢体动作，并将其映射到2D矢量图型上<br><a target="_blank" rel="noopener" href="https://github.com/yemount/pose-animator">https://github.com/yemount/pose-animator</a></li>
+<li>ar-cutpaste<br>手机上预装工具，对着目标物体拍摄，即可将图像复制粘贴进 Photoshop<br><a target="_blank" rel="noopener" href="https://github.com/cyrildiagne/ar-cutpaste">https://github.com/cyrildiagne/ar-cutpaste</a></li>
+<li>imgcook<br>专注以 Sketch、PSD、静态图片等形式的视觉稿作为输入，通过智能化技术一键生成可维护的前端代码<br><a target="_blank" rel="noopener" href="https://www.imgcook.com/">https://www.imgcook.com/</a></li>
+<li>nsfwjs<br>帮助快速识别不合时宜的图像<br><a target="_blank" rel="noopener" href="https://nsfwjs.com/">https://nsfwjs.com/</a><h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3></li>
+<li>Vditor<br>Markdown 编辑器，支持所见即所得、即时渲染（类似 Typora）和分屏预览模式，由 TypeScript 实现，支持原生 JavaScript、Vue、React、Angular，提供桌面版<br><a target="_blank" rel="noopener" href="https://b3log.org/vditor/">https://b3log.org/vditor/</a></li>
+<li>monaco-editor<br>为VS Code提供支持的代码编辑器<br><a target="_blank" rel="noopener" href="https://microsoft.github.io/monaco-editor/">https://microsoft.github.io/monaco-editor/</a></li>
+<li>bytemd<br>用 Svelte 构建的 Markdown 编辑器组件。它也可以用于其他库/框架，例如 React、Vue 和 Angular<br><a target="_blank" rel="noopener" href="https://bytemd.netlify.app/">https://bytemd.netlify.app/</a></li>
+<li>wangEditor<br>Typescript 开发的 Web 富文本编辑器， 轻量、简洁、易用、开源免费<br><a target="_blank" rel="noopener" href="https://www.wangeditor.com/">https://www.wangeditor.com/</a></li>
+<li>mavonEditor<br>Markdown 编辑器，支持多种个性化功能<br><a target="_blank" rel="noopener" href="http://www.mavoneditor.com/">http://www.mavoneditor.com/</a></li>
+<li>quill<br>API 驱动的富文本编辑器<br><a target="_blank" rel="noopener" href="https://quilljs.com/">https://quilljs.com/</a></li>
+<li>codemirror5<br>浏览器内代码编辑器<br><a target="_blank" rel="noopener" href="https://codemirror.net/">https://codemirror.net/</a></li>
+<li>marked<br>用于解析 Markdown 的编译器<br><a target="_blank" rel="noopener" href="https://marked.js.org/">https://marked.js.org/</a></li>
+<li>tiptap<br>完全控制文本编辑器体验。它是可定制的，带有大量扩展，是开源的，并且有大量的文档<br><a target="_blank" rel="noopener" href="https://tiptap.dev/">https://tiptap.dev/</a><h3 id="2D-3D"><a href="#2D-3D" class="headerlink" title="2D 3D"></a>2D 3D</h3></li>
+<li>dat.gui<br>在 JavaScript 中更改变量的轻量级图形用户界面<br><a target="_blank" rel="noopener" href="https://github.com/dataarts/dat.gui">https://github.com/dataarts/dat.gui</a></li>
+<li>Three.js<br>易于使用、轻量级、跨浏览器的通用 3D 库<br><a target="_blank" rel="noopener" href="https://threejs.org/">https://threejs.org/</a></li>
+<li>Draco 3D<br>缩和解压缩 3D 几何网格和点云。它旨在改进 3D 图形的存储和传输<br><a target="_blank" rel="noopener" href="https://google.github.io/draco/">https://google.github.io/draco/</a></li>
+<li>stats.js<br>JavaScript 性能监视器<br><a target="_blank" rel="noopener" href="http://mrdoob.github.io/stats.js/">http://mrdoob.github.io/stats.js/</a></li>
+<li>matter-js<br>一个用于 web 的 JavaScript 2D 物理引擎<br><a target="_blank" rel="noopener" href="https://brm.io/matter-js/">https://brm.io/matter-js/</a></li>
+<li>Oimo.js<br>用于 javascript 的轻量级 3d 物理引擎，是OimoPhysics<br>的完整 javascript 转换<br><a target="_blank" rel="noopener" href="http://lo-th.github.io/Oimo.js/#basic">http://lo-th.github.io/Oimo.js/#basic</a></li>
+<li>ammo.js<br>使用 Emscripten 将 Bullet 物理引擎直接移植到 JavaScript<br><a target="_blank" rel="noopener" href="https://github.com/kripken/ammo.js">https://github.com/kripken/ammo.js</a><h3 id="其他常用"><a href="#其他常用" class="headerlink" title="其他常用"></a>其他常用</h3></li>
+<li>Auto.js Pro<br>Android上支持Node.js的JavaScript自动化和编程软件<br><a target="_blank" rel="noopener" href="https://pro.autojs.org/">https://pro.autojs.org/</a></li>
+<li>Inquirer.js<br>实现命令行交互式界面的工具集合<br><a target="_blank" rel="noopener" href="https://github.com/SBoudrias/Inquirer.js/">https://github.com/SBoudrias/Inquirer.js/</a></li>
+<li>chalk<br>命令行美化工具<br><a target="_blank" rel="noopener" href="https://github.com/chalk/chalk">https://github.com/chalk/chalk</a></li>
+<li>Timer.js<br>简单而轻量级的库，无需任何依赖项来创建和管理计时器<br><a target="_blank" rel="noopener" href="https://github.com/husa/timer.js">https://github.com/husa/timer.js</a></li>
+<li>day.js<br>极简的 JavaScript 库，它使用与 Moment.js 兼容的 API 为现代浏览器解析、验证、操作和显示日期和时间<br><a target="_blank" rel="noopener" href="https://day.js.org/">https://day.js.org/</a></li>
+<li>Socket.io<br>支持基于事件的实时双向通信<br><a target="_blank" rel="noopener" href="https://socket.io/">https://socket.io/</a></li>
+<li>The Algorithms<br>GitHub 最大的开源算法库<br><a target="_blank" rel="noopener" href="https://the-algorithms.com/">https://the-algorithms.com/</a></li>
+<li>log-symbols<br>各种日志级别的彩色符号<br><a target="_blank" rel="noopener" href="https://github.com/sindresorhus/log-symbols">https://github.com/sindresorhus/log-symbols</a></li>
+<li>plop<br>微型生成器框架，使整个团队可以轻松地创建具有一定一致性的文件<br><a target="_blank" rel="noopener" href="https://plopjs.com/">https://plopjs.com/</a></li>
+<li>prompts<br>轻量级、美观且用户友好的交互式提示<br><a target="_blank" rel="noopener" href="https://github.com/terkelg/prompts">https://github.com/terkelg/prompts</a></li>
+<li>shelljs<br>基于 Node.js API 的 Unix shell 命令的可移植（Windows/Linux/macOS）实现<br><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/shelljs">https://www.npmjs.com/package/shelljs</a></li>
+<li>figlet<br>浏览器控制台个性化输出<br><a target="_blank" rel="noopener" href="https://github.com/patorjk/figlet.js">https://github.com/patorjk/figlet.js</a></li>
+<li>picocolors<br>终端修改输出字符样式的 npm 包，比 chalk 体积小 14 倍，速度快 2 倍<br><a target="_blank" rel="noopener" href="https://github.com/alexeyraspopov/picocolors">https://github.com/alexeyraspopov/picocolors</a></li>
+<li>cac<br>用于构建 CLI 应用程序的 JavaScript 库，体积数倍小于 commander 和 yargs<br><a target="_blank" rel="noopener" href="https://github.com/cacjs/cac">https://github.com/cacjs/cac</a></li>
+<li>npm-run-all<br>用于并行或顺序运行多个 npm 脚本的 CLI 工具<br><a target="_blank" rel="noopener" href="https://github.com/mysticatea/npm-run-all">https://github.com/mysticatea/npm-run-all</a></li>
+<li>node-semver<br>语义化版本号管理的 npm 库，比如 判断一个版本是否合法，判断版本号命名是否正确，两个版本谁大谁小之类 等<br><a target="_blank" rel="noopener" href="https://github.com/npm/node-semver">https://github.com/npm/node-semver</a></li>
+<li>puppeteer<br>在浏览器中手动执行的大多数操作都可以使用 Puppeteer 完成<br>生成页面的屏幕截图和 PDF。<br>抓取 SPA（单页应用程序）并生成预渲染内容<br>自动化表单提交、UI 测试、键盘输入等。<br><a target="_blank" rel="noopener" href="https://pptr.dev/">https://pptr.dev/</a></li>
+<li>temir<br>用vue组件来编写命令行界面应用的工具<br><a target="_blank" rel="noopener" href="https://github.com/webfansplz/temir">https://github.com/webfansplz/temir</a></li>
+<li>enquirer<br>适用于 Node.js 的时尚、直观且用户友好的提示<br><a target="_blank" rel="noopener" href="https://github.com/enquirer/enquirer">https://github.com/enquirer/enquirer</a><h2 id="跨平台"><a href="#跨平台" class="headerlink" title="跨平台"></a>跨平台</h2><h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3></li>
+<li>uni-app<br>使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、Web（响应式）、以及各种小程序等13个平台<br><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/">https://uniapp.dcloud.io/</a></li>
+<li>react-native<br>使用 React 构建移动应用程序<br><a target="_blank" rel="noopener" href="https://reactnative.dev/">https://reactnative.dev/</a></li>
+<li>Flutter<br>Google 的开源框架，用于构建美观、本机编译的多平台应用程序<br><a target="_blank" rel="noopener" href="https://flutter.dev/">https://flutter.dev/</a></li>
+<li>chameleon<br>一套代码运行多端，一端所见即多端所见<br><a target="_blank" rel="noopener" href="http://cml.didi.cn/">http://cml.didi.cn/</a></li>
+<li>Taro<br>遵循 React 语法规范的多端统一开发框架<br><a target="_blank" rel="noopener" href="https://taro.zone/">https://taro.zone/</a></li>
+<li>Electron<br>使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序<br><a target="_blank" rel="noopener" href="https://www.electronjs.org/">https://www.electronjs.org/</a></li>
+<li>MicroApp<br>京东零售推出的微前端框架。基于webcomponent-like渲染，从组件思维实现微前端，旨在降低上手难度，提高工作效率<br><a target="_blank" rel="noopener" href="https://micro-zoe.github.io/micro-app/">https://micro-zoe.github.io/micro-app/</a></li>
+<li>Tauri<br>使用 Web 前端构建更小、更快、更安全的桌面应用程序<br><a target="_blank" rel="noopener" href="https://tauri.studio/">https://tauri.studio/</a></li>
+<li>Hippy<br>跨平台的开发框架，旨在帮助开发者编写一次，运行在三个平台（iOS、Android 和 Web）上<br><a target="_blank" rel="noopener" href="https://hippyjs.org/#/">https://hippyjs.org/#/</a></li>
+<li>无界<br>基于 Web Components + iframe 微前端框架，具备成本低、速度快、原生隔离、功能强等一系列优点。<br><a target="_blank" rel="noopener" href="https://wujie-micro.github.io/doc/">https://wujie-micro.github.io/doc/</a></li>
+<li>qiankun<br>微前端的实现，基于single-spa。它旨在使构建生产就绪的微前端架构系统变得更加容易和轻松。<br><a target="_blank" rel="noopener" href="https://qiankun.umijs.org/zh">https://qiankun.umijs.org/zh</a><h3 id="Flutter"><a href="#Flutter" class="headerlink" title="Flutter"></a>Flutter</h3></li>
+<li>pub.dev<br>Dart和Flutter应用程序的官方包存储库<br><a target="_blank" rel="noopener" href="https://pub.dev/">https://pub.dev/</a></li>
+<li>awesome-flutter-plugins<br>尽可能收集好用的Flutter插件以便更效率的开发<br><a target="_blank" rel="noopener" href="https://github.com/jahnli/awesome-flutter-plugins">https://github.com/jahnli/awesome-flutter-plugins</a></li>
+<li>flutter-widget.live<br>使用 Flutter for web 构建的网站，用于在线实时预览小部件示例。<br><a target="_blank" rel="noopener" href="https://flutter-widget.live/basics/introduction">https://flutter-widget.live/basics/introduction</a></li>
+<li>google Icons<br>Google Material Design 图标<br><a target="_blank" rel="noopener" href="https://fonts.google.com/icons">https://fonts.google.com/icons</a></li>
+<li>Json To Dart Model<br>Json 转 Dart Model类<br><a target="_blank" rel="noopener" href="https://ashamp.github.io/jsonToDartModel/">https://ashamp.github.io/jsonToDartModel/</a></li>
+<li>flutter  awesome<br>很棒的列表，其中包含优秀的 Flutter 库和工具<br><a target="_blank" rel="noopener" href="https://flutterawesome.com/">https://flutterawesome.com/</a></li>
+<li>LottieFiles<br>免费 Lottie 动画文件、工具和插件<br><a target="_blank" rel="noopener" href="https://lottiefiles.com/">https://lottiefiles.com/</a><h3 id="Electron"><a href="#Electron" class="headerlink" title="Electron"></a>Electron</h3></li>
+<li>vue-cli-plugin-electron-builde<br>使用Electron轻松构建用于桌面的Vue.js应用<br><a target="_blank" rel="noopener" href="https://nklayman.github.io/vue-cli-plugin-electron-builder/">https://nklayman.github.io/vue-cli-plugin-electron-builder/</a></li>
+<li>electron-about-window<br>为Electron 提供 “关于此应用程序” 窗口。<br><a target="_blank" rel="noopener" href="https://github.com/rhysd/electron-about-window">https://github.com/rhysd/electron-about-window</a></li>
+<li>nativefier<br>使任何网页成为桌面应用程序<br><a target="_blank" rel="noopener" href="https://github.com/nativefier/nativefier">https://github.com/nativefier/nativefier</a><h3 id="Uniapp"><a href="#Uniapp" class="headerlink" title="Uniapp"></a>Uniapp</h3></li>
+<li>Grace UI<br>兼容微信小程序及uni-app的优秀前端框架，以flex布局为基础，提供了丰富的组件及界面库GraceUI<br><a target="_blank" rel="noopener" href="https://www.graceui.com/">https://www.graceui.com/</a></li>
+<li>uView<br>全面兼容nvue的uni-app生态框架，全面的组件和便捷的工具<br><a target="_blank" rel="noopener" href="https://www.uviewui.com/">https://www.uviewui.com/</a></li>
+<li>ThorUI<br>轻量、简洁、全面的移动端组件库<br><a target="_blank" rel="noopener" href="https://thorui.cn/doc/">https://thorui.cn/doc/</a><h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3></li>
+<li>cssfx<br>精美简单的点击复制 CSS 效果<br><a target="_blank" rel="noopener" href="https://cssfx.netlify.app/">https://cssfx.netlify.app/</a></li>
+<li>Twitter Hashflags<br>Twitter 点赞动画<br><a target="_blank" rel="noopener" href="https://hashflags.io/">https://hashflags.io/</a></li>
+<li>UI Snippets<br>UI 片段的集合<br><a target="_blank" rel="noopener" href="https://ui-snippets.dev/">https://ui-snippets.dev/</a></li>
+<li>SpinKit<br>CSS 动画的加载指示器<br><a target="_blank" rel="noopener" href="https://tobiasahlin.com/spinkit/">https://tobiasahlin.com/spinkit/</a></li>
+<li>animate.css<br>强大的预设css3动画库<br><a target="_blank" rel="noopener" href="https://animate.style/">https://animate.style/</a></li>
+<li>犸良<br>一站式动效制作平台，通过海量的动效素材以及可视化编辑能力，帮助零基础的用户轻松完成动效制作<br><a target="_blank" rel="noopener" href="https://design.alipay.com/emotion">https://design.alipay.com/emotion</a></li>
+<li>animista<br>Css 动画<br><a target="_blank" rel="noopener" href="https://animista.net/">https://animista.net/</a></li>
+<li>lordicon<br>功能强大的精心制作的动画图标库<br><a target="_blank" rel="noopener" href="https://lordicon.com/">https://lordicon.com/</a></li>
+<li>svg-spinners<br>24 x 24 dp的svg格式loading加载器<br><a target="_blank" rel="noopener" href="https://github.com/n3r4zzurr0/svg-spinners">https://github.com/n3r4zzurr0/svg-spinners</a></li>
+<li>magic<br>具有炫酷效果的 CSS3 动画<br><a target="_blank" rel="noopener" href="https://www.minimamente.com/project/magic/">https://www.minimamente.com/project/magic/</a></li>
+<li>Hover.css<br>CSS3 驱动的悬停效果，可应用于链接、按钮、徽标、SVG、特色图像等<br><a target="_blank" rel="noopener" href="http://ianlunn.github.io/Hover/">http://ianlunn.github.io/Hover/</a></li>
+<li>eva-icons<br>超过 480 个制作精美的开源图标。SVG、Sketch、Web 字体和动画支持<br><a target="_blank" rel="noopener" href="https://akveo.github.io/eva-icons/#/">https://akveo.github.io/eva-icons/#/</a><h3 id="工具-1"><a href="#工具-1" class="headerlink" title="工具"></a>工具</h3></li>
+<li>normalize.css<br>CSS 重置的现代替代方案<br><a target="_blank" rel="noopener" href="http://necolas.github.io/normalize.css/">http://necolas.github.io/normalize.css/</a></li>
+<li>Squoosh<br>对比 tinypng 有【更好的】压缩效果<br><a target="_blank" rel="noopener" href="https://squoosh.app/">https://squoosh.app/</a><h3 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h3></li>
+<li>Manypixels<br>收集无版权插图的网站，提供 SVG / PNG 格式下载，并且允许更改颜色<br><a target="_blank" rel="noopener" href="https://www.manypixels.co/gallery">https://www.manypixels.co/gallery</a></li>
+<li>U钙网<br>免费的LOGO在线设计制作工具<br><a target="_blank" rel="noopener" href="https://www.uugai.com/">https://www.uugai.com/</a></li>
+<li>design-blocks<br>一组 170 多个基于 Bootstrap 的设计块，可用于创建干净的现代网站<br><a target="_blank" rel="noopener" href="https://froala.com/design-blocks/">https://froala.com/design-blocks/</a></li>
+<li>unDraw<br>精美的 SVG 插画集<br><a target="_blank" rel="noopener" href="https://undraw.co/illustrations">https://undraw.co/illustrations</a></li>
+<li>Ira Design<br>通过调配渐变色、搭配手绘组件定制插画<br><a target="_blank" rel="noopener" href="https://iradesign.io/gallery/illustrations">https://iradesign.io/gallery/illustrations</a></li>
+<li>lukasz adam<br>免费 SVG 插画<br><a target="_blank" rel="noopener" href="https://lukaszadam.com/illustrations">https://lukaszadam.com/illustrations</a></li>
+<li>pixeltrue<br>创建令人叹为观止的项目的插图<br><a target="_blank" rel="noopener" href="https://www.pixeltrue.com/packs">https://www.pixeltrue.com/packs</a></li>
+<li>3dicons<br>3d图标库<br><a target="_blank" rel="noopener" href="https://3dicons.co/">https://3dicons.co/</a></li>
+<li>css-buttons<br>100 个现代 CSS 按钮<br><a target="_blank" rel="noopener" href="https://css-buttons.web.app/">https://css-buttons.web.app/</a></li>
+<li>uiset<br>优质免费的UI设计资源<br><a target="_blank" rel="noopener" href="https://uiset.com/">https://uiset.com/</a></li>
+<li>error404<br>404插画页面<br><a target="_blank" rel="noopener" href="https://error404.fun/">https://error404.fun/</a></li>
+<li>ui8<br>5,745 个精选设计资源，为您的创意工作流程注入活力<br><a target="_blank" rel="noopener" href="https://ui8.net/">https://ui8.net/</a><h2 id="编程工具"><a href="#编程工具" class="headerlink" title="编程工具"></a>编程工具</h2><h3 id="代码工具"><a href="#代码工具" class="headerlink" title="代码工具"></a>代码工具</h3></li>
+<li>gitignore.io<br>为项目创建有用的 .gitignore 文件<br><a target="_blank" rel="noopener" href="https://www.toptal.com/developers/gitignore">https://www.toptal.com/developers/gitignore</a></li>
+<li>any-rule<br>常用正则大全, 支持web / vscode / idea / Alfred Workflow多平台<br><a target="_blank" rel="noopener" href="https://any86.github.io/any-rule/">https://any86.github.io/any-rule/</a></li>
+<li>30-seconds-of-code<br>满足多种语言开发需求的简短代码片段<br><a target="_blank" rel="noopener" href="https://www.30secondsofcode.org/">https://www.30secondsofcode.org/</a></li>
+<li>github-readme-stats<br>为 github 自述文件动态生成的统计信息<br><a target="_blank" rel="noopener" href="https://github.com/anuraghazra/github-readme-stats">https://github.com/anuraghazra/github-readme-stats</a></li>
+<li>cz-cli<br>规范提交说明的git工具<br><a target="_blank" rel="noopener" href="http://commitizen.github.io/cz-cli/">http://commitizen.github.io/cz-cli/</a></li>
+<li>commitlint<br>git commit 校验工具<br><a target="_blank" rel="noopener" href="https://commitlint.js.org/#/">https://commitlint.js.org/#/</a></li>
+<li>husky<br>Git hooks 工具，可以防止使用 Git hooks 的一些不好的 commit 或者 push<br><a target="_blank" rel="noopener" href="https://typicode.github.io/husky/#/">https://typicode.github.io/husky/#/</a></li>
+<li>lint-staged<br>代码提交之前,进行代码规则检查并尝试修复，能够确保进入git库的代码都是符合代码规则<br><a target="_blank" rel="noopener" href="https://github.com/okonet/lint-staged">https://github.com/okonet/lint-staged</a></li>
+<li>anywhere<br>随启随用的静态文件服务器<br><a target="_blank" rel="noopener" href="https://github.com/JacksonTian/anywhere">https://github.com/JacksonTian/anywhere</a></li>
+<li>code996<br>统计 Git 项目的 commit 时间分布，进而推导出这个项目的编码工作强度<br><a target="_blank" rel="noopener" href="https://hellodigua.github.io/code996/#/">https://hellodigua.github.io/code996/#/</a><h3 id="图像工具"><a href="#图像工具" class="headerlink" title="图像工具"></a>图像工具</h3></li>
+<li>bigjpg<br>使用度卷积神经网络。它会将噪点和锯齿的部分进行补充，实现图片的无损放大<br><a target="_blank" rel="noopener" href="https://bigjpg.com/">https://bigjpg.com/</a></li>
+<li>jpghd<br>使用人工智能 AI 超分模型和深度学习技术来将低清破损有噪点图片处理成高画质高分辨率图片同时支持破损老照片修复和老照片上色<br><a target="_blank" rel="noopener" href="https://jpghd.com/">https://jpghd.com/</a></li>
+<li>bigmp4<br>使用智能 AI 模型，能将视频无损高清放大、增强画质、智能补帧使画面丝滑流畅栩栩如生同时支持黑白视频上色和慢动作<br><a target="_blank" rel="noopener" href="https://bigmp4.com/">https://bigmp4.com/</a></li>
+<li>imglarger<br>基于强大的机器学习可在不降低质量的情况下提高图像分辨率<br><a target="_blank" rel="noopener" href="https://imglarger.com/">https://imglarger.com/</a></li>
+<li>unscreen<br>智能AI去除视频背景在线神器<br><a target="_blank" rel="noopener" href="https://www.unscreen.com/">https://www.unscreen.com/</a></li>
+<li>阿里妈妈创意中心<br>阿里智能文案，智能抠图工具<br><a target="_blank" rel="noopener" href="https://chuangyi.taobao.com/">https://chuangyi.taobao.com/</a><h3 id="文件转换"><a href="#文件转换" class="headerlink" title="文件转换"></a>文件转换</h3></li>
+<li>ALL TO ALL<br>全类型的在线文件转换平台，免费、快速，无须下载安装任何软件<br><a target="_blank" rel="noopener" href="https://www.alltoall.net/">https://www.alltoall.net/</a></li>
+<li>Convertio<br>将文件转换成任意格式<br><a target="_blank" rel="noopener" href="https://convertio.co/zh/">https://convertio.co/zh/</a><h2 id="Vue3生态工具"><a href="#Vue3生态工具" class="headerlink" title="Vue3生态工具"></a>Vue3生态工具</h2><h3 id="1-Web-UI库"><a href="#1-Web-UI库" class="headerlink" title="1.Web UI库"></a>1.Web UI库</h3></li>
+<li>ElementUI Plus<br>一套为开发者、设计师和产品经理准备的基于 Vue 3.0 的桌面端组件库<br><a target="_blank" rel="noopener" href="https://element-plus.org/zh-CN/">https://element-plus.org/zh-CN/</a></li>
+<li>Ant Design of Vue<br>Ant Design 的 Vue 实现，开发和服务于企业级后台产品<br><a target="_blank" rel="noopener" href="https://www.antdv.com/docs/vue/introduce-cn">https://www.antdv.com/docs/vue/introduce-cn</a></li>
+<li>BalmUI<br>基于谷歌的 Material Design，附带 Vue 插件和指令，以及从简单到复杂的高度可定制组件<br><a target="_blank" rel="noopener" href="https://next-material.balmjs.com/">https://next-material.balmjs.com/</a></li>
+<li>Naive UI<br>图森Vue3的组件库，文档完整，我项目中经常使用<br><a target="_blank" rel="noopener" href="https://www.naiveui.com/zh-CN/os-theme">https://www.naiveui.com/zh-CN/os-theme</a></li>
+<li>arco.design<br>字节跳动企业级产品设计系统，支持React和Vue双版本<br><a target="_blank" rel="noopener" href="https://arco.design/">https://arco.design/</a></li>
+<li>Quasar<br>轻松构建高性能和高质量的Vue.js 3用户界面，好用，但没有中文文档<br><a target="_blank" rel="noopener" href="https://quasar.dev/">https://quasar.dev/</a></li>
+<li>iDUX<br>Vue3.x 的 UI 组件库，完全使用 TypeScript 开发<br><a target="_blank" rel="noopener" href="https://idux.site/">https://idux.site/</a></li>
+<li>TDesign<br>腾讯业务团队在服务业务过程中沉淀的一套企业级设计体系<br><a target="_blank" rel="noopener" href="https://tdesign.tencent.com/">https://tdesign.tencent.com/</a><br><a target="_blank" rel="noopener" href="https://tdesign.tencent.com/vue-next/overview">https://tdesign.tencent.com/vue-next/overview</a></li>
+<li>PrimeVue<br>易于使用、多功能、高性能的 Vue UI 组件库<br><a target="_blank" rel="noopener" href="https://www.primefaces.org/primevue/">https://www.primefaces.org/primevue/</a></li>
+<li>DevUI<br>华为基于 Vue3 和 DevUI 设计的 UI 组件<br><a target="_blank" rel="noopener" href="https://vue-devui.github.io/">https://vue-devui.github.io/</a></li>
+<li>vuestic-ui<br>Vue 3 的免费和开源 UI 库 ,UI非常好看，并且有可用后台管理界面。<br><a target="_blank" rel="noopener" href="https://vuestic.dev/">https://vuestic.dev/</a></li>
+<li>Headless UI<br>完全无样式、完全可访问的 UI 组件，旨在与 Tailwind CSS 完美集成。<br><a target="_blank" rel="noopener" href="https://headlessui.com/">https://headlessui.com/</a></li>
+<li>View UI Plus<br>基于 Vue.js 3 的企业级 UI 组件库和前端解决方案<br><a target="_blank" rel="noopener" href="https://www.iviewui.com/">https://www.iviewui.com/</a><h3 id="2-移动UI库"><a href="#2-移动UI库" class="headerlink" title="2.移动UI库"></a>2.移动UI库</h3></li>
+<li>Vant<br>有赞轻量、可靠的移动端组件库<br><a target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/#/zh-CN">https://vant-contrib.gitee.io/vant/#/zh-CN</a></li>
+<li>NutUI<br>京东风格的轻量级移动端 Vue 组件库，非常适合移动端电商使用。<br><a target="_blank" rel="noopener" href="https://nutui.jd.com/#/">https://nutui.jd.com/#/</a></li>
+<li>Varlet<br>Material 风格移动端组件库 ，文档非常齐全。<br><a target="_blank" rel="noopener" href="https://varlet.gitee.io/varlet-ui/#/zh-CN/home">https://varlet.gitee.io/varlet-ui/#/zh-CN/home</a></li>
+<li>nutui-bingo<br>京东基于 NutUI 的抽奖组件库，助力营销活动和小游戏场景。<br><a target="_blank" rel="noopener" href="https://nutui.jd.com/bingo/#/">https://nutui.jd.com/bingo/#/</a><h3 id="3-相关工具"><a href="#3-相关工具" class="headerlink" title="3.相关工具"></a>3.相关工具</h3></li>
+<li>unplugin-vue-components<br>antfu 按需组件自动导入，开箱即用地支持 Vue 2 和 Vue 3，Tree-shakable，只注册你使用的组件，附有流行UI 库的内置解析器。<br><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/unplugin-vue-components">https://www.npmjs.com/package/unplugin-vue-components</a></li>
+<li>vuex-persistedstate<br>在页面重新加载之间保持并重载您的 Vuex 状态<br><a target="_blank" rel="noopener" href="https://github.com/robinvdvleuten/vuex-persistedstate">https://github.com/robinvdvleuten/vuex-persistedstate</a></li>
+<li>vuex-persist<br>支持 Typescript 的Vuex插件，它能够将应用程序的状态保存到持久存储中，例如 Cookies 或 localStorage<br><a target="_blank" rel="noopener" href="https://championswimmer.in/vuex-persist/">https://championswimmer.in/vuex-persist/</a></li>
+<li>@vueuse/gesture<br>手势库，使应用程序具有交互性<br><a target="_blank" rel="noopener" href="https://gesture.vueuse.org/">https://gesture.vueuse.org/</a></li>
+<li>unplugin-auto-import<br>antfu 自动导入 Vite、Webpack、Rollup 和 esbuild 的 API。支持 TypeScript。<br><a target="_blank" rel="noopener" href="https://github.com/antfu/unplugin-auto-import">https://github.com/antfu/unplugin-auto-import</a></li>
+<li>pinia-plugin-persistedstate<br>Pinia 商店的可配置持久性<br><a target="_blank" rel="noopener" href="https://github.com/prazdevs/pinia-plugin-persistedstate">https://github.com/prazdevs/pinia-plugin-persistedstate</a></li>
+<li><a target="_blank" rel="noopener" href="https://vue-termui.dev/">https://vue-termui.dev/</a><br>一个基于 Vue.js 的终端 UI 框架，可让您轻松构建现代终端应用程序<br><a target="_blank" rel="noopener" href="https://vue-termui.dev/">https://vue-termui.dev/</a><h3 id="4-可视化"><a href="#4-可视化" class="headerlink" title="4.可视化"></a>4.可视化</h3></li>
+<li>Pdfvuer<br>DF 查看器，使用 Mozilla 的 PDF.js，支持 Vue2 和 Vue3<br><a target="_blank" rel="noopener" href="https://arkokoley.github.io/pdfvuer/">https://arkokoley.github.io/pdfvuer/</a></li>
+<li>vue3-marquee<br>无缝滚动组件<br><a target="_blank" rel="noopener" href="https://vue3-marquee.vercel.app/">https://vue3-marquee.vercel.app/</a></li>
+<li>Vue-ECharts<br>百度ECharts 的 Vue.js 组件。 配置参考Echarts官方 基于 ECharts v5+ 开发，适用于Vue.js 2/3。<br><a target="_blank" rel="noopener" href="https://vue-echarts.dev/">https://vue-echarts.dev/</a></li>
+<li>iconpark<br>字节跳动出品，将一个SVG图标转化为多个主题，并生成React图标，Vue图标，svg图标<br><a target="_blank" rel="noopener" href="https://iconpark.oceanengine.com/home">https://iconpark.oceanengine.com/home</a><h3 id="5-插件"><a href="#5-插件" class="headerlink" title="5.插件"></a>5.插件</h3></li>
+<li>vue-multiselect-next<br>Vue.js 的通用选择/多选/标记组件<br><a target="_blank" rel="noopener" href="https://vue-multiselect.js.org/">https://vue-multiselect.js.org/</a></li>
+<li>vue-print-nb<br>用于印刷、简单、快速、方便、轻便的指令包装器<br><a target="_blank" rel="noopener" href="https://github.com/Power-kxLee/vue-print-nb">https://github.com/Power-kxLee/vue-print-nb</a></li>
+<li>vue-i18n-next<br>Vue3的国际化插件<br><a target="_blank" rel="noopener" href="https://vue-i18n.intlify.dev/">https://vue-i18n.intlify.dev/</a></li>
+<li>vue-cropper<br>简单的vue图片裁剪插件<br><a target="_blank" rel="noopener" href="http://github.xyxiao.cn/vue-cropper/example/">http://github.xyxiao.cn/vue-cropper/example/</a></li>
+<li>Grid Layout<br>Vue.js 的网格布局系统<br><a target="_blank" rel="noopener" href="https://jbaysolutions.github.io/">https://jbaysolutions.github.io/</a></li>
+<li>Vue Qrcode Reader<br>允许在不离开浏览器的情况下检测和解码二维码<br><a target="_blank" rel="noopener" href="https://gruhn.github.io/vue-qrcode-reader/">https://gruhn.github.io/vue-qrcode-reader/</a></li>
+<li>Makeit Captcha<br>基于 Vue3 + Vite + Canvas 开发的滑块验证码，动态生成验证滑块，结合后端的二次校验，能有效的避免被抓取模拟验证<a target="_blank" rel="noopener" href="https://admin.makeit.vip/components/captcha">https://admin.makeit.vip/components/captcha</a></li>
+<li>vue3-clipboard<br>Vue 3 的 clipboard.js<br><a target="_blank" rel="noopener" href="https://github.com/soerenmartius/vue3-clipboard">https://github.com/soerenmartius/vue3-clipboard</a></li>
+<li>vue.draggable<br>基于Sortable.js的Vue 3拖放组件<br><a target="_blank" rel="noopener" href="https://sortablejs.github.io/vue.draggable.next/#/simple">https://sortablejs.github.io/vue.draggable.next/#/simple</a></li>
+<li>BetterScroll<br>解决移动端（已支持 PC）各种滚动场景需求的插件。<br><a target="_blank" rel="noopener" href="https://better-scroll.github.io/docs/zh-CN/">https://better-scroll.github.io/docs/zh-CN/</a><h3 id="6-相关生态"><a href="#6-相关生态" class="headerlink" title="6.相关生态"></a>6.相关生态</h3></li>
+<li>Vue 插件库<br><a target="_blank" rel="noopener" href="https://www.vue365.cn/">https://www.vue365.cn/</a></li>
+<li>Pinia<br>轻量级状态管理库，API 设计更接近Vuex 5的提案<br><a target="_blank" rel="noopener" href="https://pinia.vuejs.org/">https://pinia.vuejs.org/</a></li>
+<li>Nuxt Modules<br>Nuxt 发现我们的模块列表以增强您的Nuxt 项目<br><a target="_blank" rel="noopener" href="https://modules.nuxtjs.org/">https://modules.nuxtjs.org/</a></li>
+<li>Nuxt 3<br>轻量级应用框架,可用来创建服务端渲染 (SSR) 应用<br><a target="_blank" rel="noopener" href="https://v3.nuxtjs.org/">https://v3.nuxtjs.org/</a></li>
+<li>vuepress<br>Vue 驱动的静态网站生成器<br><a target="_blank" rel="noopener" href="https://v2.vuepress.vuejs.org/zh/">https://v2.vuepress.vuejs.org/zh/</a></li>
+<li>VueUse<br>强大的 Vue 组合实用程序集合<br><a target="_blank" rel="noopener" href="https://vueuse.org/">https://vueuse.org/</a><h3 id="7-动画"><a href="#7-动画" class="headerlink" title="7.动画"></a>7.动画</h3></li>
+<li>vue-starport<br>带有动画的跨路由共享组件<br><a target="_blank" rel="noopener" href="https://vue-starport.netlify.app/">https://vue-starport.netlify.app/</a></li>
+<li>@vueuse/motion<br>Vue Composables 让你的组件动起来<br><a target="_blank" rel="noopener" href="https://motion.vueuse.org/">https://motion.vueuse.org/</a><h3 id="8-音视频"><a href="#8-音视频" class="headerlink" title="8.音视频"></a>8.音视频</h3></li>
+<li>@vueuse/sound<br>用于播放音效的 Vue 组合<br><a target="_blank" rel="noopener" href="https://sound.vueuse.org/">https://sound.vueuse.org/</a><h2 id="全栈-后端"><a href="#全栈-后端" class="headerlink" title="全栈-后端"></a>全栈-后端</h2><h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3></li>
+<li>isomorphic-git<br>用于节点和浏览器的 git 纯 JavaScript 实现<br><a target="_blank" rel="noopener" href="https://isomorphic-git.org/">https://isomorphic-git.org/</a></li>
+<li>jsonwebtoken<br>node.js 的 JsonWebToken 实现<br><a target="_blank" rel="noopener" href="https://github.com/auth0/node-jsonwebtoken">https://github.com/auth0/node-jsonwebtoken</a></li>
+<li>Qiniu SDK<br>七牛资源（云）存储 SDK for Node.js<br><a target="_blank" rel="noopener" href="https://developer.qiniu.com/kodo/sdk/nodejs">https://developer.qiniu.com/kodo/sdk/nodejs</a></li>
+<li>koa-body<br>功能齐全的koa正文解析器中间件，支持multipart、urlencoded和json请求正文，提供与 Express 的 bodyParser 相同的功能<br><a target="_blank" rel="noopener" href="https://github.com/koajs/koa-body">https://github.com/koajs/koa-body</a></li>
+<li>koa-json-error<br>纯Koa JSON 应用程序的错误处理程序，显示堆栈跟踪<br><a target="_blank" rel="noopener" href="https://github.com/koajs/json-error">https://github.com/koajs/json-error</a></li>
+<li>koa-jwt<br>用于验证 JSON Web 令牌的 Koa 中间件<br><a target="_blank" rel="noopener" href="https://github.com/koajs/jwt">https://github.com/koajs/jwt</a></li>
+<li>koa-router<br>Koa 的路由器中间件<br><a target="_blank" rel="noopener" href="https://github.com/koajs/router">https://github.com/koajs/router</a></li>
+<li>koa2-cors<br>koa2 的 CORS 中间件<br><a target="_blank" rel="noopener" href="https://github.com/zadzbw/koa2-cors">https://github.com/zadzbw/koa2-cors</a></li>
+<li>koa-sslify<br>为 Koa.js 实施 HTTPS 中间件<br><a target="_blank" rel="noopener" href="https://github.com/turboMaCk/koa-sslify">https://github.com/turboMaCk/koa-sslify</a></li>
+<li>superagent-proxy<br>允许您通过某种代理来代理 HTTP 请求<br><a target="_blank" rel="noopener" href="https://github.com/TooTallNate/superagent-proxy">https://github.com/TooTallNate/superagent-proxy</a></li>
+<li>node-http-proxy-agen<br>HTTP 端点的 HTTP(s) 代理“http.Agent”实现<br><a target="_blank" rel="noopener" href="https://github.com/TooTallNate/node-http-proxy-agent">https://github.com/TooTallNate/node-http-proxy-agent</a></li>
+<li>https-proxy-agent<br>HTTPS 端点的 HTTP(s) 代理“http.Agent”实现<br><a target="_blank" rel="noopener" href="https://github.com/TooTallNate/node-https-proxy-agent">https://github.com/TooTallNate/node-https-proxy-agent</a></li>
+<li>socks-proxy-agent<br>用于 HTTP 和 HTTPS 的 SOCKS (v4/v5) 代理“http.Agent”实现<br><a target="_blank" rel="noopener" href="https://github.com/TooTallNate/node-socks-proxy-agent">https://github.com/TooTallNate/node-socks-proxy-agent</a></li>
+<li>simple-get<br>发出 http get 请求的最简单方法。支持 HTTPS、重定向、gzip/deflate、小于 100 行的流<br><a target="_blank" rel="noopener" href="https://github.com/feross/simple-get">https://github.com/feross/simple-get</a></li>
+<li>commander.js<br>node.js命令行界面的完整解决方案<br><a target="_blank" rel="noopener" href="https://github.com/tj/commander.js">https://github.com/tj/commander.js</a></li>
+<li>ora<br>命令行 loading 动效<br><a target="_blank" rel="noopener" href="https://github.com/sindresorhus/ora">https://github.com/sindresorhus/ora</a></li>
+<li>dotenv<br>从 .env 为 nodejs 项目加载环境变量<br><a target="_blank" rel="noopener" href="https://github.com/motdotla/dotenv">https://github.com/motdotla/dotenv</a></li>
+<li>FFCreator<br>基于node.js的高速视频制作库<br><a target="_blank" rel="noopener" href="https://tnfe.github.io/FFCreator/#/">https://tnfe.github.io/FFCreator/#/</a></li>
+<li>sharp<br>高性能 Node.js 图像处理，调整 JPEG、PNG、WebP、AVIF 和 TIFF 图像大小的最快模块<br><a target="_blank" rel="noopener" href="https://sharp.pixelplumbing.com/">https://sharp.pixelplumbing.com/</a></li>
+<li>node-fs-extra<br>强大的文件操作库， 是 Nodejs fs 模块 的增强版<br><a target="_blank" rel="noopener" href="https://github.com/jprichardson/node-fs-extra">https://github.com/jprichardson/node-fs-extra</a></li>
+<li>chokidar<br>用于文件监控的库，解决兼容性不好、无法监听、监听多次 等大量影响性能的问题<br><a target="_blank" rel="noopener" href="https://paulmillr.com/">https://paulmillr.com/</a></li>
+<li>fast-glob<br>快速批量导入、读取文件的库<br><a target="_blank" rel="noopener" href="https://github.com/mrmlnc/fast-glob">https://github.com/mrmlnc/fast-glob</a></li>
+<li>peerflix<br>node.js 的流式 torrent 客户端<br><a target="_blank" rel="noopener" href="https://github.com/mafintosh/peerflix">https://github.com/mafintosh/peerflix</a><h3 id="工具-2"><a href="#工具-2" class="headerlink" title="工具"></a>工具</h3></li>
+<li>Nginx<br>高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务<br><a target="_blank" rel="noopener" href="https://blog.redis.com.cn/doc/">https://blog.redis.com.cn/doc/</a></li>
+<li>PM2<br>Node进程管理工具，如性能监控、自动重启、负载均衡等<br><a target="_blank" rel="noopener" href="https://pm2.keymetrics.io/docs/usage/process-management/">https://pm2.keymetrics.io/docs/usage/process-management/</a></li>
+<li>nodemon<br>监视 node.js 应用程序中的任何更改并自动重新启动服务器<br><a target="_blank" rel="noopener" href="https://nodemon.io/">https://nodemon.io/</a></li>
+<li>RobotJS<br>Node.js 桌面自动化，控制鼠标、键盘和阅读屏幕等<br><a target="_blank" rel="noopener" href="http://robotjs.io/">http://robotjs.io/</a></li>
+<li>Jenkins<br>领先的开源自动化服务器，Jenkins 提供了数百个插件来支持构建、部署和自动化任何项目<br><a target="_blank" rel="noopener" href="https://www.jenkins.io/">https://www.jenkins.io/</a></li>
+<li>nexe<br>将 node.js 应用程序中创建一个可执行文件<br><a target="_blank" rel="noopener" href="https://github.com/nexe/nexe">https://github.com/nexe/nexe</a></li>
+<li>debug<br>模仿 Node.js 核心调试技术的小型 JavaScript 调试实用程序。适用于 Node.js 和 Web 浏览器<br><a target="_blank" rel="noopener" href="https://github.com/debug-js/debug">https://github.com/debug-js/debug</a><h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3></li>
+<li>mongoose<br>旨在在异步环境中工作的 MongoDB 对象建模<br><a target="_blank" rel="noopener" href="https://mongoosejs.com/">https://mongoosejs.com/</a></li>
+<li>GraphQL<br>用于 API 的查询语言也是一个满足你数据查询的运行时<br><a target="_blank" rel="noopener" href="https://graphql.cn/">https://graphql.cn/</a></li>
+<li>lowdb数据库<br>适用于Node，Electron和浏览器的小型JSON数据库。由Lodash驱动<br><a target="_blank" rel="noopener" href="https://github.com/typicode/lowdb">https://github.com/typicode/lowdb</a></li>
+<li>nedb<br>适用于Node.js，nw.js，Electron和浏览器的嵌入式持久性数据库或内存数据库,API是MongoDB的子集<br><a target="_blank" rel="noopener" href="https://github.com/louischatriot/nedb">https://github.com/louischatriot/nedb</a><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3></li>
+<li>网易云音乐 API<br>全部接口已升级到最新，具备登录接口,多达200多个接口<br><a target="_blank" rel="noopener" href="https://binaryify.github.io/NeteaseCloudMusicApi/#/">https://binaryify.github.io/NeteaseCloudMusicApi/#/</a></li>
+<li>Node-SpliderApi<br>基于 Node+Express 网络爬虫 API 接口 包括前端开发日报、kugou 音乐、前端 top 框架排行、妹纸福利、搞笑视频、段子笑话、各类视频新闻资讯 热点详情接口数据,接口数据更新目标<br><a target="_blank" rel="noopener" href="https://ecitlm.github.io/Node-SpliderApi/">https://ecitlm.github.io/Node-SpliderApi/</a></li>
+<li>聚合数据<br>免费向开发者提供全国车辆违章查询API,天气API,基站数据,移动联通基站,电信基站,覆盖国内外1000多个主要城市公共交通信息数据<br><a target="_blank" rel="noopener" href="https://www.juhe.cn/">https://www.juhe.cn/</a></li>
+<li>极速数据<br>提供各类生活数据API,方便开发者快速简单的开发APP、软件及其他服务平台<br><a target="_blank" rel="noopener" href="https://www.jisuapi.com/">https://www.jisuapi.com/</a></li>
+<li>京东万象<br>供金融、电商、运营商数据,免费数据,热门数据,学籍数据,企业诉讼数据,实名认证,征信数据,质检等多种数据<br><a target="_blank" rel="noopener" href="https://wx.jdcloud.com/api">https://wx.jdcloud.com/api</a></li>
+<li>QQ音乐API<br>通过Web网页版请求QQ音乐接口数据<br><a target="_blank" rel="noopener" href="https://rain120.github.io/qq-music-api/#/">https://rain120.github.io/qq-music-api/#/</a></li>
+<li>万维易源<br>一站式全网API调用平台<br><a target="_blank" rel="noopener" href="https://www.showapi.com/">https://www.showapi.com/</a></li>
+<li>TP5 Splider Api<br>基于Thinkphp5+phpQuery 网络爬虫抓取数据接口 统一输出接口数据api<br><a target="_blank" rel="noopener" href="https://ecitlm.github.io/TP5_Splider/#/">https://ecitlm.github.io/TP5_Splider/#/</a></li>
+<li>Roll API<br>提供开发中常用数据的一个稳定聚合Api接口<br><a target="_blank" rel="noopener" href="https://www.mxnzp.com/doc/list">https://www.mxnzp.com/doc/list</a></li>
+<li>Open API<br>收集可用的Open APIs<br><a target="_blank" rel="noopener" href="https://www.wanandroid.com/openapis">https://www.wanandroid.com/openapis</a></li>
+<li>天行数据<br>160多个免费接口，接口高度统一，简单易用，毫秒级响应<br><a target="_blank" rel="noopener" href="https://www.tianapi.com/">https://www.tianapi.com/</a></li>
+<li>free-api<br>免费API,收集免费的接口服务<br><a target="_blank" rel="noopener" href="https://www.free-api.com/">https://www.free-api.com/</a></li>
+<li>douban-imdb-api<br>基于豆瓣、IMDB、烂番茄评分的电影电视剧双语(中英)数据api接口<br><a target="_blank" rel="noopener" href="https://www.iqi360.com/p/douban-imdb-api">https://www.iqi360.com/p/douban-imdb-api</a><h3 id="框架-1"><a href="#框架-1" class="headerlink" title="框架"></a>框架</h3></li>
+<li>Koa<br>基于 Node.js 平台的下一代 web 开发框架<br><a target="_blank" rel="noopener" href="https://koajs.com/">https://koajs.com/</a></li>
+<li>Express<br>用于Node.js 的快速、独立、简约的 Web 框架<br><a target="_blank" rel="noopener" href="https://expressjs.com/">https://expressjs.com/</a></li>
+<li>egg.js<br>为企业级框架和应用而生<br><a target="_blank" rel="noopener" href="https://www.eggjs.org/">https://www.eggjs.org/</a></li>
+<li>Nest.js<br>构建高效且可扩展的服务器端应用程序的渐进式Node.js框架<br><a target="_blank" rel="noopener" href="https://nestjs.com/">https://nestjs.com/</a></li>
+</ul>
+</blockquote>
 
             </div>
             <hr/>
@@ -2099,7 +1853,7 @@ sudu ./vmware-install.pl</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.smitten.top/posts/linux.html">https://www.smitten.top/posts/linux.html</a>
+                    <a href="https://www.smitten.top/posts/300Tools.html">https://www.smitten.top/posts/300Tools.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -2137,8 +1891,8 @@ sudu ./vmware-install.pl</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/Tool/">
+                                    <span class="chip bg-color">Tool</span>
                                 </a>
                             
                         </div>
@@ -2673,12 +2427,14 @@ sudu ./vmware-install.pl</code></pre>
         
         <div class="article col s12 m6">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/wt.html">
+                <a href="/posts/300Tools.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/memory.png" class="responsive-img" alt="使Windows  Terminal变得更易用">
+                        
+                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="前端300+实用工具分享【转载】">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -2689,22 +2445,83 @@ sudu ./vmware-install.pl</code></pre>
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          使Windows  Terminal变得更易用
+                          前端300+实用工具分享【转载】
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使Windows  Terminal变得更易用1.个性化美化在wt(Windows  Terminal)设置面板中打开json文件，然后找到defaults关键字并在后面花括号里追加以下代码：
-亚克力毛玻璃效果
-&quot;useAcryl
+                            
+本文内容来自 B 站 UP 主 @技术胖的视频：前端老司机 300+实用工具分享 若造成侵权请联系我进行删除。
+Javascript工具
+Underscore.js一套完善的函数式编程的接口，更方便地在JavaScript中实现函数式编程
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-01-08
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="post-category">
+                                    转载
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Tool/">
+                        <span class="chip bg-color">Tool</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/Memos.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/banner/2.jpg" class="responsive-img" alt="关于Memos">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          关于Memos
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言我从接触独立博客开始，就一直在博客的子栏目中部署了一个类似 嘀咕 的微博客。最初的作用是备份 QQ 空间、Twitter 和朋友圈等。可是慢慢发现，不知道为什么自己在这些社交媒体的分享欲变得越来越弱，只想有一个地方来记录我平时的一些想法
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -2720,67 +2537,8 @@ sudu ./vmware-install.pl</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BE%8E%E5%8C%96%E6%95%88%E7%8E%87/">
-                        <span class="chip bg-color">美化效率</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/gift.html">
-                    <div class="card-image">
-                        
-                        <img src="/medias/toc-banner/gift.png" class="responsive-img" alt="宝藏句子收藏区">
-                        
-                        <!-- 福袋按钮 -->
-                        <div class="caishendeng">        
-                            <div class="caishenxian wenzhangxian">
-                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                            </div>              
-                        </div>
-                        <span class="card-title">
-                          <!-- 文章卡片hover线条效果 -->
-                          <span class="titlesline"></span>
-                          宝藏句子收藏区
-                        </span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            宝藏句子收藏区引入突然有一个想法想把看到的宝藏句子都收集起来，让大家一起🤩
-英文If you reveal your secrets to the wind you should not blame the wind revealing 
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-10
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%94%B6%E8%97%8F/" class="post-category">
-                                    收藏
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%AE%9D%E8%97%8F%E5%8F%A5%E5%AD%90/">
-                        <span class="chip bg-color">宝藏句子</span>
+                    <a href="/tags/Memos/">
+                        <span class="chip bg-color">Memos</span>
                     </a>
                     
                 </div>
@@ -2864,7 +2622,7 @@ sudu ./vmware-install.pl</code></pre>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         
         
-        <div class="toc-widget" data-spmid="Linux">
+        <div class="toc-widget" data-spmid="Tool">
             <div class="toc-title">
                 <i class="far fa-list-alt"></i>
                 &nbsp;&nbsp;目录
@@ -2879,7 +2637,7 @@ sudu ./vmware-install.pl</code></pre>
 <!-- TOC 悬浮按钮. -->
 
     
-<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="Linux">
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="Tool">
     <a class="btn-floating btn-large bg-color">
         <i class="fas fa-list-ul"></i>
     </a>
