@@ -86,27 +86,6 @@
   </url>
   
   <url>
-    <loc>https://www.smitten.top/donate/index.html</loc>
-    
-    <lastmod>2023-04-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/essay/index.html</loc>
-    
-    <lastmod>2023-04-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.smitten.top/friends/index.html</loc>
-    
-    <lastmod>2023-04-06</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.smitten.top/gallery/index.html</loc>
     
     <lastmod>2023-04-06</lastmod>
@@ -129,6 +108,13 @@
   
   <url>
     <loc>https://www.smitten.top/posts/jsDelivr.html</loc>
+    
+    <lastmod>2023-04-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/posts/0.html</loc>
     
     <lastmod>2023-04-06</lastmod>
     
@@ -316,6 +302,27 @@
     
   </url>
   
+  <url>
+    <loc>https://www.smitten.top/donate/index.html</loc>
+    
+    <lastmod>2023-04-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/essay/index.html</loc>
+    
+    <lastmod>2023-04-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/friends/index.html</loc>
+    
+    <lastmod>2023-04-06</lastmod>
+    
+  </url>
+  
 
   <url>
     <loc>https://www.smitten.top/</loc>
@@ -439,6 +446,13 @@
   
   <url>
     <loc>https://www.smitten.top/tags/%E5%AE%9D%E8%97%8F%E5%8F%A5%E5%AD%90/</loc>
+    <lastmod>2023-04-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.smitten.top/tags/moc/</loc>
     <lastmod>2023-04-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
