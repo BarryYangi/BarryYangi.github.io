@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="Keep running, Barry">
+    <meta name="keywords" content="我是如何解决 jsDelivr 在国内被污染的？, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Keep running | Barryの小站</title>
+    <title>我是如何解决 jsDelivr 在国内被污染的？ | Barryの小站</title>
     
     <script>
         // 隐藏
@@ -1152,12 +1152,12 @@ class="themespring" -->
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Keep running</h1>
+                    <h1 class="description center-align post-title">我是如何解决 jsDelivr 在国内被污染的？</h1>
                 </div>
             </div>
         </div>
@@ -1275,7 +1275,7 @@ class="themespring" -->
 <div class="row">
     
     
-        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="keep">
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="Cloudflare">
             <style>
     #switchspring {
         bottom: 223px!important;
@@ -1442,12 +1442,8 @@ h3:hover {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/keep/">
-                                <span class="chip bg-color">keep</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%BF%90%E5%8A%A8/">
-                                <span class="chip bg-color">运动</span>
+                            <a href="/tags/Cloudflare/">
+                                <span class="chip bg-color">Cloudflare</span>
                             </a>
                         
                     </div>
@@ -1471,7 +1467,7 @@ h3:hover {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-03-15
+                    2023-04-06
                 </div>
                 
 
@@ -1480,14 +1476,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    28 分
                 </div>
                 
 
@@ -1497,162 +1493,113 @@ h3:hover {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="https://easyimage.smitten.top/i/2023/03/15/ucu3i6-0.webp" alt="Barry Running"><br>保持每天运动是个好习惯，这几天我在刷 Github 时就刷到了这么一个可以将我们平时在各种运动 APP 里的数据做一个前端可视化的这么一个项目，于是我也尝试动手搭了一个，下面我就来分享一下我是如何实现的，本文主要分享配置 Keep 的操作。</p>
-<h2 id="Clone-主项目到本地"><a href="#Clone-主项目到本地" class="headerlink" title="Clone 主项目到本地"></a>Clone 主项目到本地</h2><p>Running Page 是 <a target="_blank" rel="noopener" href="https://github.com/yihong0618">@yihong0618</a> 创立的一个开源项目，通过这个项目可以从多个主流跑步平台同步锻炼数据，自动生成一个地图可视化的跑步页面。通过 GitHub Pages 可以快速的完成自动部署。</p>
-<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">https://github.com/yihong0618/running_page</a><br>我们可以将该仓库 fork 到自己的仓库在 clone 下来，或者直接 clone 下载传到自己新建的仓库。</p>
-<h2 id="配置项目文件"><a href="#配置项目文件" class="headerlink" title="配置项目文件"></a>配置项目文件</h2><pre><code>注意：压缩包当中包含多个以 . 开头的文件名称，在 macOS 系统下需要使用快捷键「Command + shift + .」显示隐藏文件。
-</code></pre><h3 id="1-在根目录中找到「gatsby-config-js」，配置个性化选项。"><a href="#1-在根目录中找到「gatsby-config-js」，配置个性化选项。" class="headerlink" title="1.在根目录中找到「gatsby-config.js」，配置个性化选项。"></a>1.在根目录中找到「gatsby-config.js」，配置个性化选项。</h3><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">pathPrefix</span><span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>   <span class="token comment"># 如需使用自定义域名，此处需要修改为/</span>
-<span class="token key atrule">siteMetadata</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span>
-  <span class="token key atrule">siteTitle</span><span class="token punctuation">:</span> <span class="token string">'Running Page'</span><span class="token punctuation">,</span>   <span class="token comment"># 站点标题</span>
-  <span class="token key atrule">siteUrl</span><span class="token punctuation">:</span> <span class="token string">'https://running.domain.com'</span><span class="token punctuation">,</span>   <span class="token comment"># 站点域名</span>
-  <span class="token key atrule">logo</span><span class="token punctuation">:</span> <span class="token string">'https://q.qlogo.cn/headimg_dl?bs=qq&amp;dst_uin=*********&amp;spec=640'</span><span class="token punctuation">,</span>   <span class="token comment"># 左上角头像</span>
-  <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'Just Do It'</span><span class="token punctuation">,</span>
-  <span class="token key atrule">navLinks</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">&#123;</span>
-      <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">'Blog'</span><span class="token punctuation">,</span>   <span class="token comment"># 右上角导航栏</span>
-      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'https://blog.domain.com'</span><span class="token punctuation">,</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">,</span></code></pre>
-<h3 id="2-打开「-github」-gt-「workflows」-gt-「run-data-sync-yml」文件，修改平台类型及信息。不同平台的配置信息可以前往-说明页面-进行查看。"><a href="#2-打开「-github」-gt-「workflows」-gt-「run-data-sync-yml」文件，修改平台类型及信息。不同平台的配置信息可以前往-说明页面-进行查看。" class="headerlink" title="2.打开「.github」&gt;「workflows」&gt;「run_data_sync.yml」文件，修改平台类型及信息。不同平台的配置信息可以前往 说明页面 进行查看。"></a>2.打开「.github」&gt;「workflows」&gt;「run_data_sync.yml」文件，修改平台类型及信息。不同平台的配置信息可以前往 <a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page/blob/master/README-CN.md#%E6%94%AF%E6%8C%81">说明页面</a> 进行查看。</h3><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Run Data Sync
+                <p>早在2021年12月20日，jsDelivr 在中国大陆地区的 ICP 备案被吊销，且随后的服务在中国大陆地区极不稳定，严重拖慢了网页的速度。</p>
+<p>由于 jsDelivr 被封锁，导致了原来使用 jsDelivr 的 CDN 服务的网页速度缓慢，多数功能不正常。要解决这个问题，要么更换 CDN，要么给 jsDelivr 套上一层反向代理。这里博主采用了 Cloudflare Worker。</p>
+<h1 id="新建-Worker"><a href="#新建-Worker" class="headerlink" title="新建 Worker"></a>新建 Worker</h1><p>登录到 Cloudflare 控制台，点击侧栏的 Workers，新建服务。<br><img src="https://cdn.yct.ee/gh/BarryYangi/ObsStaticData@main/obsidian/16807536030001yhgo9.png" alt="gh"><br>在创建页面填入你自己的服务名称。<br><img src="https://cdn.yct.ee/gh/BarryYangi/ObsStaticData@main/obsidian/1680753650000qwb9pf.png" alt="gh"></p>
+<p>创建后将转入资源页面。<br><img src="https://cdn.yct.ee/gh/BarryYangi/ObsStaticData@main/obsidian/1680753684000wpls1p.png" alt="gh"></p>
+<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p>点击“快速编辑”，在代码框内复制以下代码：<br>&lt;!—hexoPostRenderEscape:<pre class="language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 替换成你想镜像的站点</span><br><span class="token keyword">const</span> upstream <span class="token operator">=</span> <span class="token string">‘cdn.jsdelivr.net’</span></code></pre></p>
+<p><span class="token comment">// 如果那个站点有专门的移动适配站点，否则保持和上面一致</span><br><span class="token keyword">const</span> upstream_mobile <span class="token operator">=</span> <span class="token string">‘cdn.jsdelivr.net’</span></p>
+<p><span class="token keyword">const</span> blocked_region <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">‘KP’</span><span class="token punctuation">,</span><span class="token string">‘RU’</span><span class="token punctuation">]</span></p>
+<p><span class="token keyword">const</span> blocked_ip_address <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">‘0.0.0.0’</span><span class="token punctuation">,</span> <span class="token string">‘127.0.0.1’</span><span class="token punctuation">]</span></p>
+<p><span class="token keyword">const</span> replace_dict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><br>    <span class="token string">‘$upstream’</span><span class="token operator">:</span> <span class="token string">‘$custom_domain’</span><span class="token punctuation">,</span><br>    <span class="token string">‘//cdn.jsdelivr.net’</span><span class="token operator">:</span> <span class="token string">‘’</span><br><span class="token punctuation">&#125;</span></p>
+<p><span class="token comment">//以下内容都不用动</span><br><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">‘fetch’</span><span class="token punctuation">,</span> <span class="token parameter">event</span> <span class="token operator">=&gt;</span> <span class="token punctuation">&#123;</span><br>    event<span class="token punctuation">.</span><span class="token function">respondWith</span><span class="token punctuation">(</span><span class="token function">fetchAndApply</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>request<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">&#125;</span><span class="token punctuation">)</span></p>
+<p><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">fetchAndApply</span><span class="token punctuation">(</span><span class="token parameter">request</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></p>
+<pre><code>&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; region &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;cf-ipcountry&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toUpperCase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; ip_address &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;cf-connecting-ip&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; user_agent &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;user-agent&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-<span class="token key atrule">on</span><span class="token punctuation">:</span>
-  <span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
-  <span class="token key atrule">schedule</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 0 * * *"</span>
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; url &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;url&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; url_host &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; url&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;host&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-<span class="token key atrule">env</span><span class="token punctuation">:</span>
-  <span class="token comment"># please change to your own config.</span>
-  <span class="token key atrule">RUN_TYPE</span><span class="token punctuation">:</span> keep <span class="token comment"># support strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn, Please change the 'pass' it to your own</span>
-  <span class="token key atrule">ATHLETE</span><span class="token punctuation">:</span> BarryYangi
-  <span class="token key atrule">TITLE</span><span class="token punctuation">:</span> Barry Running
-  <span class="token key atrule">MIN_GRID_DISTANCE</span><span class="token punctuation">:</span> <span class="token number">4</span> <span class="token comment"># change min distance here</span>
-  <span class="token key atrule">TITLE_GRID</span><span class="token punctuation">:</span> Over 4km Runs <span class="token comment"># also here</span>
-  <span class="token key atrule">GITHUB_NAME</span><span class="token punctuation">:</span> BarryYangi
-  <span class="token key atrule">GITHUB_EMAIL</span><span class="token punctuation">:</span> 2059484047@qq.com
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;url&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;protocol &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;http:&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    url&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;protocol &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;https:&#39;&lt;/span&gt;
+    response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;redirect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;url&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;href&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
 
-<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
-  <span class="token key atrule">sync</span><span class="token punctuation">:</span>
-    <span class="token key atrule">name</span><span class="token punctuation">:</span> Sync
-    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
-    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;device_status&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user_agent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    upstream_domain &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; upstream
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    upstream_domain &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; upstream_mobile
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
 
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v1
-        <span class="token key atrule">with</span><span class="token punctuation">:</span>
-          <span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.7</span>
+url&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;host &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; upstream_domain&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-      <span class="token comment"># from pdm</span>
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set Variables
-        <span class="token key atrule">id</span><span class="token punctuation">:</span> set_variables
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          echo "PY=$(python -c 'import hashlib, sys;print(hashlib.sha256(sys.version.encode()+sys.executable.encode()).hexdigest())')" >> $GITHUB_OUTPUT
-          echo "PIP_CACHE=$(pip cache dir)" >> $GITHUB_OUTPUT</span>
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;blocked_region&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;region&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Access denied: WorkersProxy is not available in your region yet.&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        status&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;403&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;blocked_ip_address&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;ip_address&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Access denied: Your IP address is blocked by WorkersProxy.&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        status&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;403&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; method &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;method&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; request_headers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;headers&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; new_request_headers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;request_headers&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Cache PIP
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v2
-        <span class="token key atrule">with</span><span class="token punctuation">:</span>
-          <span class="token key atrule">path</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PIP_CACHE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-          <span class="token key atrule">key</span><span class="token punctuation">:</span> Ubuntu<span class="token punctuation">-</span>pip<span class="token punctuation">-</span>$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PY <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+    new_request_headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Host&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; upstream_domain&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    new_request_headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;Referer&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; url&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;href&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt</span>
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> steps.pip<span class="token punctuation">-</span>cache.outputs.cache<span class="token punctuation">-</span>hit <span class="token tag">!=</span> 'true'
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; original_response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;url&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;href&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        method&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; method&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        headers&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; new_request_headers
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/nike_sync.py $&#123;&#123; secrets.NIKE_REFRESH_TOKEN &#125;&#125;</span>
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; original_response_clone &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; original_response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;clone&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; original_text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; response_headers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; original_response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;headers&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; new_response_headers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Headers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;response_headers&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; status &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; original_response&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;status&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike to Strava(Run with nike data backup and show with strava)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike_to_strava'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/nike_to_strava_sync.py $&#123;&#123; secrets.NIKE_REFRESH_TOKEN &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;</span>
+    new_response_headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;access-control-allow-origin&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;*&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    new_response_headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;access-control-allow-credentials&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    new_response_headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;content-security-policy&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    new_response_headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;content-security-policy-report-only&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    new_response_headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;clear-site-data&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Keep script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'keep'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/keep_sync.py $&#123;&#123; secrets.KEEP_MOBILE &#125;&#125; $&#123;&#123; secrets.KEEP_PASSWORD &#125;&#125; --with-gpx</span>
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; content_type &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; new_response_headers&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;content-type&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;content_type&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;text/html&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; content_type&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;UTF-8&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        original_text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;replace_response_text&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;original_response_clone&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; upstream_domain&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; url_host&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        original_text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; original_response_clone&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;body
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
 
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;</span>
+    response &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;original_text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        status&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        headers&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; new_response_headers
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; response&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+</code></pre><p><span class="token punctuation">&#125;</span></p>
+<p><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">replace_response_text</span><span class="token punctuation">(</span><span class="token parameter">response<span class="token punctuation">,</span> upstream_domain<span class="token punctuation">,</span> host_name&lt;/span&gt;<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><br>    <span class="token keyword">let</span> text <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">text</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span></p>
+<pre><code>&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; j&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; replace_dict&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    j &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; replace_dict&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;$upstream&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; upstream_domain
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;$custom_domain&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; host_name
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
 
-      <span class="token comment"># for garmin if you want generate `tcx` you can add --tcx command in the args.</span>
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125;</span>
-        <span class="token comment"># If you only want to sync `type running` add args --only-run, default script is to sync all data (rides and runs).</span>
-        <span class="token comment"># python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; --only-run</span>
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;j &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;$upstream&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        j &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; upstream_domain
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;j &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;$custom_domain&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+        j &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; host_name
+    &lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
 
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin CN script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_cn'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; --is-cn</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Only GPX script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'only_gpx'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/gpx_sync.py</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin(Run with strava(or others upload to strava) data backup in Garmin)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/strava_to_garmin_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; $&#123;&#123; secrets.STRAVA_EMAIL &#125;&#125; $&#123;&#123; secrets.STRAVA_PASSWORD &#125;&#125;</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin<span class="token punctuation">-</span>cn(Run with strava(or others upload to strava) data backup in Garmin<span class="token punctuation">-</span>cn)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin_cn'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/strava_to_garmin_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; $&#123;&#123; secrets.STRAVA_EMAIL &#125;&#125; $&#123;&#123; secrets.STRAVA_PASSWORD &#125;&#125; --is-cn</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin<span class="token punctuation">-</span>cn to Strava(Run with Garmin data backup in Strava)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava_cn'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/garmin_to_strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; --is-cn</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin to Strava(Run with Garmin data backup in Strava)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/garmin_to_strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125;</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Tulipsport script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'tulipsport'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/tulipsport_sync.py $&#123;&#123; secrets.TULIPSPORT_TOKEN &#125;&#125; --with-gpx</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Make svg GitHub profile
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE <span class="token tag">!=</span> 'pass'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/gen_svg.py --from-db --title "$&#123;&#123; env.TITLE &#125;&#125;" --type github --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github.svg --use-localtime --min-distance 0.5
-          python scripts/gen_svg.py --from-db --title "$&#123;&#123; env.TITLE_GRID &#125;&#125;" --type grid --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --output assets/grid.svg --special-color yellow --special-color2 red --special-distance 20 --special-distance2 40 --use-localtime --min-distance "$&#123;&#123; env.MIN_GRID_DISTANCE &#125;&#125;"
-          python scripts/gen_svg.py --from-db --type circular --use-localtime
-          python scripts/gen_svg.py --from-db --year $(date +"%Y")  --language zh_CN --title "$(date +"%Y") Running" --type github --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy site
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
-        <span class="token key atrule">with</span><span class="token punctuation">:</span>
-            <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.MY_GIT_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-            <span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> vercel<span class="token punctuation">-</span>pages
-            <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> .
-            <span class="token key atrule">force_orphan</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-            <span class="token comment"># keep_files: true</span></code></pre>
-<p>这里推荐我们删掉剩下三个 workflows 配置 yml，因为我们不需要，后面我们将会将站点配置到 vercel 上，然后复制我的 <code>run_data_sync.yml</code> 文件内容到该文件覆盖。</p>
-<h3 id="3-找到自己所对应的平台需要完善的帐户信息"><a href="#3-找到自己所对应的平台需要完善的帐户信息" class="headerlink" title="3.找到自己所对应的平台需要完善的帐户信息"></a>3.找到自己所对应的平台需要完善的帐户信息</h3><p>列如 keep：<br><pre class="language-bash" data-language="bash"><code class="language-bash">python scripts/keep_sync.py <span class="token variable">$&#123;&#123; secrets.KEEP_MOBILE &#125;</span><span class="token punctuation">&#125;</span> <span class="token variable">$&#123;&#123; secrets.KEEP_PASSWORD &#125;</span><span class="token punctuation">&#125;</span> --with-gpx</code></pre><br>我们需要能够登录 keep 的手机账号以及密码，随后我们需要用到。</p>
-<h3 id="4-Running-Page-使用-Mapbox-进行地图展示，需要前往-Mapbox-站点-注册一个开发者账号。"><a href="#4-Running-Page-使用-Mapbox-进行地图展示，需要前往-Mapbox-站点-注册一个开发者账号。" class="headerlink" title="4.Running Page 使用 Mapbox 进行地图展示，需要前往 Mapbox 站点 注册一个开发者账号。"></a>4.Running Page 使用 Mapbox 进行地图展示，需要前往 <a target="_blank" rel="noopener" href="https://www.mapbox.com/">Mapbox 站点</a> 注册一个开发者账号。</h3><p>登录账号后，选择「Create a token」创建一个令牌，并完善相关信息。提交后会得到一串令牌信息，编辑「src」&gt;「utils」&gt;「const.js」文件，将自己的令牌替换到 MAPBOX_TOKEN 当中。</p>
-<h3 id="5-保存文件并且-push-到自己的-git-仓库"><a href="#5-保存文件并且-push-到自己的-git-仓库" class="headerlink" title="5.保存文件并且 push 到自己的 git 仓库"></a>5.保存文件并且 push 到自己的 git 仓库</h3><h2 id="Git-仓库-secrets-配置"><a href="#Git-仓库-secrets-配置" class="headerlink" title="Git 仓库 secrets 配置"></a>Git 仓库 secrets 配置</h2><p>进入自己的仓库，依次点击 Settings-&gt;Secrets and variables-&gt;Actions-&gt;New repository secret 新建如下图三个 secrets<br><img src="https://easyimage.smitten.top/i/2023/03/15/vvwxu8-0.webp" alt="secrets"></p>
-<p>其中前两项为 keep 的手机账号和密码，最后一项为 github 的 token，如果没有的话可以点击头像-&gt;Settings-&gt;Developer settings-&gt;Personal access tokens (classic)-&gt;Generate new token<br>创建的时候可以把所有权限都勾了，然后创建完就复制记下来，这个 token 是值出现一次的，看完以后就再也不能看了，然后把这个 token 放到前面我们仓库的哪个 secret 里去即可。</p>
-<h2 id="配置-Vercel"><a href="#配置-Vercel" class="headerlink" title="配置 Vercel"></a>配置 Vercel</h2><p>进入我们的 <a target="_blank" rel="noopener" href="https://vercel.com/">Vercel</a> 没有账号的注册一个然后绑定我们的 GitHub ，绑定完直接点击刚刚我们新建的仓库导入即可。<br>然后我们回到 Github 的仓库点击 Actions，按如下步骤手动触发一次工作流。<br><img src="https://easyimage.smitten.top/i/2023/03/15/w1jap5-0.webp" alt="Actions"></p>
-<p>等待工作流跑完如果是勾就说明没问题了，这个时候我们会发现多出来了一个 vercel-pages 分支，这个分支我们用来在 vercel 上部署，我们来到 vercel 的本项目的 setting 页面更改默认的部署分支为 vercel-pages，步骤如下图：<br><img src="https://easyimage.smitten.top/i/2023/03/15/w4jupa-0.webp" alt></p>
-<p>保存完成后我们需要在去 vercel-pages 分支在 push 一次 vercel 这边才会真正应用，我们只需在 github 仓库的 Actions 页面重新执行一次我们刚刚操作过的哪个工作流即可。</p>
-<p>等待工作流跑完，然后你回到 vercel 页面等待部署完你就会发现部署分支已经变为了 vercel-pages</p>
-<h2 id="vercel-绑定域名"><a href="#vercel-绑定域名" class="headerlink" title="vercel 绑定域名"></a>vercel 绑定域名</h2><p>如果你想将本页面分享给你的朋友看这样肯定是不够优雅的，哪如果你有自己的域名可以到 vercel 的 Setting 页面的 Domains 选项绑定自己的域名。</p>
-<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><p>在此希望这个项目能带给我们的不仅仅是一次简单的项目部署经验，能让我们借此养成一个良好的运动习惯才是最重要的，然后记录下来，将来可以去追溯当下。<br>Just enjoy it.</p>
+    &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; re &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;g&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;re&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; j&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+</code></pre><p><span class="token punctuation">&#125;</span></p>
+<p><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">device_status</span> <span class="token punctuation">(</span><span class="token parameter">user_agent_info</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><br>    <span class="token keyword">var</span> agents <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">“Android”</span><span class="token punctuation">,</span> <span class="token string">“iPhone”</span><span class="token punctuation">,</span> <span class="token string">“SymbianOS”</span><span class="token punctuation">,</span> <span class="token string">“Windows Phone”</span><span class="token punctuation">,</span> <span class="token string">“iPad”</span><span class="token punctuation">,</span> <span class="token string">“iPod”</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>    <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span><br>    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> v <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> v <span class="token operator">&lt;</span> agents<span class="token punctuation">.</span>length<span class="token punctuation">;</span> v<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><br>        <span class="token keyword">if</span> <span class="token punctuation">(</span>user_agent_info<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>agents<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator" &gt;></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><br>            flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span><br>            <span class="token keyword">break</span><span class="token punctuation">;</span><br>        <span class="token punctuation">&#125;</span><br>    <span class="token punctuation">&#125;</span><br>    <span class="token keyword">return</span> flag<span class="token punctuation">;</span><br><span class="token punctuation">&#125;</span>&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</p>
+<p>保存并部署后，你的反向代理就生效了。</p>
+<h1 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h1><p>但是不幸的是在国内 <code>.workers.dev</code> 后缀的域名现在也被污染了，所以你需要自己绑定一个域名在国内才能正常访问。<br>先购买一个域名，然后将其 DNS 服务商转到 cloudflare。随后来到我们刚刚新建的 Workers 管理页面点击触发器-&gt;自定义域-&gt;添加自定义域，输入你想绑定的域名即可。</p>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>使用时，将原来的 <code>cdn.jsdelivr.net</code> 域名替换为您的 Worker 或者博主提供的 Worker 就可以了。如：<br><pre class="language-javascript" data-language="javascript"><code class="language-javascript">https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>cdn<span class="token punctuation">.</span>jsdelivr<span class="token punctuation">.</span>net<span class="token operator">/</span>gh<span class="token operator">/</span>BarryYangi<span class="token operator">/</span>ObsStaticData<span class="token operator">/</span>obsidian<span class="token operator">/</span><span class="token number">168069442100071</span>iy8i<span class="token punctuation">.</span>png</code></pre><br>将<code>cdn.jsdelivr.net</code>替换为我们的Worker：<br><pre class="language-javascript" data-language="javascript"><code class="language-javascript">https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>jsdelivr<span class="token operator">-</span>cdn<span class="token punctuation">.</span><span class="token number">2059484047.</span>workers<span class="token punctuation">.</span>dev<span class="token operator">/</span>gh<span class="token operator">/</span>BarryYangi<span class="token operator">/</span>ObsStaticData<span class="token operator">/</span>obsidian<span class="token operator">/</span><span class="token number">168069442100071</span>iy8i<span class="token punctuation">.</span>png</code></pre></p>
+<p>这样，就能保证较为稳定的使用 jsDelivr 的服务了。</p>
+<p>Just enjoy it.</p>
 
             </div>
             <hr/>
@@ -1678,7 +1625,7 @@ h3:hover {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.smitten.top/posts/KeepRunning.html">https://www.smitten.top/posts/KeepRunning.html</a>
+                    <a href="https://www.smitten.top/posts/jsDelivr.html">https://www.smitten.top/posts/jsDelivr.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1716,12 +1663,8 @@ h3:hover {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/keep/">
-                                    <span class="chip bg-color">keep</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%BF%90%E5%8A%A8/">
-                                    <span class="chip bg-color">运动</span>
+                                <a href="/tags/Cloudflare/">
+                                    <span class="chip bg-color">Cloudflare</span>
                                 </a>
                             
                         </div>
@@ -2256,13 +2199,14 @@ h3:hover {
         
         <div class="article col s12 m6">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/GitHubNeverDie.html">
+                <a href="/posts/jsDelivr.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="People Die, but Long Live GitHub">
+                        <img src="/medias/banner/2.jpg" class="responsive-img" alt="我是如何解决 jsDelivr 在国内被污染的？">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -2273,22 +2217,84 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          People Die, but Long Live GitHub
+                          我是如何解决 jsDelivr 在国内被污染的？
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            不知道有没有人注意到，Joe Armstrong 最近几个月都在忙着迁移博客到 TiddlyWiki。我很早就关注了他的 Twitter，然而之前并没多想。听闻大师在 4 月 20 号去世，我才反应过来，原来他之前的举动是在未雨绸缪。
-
-T
+                            早在2021年12月20日，jsDelivr 在中国大陆地区的 ICP 备案被吊销，且随后的服务在中国大陆地区极不稳定，严重拖慢了网页的速度。
+由于 jsDelivr 被封锁，导致了原来使用 jsDelivr 的 CDN 服务的网页速度缓慢
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-17
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Cloudflare/">
+                        <span class="chip bg-color">Cloudflare</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/300Tools.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="前端300+实用工具分享【转载】">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          前端300+实用工具分享【转载】
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+本文内容来自 B 站 UP 主 @技术胖的视频：前端老司机 300+实用工具分享 若造成侵权请联系我进行删除。
+Javascript工具
+Underscore.js一套完善的函数式编程的接口，更方便地在JavaScript中实现函数式编程
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -2304,1246 +2310,8 @@ T
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/GitHub/">
-                        <span class="chip bg-color">GitHub</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/PCVideo.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="优雅的通过PC接管移动设备音频">
-                        
-                        <!-- 福袋按钮 -->
-                        <div class="caishendeng">        
-                            <div class="caishenxian wenzhangxian">
-                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                            </div>              
-                        </div>
-                        <span class="card-title">
-                          <!-- 文章卡片hover线条效果 -->
-                          <span class="titlesline"></span>
-                          优雅的通过PC接管移动设备音频
-                        </span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            可能我们在生活中偶尔会有这种需求，就比如说正在寝室或者办公室学习或者办公的时候需要听语音条或者看一个视频又不方便外放声音，而且又不想频繁换耳机（懒），这时这种场景需求就可以被满足。
-个人应用场景参考IPad 音频被电脑接管，IPad 放在旁
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9F%B3%E9%A2%91/">
-                        <span class="chip bg-color">音频</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%93%9D%E7%89%99/">
-                        <span class="chip bg-color">蓝牙</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
-</article>
-<style>
-  .articles .row .article {
-    position: relative;
-  }
-</style>
-
-</div>
-
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('30')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: Barryの小站<br />'
-            + '文章作者: itsBarry<br />'
-            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-<!-- 代码块折行 -->
-
-
-        </div>
-        
-        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="运动">
-            <style>
-    #switchspring {
-        bottom: 223px!important;
-    }
-    @media only screen and (max-width: 601px) {
-        #switchspring {
-            bottom: 178px!important;
-        }
-    }
-    #switchchristmas {
-        bottom: 281px!important;
-    }
-    @media only screen and (max-width: 601px) {
-        #switchchristmas {
-            bottom: 235px!important;
-        }
-    }
-    .ititle {
-        margin: 15px 0;
-        text-align:center;
-        font-family: 'Architects Daughter', cursive;
-    }
-    .ipage {
-        line-height: 30px;
-        margin: 0 auto;
-        padding: 15px 32px 29px;
-        background-color: #f9f9f9;
-        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
-        -moz-border-radius-bottomleft: 20px 500px;
-        -moz-border-radius-bottomright: 500px 30px;
-        -moz-border-radius-topright: 5px 100px;	
-        -webkit-border-bottom-left-radius: 20px 500px;
-        -webkit-border-bottom-right-radius: 64px 10px;
-        -webkit-border-top-right-radius: 5px 100px;    
-        border-bottom-left-radius: 20px 500px;
-        border-bottom-right-radius: 64px 10px;
-        border-top-right-radius: 5px 100px;           
-        -webkit-background-size: 100% 30px;
-        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
-        text-shadow: 0 1px 0 #F6EF97;
-        position: relative;
-    }
-.izhengwen {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    height: auto;
-    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
-    background-size: 100% 32px;
-}
-.izhengwen p {
-    letter-spacing: .1rem;
-}
-#articleContent p {
-    margin: 0
-}
-.ititle {
-    font-family: 'Architects Daughter', cursive;
-    font-size: 1.45rem!important;
-    padding: 10px auto;
-}
-.izhengwen p {
-    position: relative;
-    line-height: 2.2rem!important;
-    text-indent: 2em;
-    font-family: 'Architects Daughter', cursive!important;
-    font-size: 1.45rem!important;
-}
-.ipage::before {
-    content: " ";
-    display: inline-block;
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    right: 52px;
-    z-index: 4;
-    width: 4px;
-    height: 100%;
-    border-left: 1px solid #fca1a1;
-}
-.izhengwen p:nth-child(odd):before {
-    content: " ";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: -16px;
-    z-index: 3;
-    width: 24px;
-    height: 24px;
-    background-color: #fff;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
-}
-.ipage:after {
-    content: " ";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 52px;
-    z-index: 3;
-    width: 4px;
-    height: 100%;
-    border-left: 4px double #fca1a1;
-}
-.ipage p {
-    padding: 0 2em;
-    color: #333!important;
-}
-body.dark .ipage {
-    opacity: 0.85;
-}
-/*小屏幕下(手机类)的样式*/
-@media only screen and (max-width: 600px) {
-    .ipage {
-        padding: 15px 23px 29px;
-    }
-    .ipage:after {
-        left: 36px;
-    }
-    .ipage::before {
-        right: 36px;    
-    }
-    .ipage p, .ititle {
-        padding: 0 0.9em;
-    }
-
-}
-h3 {
-    font-size: 1.32rem;
-    font-weight: 400;
-    color: #101012;
-    transition: 0.8s;
-    cursor: pointer;
-}
-h3:hover {
-    transform: translateX(15px);
-}
-</style>
-
-<!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        
-        <div class="card-content article-info">
-            <!-- 福袋按钮 -->
-            <div class="caishendeng">        
-                <div class="guguxian wenzhangxian">
-                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
-                </div>              
-            </div>
-            <!-- 圣诞按钮 -->
-            <div class="shengdandeng">        
-                <div class="shengdanxian" style="left: 50%;">
-                    <!-- <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" /> -->
-                </div>              
-            </div>
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/keep/">
-                                <span class="chip bg-color">keep</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%BF%90%E5%8A%A8/">
-                                <span class="chip bg-color">运动</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                技术
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
-                
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-03-15
-                </div>
-                
-
-                
-
-                
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
-                </div>
-                
-
-                
-                <div class="info-break-policy">
-                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
-                </div>
-                
-
-                
-            </div>
-        </div>
-        <hr class="clearfix">
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <p><img src="https://easyimage.smitten.top/i/2023/03/15/ucu3i6-0.webp" alt="Barry Running"><br>保持每天运动是个好习惯，这几天我在刷 Github 时就刷到了这么一个可以将我们平时在各种运动 APP 里的数据做一个前端可视化的这么一个项目，于是我也尝试动手搭了一个，下面我就来分享一下我是如何实现的，本文主要分享配置 Keep 的操作。</p>
-<h2 id="Clone-主项目到本地"><a href="#Clone-主项目到本地" class="headerlink" title="Clone 主项目到本地"></a>Clone 主项目到本地</h2><p>Running Page 是 <a target="_blank" rel="noopener" href="https://github.com/yihong0618">@yihong0618</a> 创立的一个开源项目，通过这个项目可以从多个主流跑步平台同步锻炼数据，自动生成一个地图可视化的跑步页面。通过 GitHub Pages 可以快速的完成自动部署。</p>
-<p>项目地址：<a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page">https://github.com/yihong0618/running_page</a><br>我们可以将该仓库 fork 到自己的仓库在 clone 下来，或者直接 clone 下载传到自己新建的仓库。</p>
-<h2 id="配置项目文件"><a href="#配置项目文件" class="headerlink" title="配置项目文件"></a>配置项目文件</h2><pre><code>注意：压缩包当中包含多个以 . 开头的文件名称，在 macOS 系统下需要使用快捷键「Command + shift + .」显示隐藏文件。
-</code></pre><h3 id="1-在根目录中找到「gatsby-config-js」，配置个性化选项。"><a href="#1-在根目录中找到「gatsby-config-js」，配置个性化选项。" class="headerlink" title="1.在根目录中找到「gatsby-config.js」，配置个性化选项。"></a>1.在根目录中找到「gatsby-config.js」，配置个性化选项。</h3><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">pathPrefix</span><span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>   <span class="token comment"># 如需使用自定义域名，此处需要修改为/</span>
-<span class="token key atrule">siteMetadata</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span>
-  <span class="token key atrule">siteTitle</span><span class="token punctuation">:</span> <span class="token string">'Running Page'</span><span class="token punctuation">,</span>   <span class="token comment"># 站点标题</span>
-  <span class="token key atrule">siteUrl</span><span class="token punctuation">:</span> <span class="token string">'https://running.domain.com'</span><span class="token punctuation">,</span>   <span class="token comment"># 站点域名</span>
-  <span class="token key atrule">logo</span><span class="token punctuation">:</span> <span class="token string">'https://q.qlogo.cn/headimg_dl?bs=qq&amp;dst_uin=*********&amp;spec=640'</span><span class="token punctuation">,</span>   <span class="token comment"># 左上角头像</span>
-  <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'Just Do It'</span><span class="token punctuation">,</span>
-  <span class="token key atrule">navLinks</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">&#123;</span>
-      <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">'Blog'</span><span class="token punctuation">,</span>   <span class="token comment"># 右上角导航栏</span>
-      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'https://blog.domain.com'</span><span class="token punctuation">,</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-  <span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">,</span></code></pre>
-<h3 id="2-打开「-github」-gt-「workflows」-gt-「run-data-sync-yml」文件，修改平台类型及信息。不同平台的配置信息可以前往-说明页面-进行查看。"><a href="#2-打开「-github」-gt-「workflows」-gt-「run-data-sync-yml」文件，修改平台类型及信息。不同平台的配置信息可以前往-说明页面-进行查看。" class="headerlink" title="2.打开「.github」&gt;「workflows」&gt;「run_data_sync.yml」文件，修改平台类型及信息。不同平台的配置信息可以前往 说明页面 进行查看。"></a>2.打开「.github」&gt;「workflows」&gt;「run_data_sync.yml」文件，修改平台类型及信息。不同平台的配置信息可以前往 <a target="_blank" rel="noopener" href="https://github.com/yihong0618/running_page/blob/master/README-CN.md#%E6%94%AF%E6%8C%81">说明页面</a> 进行查看。</h3><pre class="language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Run Data Sync
-
-<span class="token key atrule">on</span><span class="token punctuation">:</span>
-  <span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
-  <span class="token key atrule">schedule</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 0 * * *"</span>
-
-<span class="token key atrule">env</span><span class="token punctuation">:</span>
-  <span class="token comment"># please change to your own config.</span>
-  <span class="token key atrule">RUN_TYPE</span><span class="token punctuation">:</span> keep <span class="token comment"># support strava/nike/garmin/garmin_cn/keep/only_gpx/nike_to_strava/strava_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn, Please change the 'pass' it to your own</span>
-  <span class="token key atrule">ATHLETE</span><span class="token punctuation">:</span> BarryYangi
-  <span class="token key atrule">TITLE</span><span class="token punctuation">:</span> Barry Running
-  <span class="token key atrule">MIN_GRID_DISTANCE</span><span class="token punctuation">:</span> <span class="token number">4</span> <span class="token comment"># change min distance here</span>
-  <span class="token key atrule">TITLE_GRID</span><span class="token punctuation">:</span> Over 4km Runs <span class="token comment"># also here</span>
-  <span class="token key atrule">GITHUB_NAME</span><span class="token punctuation">:</span> BarryYangi
-  <span class="token key atrule">GITHUB_EMAIL</span><span class="token punctuation">:</span> 2059484047@qq.com
-
-<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
-  <span class="token key atrule">sync</span><span class="token punctuation">:</span>
-    <span class="token key atrule">name</span><span class="token punctuation">:</span> Sync
-    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
-    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set up Python
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>python@v1
-        <span class="token key atrule">with</span><span class="token punctuation">:</span>
-          <span class="token key atrule">python-version</span><span class="token punctuation">:</span> <span class="token number">3.7</span>
-
-      <span class="token comment"># from pdm</span>
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Set Variables
-        <span class="token key atrule">id</span><span class="token punctuation">:</span> set_variables
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          echo "PY=$(python -c 'import hashlib, sys;print(hashlib.sha256(sys.version.encode()+sys.executable.encode()).hexdigest())')" >> $GITHUB_OUTPUT
-          echo "PIP_CACHE=$(pip cache dir)" >> $GITHUB_OUTPUT</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Cache PIP
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/cache@v2
-        <span class="token key atrule">with</span><span class="token punctuation">:</span>
-          <span class="token key atrule">path</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PIP_CACHE <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-          <span class="token key atrule">key</span><span class="token punctuation">:</span> Ubuntu<span class="token punctuation">-</span>pip<span class="token punctuation">-</span>$<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> steps.set_variables.outputs.PY <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install dependencies
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt</span>
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> steps.pip<span class="token punctuation">-</span>cache.outputs.cache<span class="token punctuation">-</span>hit <span class="token tag">!=</span> 'true'
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/nike_sync.py $&#123;&#123; secrets.NIKE_REFRESH_TOKEN &#125;&#125;</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Nike to Strava(Run with nike data backup and show with strava)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'nike_to_strava'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/nike_to_strava_sync.py $&#123;&#123; secrets.NIKE_REFRESH_TOKEN &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Keep script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'keep'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/keep_sync.py $&#123;&#123; secrets.KEEP_MOBILE &#125;&#125; $&#123;&#123; secrets.KEEP_PASSWORD &#125;&#125; --with-gpx</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;</span>
-
-      <span class="token comment"># for garmin if you want generate `tcx` you can add --tcx command in the args.</span>
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125;</span>
-        <span class="token comment"># If you only want to sync `type running` add args --only-run, default script is to sync all data (rides and runs).</span>
-        <span class="token comment"># python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; --only-run</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin CN script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_cn'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/garmin_sync.py $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; --is-cn</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Only GPX script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'only_gpx'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/gpx_sync.py</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin(Run with strava(or others upload to strava) data backup in Garmin)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/strava_to_garmin_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125; $&#123;&#123; secrets.STRAVA_EMAIL &#125;&#125; $&#123;&#123; secrets.STRAVA_PASSWORD &#125;&#125;</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Strava to Garmin<span class="token punctuation">-</span>cn(Run with strava(or others upload to strava) data backup in Garmin<span class="token punctuation">-</span>cn)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'strava_to_garmin_cn'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/strava_to_garmin_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; $&#123;&#123; secrets.STRAVA_EMAIL &#125;&#125; $&#123;&#123; secrets.STRAVA_PASSWORD &#125;&#125; --is-cn</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin<span class="token punctuation">-</span>cn to Strava(Run with Garmin data backup in Strava)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava_cn'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/garmin_to_strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_CN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_CN_PASSWORD &#125;&#125; --is-cn</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Garmin to Strava(Run with Garmin data backup in Strava)
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'garmin_to_strava'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/garmin_to_strava_sync.py $&#123;&#123; secrets.STRAVA_CLIENT_ID &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_SECRET &#125;&#125; $&#123;&#123; secrets.STRAVA_CLIENT_REFRESH_TOKEN &#125;&#125;  $&#123;&#123; secrets.GARMIN_EMAIL &#125;&#125; $&#123;&#123; secrets.GARMIN_PASSWORD &#125;&#125;</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Run sync Tulipsport script
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE == 'tulipsport'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/tulipsport_sync.py $&#123;&#123; secrets.TULIPSPORT_TOKEN &#125;&#125; --with-gpx</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Make svg GitHub profile
-        <span class="token key atrule">if</span><span class="token punctuation">:</span> env.RUN_TYPE <span class="token tag">!=</span> 'pass'
-        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
-          python scripts/gen_svg.py --from-db --title "$&#123;&#123; env.TITLE &#125;&#125;" --type github --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github.svg --use-localtime --min-distance 0.5
-          python scripts/gen_svg.py --from-db --title "$&#123;&#123; env.TITLE_GRID &#125;&#125;" --type grid --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --output assets/grid.svg --special-color yellow --special-color2 red --special-distance 20 --special-distance2 40 --use-localtime --min-distance "$&#123;&#123; env.MIN_GRID_DISTANCE &#125;&#125;"
-          python scripts/gen_svg.py --from-db --type circular --use-localtime
-          python scripts/gen_svg.py --from-db --year $(date +"%Y")  --language zh_CN --title "$(date +"%Y") Running" --type github --athlete "$&#123;&#123; env.ATHLETE &#125;&#125;" --special-distance 10 --special-distance2 20 --special-color yellow --special-color2 red --output assets/github_$(date +"%Y").svg --use-localtime --min-distance 0.5</span>
-
-      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy site
-        <span class="token key atrule">uses</span><span class="token punctuation">:</span> peaceiris/actions<span class="token punctuation">-</span>gh<span class="token punctuation">-</span>pages@v3
-        <span class="token key atrule">with</span><span class="token punctuation">:</span>
-            <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.MY_GIT_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-            <span class="token key atrule">publish_branch</span><span class="token punctuation">:</span> vercel<span class="token punctuation">-</span>pages
-            <span class="token key atrule">publish_dir</span><span class="token punctuation">:</span> .
-            <span class="token key atrule">force_orphan</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-            <span class="token comment"># keep_files: true</span></code></pre>
-<p>这里推荐我们删掉剩下三个 workflows 配置 yml，因为我们不需要，后面我们将会将站点配置到 vercel 上，然后复制我的 <code>run_data_sync.yml</code> 文件内容到该文件覆盖。</p>
-<h3 id="3-找到自己所对应的平台需要完善的帐户信息"><a href="#3-找到自己所对应的平台需要完善的帐户信息" class="headerlink" title="3.找到自己所对应的平台需要完善的帐户信息"></a>3.找到自己所对应的平台需要完善的帐户信息</h3><p>列如 keep：<br><pre class="language-bash" data-language="bash"><code class="language-bash">python scripts/keep_sync.py <span class="token variable">$&#123;&#123; secrets.KEEP_MOBILE &#125;</span><span class="token punctuation">&#125;</span> <span class="token variable">$&#123;&#123; secrets.KEEP_PASSWORD &#125;</span><span class="token punctuation">&#125;</span> --with-gpx</code></pre><br>我们需要能够登录 keep 的手机账号以及密码，随后我们需要用到。</p>
-<h3 id="4-Running-Page-使用-Mapbox-进行地图展示，需要前往-Mapbox-站点-注册一个开发者账号。"><a href="#4-Running-Page-使用-Mapbox-进行地图展示，需要前往-Mapbox-站点-注册一个开发者账号。" class="headerlink" title="4.Running Page 使用 Mapbox 进行地图展示，需要前往 Mapbox 站点 注册一个开发者账号。"></a>4.Running Page 使用 Mapbox 进行地图展示，需要前往 <a target="_blank" rel="noopener" href="https://www.mapbox.com/">Mapbox 站点</a> 注册一个开发者账号。</h3><p>登录账号后，选择「Create a token」创建一个令牌，并完善相关信息。提交后会得到一串令牌信息，编辑「src」&gt;「utils」&gt;「const.js」文件，将自己的令牌替换到 MAPBOX_TOKEN 当中。</p>
-<h3 id="5-保存文件并且-push-到自己的-git-仓库"><a href="#5-保存文件并且-push-到自己的-git-仓库" class="headerlink" title="5.保存文件并且 push 到自己的 git 仓库"></a>5.保存文件并且 push 到自己的 git 仓库</h3><h2 id="Git-仓库-secrets-配置"><a href="#Git-仓库-secrets-配置" class="headerlink" title="Git 仓库 secrets 配置"></a>Git 仓库 secrets 配置</h2><p>进入自己的仓库，依次点击 Settings-&gt;Secrets and variables-&gt;Actions-&gt;New repository secret 新建如下图三个 secrets<br><img src="https://easyimage.smitten.top/i/2023/03/15/vvwxu8-0.webp" alt="secrets"></p>
-<p>其中前两项为 keep 的手机账号和密码，最后一项为 github 的 token，如果没有的话可以点击头像-&gt;Settings-&gt;Developer settings-&gt;Personal access tokens (classic)-&gt;Generate new token<br>创建的时候可以把所有权限都勾了，然后创建完就复制记下来，这个 token 是值出现一次的，看完以后就再也不能看了，然后把这个 token 放到前面我们仓库的哪个 secret 里去即可。</p>
-<h2 id="配置-Vercel"><a href="#配置-Vercel" class="headerlink" title="配置 Vercel"></a>配置 Vercel</h2><p>进入我们的 <a target="_blank" rel="noopener" href="https://vercel.com/">Vercel</a> 没有账号的注册一个然后绑定我们的 GitHub ，绑定完直接点击刚刚我们新建的仓库导入即可。<br>然后我们回到 Github 的仓库点击 Actions，按如下步骤手动触发一次工作流。<br><img src="https://easyimage.smitten.top/i/2023/03/15/w1jap5-0.webp" alt="Actions"></p>
-<p>等待工作流跑完如果是勾就说明没问题了，这个时候我们会发现多出来了一个 vercel-pages 分支，这个分支我们用来在 vercel 上部署，我们来到 vercel 的本项目的 setting 页面更改默认的部署分支为 vercel-pages，步骤如下图：<br><img src="https://easyimage.smitten.top/i/2023/03/15/w4jupa-0.webp" alt></p>
-<p>保存完成后我们需要在去 vercel-pages 分支在 push 一次 vercel 这边才会真正应用，我们只需在 github 仓库的 Actions 页面重新执行一次我们刚刚操作过的哪个工作流即可。</p>
-<p>等待工作流跑完，然后你回到 vercel 页面等待部署完你就会发现部署分支已经变为了 vercel-pages</p>
-<h2 id="vercel-绑定域名"><a href="#vercel-绑定域名" class="headerlink" title="vercel 绑定域名"></a>vercel 绑定域名</h2><p>如果你想将本页面分享给你的朋友看这样肯定是不够优雅的，哪如果你有自己的域名可以到 vercel 的 Setting 页面的 Domains 选项绑定自己的域名。</p>
-<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><p>在此希望这个项目能带给我们的不仅仅是一次简单的项目部署经验，能让我们借此养成一个良好的运动习惯才是最重要的，然后记录下来，将来可以去追溯当下。<br>Just enjoy it.</p>
-
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">itsBarry</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://www.smitten.top/posts/KeepRunning.html">https://www.smitten.top/posts/KeepRunning.html</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/about" target="_blank">itsBarry</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
-                            
-                                <a href="/tags/keep/">
-                                    <span class="chip bg-color">keep</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%BF%90%E5%8A%A8/">
-                                    <span class="chip bg-color">运动</span>
-                                </a>
-                            
-                        </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">感谢赞赏哦~</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-        <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
-    .v[data-class=v] .emoji, .v[data-class=v] .vemoji {
-        max-height: 20px;
-        overflow: hidden;
-        max-width: 20px!important;
-    }
-    .v[data-class=v] .vwrap .vemojis {
-        text-align: center;
-    }
-    .roboterbb {
-        position: absolute;
-        right: 87px;
-        padding-top: 3px;
-    }
-    .robot-check-text:hover {
-        color: #26a69a;
-    }
-    .roboter:hover .robot-check-text::before {
-        border: 2px solid #5a5a5a;
-    }
-    .robotxian {
-        background: #5a5a5a;
-        top: 21px;
-        left: 11px!important;
-        transform-origin: 50% -17px;
-        animation: swing 3.5s infinite ease-in-out;
-        -webkit-transform-origin: 50% -17px;
-        -webkit-animation: swing 2.85s infinite ease-in-out;
-    }
-    .v[data-class=v] .vwrap {
-        padding-bottom: 23px;
-    }
-    .robotimg {
-        width: 28px!important;
-        height: 28px!important;
-        top: 14px!important;
-        left: -13px!important;
-        max-width: none!important;
-        z-index: 99;
-        cursor: none!important;
-    }
-    .v[data-class=v] .vbtn:disabled {
-        color: #b2b2b5;
-        border-color: #b2b2b5;
-    }
-    .v[data-class=v] .vbtn:disabled {
-        background-color: transparent;
-    }
-    .valine-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-    .v[data-class=v] .vwrap {
-        border-radius: 8px;
-    }
-    /* #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/medias/comment_bg1.webp") 100% 100% no-repeat;
-    } */
-    #vcomments textarea {
-        background: url(/medias/comment_bg1.webp) no-repeat;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-        background-color: rgba(255,255,255,0);
-        resize: vertical;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-</style>
-
-<div class="card valine-card" id="vcomments-top">
-
-    <!-- 福袋按钮 -->
-    <div class="caishendeng">        
-        <div class="caishenxian fudaixian">
-            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png" />
-        </div>              
-    </div>
-   
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评 论</span>
-    </div>
-    <div id="vcomments" class="card-content" style="display: grid"></div>
-</div>
-
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
-<script>
-    new Valine({
-        el: '#vcomments',
-        enableQQ: true,
-        boolean: true,
-        appId: 'k5N8XhsMfL71uDYEah6HoN6B-gzGzoHsz',
-        appKey: 'Q4JIAdUGaDEKrFZxjrymW7VX',
-        notify: 'false' === 'true',
-        verify: 'false' === 'true',
-        visitor: 'true' === 'true',
-        // avatar: 'mm',
-        avatar: '/medias/robot.png',
-        pageSize: '16',
-        lang: 'zh-cn',
-        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
-
-        adminEmailMd5: '',
-
-        master: ["6b922a7268ecf15b7de33e844cfb9fba"],
-        friends: [""],
-        tagMeta: ["博主", "小伙伴", "访客"],
-        // tagMeta: '博主,小伙伴,访客',
-        // master: '6b922a7268ecf15b7de33e844cfb9fba',
-        // friends: '',
-        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest"]
-    });
-</script>
-<!-- 直达评论 -->
-<div id="to_comment" class="comment-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
-        <i class="fas fa-comments"></i>
-    </a>
-</div>
-
-
-<!-- 评论机器人验证 -->
-<script>
-    $('.roboter').on('click',function(){
-        $('.robot-check-text').html('·&nbsp;&nbsp;&nbsp;验证成功！');
-        $('.roboter:hover .robot-check-text::before').css('border','2px solid #26a69a');
-        $('.robotxian').css('background','#26a69a');
-        $('.robotimg').attr('src','/medias/robot.png');
-        $('.robot-check-text').css('color','#26a69a');
-    });
-    
-    if(!$('.robot-check').checked) {
-        // alert("请勾选机器人验证后再发表评论！");
-        $('.vsubmit').attr('disabled',true).attr('title','评论前勾选机器人验证按钮');
-    } 
-    $('.robot-check').on('click',function(){
-        $('.vsubmit').attr('disabled',false).attr('title','欢迎畅所欲言');
-    });
-</script>
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/posts/GitHubNeverDie.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="People Die, but Long Live GitHub">
-                        
-                        <!-- 福袋按钮 -->
-                        <div class="caishendeng">        
-                            <div class="caishenxian wenzhangxian">
-                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                            </div>              
-                        </div>
-                        <span class="card-title">
-                          <!-- 文章卡片hover线条效果 -->
-                          <span class="titlesline"></span>
-                          People Die, but Long Live GitHub
-                        </span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            不知道有没有人注意到，Joe Armstrong 最近几个月都在忙着迁移博客到 TiddlyWiki。我很早就关注了他的 Twitter，然而之前并没多想。听闻大师在 4 月 20 号去世，我才反应过来，原来他之前的举动是在未雨绸缪。
-
-T
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%BD%AC%E8%BD%BD/" class="post-category">
-                                    转载
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/GitHub/">
-                        <span class="chip bg-color">GitHub</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/PCVideo.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="优雅的通过PC接管移动设备音频">
-                        
-                        <!-- 福袋按钮 -->
-                        <div class="caishendeng">        
-                            <div class="caishenxian wenzhangxian">
-                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                            </div>              
-                        </div>
-                        <span class="card-title">
-                          <!-- 文章卡片hover线条效果 -->
-                          <span class="titlesline"></span>
-                          优雅的通过PC接管移动设备音频
-                        </span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            可能我们在生活中偶尔会有这种需求，就比如说正在寝室或者办公室学习或者办公的时候需要听语音条或者看一个视频又不方便外放声音，而且又不想频繁换耳机（懒），这时这种场景需求就可以被满足。
-个人应用场景参考IPad 音频被电脑接管，IPad 放在旁
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-15
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E9%9F%B3%E9%A2%91/">
-                        <span class="chip bg-color">音频</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%93%9D%E7%89%99/">
-                        <span class="chip bg-color">蓝牙</span>
+                    <a href="/tags/Tool/">
+                        <span class="chip bg-color">Tool</span>
                     </a>
                     
                 </div>
@@ -3627,15 +2395,7 @@ T
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         
         
-        <div class="toc-widget" data-spmid="keep">
-            <div class="toc-title">
-                <i class="far fa-list-alt"></i>
-                &nbsp;&nbsp;目录
-            </div>
-            <div id="toc-content"></div>
-        </div>
-        
-        <div class="toc-widget" data-spmid="运动">
+        <div class="toc-widget" data-spmid="Cloudflare">
             <div class="toc-title">
                 <i class="far fa-list-alt"></i>
                 &nbsp;&nbsp;目录
@@ -3650,13 +2410,7 @@ T
 <!-- TOC 悬浮按钮. -->
 
     
-<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="keep">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="运动">
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="Cloudflare">
     <a class="btn-floating btn-large bg-color">
         <i class="fas fa-list-ul"></i>
     </a>
