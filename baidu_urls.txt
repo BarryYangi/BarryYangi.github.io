@@ -1,3 +1,4 @@
+https://www.smitten.top/posts/0.html
 https://www.smitten.top/posts/f8c8.html
 https://www.smitten.top/posts/frontend-terminology.html
 https://www.smitten.top/posts/jsDelivr.html
@@ -14,7 +15,6 @@ https://www.smitten.top/posts/HexoCI.html
 https://www.smitten.top/posts/WeAreToghter.html
 https://www.smitten.top/posts/imgapi.html
 https://www.smitten.top/posts/dy.html
-https://www.smitten.top/posts/TeamSpeak.html
 https://www.smitten.top/posts/VPS.html
 https://www.smitten.top/posts/AList.html
 https://www.smitten.top/posts/wt.html
