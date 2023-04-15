@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于Linux内核</title>
+      <link href="/posts/LinuxKernel.html"/>
+      <url>/posts/LinuxKernel.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>昨天刷课时，刷到一张很有趣的关于 Linux 内核的漫画，感觉会对刚接触 Linux 的同学对 Linux 内核有更好的理解，在这里分享给大家。</p></blockquote><h2 id="内核漫画"><a href="#内核漫画" class="headerlink" title="内核漫画"></a>内核漫画</h2><p><img src="https://cdn.yct.ee/gh/BarryYangi/ObsStaticData@main/obsidian/16815240180005z3bei.png" alt="Linux"></p><h2 id="一些理解"><a href="#一些理解" class="headerlink" title="一些理解"></a>一些理解</h2><p>这张漫画很好的展示了 Linux 基本的一些运作原理，Linux 作为一个分层结构的系统，在漫画中将其简单分为三层，底层为文件系统，用来管理和操作文件，中间层为进程管理运行的地方，上层为一些 tty，也就是命令行工具来处理系统与用户交互的一些地方。</p><h3 id="底层"><a href="#底层" class="headerlink" title="底层"></a>底层</h3><p>我们先从底层开始看，首先底层是一个 filesystem，也就是管理操作文件的地方，这里的每一只小企鹅我们可以理解为一个进程，我们可以看到这只编号为 421 的企鹅正在打开文件柜，这里就可以理解为一个 PID 为 421 的进程正在读取文件夹对文件系统进行一些操作。</p><h3 id="中间层"><a href="#中间层" class="headerlink" title="中间层"></a>中间层</h3><p>中间层为进程管理运行的地方，我们可以看到有很多只不同的小企鹅在各司其职，在右下角的 process table 这里桌子上坐着的小企鹅中，我们可以看到有一只编号为 171 的小企鹅眯着眼在休息，这里我们可以理解为在这个进程很空闲，并没有在处理任务。<br>在进程以外，我们还可以看到几只小狗，这些小狗其实就是一些对进程管理和监控的系统，然后我们看墙上其实也有很多有意思的地方，比如左边这个 1341 进程，我们可以看到它正在监听 80 端口，所以说这个进程正在处理一些网络输入输出的任务。<br>在后面还有一个 21 端口，我们可以看到这个 21 接口的牌牌已经摇摇欲坠了，说明很久都没有人光顾这个接口了，大家应该知道 21 接口是负责 ftp 协议的，也一方面反映这个协议已经比较老旧了。<br>21 端口正好可以与隔壁的 22 端口比较一下，22 端口大家都知道为 SSH 默认监听端口，我们可以看到监听 22 端口的这只小企鹅戴个墨镜，感觉是非常的 famous 非常的精神抖擞，这也侧面反映出 SSH 或者是 22 端口是目前比较常用或者比较流行的一个端口。<br>然后我们看到中间有一只大企鹅 217 cron，这其实是一只处理定时任务调度的进程。<br>也有一只叫 wine 的企鹅，这个进程使得在运行 Linux、FreeBSD 或其他一些操作系统的计算机上运行一些 Windows 应用程序成为可能。<br>在后面可以看到有两只企鹅在一起搬一根管道，这里也说明不同进程之间其实是可以通过管道进行通信的，不同进程是允许通信的。<br>最后我们可以看到有个楼梯是可以直接通往 FS 低层的文件系统的，也就是 421 这只企鹅在干的事。</p><h3 id="顶层"><a href="#顶层" class="headerlink" title="顶层"></a>顶层</h3><p>顶层主要是一些 tty，这层会与很多命令行接口来处理用户的输入，我们看到也有企鹅在监听这些 tty，然后接收到用户的输入后通过进程处理后输出一些结果。</p><h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p>最后给大家分享一张 Linux 的思维导图，大家有需要自取。<br><img src="https://cdn.yct.ee/gh/BarryYangi/ObsStaticData@main/obsidian/1681524119000vwfheg.png" alt="Linux"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/posts/0.html"/>
       <url>/posts/0.html</url>
@@ -21,7 +46,7 @@
       <link href="/posts/f8c8.html"/>
       <url>/posts/f8c8.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>%% Begin Waypoint %%</p><ul><li><strong>[[已发布文章]]</strong><ul><li>[[宝藏句子收藏区]]</li><li>[[步入Linux的现代方法]]</li><li>[[共勉]]</li><li>[[关于Memos]]</li><li>[[论Linux to go]]</li><li>[[前端300+实用工具分享【转载】]]</li><li>[[三分钟让你的Web网页变优雅]]</li><li>[[使Windows  Terminal变得更易用]]</li><li>[[所有过往，皆为序章]]</li><li>[[我是如何解决 jsDelivr 在国内被污染的？]]</li><li>[[我要我们在一起]]</li><li>[[五分钟搭建个人资源库]]</li><li>[[五分钟搭建一个随机图片API]]</li><li>[[优雅的通过PC接管移动设备音频]]</li><li>[[整理一些常用的脚本（持续更新中）]]</li><li>[[转载一篇知乎上的文章：抖音是如何毁掉我们的？]]</li><li>[[Frontend-terminology]]</li><li>[[hexo博客工作流CI（一键部署的快乐）]]</li><li>[[Hi,Regex]]</li><li>[[Keep running]]</li><li>[[People Die, but Long Live GitHub]]</li><li>[[TeamSpeak服务器搭建——基于Docker-Compose]]</li><li>[[VPS 基础Docker环境配置]]</li></ul></li></ul><p>%% End Waypoint %%</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>%% Begin Waypoint %%</p><ul><li><strong>[[已发布文章]]</strong><ul><li>[[宝藏句子收藏区]]</li><li>[[步入Linux的现代方法]]</li><li>[[共勉]]</li><li>[[关于Linux内核]]</li><li>[[关于Memos]]</li><li>[[论Linux to go]]</li><li>[[前端300+实用工具分享【转载】]]</li><li>[[三分钟让你的Web网页变优雅]]</li><li>[[使Windows  Terminal变得更易用]]</li><li>[[所有过往，皆为序章]]</li><li>[[我是如何解决 jsDelivr 在国内被污染的？]]</li><li>[[我要我们在一起]]</li><li>[[五分钟搭建个人资源库]]</li><li>[[五分钟搭建一个随机图片API]]</li><li>[[优雅的通过PC接管移动设备音频]]</li><li>[[整理一些常用的脚本（持续更新中）]]</li><li>[[转载一篇知乎上的文章：抖音是如何毁掉我们的？]]</li><li>[[Frontend-terminology]]</li><li>[[hexo博客工作流CI（一键部署的快乐）]]</li><li>[[Hi,Regex]]</li><li>[[Keep running]]</li><li>[[People Die, but Long Live GitHub]]</li><li>[[TeamSpeak服务器搭建——基于Docker-Compose]]</li><li>[[VPS 基础Docker环境配置]]</li></ul></li></ul><p>%% End Waypoint %%</p>]]></content>
       
       
       
