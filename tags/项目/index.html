@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="🐈 实战项目, Barry">
+    <meta name="keywords" content="标签: 项目, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>🐈 实战项目 | Barryの小站</title>
+    <title>标签: 项目 | Barryの小站</title>
     
     <script>
         // 隐藏
@@ -1155,7 +1155,7 @@ class="themespring" -->
         <div class="brand">
             <div class="title center-align">
                 
-                    🐈 实战项目
+                    
                  
             </div>
 
@@ -1193,763 +1193,84 @@ class="themespring" -->
 
 
 <style>
-    /* .bg-cover {
-        background-image: url("/medias/banner/projectbg.jpg")!important;
-    } */
+    .bg-cover {
+        height: 44vh;
+    }
+    #sma {
+        bottom: 118px;
+    }
     .bg-cover::before {
         background-image: url(/medias/bggrid.png);
     }
-    @media only screen and (max-width: 601px) {
-        #switchspring {
-            bottom: 178px!important;
-        }
-    }
-    body.dark .page .content li {
-        background: rgba(34,34,34,0.55)!important;
-    }
-    
-    #switchspring {
-        bottom: 223px;
-    }
-    .card-content {
-        padding: 12px!important;
-    }
-    .miaoshus {
-        padding: 12px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 95%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 3px auto 0px;
-    }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
-    }
-</style>
-<!-- 以下书单模块css样式 -->
-<style>
-    @media screen and (min-width: 768px) {
-        #book .page {
-        /* background-color: hsla(0,0%,100%,.7); */
-        -webkit-box-shadow: 0 8px 16px rgba(0,0,0,.12);
-        box-shadow: 0 8px 16px rgba(0,0,0,.12);
-        }
-    }
-    #book .page {
-        overflow: hidden;
-        border-radius: 3px;
-    }
-    @media screen and (min-width: 768px) {
-        #book .content {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-    #book .content {
-        display: grid;
-        grid-column-gap: 16px;
-        padding: 16px;
-        text-align: justify;
-    }
-    #book .content li {
-        list-style: none;
-        margin-bottom: 16px;
-        border-radius: 3px;
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    #book .content li .info {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        padding: 20px 20px 0;
-        line-height: 1.7;
-        list-style: none;
-    }
-    .book-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-perspective: 600px;
-        perspective: 600px;
-    }
-    .book {
-        position: relative;
-        width: 100px;
-        height: 150px;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform: rotateY(-30deg);
-        transform: rotateY(-30deg);
-        -webkit-transition: 1s ease;
-        transition: 1s ease;
-        -webkit-animation: bookRotate 0s 1s ease 0s;
-        animation: bookRotate 0s 1s ease 0s;
-        list-style: none;
-    }
-    .book:before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        top: 2px;
-        width: 23px;
-        height: 146px;
-        -webkit-transform: translateX(84.5px) rotateY(90deg);
-        transform: translateX(84.5px) rotateY(90deg);
-        background: -webkit-gradient(linear,left top,right top,from(#fff),color-stop(5%,#f9f9f9),color-stop(10%,#fff),color-stop(15%,#f9f9f9),color-stop(20%,#fff),color-stop(25%,#f9f9f9),color-stop(30%,#fff),color-stop(35%,#f9f9f9),color-stop(40%,#fff),color-stop(45%,#f9f9f9),color-stop(50%,#fff),color-stop(55%,#f9f9f9),color-stop(60%,#fff),color-stop(65%,#f9f9f9),color-stop(70%,#fff),color-stop(75%,#f9f9f9),color-stop(80%,#fff),color-stop(85%,#f9f9f9),color-stop(90%,#fff),color-stop(95%,#f9f9f9),to(#fff));
-        background: linear-gradient(90deg,#fff,#f9f9f9 5%,#fff 10%,#f9f9f9 15%,#fff 20%,#f9f9f9 25%,#fff 30%,#f9f9f9 35%,#fff 40%,#f9f9f9 45%,#fff 50%,#f9f9f9 55%,#fff 60%,#f9f9f9 65%,#fff 70%,#f9f9f9 75%,#fff 80%,#f9f9f9 85%,#fff 90%,#f9f9f9 95%,#fff);
-    }
-    .book>:first-child {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
-        -webkit-transform: translateZ(12.5px);
-        transform: translateZ(12.5px);
-        border-radius: 0 2px 2px 0;
-        -webkit-box-shadow: 5px 5px 20px #666;
-        box-shadow: 5px 5px 20px #666;
-    }
-    .book:after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
-        -webkit-transform: translateZ(-12.5px);
-        transform: translateZ(-12.5px);
-        background-color: #555;
-        border-radius: 0 2px 2px 0;
-    }
-    #book .content li .info>div {
-        margin-left: 32px;
-    }
-    #book .content li .info h3 {
-        font-size: 16px;
-    }
-    #book .content li .info p a {
-        position: relative;
-        color: #b854d4;
-    }
-    #book .content li .info p a:before {
-        content: " " attr(href);
-        position: absolute;
-        padding: 0 4px;
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-        pointer-events: none;
-        font-family: Fontello;
-        font-size: 12px;
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        border-radius: 3px;
-        background-color: #fff;
-        opacity: 0;
-        -webkit-transform: scale(.7) translateY(-75%);
-        transform: scale(.7) translateY(-75%);
-        -webkit-transform-origin: left center;
-        transform-origin: left center;
-        -webkit-transition: all .3s ease 0s;
-        transition: all .3s ease 0s;
-    }
-    #book .content li .info p a:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1.5px;
-        background-color: #b854d4;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transform-origin: bottom right;
-        transform-origin: bottom right;
-        -webkit-transition: -webkit-transform .3s ease-out;
-        transition: -webkit-transform .3s ease-out;
-        transition: transform .3s ease-out;
-        transition: transform .3s ease-out,-webkit-transform .3s ease-out;
-    }
-    #book .content li .info .fa-star {
-        margin-right: 4px;
-        color: #d68fe9;
-    }
-    .icon-star:before {
-        content: "\e80b";
-    }
-    [class*=" icon-"]:before, [class^=icon-]:before {
-        font-family: Fontello;
-        font-style: normal;
-        font-weight: 400;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    #book .content li .description {
-        padding: 12px 20px;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-    #book .content li .info p {
-        font-size: 14px;
-        line-height: 1.7;
-
-    }
-    @media screen and (min-width: 768px) {
-        #book .content li:hover {
-            -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-            -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-            box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-        }
-    }
-    #book .content li {
-        list-style: none;
-        margin-bottom: 16px;
-        border-radius: 3px;
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    #book .content li:hover .book {
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
-    }
-    .quote {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        position: relative;
-        margin-bottom: 16px;
-        padding: 32px 0;
-    }
-    .quote i:first-child {
-        top: 0;
-        left: 16px;
-    }
-    .quote i {
-        position: absolute;
-        font-size: 24px;
-    }
-    .icon-quote-left:before {
-        content: "\f10d";
-    }
-    [class*=" icon-"]:before, [class^=icon-]:before {
-        font-family: Fontello;
-        font-style: normal;
-        font-weight: 400;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
 </style>
 <main class="content">
-    <div class="container">
-        <div class="card">
-            <!-- 福袋按钮 -->
-            <div class="caishendeng">        
-                <div class="guguxian">
-                    <img class="caishenpic gugus" src="/medias/spring-img/gu1.png" />
-                </div>              
-            </div>
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <div class="miaoshus">
-                        <div class="title center-align">“ 博主项目一览 ”
-                    </div>
+    
 
-                    <!-- 书单模块开始 -->
-                    <div id="book">
-                    <div class="page">
-                      <ul class="content">
-                        <!-- 每个li标签内容代表一本书籍的所有信息 -->
-                        <!-- <li>
-                            <div class="info">
-                                <a href="https://gitee.com/nekodeng/vue_shop_system" target="_blank" rel="noreferrer noopener" class="book-container">
-                                    <div class="book">
-                                        <img src="/medias/project-img/vue_system.png">
-                                    </div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="项目">
+                <div class="card">
+                    <a href="/posts/eeeLink.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/banner/2.jpg" class="responsive-img" alt="生成一个有趣的链接">
+                            
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: pink;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              生成一个有趣的链接
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
                                 </a>
-                                <div>
-                                    <a href="https://gitee.com/nekodeng/vue_shop_system" target="_blank"><h3>《 vue+element商品后台管理系统 》</h3></a>
-                                    <p>作者：itsNekoDeng</p>
-                                    <p>完成时间：2019-03-06</p>
-                                    <p>项目进度：大体已完成...</p>
-                                    <p>
-                                        <span>项目源码：</span>
-                                        <a href="https://gitee.com/nekodeng/vue_shop_system" target="_blank" rel="noopener noreferrer"> vue+element商品后台管理系统 </a>
-                                    </p>
-                                    <p> 
-                                        <span>推荐指数：</span>
-                                        <span></span>
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="description">“ 一个基于vue和element的后台管理系统，vue2.x + element，其中本源码中的vue_api_server文件为项目的api接口文件 ”</p>
-                        </li>   -->
-                        <!-- 每个li标签内容代表一本书籍的所有信息 -->
-                        <!-- <li>
-                            <div class="info">
-                                <a href="https://github.com/nekodeng/supermall-vue2-cli3" target="_blank" rel="noreferrer noopener" class="book-container">
-                                    <div class="book">
-                                        <img src="/medias/project-img/vue-mall.png">
-                                    </div>
-                                </a>
-                                <div>
-                                    <a href="https://github.com/nekodeng/supermall-vue2-cli3" target="_blank"><h3>《 仿蘑菇街H5vue项目-vue2-cli3 》</h3></a>
-                                    <p>作者：itsNekoDeng</p>
-                                    <p>完成时间：2019-02-08</p>
-                                    <p>项目进度：大体已完成...</p>
-                                    <p>
-                                        <span>项目源码：</span>
-                                        <a href="https://github.com/nekodeng/supermall-vue2-cli3" target="_blank" rel="noopener noreferrer"> 仿蘑菇街H5vue项目-vue2-cli3 </a>
-                                    </p>
-                                    <p> 
-                                        <span>推荐指数：</span>
-                                        <span></span>
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="description">“ About
-                                After learning VUE at B station, the project of imitation mushroom street actual combat, using VUE family bucket ”</p>
-                        </li> -->
-                        <p>后续陆续更新~</p>
-                      </ul>
+                                
+                                
+                            </span>
+                        </div>
                     </div>
-                  <!-- 书单模块结束 -->
-                  </div>
-                  </div>
                 </div>
             </div>
-            <div class="card">
-                
-
-                
-
-                
-
-                
-
-                
-                <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
-    .v[data-class=v] .emoji, .v[data-class=v] .vemoji {
-        max-height: 20px;
-        overflow: hidden;
-        max-width: 20px!important;
-    }
-    .v[data-class=v] .vwrap .vemojis {
-        text-align: center;
-    }
-    .roboterbb {
-        position: absolute;
-        right: 87px;
-        padding-top: 3px;
-    }
-    .robot-check-text:hover {
-        color: #26a69a;
-    }
-    .roboter:hover .robot-check-text::before {
-        border: 2px solid #5a5a5a;
-    }
-    .robotxian {
-        background: #5a5a5a;
-        top: 21px;
-        left: 11px!important;
-        transform-origin: 50% -17px;
-        animation: swing 3.5s infinite ease-in-out;
-        -webkit-transform-origin: 50% -17px;
-        -webkit-animation: swing 2.85s infinite ease-in-out;
-    }
-    .v[data-class=v] .vwrap {
-        padding-bottom: 23px;
-    }
-    .robotimg {
-        width: 28px!important;
-        height: 28px!important;
-        top: 14px!important;
-        left: -13px!important;
-        max-width: none!important;
-        z-index: 99;
-        cursor: none!important;
-    }
-    .v[data-class=v] .vbtn:disabled {
-        color: #b2b2b5;
-        border-color: #b2b2b5;
-    }
-    .v[data-class=v] .vbtn:disabled {
-        background-color: transparent;
-    }
-    .valine-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-    .v[data-class=v] .vwrap {
-        border-radius: 8px;
-    }
-    /* #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/medias/comment_bg1.webp") 100% 100% no-repeat;
-    } */
-    #vcomments textarea {
-        background: url(/medias/comment_bg1.webp) no-repeat;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right;
-        background-color: rgba(255,255,255,0);
-        resize: vertical;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-</style>
-
-<div class="card valine-card" id="vcomments-top">
-
-    <!-- 福袋按钮 -->
-    <div class="caishendeng">        
-        <div class="caishenxian fudaixian">
-            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png" />
-        </div>              
-    </div>
-   
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评 论</span>
-    </div>
-    <div id="vcomments" class="card-content" style="display: grid"></div>
-</div>
-
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
-<script>
-    new Valine({
-        el: '#vcomments',
-        enableQQ: true,
-        boolean: true,
-        appId: 'k5N8XhsMfL71uDYEah6HoN6B-gzGzoHsz',
-        appKey: 'Q4JIAdUGaDEKrFZxjrymW7VX',
-        notify: 'false' === 'true',
-        verify: 'false' === 'true',
-        visitor: 'true' === 'true',
-        // avatar: 'mm',
-        avatar: '/medias/robot.png',
-        pageSize: '16',
-        lang: 'zh-cn',
-        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
-
-        adminEmailMd5: '',
-
-        master: ["6b922a7268ecf15b7de33e844cfb9fba"],
-        friends: [""],
-        tagMeta: ["博主", "小伙伴", "访客"],
-        // tagMeta: '博主,小伙伴,访客',
-        // master: '6b922a7268ecf15b7de33e844cfb9fba',
-        // friends: '',
-        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest"]
-    });
-</script>
-<!-- 直达评论 -->
-<div id="to_comment" class="comment-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
-        <i class="fas fa-comments"></i>
-    </a>
-</div>
-
-
-<!-- 评论机器人验证 -->
-<script>
-    $('.roboter').on('click',function(){
-        $('.robot-check-text').html('·&nbsp;&nbsp;&nbsp;验证成功！');
-        $('.roboter:hover .robot-check-text::before').css('border','2px solid #26a69a');
-        $('.robotxian').css('background','#26a69a');
-        $('.robotimg').attr('src','/medias/robot.png');
-        $('.robot-check-text').css('color','#26a69a');
-    });
-    
-    if(!$('.robot-check').checked) {
-        // alert("请勾选机器人验证后再发表评论！");
-        $('.vsubmit').attr('disabled',true).attr('title','评论前勾选机器人验证按钮');
-    } 
-    $('.robot-check').on('click',function(){
-        $('.vsubmit').attr('disabled',false).attr('title','欢迎畅所欲言');
-    });
-</script>
-
-                
-                
-                
-            </div>
+            
         </div>
-    </div>
+    </article>
 </main>
+
+
 
 
     <style>

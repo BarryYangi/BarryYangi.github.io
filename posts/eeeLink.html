@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="🐈 实战项目, Barry">
+    <meta name="keywords" content="生成一个有趣的链接, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>🐈 实战项目 | Barryの小站</title>
+    <title>生成一个有趣的链接 | Barryの小站</title>
     
     <script>
         // 隐藏
@@ -1148,438 +1148,585 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-        <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    🐈 实战项目
-                 
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['世界灿烂盛大，欢迎回家。','在等雪花、圣诞树、新年烟火、和更好的你。'],
-                        startDelay: 200,
-                        typeSpeed: 120,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">生成一个有趣的链接</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-    <div class="mohuxiaoguo"></div>
-</div>
-
-
+<main class="post-container content">
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
-    /* .bg-cover {
-        background-image: url("/medias/banner/projectbg.jpg")!important;
-    } */
-    .bg-cover::before {
-        background-image: url(/medias/bggrid.png);
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
+</style>
+
+<div class="row">
+    
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="项目">
+            <style>
+    #switchspring {
+        bottom: 223px!important;
     }
     @media only screen and (max-width: 601px) {
         #switchspring {
             bottom: 178px!important;
         }
     }
-    body.dark .page .content li {
-        background: rgba(34,34,34,0.55)!important;
+    #switchchristmas {
+        bottom: 281px!important;
     }
-    
-    #switchspring {
-        bottom: 223px;
-    }
-    .card-content {
-        padding: 12px!important;
-    }
-    .miaoshus {
-        padding: 12px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 95%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 3px auto 0px;
-    }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
-    }
-</style>
-<!-- 以下书单模块css样式 -->
-<style>
-    @media screen and (min-width: 768px) {
-        #book .page {
-        /* background-color: hsla(0,0%,100%,.7); */
-        -webkit-box-shadow: 0 8px 16px rgba(0,0,0,.12);
-        box-shadow: 0 8px 16px rgba(0,0,0,.12);
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 235px!important;
         }
     }
-    #book .page {
-        overflow: hidden;
-        border-radius: 3px;
+    .ititle {
+        margin: 15px 0;
+        text-align:center;
+        font-family: 'Architects Daughter', cursive;
     }
-    @media screen and (min-width: 768px) {
-        #book .content {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-    #book .content {
-        display: grid;
-        grid-column-gap: 16px;
-        padding: 16px;
-        text-align: justify;
-    }
-    #book .content li {
-        list-style: none;
-        margin-bottom: 16px;
-        border-radius: 3px;
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    #book .content li .info {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        padding: 20px 20px 0;
-        line-height: 1.7;
-        list-style: none;
-    }
-    .book-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-perspective: 600px;
-        perspective: 600px;
-    }
-    .book {
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;	
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;    
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;           
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
         position: relative;
-        width: 100px;
-        height: 150px;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -webkit-transform: rotateY(-30deg);
-        transform: rotateY(-30deg);
-        -webkit-transition: 1s ease;
-        transition: 1s ease;
-        -webkit-animation: bookRotate 0s 1s ease 0s;
-        animation: bookRotate 0s 1s ease 0s;
-        list-style: none;
     }
-    .book:before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        top: 2px;
-        width: 23px;
-        height: 146px;
-        -webkit-transform: translateX(84.5px) rotateY(90deg);
-        transform: translateX(84.5px) rotateY(90deg);
-        background: -webkit-gradient(linear,left top,right top,from(#fff),color-stop(5%,#f9f9f9),color-stop(10%,#fff),color-stop(15%,#f9f9f9),color-stop(20%,#fff),color-stop(25%,#f9f9f9),color-stop(30%,#fff),color-stop(35%,#f9f9f9),color-stop(40%,#fff),color-stop(45%,#f9f9f9),color-stop(50%,#fff),color-stop(55%,#f9f9f9),color-stop(60%,#fff),color-stop(65%,#f9f9f9),color-stop(70%,#fff),color-stop(75%,#f9f9f9),color-stop(80%,#fff),color-stop(85%,#f9f9f9),color-stop(90%,#fff),color-stop(95%,#f9f9f9),to(#fff));
-        background: linear-gradient(90deg,#fff,#f9f9f9 5%,#fff 10%,#f9f9f9 15%,#fff 20%,#f9f9f9 25%,#fff 30%,#f9f9f9 35%,#fff 40%,#f9f9f9 45%,#fff 50%,#f9f9f9 55%,#fff 60%,#f9f9f9 65%,#fff 70%,#f9f9f9 75%,#fff 80%,#f9f9f9 85%,#fff 90%,#f9f9f9 95%,#fff);
+.izhengwen {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+    background-size: 100% 32px;
+}
+.izhengwen p {
+    letter-spacing: .1rem;
+}
+#articleContent p {
+    margin: 0
+}
+.ititle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem!important;
+    padding: 10px auto;
+}
+.izhengwen p {
+    position: relative;
+    line-height: 2.2rem!important;
+    text-indent: 2em;
+    font-family: 'Architects Daughter', cursive!important;
+    font-size: 1.45rem!important;
+}
+.ipage::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 52px;
+    z-index: 4;
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid #fca1a1;
+}
+.izhengwen p:nth-child(odd):before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.ipage:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    z-index: 3;
+    width: 4px;
+    height: 100%;
+    border-left: 4px double #fca1a1;
+}
+.ipage p {
+    padding: 0 2em;
+    color: #333!important;
+}
+body.dark .ipage {
+    opacity: 0.85;
+}
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 600px) {
+    .ipage {
+        padding: 15px 23px 29px;
     }
-    .book>:first-child {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
-        -webkit-transform: translateZ(12.5px);
-        transform: translateZ(12.5px);
-        border-radius: 0 2px 2px 0;
-        -webkit-box-shadow: 5px 5px 20px #666;
-        box-shadow: 5px 5px 20px #666;
+    .ipage:after {
+        left: 36px;
     }
-    .book:after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 150px;
-        -webkit-transform: translateZ(-12.5px);
-        transform: translateZ(-12.5px);
-        background-color: #555;
-        border-radius: 0 2px 2px 0;
+    .ipage::before {
+        right: 36px;    
     }
-    #book .content li .info>div {
-        margin-left: 32px;
+    .ipage p, .ititle {
+        padding: 0 0.9em;
     }
-    #book .content li .info h3 {
-        font-size: 16px;
-    }
-    #book .content li .info p a {
-        position: relative;
-        color: #b854d4;
-    }
-    #book .content li .info p a:before {
-        content: " " attr(href);
-        position: absolute;
-        padding: 0 4px;
-        width: -webkit-max-content;
-        width: -moz-max-content;
-        width: max-content;
-        pointer-events: none;
-        font-family: Fontello;
-        font-size: 12px;
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        border-radius: 3px;
-        background-color: #fff;
-        opacity: 0;
-        -webkit-transform: scale(.7) translateY(-75%);
-        transform: scale(.7) translateY(-75%);
-        -webkit-transform-origin: left center;
-        transform-origin: left center;
-        -webkit-transition: all .3s ease 0s;
-        transition: all .3s ease 0s;
-    }
-    #book .content li .info p a:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1.5px;
-        background-color: #b854d4;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transform-origin: bottom right;
-        transform-origin: bottom right;
-        -webkit-transition: -webkit-transform .3s ease-out;
-        transition: -webkit-transform .3s ease-out;
-        transition: transform .3s ease-out;
-        transition: transform .3s ease-out,-webkit-transform .3s ease-out;
-    }
-    #book .content li .info .fa-star {
-        margin-right: 4px;
-        color: #d68fe9;
-    }
-    .icon-star:before {
-        content: "\e80b";
-    }
-    [class*=" icon-"]:before, [class^=icon-]:before {
-        font-family: Fontello;
-        font-style: normal;
-        font-weight: 400;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    #book .content li .description {
-        padding: 12px 20px;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-    #book .content li .info p {
-        font-size: 14px;
-        line-height: 1.7;
 
-    }
-    @media screen and (min-width: 768px) {
-        #book .content li:hover {
-            -webkit-transform: translateY(-4px);
-            transform: translateY(-4px);
-            -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-            box-shadow: 0 14px 38px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.12);
-        }
-    }
-    #book .content li {
-        list-style: none;
-        margin-bottom: 16px;
-        border-radius: 3px;
-        background-color: hsla(0,0%,100%,.7);
-        -webkit-box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        box-shadow: 0 14px 38px rgba(0,0,0,.08), 0 3px 8px rgba(0,0,0,.06);
-        -webkit-transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-        transition: all .3s ease 0s,transform .6s cubic-bezier(.6,.2,.1,1) 0s,-webkit-transform .6s cubic-bezier(.6,.2,.1,1) 0s;
-    }
-    #book .content li:hover .book {
-        -webkit-transform: rotateY(0deg);
-        transform: rotateY(0deg);
-    }
-    .quote {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        position: relative;
-        margin-bottom: 16px;
-        padding: 32px 0;
-    }
-    .quote i:first-child {
-        top: 0;
-        left: 16px;
-    }
-    .quote i {
-        position: absolute;
-        font-size: 24px;
-    }
-    .icon-quote-left:before {
-        content: "\f10d";
-    }
-    [class*=" icon-"]:before, [class^=icon-]:before {
-        font-family: Fontello;
-        font-style: normal;
-        font-weight: 400;
-        display: inline-block;
-        text-decoration: inherit;
-        width: 1em;
-        text-align: center;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1em;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+}
+h3 {
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: #101012;
+    transition: 0.8s;
+    cursor: pointer;
+}
+h3:hover {
+    transform: translateX(15px);
+}
 </style>
-<main class="content">
-    <div class="container">
-        <div class="card">
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        
+        <div class="card-content article-info">
             <!-- 福袋按钮 -->
             <div class="caishendeng">        
-                <div class="guguxian">
-                    <img class="caishenpic gugus" src="/medias/spring-img/gu1.png" />
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
                 </div>              
             </div>
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <div class="miaoshus">
-                        <div class="title center-align">“ 博主项目一览 ”
+            <!-- 圣诞按钮 -->
+            <div class="shengdandeng">        
+                <div class="shengdanxian" style="left: 50%;">
+                    <!-- <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" /> -->
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                                <span class="chip bg-color">项目</span>
+                            </a>
+                        
                     </div>
-
-                    <!-- 书单模块开始 -->
-                    <div id="book">
-                    <div class="page">
-                      <ul class="content">
-                        <!-- 每个li标签内容代表一本书籍的所有信息 -->
-                        <!-- <li>
-                            <div class="info">
-                                <a href="https://gitee.com/nekodeng/vue_shop_system" target="_blank" rel="noreferrer noopener" class="book-container">
-                                    <div class="book">
-                                        <img src="/medias/project-img/vue_system.png">
-                                    </div>
-                                </a>
-                                <div>
-                                    <a href="https://gitee.com/nekodeng/vue_shop_system" target="_blank"><h3>《 vue+element商品后台管理系统 》</h3></a>
-                                    <p>作者：itsNekoDeng</p>
-                                    <p>完成时间：2019-03-06</p>
-                                    <p>项目进度：大体已完成...</p>
-                                    <p>
-                                        <span>项目源码：</span>
-                                        <a href="https://gitee.com/nekodeng/vue_shop_system" target="_blank" rel="noopener noreferrer"> vue+element商品后台管理系统 </a>
-                                    </p>
-                                    <p> 
-                                        <span>推荐指数：</span>
-                                        <span></span>
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="description">“ 一个基于vue和element的后台管理系统，vue2.x + element，其中本源码中的vue_api_server文件为项目的api接口文件 ”</p>
-                        </li>   -->
-                        <!-- 每个li标签内容代表一本书籍的所有信息 -->
-                        <!-- <li>
-                            <div class="info">
-                                <a href="https://github.com/nekodeng/supermall-vue2-cli3" target="_blank" rel="noreferrer noopener" class="book-container">
-                                    <div class="book">
-                                        <img src="/medias/project-img/vue-mall.png">
-                                    </div>
-                                </a>
-                                <div>
-                                    <a href="https://github.com/nekodeng/supermall-vue2-cli3" target="_blank"><h3>《 仿蘑菇街H5vue项目-vue2-cli3 》</h3></a>
-                                    <p>作者：itsNekoDeng</p>
-                                    <p>完成时间：2019-02-08</p>
-                                    <p>项目进度：大体已完成...</p>
-                                    <p>
-                                        <span>项目源码：</span>
-                                        <a href="https://github.com/nekodeng/supermall-vue2-cli3" target="_blank" rel="noopener noreferrer"> 仿蘑菇街H5vue项目-vue2-cli3 </a>
-                                    </p>
-                                    <p> 
-                                        <span>推荐指数：</span>
-                                        <span></span>
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="description">“ About
-                                After learning VUE at B station, the project of imitation mushroom street actual combat, using VUE family bucket ”</p>
-                        </li> -->
-                        <p>后续陆续更新~</p>
-                      </ul>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
+                        
                     </div>
-                  <!-- 书单模块结束 -->
-                  </div>
-                  </div>
+                    
                 </div>
             </div>
-            <div class="card">
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-05-22
+                </div>
                 
 
                 
 
                 
-
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.2k
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    4 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><img src="https://cdn.yct.ee/gh/BarryYangi/ObsStaticData@main/obsidian/1684743458000si15uh.png" alt="gh"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前两天上网冲浪发现了一个有趣的项目 <a target="_blank" rel="noopener" href="https://github.com/lucaceriani/ooo">ooo</a> ,这个项目的有趣的地方在于可以将你的一个链接重新编码为一个全是 “o”的新链接，你可以将这个链接发给别人整蛊一下。虽然说这个项目实际来说意义不大，但是本着好奇他妈给好奇开门（bushi）的精神，我还是想自己部署一个玩一玩，于是就有了这篇文章，于是又诞生了一个全是 e 的站点 <a target="_blank" rel="noopener" href="https://eeeeeeeeeeee.ee/">eeeeeeeeeeee.ee</a>。</p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>既然是一个小的 web 服务，还是一个基于域名跳转的 web 服务，这个域名选择就相当重要了，我直接跳过读源码阶段就准备先拿下一个域名，需求很简单，全都是一个字母就行，然后统计了一下目前已知顶级域后缀相同的有 <code>.ooo(infibeam注册局)</code>、<code>.ee(爱沙尼亚)</code> 、<code>.cc(可可群岛)</code> 、<code>.gg(格恩西岛)</code> 、<code>.tt(特立尼达和多巴哥)</code> 、<code>.bb(巴巴多斯)</code> 、<code>.xxx(用于成人网站)</code>。我之前的个人域名就是 ee 后缀的，所以我先去看了下 ee… ee. ee 这个域名，在输入 12 个 e 的时候终于是可以用了，也去看了下别的几个都是前缀 15 个字母起步，而且价格还不便宜，所以还是选择了 ee 后缀的，主要是便宜，一年 69 人民币确实香。于是下单了 eeeeeeeeeeee.ee 。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="读源码"><a href="#读源码" class="headerlink" title="读源码"></a>读源码</h3><p>在简单读了一下 ooo 的源码后，大概实现过程是先在前端将给定的 URL 编码为一个特殊的字符串，并能够将这个特殊的字符串解码回原始的 URL。编码过程使用了一种基于特殊字符 “o” 的表示法，将 URL 编码成包含四种不同 “o” 字符的字符串。后端仅通过 Cloudflare Worker 服务，将经过 OOO 编码的 URL 重定向到原始的 URL。在处理请求时，该 Worker 会将请求的 URL 中的路径部分解码，并将其作为经过 OOO 编码的字符串传递给 OOO 类的 decodeUrl 方法进行解码。解码后得到的字符串即为原始的 URL，然后使用 Cloudflare 的 Response.redirect 方法将请求重定向到原始的 URL。<br>读了源码其实我才发现，原来那些 o 并不是全部相同的 o，而是 4 个同形字符，四个不同的 “o” 字符（对应不同的 Unicode 编码）。</p>
+<h3 id="同形字符"><a href="#同形字符" class="headerlink" title="同形字符"></a>同形字符</h3><p>所以现在我需要去找几个 e 的同形字符，幸运的是有人整理过相关内容的<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv15844179">文章</a>，这里不得不感慨下光计算机字符里的学问还挺多的，前几天刚看到一个将用户名无形地插入到具有零宽度字符的文本中的<a target="_blank" rel="noopener" href="https://medium.com/@umpox/be-careful-what-you-copy-invisibly-inserting-usernames-into-text-with-zero-width-characters-18b4e6f17b66">文章</a>，也很有意思，有兴趣的朋友可以去看看。这里我选择了0065,0435 ： eе 和0275,04E9 ： ɵө 虽然后面两不太像，但也凑合。</p>
+<h3 id="前端页面"><a href="#前端页面" class="headerlink" title="前端页面"></a>前端页面</h3><p>将项目克隆到本地，前端页面其实要改的也不多，将 <code>ooo.js</code> 里的 OOO 对象里的四个“o”的字符换成我们自己的其实前端服务就能正常跑了，剩下就是改一些相应的内容样式。这里唯一需要注意的是，我们需要务必需要修改 <code>currVer = &quot;eeee&quot;</code> 改值为与你域名字母相同，这是一个前缀用来我们后端进行路由识别，我们修改完成后将其上传到 Cloudflare Pages 服务中部署，并且绑定自定义域名为你购买的同字母域名（需提前将域名转入 Cloudflare）。</p>
+<h3 id="后端服务"><a href="#后端服务" class="headerlink" title="后端服务"></a>后端服务</h3><p>前文有说到项目的后端服务是部署在 Cloudflare Worker 上的，后端涉及的代码为 <code>worker.js</code>，在 Cloudflare 控制面板左侧选项中，找到 Workers 和 Pages 新建一个 Workers 并将 <code>worker.js</code> 中的代码粘贴到点击 Worker 设置面板快速编辑按钮后出现的页面中。此步务必需要注意粘贴的代码中的解码对应的字符需要与前端编码字符对应，自行修改。修改完成点击设置面板的触发器选项，在路由处添加一个路由用来解析 URL，示例如下：<br><img src="https://cdn.yct.ee/gh/BarryYangi/ObsStaticData@main/obsidian/1685085612000ugrvpl.png" alt="gh"></p>
+<p>现在你可以去访问你的域名看看出现编码后的链接能否跳转到目标地址了。如果不能正常跳转，可能是你的域名没有开启 Cloudflare CDN，也就是那朵小黄云我们需要打开，因为 worker 的自定义路由跳转需要先通过 CDN 劫持到访问的链接，不然是不可用的。</p>
+<p>Just enjoy it！</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itsBarry</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.smitten.top/posts/eeeLink.html">https://www.smitten.top/posts/eeeLink.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itsBarry</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                                    <span class="chip bg-color">项目</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
                 <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢赞赏哦~</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -1943,13 +2090,310 @@ class="themespring" -->
     });
 </script>
 
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/JsWork.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/banner/1.jpg" class="responsive-img" alt="「关于证明我是一名 JS 程序员这件事」">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          「关于证明我是一名 JS 程序员这件事」
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            浏览器与网络浏览器内核渲染引擎用来解释网页语法并渲染到网页上。负责显示请求的内容。如果请求的内容是 HTML，它就负责解析 HTML 和 CSS 内容，并将解析后的内容显示在屏幕上。常见的渲染引擎可以分这四种：Trident、Gecko、B
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
                 
-                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/UnderDog.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="「富豪谷底求翻身」">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          「富豪谷底求翻身」
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言这几天闲着找了一部纪录片看了下，还挺有意思的，跟大家分享一下里面的一些观点，主要内容为美国亿万富翁 Glenn Stearns 接受挑战，真实再现如何从贫穷汉到价值百万公司的总裁。Glenn 在节目中隐去自己的姓氏，用仅有的 100 美
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%BD%B1%E8%AF%84/">
+                        <span class="chip bg-color">影评</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
+</article>
+<style>
+  .articles .row .article {
+    position: relative;
+  }
+</style>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Barryの小站<br />'
+            + '文章作者: itsBarry<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+        </div>
+        
+        
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        
+        
+        <div class="toc-widget" data-spmid="项目">
+            <div class="toc-title">
+                <i class="far fa-list-alt"></i>
+                &nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content"></div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="项目">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
 </main>
+
+
 
 
     <style>
