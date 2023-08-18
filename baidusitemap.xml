@@ -1,58 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.smitten.top/posts/VPSDocker.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/HexoCI.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/UnderDog.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/CloudflareZeroTrust.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/font.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/imgapi.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/AList.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/PCVideo.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/wt.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/wtv2.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/encourage.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/LinuxKernel.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
-    <loc>https://www.smitten.top/posts/Memos.html</loc>
-    <lastmod>2023-08-18</lastmod>
-  </url>
-  <url>
     <loc>https://www.smitten.top/posts/JsWork.html</loc>
     <lastmod>2023-08-18</lastmod>
   </url>
@@ -114,6 +62,58 @@
   </url>
   <url>
     <loc>https://www.smitten.top/posts/GitHubNeverDie.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/VPSDocker.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/HexoCI.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/UnderDog.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/CloudflareZeroTrust.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/font.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/imgapi.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/AList.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/PCVideo.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/wt.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/wtv2.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/encourage.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/LinuxKernel.html</loc>
+    <lastmod>2023-08-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.smitten.top/posts/Memos.html</loc>
     <lastmod>2023-08-18</lastmod>
   </url>
 </urlset> 
