@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="keywords" content="归档: 2023/7, Barry">
+    <meta name="keywords" content="使Windows  Terminal变得更易用（v2）, Barry">
     <meta name="description" content="Barryの个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>归档: 2023/7 | Barryの小站</title>
+    <title>使Windows  Terminal变得更易用（v2） | Barryの小站</title>
     
     <script>
         // 隐藏
@@ -1148,222 +1148,1129 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-        <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    
-                 
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['世界灿烂盛大，欢迎回家。','在等雪花、圣诞树、新年烟火、和更好的你。'],
-                        startDelay: 200,
-                        typeSpeed: 120,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">使Windows  Terminal变得更易用（v2）</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
+<main class="post-container content">
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
+</style>
+
+<div class="row">
+    
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="美化效率">
+            <style>
+    #switchspring {
+        bottom: 223px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchspring {
+            bottom: 178px!important;
+        }
+    }
+    #switchchristmas {
+        bottom: 281px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 235px!important;
+        }
+    }
+    .ititle {
+        margin: 15px 0;
+        text-align:center;
+        font-family: 'Architects Daughter', cursive;
+    }
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;	
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;    
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;           
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
+        position: relative;
+    }
+.izhengwen {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+    background-size: 100% 32px;
+}
+.izhengwen p {
+    letter-spacing: .1rem;
+}
+#articleContent p {
+    margin: 0
+}
+.ititle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem!important;
+    padding: 10px auto;
+}
+.izhengwen p {
+    position: relative;
+    line-height: 2.2rem!important;
+    text-indent: 2em;
+    font-family: 'Architects Daughter', cursive!important;
+    font-size: 1.45rem!important;
+}
+.ipage::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 52px;
+    z-index: 4;
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid #fca1a1;
+}
+.izhengwen p:nth-child(odd):before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.ipage:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    z-index: 3;
+    width: 4px;
+    height: 100%;
+    border-left: 4px double #fca1a1;
+}
+.ipage p {
+    padding: 0 2em;
+    color: #333!important;
+}
+body.dark .ipage {
+    opacity: 0.85;
+}
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 600px) {
+    .ipage {
+        padding: 15px 23px 29px;
+    }
+    .ipage:after {
+        left: 36px;
+    }
+    .ipage::before {
+        right: 36px;    
+    }
+    .ipage p, .ititle {
+        padding: 0 0.9em;
+    }
+
+}
+h3 {
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: #101012;
+    transition: 0.8s;
+    cursor: pointer;
+}
+h3:hover {
+    transform: translateX(15px);
+}
+</style>
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        
+        <div class="card-content article-info">
+            <!-- 福袋按钮 -->
+            <div class="caishendeng">        
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
+                </div>              
+            </div>
+            <!-- 圣诞按钮 -->
+            <div class="shengdandeng">        
+                <div class="shengdanxian" style="left: 50%;">
+                    <!-- <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" /> -->
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%BE%8E%E5%8C%96%E6%95%88%E7%8E%87/">
+                                <span class="chip bg-color">美化效率</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-08-18
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在几个月前我有写过一篇<a target="_blank" rel="noopener" href="https://www.barryi.me/posts/wt.html">使Windows Terminal变得更易用</a>，那篇文章主要是介绍了通过安装 oh-my-posh、安装 Nerd 字体解决 oh-my-posh 字体图标不显示、解决 ssh 连接长时间不操作自动断开、启动专注模式以及去掉烦人的启动版权信息并默认管理员启动等内容，事实上只是让其变的更加好看了，易用度并没有多大的提升，但是今天我们将再次给我们的 WT 升升级。</p>
+<h2 id="安装必要工具"><a href="#安装必要工具" class="headerlink" title="安装必要工具"></a>安装必要工具</h2><p>首先 Windows Terminal 肯定是必要的，其次还得取安装一个 PowerShell，这两都在微软商店中下载安装，如下图。微软商店打不开就检查一下你的网络，一般都是网络问题。<br><img src="https://cdn.jsdelivr.net/gh/BarryYangi/ObsStaticData@main/obsidian/1692260721000poix8g.png" alt="gh"></p>
+<p>oh-my-posh 的安装我这里就不说了，可以去看我之前那篇文章。最后我们再来安装一个 <a target="_blank" rel="noopener" href="https://github.com/antfu/ni">ni</a>，这是 antfu 开发的来简化我们命令操作，自动选择包管理器的一个命令行小工具，偷懒神器，没用过的赶紧用起来，跟着文档敲一行命令就安装好了，不过 Windows 下使用可能会有别名冲突问题，我下文将会提到解决办法。</p>
+<h2 id="探索过程及原理概述"><a href="#探索过程及原理概述" class="headerlink" title="探索过程及原理概述"></a>探索过程及原理概述</h2><p>我想尝试使用 Windows Termimal 进行开发。Windows Terminal 默认可以使用 <code>PowerShell</code>、<code>cmd</code>、<code>wsl bash</code> 作为脚本工具。既然是在 Windows 环境下嘛，还是得尊敬一下 PoweShell 的。于是我们先把 wt 的默认 shell 更换为我们刚刚安装的微软商店的 PowerShell，如下图<br><img src="https://cdn.jsdelivr.net/gh/BarryYangi/ObsStaticData@main/obsidian/1692261644000o3sirv.png" alt="gh"></p>
+<p>其实最初的灵感是看 <a target="_blank" rel="noopener" href="https://github.com/antfu">antfu</a> 直播时，它总会在命令行敲一些我都没见过的一些极短的命令来实现一些操作，让我看的是一头雾水。最后我才发现它是给他的 shell 设置了一些别名，并且还在 GitHub 开源了他的 zsh 的配置文件<a target="_blank" rel="noopener" href="https://github.com/antfu/dotfiles/blob/main/.zshrc">配置文件</a>（Mac 党大喜，可以直接抄走了😂），但是没钱买 Mac 现在只有 Windows 的我该如何在 Windows Termimal 上实现类似的功能呢，于是开始了我的尝试。<br>如果搜索关键词 <code>windows powershell set user alias</code>，通常谷歌会给出<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/set-alias?view=powershell-6">微软官方文档</a>，但是这个文档只是告诉我们如何在脚本里面设置临时的别名，如果要设置永久别名，该怎么办？实际上，“别名”这种东西，也就是 <code>alias</code>，几乎所有的脚本语言，都没有所谓的“永久别名”(Permanent alias)，我们使用 Linux bash 、Cmder 之类的脚本工具，打开终端时，系统会默认执行一个脚本文件（ bash 是用户目录下的 <code>.bashrc</code>，Cmder 是 <code>config/user_aliases.cmd</code> ），而这样的脚本文件里，就包含了别名的定义。这也是为什么，我们在 Linux 类系统中，修改 <code>.bashrc</code> 后，必须要重新登出登录、或者 <code>source .bashrc</code> 的原因了。<br>所以，我们只要修改 Powershell 启动时执行的文件就行了。很多论坛里面说，默认执行的脚本是 <code>$Home\Documents\profile.ps1</code> ，也就是 <code>C:\Users\你的用户名\Documents\profile.ps1</code> ，但是这并不正确，最好的方式是，先启动 PowerShell ，再执行 <code>echo $profile</code>，这样得到的文件路径，才是 PowerShell 的默认执行文件路径。而且这里我们需要注意的是，如果按照我之前的那篇文章配置好后，然后今天重新安装的 PowerShell 并且设置为了 wt 的默认 shell 的话，那么，你得重新配置，因为这个微软商店的 PowerShell 和 Windows 自带的 Windows PowerShell 不是一个版本，所以不共用同一套配置文件。大概为以下路径：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/BarryYangi/ObsStaticData@main/obsidian/1692328778000hbmtbr.png" alt="gh"></p>
+<p>然后，创建这个文件就好啦。</p>
+<p>在文件里面，写上别名设置的语句。再一次注意，假如你的别名指代的命令含有空格，就不可以使用 <code>New-Alias</code> 命令，因为它不能带空格，即使你把指代的命令用引号括起来也没用。那怎么办呢？问了一下 GPT，原来，正确姿势是用 <code>function</code> ，也就是，我们把自己要定义的指令，定义为一个函数，就行啦。<br>保存文件，重新启动 PowerShell 以后，不出意外，应该会报一个 <code>File xxxxxxx\Microsoft.PowerShell_profile.ps1 cannot be loaded because running scripts is disabled on this system.</code> 根据<a target="_blank" rel="noopener" href="https://tecadmin.net/powershell-running-scripts-is-disabled-system/">此链接</a>，出现这种情况，是因为 Windows 系统为了防止恶意脚本自动执行，故默认不允许自动运行脚本。所以，在确定自己有能力把控的情况下，<strong>以管理员身份</strong>，在 PowerShell 中执行 <code>Set-ExecutionPolicy RemoteSigned</code> ，即可。</p>
+<p>再次重启 PowerShell，应该可以发现，自定义别名已经生效了。</p>
+<h2 id="解决别名冲突与传参优化"><a href="#解决别名冲突与传参优化" class="headerlink" title="解决别名冲突与传参优化"></a>解决别名冲突与传参优化</h2><p>在进行了以上操作后，你会发现你设置的别名确实可用了，但是可能有一部分别名会与 PowerShell 本来就存在的一些别名有冲突，例如 <code>ni</code> 、<code>gp</code> 、<code>gcm</code>，可能后续还会遇到很多，我们的解决方案是将其强制移除就好了，在你的配置文件中加入以下代码：<br><pre class="language-shell" data-language="shell"><code class="language-shell">Remove-Alias -Name ni -Force
+Remove-Alias -Name gp -Force
+Remove-Alias -Name gcm -Force</code></pre></p>
+<p>好，冲突问题解决了，但是最后还有一个问题就是，你会发现当你在使用一些需要传递参数的别名命令时，参数并不能传入，使用我们需要让我们的别名函数能够接收参数，当然不需要参数的就不用管了。我们只需要在我们的命令后添加 <code>$args</code> 这个自动变量，它包含当前脚本、函数或脚本块的未声明参数的数组。简而言之，它捕获所有未被预定义参数捕获的参数。例如下面这些：<br><pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token keyword">function</span> <span class="token function-name function">gcl</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> clone <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gst</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> stash <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">grm</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> <span class="token function">rm</span> <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gmv</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> <span class="token function">mv</span> <span class="token variable">$args</span> <span class="token punctuation">&#125;</span></code></pre></p>
+<p>如果你想上点强度，需要更高的自定义性，你也可用自己定义参数和提示如下：<br>&lt;!—hexoPostRenderEscape:<pre class="language-shell" data-language="shell"><code class="language-shell"><span class="token keyword">function</span> <span class="token function-name function">gcm</span> <span class="token punctuation">&#123;</span><br>    param <span class="token punctuation">(</span><br>        <span class="token punctuation">[</span>Parameter<span class="token punctuation">(</span>Mandatory<span class="token operator">=</span><span class="token variable">$true</span><span class="token punctuation">)</span><span class="token punctuation">]</span><br>        <span class="token punctuation">[</span>string<span class="token punctuation">]</span><span class="token variable">$message</span><br>    <span class="token punctuation">)</span></code></pre></p>
+<pre><code>&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;-not &lt;span class=&quot;token variable&quot;&gt;$message&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&amp;#123;&lt;/span&gt;
+    Write-Host &lt;span class=&quot;token string&quot;&gt;&quot;Error: You must provide a commit message.&quot;&lt;/span&gt; -ForegroundColor Red
+    &lt;span class=&quot;token builtin class-name&quot;&gt;return&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;&amp;#125;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit -m &lt;span class=&quot;token variable&quot;&gt;$message&lt;/span&gt;
+</code></pre><p><span class="token punctuation">&#125;</span>&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</p>
+<p>总之，玩法很多，大家可以自己慢慢研究，给大家扔一个我目前自用的配置文件，如果想换主题的话可以按照<a target="_blank" rel="noopener" href="https://ohmyposh.dev/docs/themes">文档</a>找到自己喜欢的主题更换第一行配置的 json 主题文件名即可。如果有其他的问题可以参考之前的那篇文章。</p>
+<pre class="language-shell" data-language="shell"><code class="language-shell">oh-my-posh init pwsh --config <span class="token variable">$env</span>:POSH_THEMES_PATH<span class="token punctuation">\</span>montys.omp.json <span class="token operator">|</span> Invoke-Expression
+cls
+<span class="token keyword">function</span> <span class="token function-name function">s</span> <span class="token punctuation">&#123;</span> nr start <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">d</span> <span class="token punctuation">&#123;</span> nr dev <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">b</span> <span class="token punctuation">&#123;</span> nr build <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">t</span> <span class="token punctuation">&#123;</span> nr <span class="token builtin class-name">test</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">lint</span> <span class="token punctuation">&#123;</span> nr lint <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">release</span> <span class="token punctuation">&#123;</span> nr release <span class="token punctuation">&#125;</span>
+
+
+<span class="token keyword">function</span> <span class="token function-name function">gs</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> status <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gp</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> push <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gpf</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> push --force <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gpl</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> pull --rebase <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gcl</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> clone <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gst</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> stash <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">grm</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> <span class="token function">rm</span> <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gmv</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> <span class="token function">mv</span> <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function-name function">main</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> checkout main <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gco</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> checkout <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function-name function">gcob</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> checkout -b <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function-name function">gb</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> branch <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gbd</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> branch -d <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gbD</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> branch -D <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function-name function">grb</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> rebase <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">grbc</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> rebase --continue <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gme</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> merge <span class="token variable">$args</span><span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function-name function">gl</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> log <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">glo</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> log --oneline --graph <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function-name function">ga</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> <span class="token function">add</span> <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gA</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> <span class="token function">add</span> -A <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function-name function">gc</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> commit <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gcm</span> <span class="token punctuation">&#123;</span>
+    param <span class="token punctuation">(</span>
+        <span class="token punctuation">[</span>Parameter<span class="token punctuation">(</span>Mandatory<span class="token operator">=</span><span class="token variable">$true</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+        <span class="token punctuation">[</span>string<span class="token punctuation">]</span><span class="token variable">$message</span>
+    <span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>-not <span class="token variable">$message</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        Write-Host <span class="token string">"Error: You must provide a commit message."</span> -ForegroundColor Red
+        <span class="token builtin class-name">return</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token function">git</span> commit -m <span class="token variable">$message</span>
+<span class="token punctuation">&#125;</span>
+
+
+<span class="token keyword">function</span> <span class="token function-name function">gca</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> commit -a <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">gcam</span> <span class="token punctuation">&#123;</span> <span class="token function">git</span> commit -am <span class="token variable">$args</span> <span class="token punctuation">&#125;</span>
+
+
+<span class="token keyword">function</span> <span class="token function-name function">l</span> <span class="token punctuation">&#123;</span> cls <span class="token punctuation">&#125;</span>
+<span class="token keyword">function</span> <span class="token function-name function">q</span> <span class="token punctuation">&#123;</span> <span class="token builtin class-name">exit</span> <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">function</span> <span class="token function-name function">fuck</span> <span class="token punctuation">&#123;</span> <span class="token function">shutdown</span> /s /f /t <span class="token number">0</span> <span class="token punctuation">&#125;</span>
+
+Remove-Alias -Name ni -Force
+Remove-Alias -Name gp -Force
+Remove-Alias -Name gcm -Force
+</code></pre>
+<p>Just enjoy it.</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itsBarry</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.smitten.top/posts/wtv2.html">https://www.smitten.top/posts/wtv2.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itsBarry</a>
+                    !
+                </span>
+            </div>
+        
     </div>
-    <div class="mohuxiaoguo"></div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%BE%8E%E5%8C%96%E6%95%88%E7%8E%87/">
+                                    <span class="chip bg-color">美化效率</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
 </div>
 
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
 
-<style>
-    /* banner背景图 */
-    .bg-cover {
-        background-image: url("/medias/banner/3.jpg")!important;
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
     }
-  </style>
-<style>
-    #sma {
-        bottom: 155px;
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
     }
-    .bg-cover::before {
-        background-image: url(/medias/bggrid.png);
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
     }
-    #switchspring {
-        bottom: 223px;
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
     }
 </style>
-<main class="content">
 
-    
-    <div class="container archive-calendar">
-    <div class="card">
-        <div id="post-calendar" class="card-content"></div>
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢赞赏哦~</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
 
     
 
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2022-07-26", "2023-07-26"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2022-07-26", 0], ["2022-07-27", 0], ["2022-07-28", 0], ["2022-07-29", 0], ["2022-07-30", 0], ["2022-07-31", 0], ["2022-08-01", 0], ["2022-08-02", 0], ["2022-08-03", 0], ["2022-08-04", 0], ["2022-08-05", 0], ["2022-08-06", 0], ["2022-08-07", 0], ["2022-08-08", 0], ["2022-08-09", 0], ["2022-08-10", 0], ["2022-08-11", 0], ["2022-08-12", 0], ["2022-08-13", 0], ["2022-08-14", 0], ["2022-08-15", 0], ["2022-08-16", 0], ["2022-08-17", 0], ["2022-08-18", 0], ["2022-08-19", 0], ["2022-08-20", 0], ["2022-08-21", 0], ["2022-08-22", 0], ["2022-08-23", 0], ["2022-08-24", 0], ["2022-08-25", 0], ["2022-08-26", 0], ["2022-08-27", 0], ["2022-08-28", 0], ["2022-08-29", 0], ["2022-08-30", 0], ["2022-08-31", 0], ["2022-09-01", 0], ["2022-09-02", 0], ["2022-09-03", 0], ["2022-09-04", 0], ["2022-09-05", 0], ["2022-09-06", 0], ["2022-09-07", 0], ["2022-09-08", 0], ["2022-09-09", 0], ["2022-09-10", 0], ["2022-09-11", 0], ["2022-09-12", 0], ["2022-09-13", 0], ["2022-09-14", 0], ["2022-09-15", 0], ["2022-09-16", 0], ["2022-09-17", 0], ["2022-09-18", 0], ["2022-09-19", 0], ["2022-09-20", 0], ["2022-09-21", 0], ["2022-09-22", 0], ["2022-09-23", 0], ["2022-09-24", 0], ["2022-09-25", 0], ["2022-09-26", 0], ["2022-09-27", 0], ["2022-09-28", 0], ["2022-09-29", 0], ["2022-09-30", 0], ["2022-10-01", 0], ["2022-10-02", 0], ["2022-10-03", 0], ["2022-10-04", 0], ["2022-10-05", 0], ["2022-10-06", 0], ["2022-10-07", 0], ["2022-10-08", 0], ["2022-10-09", 0], ["2022-10-10", 0], ["2022-10-11", 0], ["2022-10-12", 0], ["2022-10-13", 0], ["2022-10-14", 0], ["2022-10-15", 0], ["2022-10-16", 0], ["2022-10-17", 0], ["2022-10-18", 0], ["2022-10-19", 0], ["2022-10-20", 0], ["2022-10-21", 0], ["2022-10-22", 0], ["2022-10-23", 0], ["2022-10-24", 0], ["2022-10-25", 0], ["2022-10-26", 0], ["2022-10-27", 0], ["2022-10-28", 0], ["2022-10-29", 0], ["2022-10-30", 0], ["2022-10-31", 0], ["2022-11-01", 0], ["2022-11-02", 0], ["2022-11-03", 0], ["2022-11-04", 0], ["2022-11-05", 0], ["2022-11-06", 0], ["2022-11-07", 0], ["2022-11-08", 0], ["2022-11-09", 0], ["2022-11-10", 0], ["2022-11-11", 0], ["2022-11-12", 0], ["2022-11-13", 0], ["2022-11-14", 0], ["2022-11-15", 0], ["2022-11-16", 0], ["2022-11-17", 0], ["2022-11-18", 0], ["2022-11-19", 0], ["2022-11-20", 0], ["2022-11-21", 0], ["2022-11-22", 0], ["2022-11-23", 0], ["2022-11-24", 0], ["2022-11-25", 0], ["2022-11-26", 0], ["2022-11-27", 0], ["2022-11-28", 0], ["2022-11-29", 0], ["2022-11-30", 0], ["2022-12-01", 0], ["2022-12-02", 0], ["2022-12-03", 0], ["2022-12-04", 0], ["2022-12-05", 0], ["2022-12-06", 0], ["2022-12-07", 0], ["2022-12-08", 0], ["2022-12-09", 0], ["2022-12-10", 0], ["2022-12-11", 0], ["2022-12-12", 0], ["2022-12-13", 0], ["2022-12-14", 0], ["2022-12-15", 0], ["2022-12-16", 0], ["2022-12-17", 0], ["2022-12-18", 0], ["2022-12-19", 0], ["2022-12-20", 0], ["2022-12-21", 1], ["2022-12-22", 0], ["2022-12-23", 0], ["2022-12-24", 0], ["2022-12-25", 0], ["2022-12-26", 0], ["2022-12-27", 0], ["2022-12-28", 0], ["2022-12-29", 0], ["2022-12-30", 0], ["2022-12-31", 0], ["2023-01-01", 0], ["2023-01-02", 0], ["2023-01-03", 0], ["2023-01-04", 0], ["2023-01-05", 0], ["2023-01-06", 0], ["2023-01-07", 0], ["2023-01-08", 2], ["2023-01-09", 0], ["2023-01-10", 0], ["2023-01-11", 0], ["2023-01-12", 0], ["2023-01-13", 0], ["2023-01-14", 0], ["2023-01-15", 0], ["2023-01-16", 0], ["2023-01-17", 0], ["2023-01-18", 0], ["2023-01-19", 0], ["2023-01-20", 0], ["2023-01-21", 0], ["2023-01-22", 0], ["2023-01-23", 0], ["2023-01-24", 1], ["2023-01-25", 0], ["2023-01-26", 0], ["2023-01-27", 0], ["2023-01-28", 0], ["2023-01-29", 0], ["2023-01-30", 0], ["2023-01-31", 0], ["2023-02-01", 0], ["2023-02-02", 0], ["2023-02-03", 0], ["2023-02-04", 0], ["2023-02-05", 0], ["2023-02-06", 0], ["2023-02-07", 0], ["2023-02-08", 0], ["2023-02-09", 0], ["2023-02-10", 0], ["2023-02-11", 1], ["2023-02-12", 0], ["2023-02-13", 0], ["2023-02-14", 2], ["2023-02-15", 0], ["2023-02-16", 0], ["2023-02-17", 1], ["2023-02-18", 0], ["2023-02-19", 0], ["2023-02-20", 0], ["2023-02-21", 1], ["2023-02-22", 0], ["2023-02-23", 0], ["2023-02-24", 0], ["2023-02-25", 0], ["2023-02-26", 0], ["2023-02-27", 0], ["2023-02-28", 0], ["2023-03-01", 0], ["2023-03-02", 0], ["2023-03-03", 0], ["2023-03-04", 0], ["2023-03-05", 0], ["2023-03-06", 0], ["2023-03-07", 0], ["2023-03-08", 2], ["2023-03-09", 0], ["2023-03-10", 0], ["2023-03-11", 0], ["2023-03-12", 0], ["2023-03-13", 0], ["2023-03-14", 1], ["2023-03-15", 3], ["2023-03-16", 0], ["2023-03-17", 1], ["2023-03-18", 0], ["2023-03-19", 0], ["2023-03-20", 0], ["2023-03-21", 0], ["2023-03-22", 0], ["2023-03-23", 0], ["2023-03-24", 0], ["2023-03-25", 0], ["2023-03-26", 1], ["2023-03-27", 1], ["2023-03-28", 0], ["2023-03-29", 0], ["2023-03-30", 0], ["2023-03-31", 0], ["2023-04-01", 0], ["2023-04-02", 0], ["2023-04-03", 0], ["2023-04-04", 0], ["2023-04-05", 0], ["2023-04-06", 1], ["2023-04-07", 0], ["2023-04-08", 1], ["2023-04-09", 0], ["2023-04-10", 0], ["2023-04-11", 0], ["2023-04-12", 0], ["2023-04-13", 0], ["2023-04-14", 0], ["2023-04-15", 1], ["2023-04-16", 0], ["2023-04-17", 0], ["2023-04-18", 0], ["2023-04-19", 0], ["2023-04-20", 0], ["2023-04-21", 0], ["2023-04-22", 0], ["2023-04-23", 0], ["2023-04-24", 0], ["2023-04-25", 0], ["2023-04-26", 0], ["2023-04-27", 0], ["2023-04-28", 1], ["2023-04-29", 0], ["2023-04-30", 0], ["2023-05-01", 0], ["2023-05-02", 0], ["2023-05-03", 0], ["2023-05-04", 0], ["2023-05-05", 0], ["2023-05-06", 0], ["2023-05-07", 0], ["2023-05-08", 0], ["2023-05-09", 0], ["2023-05-10", 0], ["2023-05-11", 0], ["2023-05-12", 0], ["2023-05-13", 0], ["2023-05-14", 0], ["2023-05-15", 0], ["2023-05-16", 0], ["2023-05-17", 0], ["2023-05-18", 0], ["2023-05-19", 0], ["2023-05-20", 0], ["2023-05-21", 0], ["2023-05-22", 2], ["2023-05-23", 1], ["2023-05-24", 0], ["2023-05-25", 0], ["2023-05-26", 0], ["2023-05-27", 0], ["2023-05-28", 0], ["2023-05-29", 0], ["2023-05-30", 0], ["2023-05-31", 0], ["2023-06-01", 0], ["2023-06-02", 0], ["2023-06-03", 0], ["2023-06-04", 0], ["2023-06-05", 0], ["2023-06-06", 0], ["2023-06-07", 0], ["2023-06-08", 0], ["2023-06-09", 0], ["2023-06-10", 0], ["2023-06-11", 0], ["2023-06-12", 0], ["2023-06-13", 0], ["2023-06-14", 0], ["2023-06-15", 0], ["2023-06-16", 0], ["2023-06-17", 0], ["2023-06-18", 0], ["2023-06-19", 0], ["2023-06-20", 0], ["2023-06-21", 0], ["2023-06-22", 0], ["2023-06-23", 0], ["2023-06-24", 0], ["2023-06-25", 0], ["2023-06-26", 0], ["2023-06-27", 0], ["2023-06-28", 0], ["2023-06-29", 0], ["2023-06-30", 0], ["2023-07-01", 0], ["2023-07-02", 0], ["2023-07-03", 0], ["2023-07-04", 0], ["2023-07-05", 0], ["2023-07-06", 0], ["2023-07-07", 0], ["2023-07-08", 0], ["2023-07-09", 0], ["2023-07-10", 0], ["2023-07-11", 0], ["2023-07-12", 0], ["2023-07-13", 0], ["2023-07-14", 0], ["2023-07-15", 0], ["2023-07-16", 0], ["2023-07-17", 0], ["2023-07-18", 0], ["2023-07-19", 0], ["2023-07-20", 0], ["2023-07-21", 0], ["2023-07-22", 0], ["2023-07-23", 0], ["2023-07-24", 0], ["2023-07-25", 0], ["2023-07-26", 1]]
-        }]
+    
 
-    };
+    
 
-    myChart.setOption(option);
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+    .v[data-class=v] .emoji, .v[data-class=v] .vemoji {
+        max-height: 20px;
+        overflow: hidden;
+        max-width: 20px!important;
+    }
+    .v[data-class=v] .vwrap .vemojis {
+        text-align: center;
+    }
+    .roboterbb {
+        position: absolute;
+        right: 87px;
+        padding-top: 3px;
+    }
+    .robot-check-text:hover {
+        color: #26a69a;
+    }
+    .roboter:hover .robot-check-text::before {
+        border: 2px solid #5a5a5a;
+    }
+    .robotxian {
+        background: #5a5a5a;
+        top: 21px;
+        left: 11px!important;
+        transform-origin: 50% -17px;
+        animation: swing 3.5s infinite ease-in-out;
+        -webkit-transform-origin: 50% -17px;
+        -webkit-animation: swing 2.85s infinite ease-in-out;
+    }
+    .v[data-class=v] .vwrap {
+        padding-bottom: 23px;
+    }
+    .robotimg {
+        width: 28px!important;
+        height: 28px!important;
+        top: 14px!important;
+        left: -13px!important;
+        max-width: none!important;
+        z-index: 99;
+        cursor: none!important;
+    }
+    .v[data-class=v] .vbtn:disabled {
+        color: #b2b2b5;
+        border-color: #b2b2b5;
+    }
+    .v[data-class=v] .vbtn:disabled {
+        background-color: transparent;
+    }
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+    .v[data-class=v] .vwrap {
+        border-radius: 8px;
+    }
+    /* #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg1.webp") 100% 100% no-repeat;
+    } */
+    #vcomments textarea {
+        background: url(/medias/comment_bg1.webp) no-repeat;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: rgba(255,255,255,0);
+        resize: vertical;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" id="vcomments-top">
+
+    <!-- 福袋按钮 -->
+    <div class="caishendeng">        
+        <div class="caishenxian fudaixian">
+            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png" />
+        </div>              
+    </div>
+   
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评 论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        enableQQ: true,
+        boolean: true,
+        appId: 'k5N8XhsMfL71uDYEah6HoN6B-gzGzoHsz',
+        appKey: 'Q4JIAdUGaDEKrFZxjrymW7VX',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        // avatar: 'mm',
+        avatar: '/medias/robot.png',
+        pageSize: '16',
+        lang: 'zh-cn',
+        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
+
+        adminEmailMd5: '',
+
+        master: ["6b922a7268ecf15b7de33e844cfb9fba"],
+        friends: [""],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        // tagMeta: '博主,小伙伴,访客',
+        // master: '6b922a7268ecf15b7de33e844cfb9fba',
+        // friends: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest"]
+    });
+</script>
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+
+
+<!-- 评论机器人验证 -->
+<script>
+    $('.roboter').on('click',function(){
+        $('.robot-check-text').html('·&nbsp;&nbsp;&nbsp;验证成功！');
+        $('.roboter:hover .robot-check-text::before').css('border','2px solid #26a69a');
+        $('.robotxian').css('background','#26a69a');
+        $('.robotimg').attr('src','/medias/robot.png');
+        $('.robot-check-text').css('color','#26a69a');
+    });
+    
+    if(!$('.robot-check').checked) {
+        // alert("请勾选机器人验证后再发表评论！");
+        $('.vsubmit').attr('disabled',true).attr('title','评论前勾选机器人验证按钮');
+    } 
+    $('.robot-check').on('click',function(){
+        $('.vsubmit').attr('disabled',false).attr('title','欢迎畅所欲言');
+    });
 </script>
 
     
 
     
 
-    <div id="cd-timeline" class="container">
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
         
-        <div class="cd-timeline-block">
-
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/archives/2023">2023</a>
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
-            
+            <div class="card">
+                <a href="/posts/wtv2.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/banner/1.jpg" class="responsive-img" alt="使Windows  Terminal变得更易用（v2）">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          使Windows  Terminal变得更易用（v2）
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言在几个月前我有写过一篇使Windows Terminal变得更易用，那篇文章主要是介绍了通过安装 oh-my-posh、安装 Nerd 字体解决 oh-my-posh 字体图标不显示、解决 ssh 连接长时间不操作自动断开、启动专注模式
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
 
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/archives/2023/07">07</a>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%BE%8E%E5%8C%96%E6%95%88%E7%8E%87/">
+                        <span class="chip bg-color">美化效率</span>
+                    </a>
+                    
+                </div>
+                
             </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>26</span>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
-            <article class="cd-timeline-content">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/posts/f8c8.html">
-                            <div class="card-image">
-                                
-                                
-                                <img src="/medias/banner/3.jpg" class="responsive-img" alt="Obsidian 汇总统计">
-                                
-                                <span class="card-title">
-                                  <!-- 文章卡片hover线条效果 -->
-                                  <span class="titlesline">
-                                    <style>
-                                      .titlesline {
-                                        width: 0px;
-                                        height: 4px;
-                                        background-color: pink;
-                                        border-radius: 2px;
-                                        position: absolute;
-                                        top: 10px;
-                                        left: 24px;
-                                      }
-                                      body.dark .titlesline {
-                                        filter: brightness(.7);
-                                      }
-                                      article .card .titlesline {
-                                        transition: all 0.36s ease;
-                                      }
-                                      article .card-image:hover .titlesline {
-                                        width: 36px;
-                                      }
-                                    </style>
-                                  </span>
-                                  Obsidian 汇总统计
-                                </span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    %% Begin Waypoint %%
+            <div class="card">
+                <a href="/posts/f8c8.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/banner/3.jpg" class="responsive-img" alt="Obsidian 汇总统计">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          Obsidian 汇总统计
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            %% Begin Waypoint %%
 
 [[已发布文章]]
 [[「富豪谷底求翻身」]]
@@ -1373,35 +2280,208 @@ class="themespring" -->
 [[关于证明我是一名 JS 程序员这件事]]
 [[关于Linux内核]]
 [
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2023-07-26
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-user fa-fw"></i>
-                                    itsBarry
-                                    
-                                </span>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card-action article-tags">
-                            
-                            <a href="/tags/moc/"><span class="chip bg-color">moc</span></a>
-                            
-                        </div>
                         
                     </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            itsBarry
+                            
+                        </span>
+                    </div>
                 </div>
-            </article>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/moc/">
+                        <span class="chip bg-color">moc</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
         </div>
         
     </div>
+</article>
+<style>
+  .articles .row .article {
+    position: relative;
+  }
+</style>
 
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Barryの小站<br />'
+            + '文章作者: itsBarry<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+        </div>
+        
+        
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        
+        
+        <div class="toc-widget" data-spmid="美化效率">
+            <div class="toc-title">
+                <i class="far fa-list-alt"></i>
+                &nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content"></div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="美化效率">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
 </main>
 
 
@@ -1494,7 +2574,7 @@ class="themespring" -->
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">98.8k</span>&nbsp;
+        class="white-color">100.9k</span>&nbsp;
       
       
       
